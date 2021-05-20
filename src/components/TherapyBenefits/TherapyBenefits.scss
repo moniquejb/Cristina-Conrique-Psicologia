@@ -1,0 +1,54 @@
+@import "../../utilities/variables.scss";
+
+.therapy-benefits-container {
+  background-color: $main-grey;
+  width: 100%;
+  height: auto;
+  padding-bottom: 50px;
+
+  h3 {
+    margin: 0;
+    @include secondary-heading ($dark-2-blue);
+    padding: 50px 0 20px 120px;
+  }
+
+  .therapy-benefits-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    h3 {
+      margin: 0;
+      padding: 0;
+      padding-top: 20px;
+      @include custom-Roboto ($dark-2-blue, 2rem, 400);
+    }
+
+    p {
+      @include custom-Roboto ($dark-1-blue, 1rem, 400);
+    }
+
+    .therapy-benefit {
+      width: 450px;
+      min-width: 320px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: 190px;
+        width: auto;
+        margin-top: 40px;
+      }
+
+      .therapy-benefit-textbox {
+        text-align: center;
+        width: 300px;
+        height: auto;
+        line-height: 23px;
+      }
+    }
+  }
+}

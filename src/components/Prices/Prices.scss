@@ -1,0 +1,93 @@
+@import "../../utilities/variables.scss";
+
+.prices-container {
+  height: 94vh;
+  width: 100%;
+  background-color: $main-grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    @include main-heading ($dark-2-yellow);
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .price-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 480px;
+
+    .price-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 450px;
+      width: 380px;
+      border-radius: 10px;
+      //border: solid 10px $main-grey;
+      background-color: $dark-1-grey;
+      margin: 30px 40px;
+      text-align: center;
+
+      h3 {
+        @include custom-Montserrat ($dark-2-red, 2.5rem, 600);
+        padding: 0;
+        margin: 0;
+        padding-top: 20px;
+      }
+
+      p {
+        @include custom-Montserrat ($dark-2-red, 1.6rem, 400);
+        padding: 0;
+        margin: 0;
+        padding-bottom: 20px;
+      }
+
+      .price-box-discount {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: $main-red;
+        height: 220px;
+        width: 220px;
+        border-radius: 50%;
+
+        h2 {
+          @include custom-Montserrat ($main-grey, 5.4rem, 600);
+          padding: 0;
+          margin: 0;
+        }
+
+        h3 {
+          @include custom-Montserrat ($main-grey, 2.1rem, 400);
+          padding: 0;
+          margin: 0;
+          margin-top: -10px;
+        }
+      }
+
+      #price-weekly {
+        margin-top: 0;
+      }
+    }
+  }
+  
+  .prices-consult-text {
+    width: 1320px;
+    height: auto;
+
+    p {
+      @include bulk-text ($dark-2-yellow);
+      text-align: justify;
+      text-justify: inter-word;
+      line-height: 2rem;
+    }
+  }
+}

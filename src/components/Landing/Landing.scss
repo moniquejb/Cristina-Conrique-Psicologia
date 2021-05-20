@@ -1,0 +1,123 @@
+@import "../../utilities/variables.scss";
+
+.landing-wrapper {
+  display: grid;
+  grid-template-columns: 62% 38%;
+
+  .landing-img {
+    width: auto;
+    min-width: 500px;
+    height: 100vh;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: grid;
+    position:relative;
+    
+    img {
+      position: absolute;
+      margin: 50px;
+      justify-self: center;
+      align-self: center;
+      min-width: 500px;
+      max-width: 800px;
+    }
+
+    .landing-colour {
+      height: 50vh;
+      width: 100%;
+      z-index: -10;
+    }
+    
+    .top-colour {
+      background-color: $main-yellow;
+    }
+    
+    .bottom-colour {
+      background-color: $main-grey;
+    }
+  }
+
+  .landing-top {
+    background-color: $main-yellow;
+    width: auto;
+    min-width: 600px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 7px;
+      margin-top: -25px;
+      @include main-heading($main-grey);
+    }
+
+    h2 {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 20px;
+      @include custom-Roboto ($main-grey, 2rem, 500)
+    }
+
+    @keyframes wordChangeAnimation {
+      0% {
+        opacity: 0;
+        transform: scale(0.99, 0.96);
+      }
+
+      80% {
+        opacity: 1;
+        transform: scale(1);
+      } 
+    }
+
+    .wordChangeAnimation {
+      animation: wordChangeAnimation 1.5s ease-out infinite alternate forwards;
+    }
+  }
+
+  .landing-bottom {
+    background-color: $main-grey;
+    width: auto;
+    height: 50vh;
+
+    .landing-bottom-textbox {
+      width: 500px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        @include bulk-text ($dark-1-red);
+        text-align: justify;
+        line-height: 2rem;
+      }
+
+      a {
+        margin-top: 10px;
+        height: 60px;
+        width: 300px;
+        background-color: $light-red;
+        @include custom-Roboto ($dark-1-red, 2rem, 400);
+        border-radius: 10px;
+        align-self: center;
+        cursor: pointer;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+          background-color: rgba($color: $light-red, $alpha: 0.6);
+          transform: scale(1.05);
+        }
+
+        &:active {
+          transform: scale(1);
+        }
+      }
+    }     
+  }
+}

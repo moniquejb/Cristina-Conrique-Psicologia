@@ -1,0 +1,32 @@
+@import "../../utilities/variables.scss";
+
+.footer-container {
+  height: 100%;
+  width: 100%;
+  background-color: $dark-2-blue;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .footer-text-container {
+    display: flex;
+    @include custom-Roboto (white, 1.2rem, 400);
+
+    a {
+      @include custom-Roboto (white, 1.2rem, 500);
+      text-decoration: none;
+      cursor: pointer;
+
+      &:visited {
+        color: white;
+      }
+
+      &:hover{
+        color: $dark-1-grey;
+      }      
+    }
+  }
+}

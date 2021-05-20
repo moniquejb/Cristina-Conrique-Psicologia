@@ -1,0 +1,148 @@
+@import "../../utilities/variables.scss";
+
+.faqs-container {
+  width: 100%;
+  height: auto;
+  background-color: $main-grey;
+  margin: 0;
+  padding: 0;
+  //padding-top: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 120px;
+  padding-bottom: 20px;
+
+  h1 {
+    margin: 0;
+    padding: 20px 0 0 0;
+    @include main-heading ($dark-2-red);
+  }
+
+  ol {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  li {
+    @include bulk-text ($dark-2-red);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .question-container {
+    cursor: pointer;
+    width: 1000px;
+    border-radius: 10px;
+    padding: 0 20px;
+    height: auto;
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    background-color: $dark-1-grey;
+
+    .questions-text-box {
+      width: 100%;
+      padding: 10px 0 10px 10px;
+      .question {
+        @include bulk-text ($dark-2-red);
+        line-height: 2rem;
+        margin: 0;
+        padding: 0;
+        margin-left: 5px;
+      }
+    }
+
+    $stroke-thickness: .25rem;
+    $stroke-color: $dark-2-red;
+    $size: 2rem;
+
+    .plus-toggle {
+      pointer-events: none;
+      > label {
+        width: $size;
+        height: $size;
+        cursor: pointer;
+        position: relative;
+        top: -10px;
+        display: block;
+        
+        &:before,
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: $stroke-thickness;
+          background: $stroke-color;
+          border-radius: $stroke-thickness;
+          height: $size / 1.8;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          transition: all .3s ease;
+        }
+        
+        &:after {
+          width: $size / 1.8;
+          height: $stroke-thickness;
+        }
+      }
+      
+      > input {
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        
+        &:checked + label {
+          &:before {
+            transform: rotate(-90deg);
+          }
+          
+          &:after {
+            transform: rotate(-180deg);
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .answer-on {
+    font-size: 1.2rem;
+    width: 980px;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 26px;
+    margin: 0 0 20px 0;
+    color: $dark-2-blue;
+  }
+
+  .answer-off {
+    display: none;
+  }
+}
+
+@keyframes animateAnswer {
+  0% {
+    opacity: 0;
+    transform: translate(0, -5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.animateAnswer {
+  animation: animateAnswer 0.5s 1;
+}

@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap");
+.legal-warning-container {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(3, 37, 47, 0.8);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 11;
+}
+.legal-warning-container .legal-warning-bg {
+  height: 600px;
+  width: 800px;
+  background-color: #E7E7E7;
+  border-radius: 20px;
+}
+.legal-warning-container .legal-warning-bg .legal-warning-exit {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #9A746D;
+  display: flex;
+  justify-content: flex-end;
+}
+.legal-warning-container .legal-warning-bg .legal-warning-exit p {
+  cursor: pointer;
+  margin: 10px 20px -20px 20px;
+}
+.legal-warning-container .legal-warning-bg .legal-warning-heading-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.legal-warning-container .legal-warning-bg .legal-warning-heading-text-container h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #4F6E72;
+}
+.legal-warning-container .legal-warning-bg .legal-warning-heading-text-container .legal-warning-text-box-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 480px;
+  width: 750px;
+  background-color: #F8F8F8;
+  border-radius: 10px;
+}
+.legal-warning-container .legal-warning-bg .legal-warning-heading-text-container .legal-warning-text-box-1 .legal-warning-text-box-2 {
+  height: 450px;
+  width: 720px;
+  overflow-y: scroll;
+}
+.legal-warning-container .legal-warning-bg .legal-warning-heading-text-container .legal-warning-text-box-1 .legal-warning-text-box-2 .legal-warning-text {
+  padding: 0px 20px 20px 20px;
+}
+.legal-warning-container .legal-warning-bg .legal-warning-heading-text-container .legal-warning-text-box-1 .legal-warning-text-box-2 .legal-warning-text h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: black;
+}
+.legal-warning-container .legal-warning-bg .legal-warning-heading-text-container .legal-warning-text-box-1 .legal-warning-text-box-2 .legal-warning-text p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: black;
+  text-align: justify;
+  line-height: 2rem;
+  margin: 0;
+}
+.legal-warning-container .legal-warning-bg .legal-warning-heading-text-container .legal-warning-text-box-1 .legal-warning-text-box-2 .legal-warning-text li {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: black;
+  line-height: 2rem;
+  margin: 0;
+}/*# sourceMappingURL=LegalWarning.css.map */

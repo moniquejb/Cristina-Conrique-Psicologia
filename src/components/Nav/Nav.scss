@@ -1,0 +1,273 @@
+@import "../../utilities/variables.scss";
+
+#shrink-nav {
+  height: 85px;
+  filter: drop-shadow(0 0 5px rgba($color: $dark-2-yellow, $alpha: 0.3));
+  transition: 0.5s;
+
+  ul,
+  li,
+  a {
+    height: 85px;
+    transition: 0.5s;
+  }
+
+  img {
+    height: 75px;
+    transition: 0.5s;
+  }
+}
+
+.nav-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 1024px;
+  height: 130px;
+  background-color: $main-yellow;
+  position: fixed;
+  transition: 0.5s;
+  z-index: 10;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    height: 130px;
+    width: 100%;
+    list-style: none;
+    @include custom-Roboto($main-grey, 1.5rem, 500);
+    display: flex;
+    transition: 0.5s;
+  }
+
+  li {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.5s;
+      width: 100%;
+      height: 130px;
+      text-decoration: none;
+      cursor: default;
+    }
+  }
+
+  .li-text:link {
+    @include custom-Roboto($main-grey, 1.5rem, 500);
+  }
+
+  .li-text:visited {
+    @include custom-Roboto($main-grey, 1.5rem, 500);
+  }
+
+  .li-text:hover {
+    background-color: rgba($color: $light-yellow, $alpha: 0.3);
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+
+  .li-text:active {
+    font-size: 1.5rem;
+  }
+
+  .li-img {
+    height: 130px;
+    padding: 0px 10px;
+  }
+
+  img {
+    height: 115px;
+    width: auto;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  #li-icon {
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+
+    a {
+      padding: 0px 10px;
+      transition: 0.5s;
+    }
+  }
+
+  svg {
+    transition: 0.5s;
+    margin: -4px;
+    height: 30px;
+    width: 30px;
+    fill: $main-grey;
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+}
+
+#terapia::before {
+  content: "";
+  display: block;
+  height: 85px;
+  margin-top: -85px;
+  visibility: hidden;
+}
+
+#sobre::before {
+  content: "";
+  display: block;
+  height: 80px;
+  margin-top: -80px;
+  visibility: hidden;
+}
+
+#contacto::before {
+  content: "";
+  display: block;
+  height: 80px;
+  margin-top: -80px;
+  visibility: hidden;
+}
+
+#tarifas::before {
+  content: "";
+  display: block;
+  height: 80px;
+  margin-top: -80px;
+  visibility: hidden;
+}
+
+//---------------------
+//Media Queries
+//---------------------
+
+@media only screen and (max-width: 1024px) {
+  .nav-container {
+    min-width: 920px;
+
+    a {
+      padding: 0px 0px;
+    }
+
+    .li-text:link {
+      font-size: 1.25rem;
+    }
+
+    .li-text:visited {
+      font-size: 1.25rem;
+    }
+  
+    .li-text:hover {
+      font-size: 1.3rem;
+    }
+
+    .li-img {
+      height: 100px;
+      padding: 0px 5px;
+    }
+
+    img {
+      height: 90px;
+    }
+
+    svg {
+      margin: -5px;
+      height: 25px;
+      width: 25px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #shrink-nav {
+    height: 100vh;
+    filter: initial;
+    transition: initial;
+  
+    ul,
+    li,
+    a {
+      height: 60px;
+      transition: initial;
+    }
+  
+    img {
+      display: none;
+    }
+  }
+
+  .nav-container {
+    filter: drop-shadow(0 0 5px rgba($color: $dark-2-yellow, $alpha: 0.4));
+    width: 200px;
+    height: 100vh;
+    min-width: initial;
+    transition: initial;
+  
+    ul {
+      height: 100vh;
+      width: 200px;
+      flex-direction: column;
+      transition: initial;
+    }
+  
+    li {
+      width: 200px;
+      height: 60px;
+      justify-content: flex-start;
+      align-items: center;
+      transition: initial;
+  
+      a {
+        width: 200px;
+        height: 60px;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 20px;
+        transition: initial;
+      }
+    }
+
+    .li-text:link {
+      font-size: 1.6rem;
+    }
+
+    .li-img {
+      display: none;
+    }
+
+    img {
+      height: initial;
+    }
+  
+    #li-icon {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      //width: 10vw;
+      width: 100%;
+      height: 60px;
+      margin: 0;
+      padding-left: 20px;
+  
+      a {
+        padding-right: 0px 0px;
+        margin: 0;
+      }
+
+      svg {
+        margin: -15px;
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+}

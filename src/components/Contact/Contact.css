@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap");
+.contact-container {
+  height: 100%;
+  width: 100%;
+  padding-bottom: 100px;
+  background-color: #A0CEBF;
+}
+.contact-container h1 {
+  margin: 0;
+  padding: 20px 0 20px 120px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 6.5rem;
+  color: #F8F8F8;
+}
+.contact-container .contact-details-form-container {
+  display: flex;
+  justify-content: space-between;
+}
+.contact-container .contact-details-form-container .contact-form-dropdown {
+  margin: 10px 30px 0 0;
+  width: 324px;
+  height: 55px;
+  border-radius: 10px;
+  border: solid 1px #F8F8F8;
+  outline-color: #F8F8F8;
+  padding-left: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: black;
+}
+.contact-container .contact-details-form-container .contact-details-container {
+  height: 415px;
+  width: 650px;
+}
+.contact-container .contact-details-form-container .contact-details-container .contact-detail {
+  width: 700px;
+  height: 50px;
+  display: flex;
+  padding: 0;
+  margin: 20px 20px 0 120px;
+}
+.contact-container .contact-details-form-container .contact-details-container .contact-detail .contact-icon {
+  height: 50px;
+  width: 50px;
+}
+.contact-container .contact-details-form-container .contact-details-container .contact-detail .contact-icon svg {
+  fill: #F8F8F8;
+}
+.contact-container .contact-details-form-container .contact-details-container .contact-detail .contact-info {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.contact-container .contact-details-form-container .contact-details-container .contact-detail .contact-info a {
+  text-decoration: none;
+  margin-left: 20px;
+}
+.contact-container .contact-details-form-container .contact-details-container .contact-detail .contact-info a h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #F8F8F8;
+  padding: 0;
+  margin: 0;
+}
+.contact-container .contact-details-form-container .contact-details-container .contact-social-media h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: #F8F8F8;
+  padding: 0;
+  margin: 50px 0 30px 120px;
+}
+.contact-container .contact-details-form-container .contact-details-container .contact-social-media .contact-social-icons {
+  margin-left: 120px;
+}
+.contact-container .contact-details-form-container .contact-details-container .contact-social-media .contact-social-icons a {
+  margin: 0 40px 20px 0;
+}
+.contact-container .contact-details-form-container .contact-details-container .contact-social-media .contact-social-icons a svg {
+  height: 80px;
+  width: 80px;
+  fill: #F8F8F8;
+}
+.contact-container .contact-details-form-container .contact-details-container .contact-social-media .contact-social-icons a svg:hover {
+  transform: scale(1.05);
+  fill: #E4F3F0;
+}
+.contact-container .contact-details-form-container .contact-details-container .contact-social-media .contact-social-icons a svg:active {
+  transform: scale(1);
+}
+.contact-container .contact-details-form-container .contact-form-container {
+  height: 415px;
+  width: 900px;
+}
+.contact-container .contact-details-form-container .contact-form-container .contact-form {
+  display: flex;
+  justify-content: space-between;
+}
+.contact-container .contact-details-form-container .contact-form-container .contact-form .contact-form-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact-container .contact-details-form-container .contact-form-container .contact-form .contact-form-left .bottom-margin {
+  margin-bottom: 20px;
+}
+.contact-container .contact-details-form-container .contact-form-container .contact-form .contact-form-left .contact-form-element label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #F8F8F8;
+}
+.contact-container .contact-details-form-container .contact-form-container .contact-form .contact-form-left .contact-form-element input {
+  margin: 10px 30px 0 0;
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  border: solid 1px #F8F8F8;
+  outline-color: #F8F8F8;
+  padding-left: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: black;
+}
+.contact-container .contact-details-form-container .contact-form-container .contact-form-right {
+  height: 415px;
+  width: auto;
+  margin-right: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact-container .contact-details-form-container .contact-form-container .contact-form-right .contact-form-textarea label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #F8F8F8;
+}
+.contact-container .contact-details-form-container .contact-form-container .contact-form-right .contact-form-textarea textarea {
+  resize: none;
+  margin: 10px 0 0 0;
+  width: 360px;
+  height: 236px;
+  border-radius: 10px;
+  border: solid 1px #F8F8F8;
+  outline-color: #F8F8F8;
+  padding: 15px 15px 20px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: black;
+}
+.contact-container .contact-details-form-container .contact-form-container .contact-form-right .contact-form-checkbox-container {
+  display: flex;
+  align-items: center;
+}
+.contact-container .contact-details-form-container .contact-form-container .contact-form-right .contact-form-checkbox-container .contact-form-checkbox {
+  width: 20px;
+  height: 20px;
+}
+.contact-container .contact-details-form-container .contact-form-container .contact-form-right .contact-form-checkbox-container .contact-form-checkbox-label {
+  width: 370px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #F8F8F8;
+  padding-left: 5px;
+}
+.contact-container .contact-details-form-container .contact-form-container .contact-form-right .contact-form-checkbox-container .contact-form-checkbox-label p {
+  margin: 0;
+  cursor: pointer;
+}
+.contact-container .contact-details-form-container .contact-form-container .contact-form-right .contact-form-checkbox-container .contact-form-checkbox-label p:hover {
+  color: #4F6E72;
+}
+.contact-container .contact-details-form-container .contact-form-container .contact-form-right button {
+  background-color: #F8F8F8;
+  border: none;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #4F6E72;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+}
+.contact-container .contact-details-form-container .contact-form-container .contact-form-right button:hover {
+  background-color: #E4F3F0;
+  transform: scale(1.05);
+}
+.contact-container .contact-details-form-container .contact-form-container .contact-form-right button:active {
+  transform: scale(1);
+}/*# sourceMappingURL=Contact.css.map */

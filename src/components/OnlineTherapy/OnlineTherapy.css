@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap");
+.online-therapy-container {
+  width: 100%;
+  height: auto;
+  background-color: #A0CEBF;
+}
+.online-therapy-container h1 {
+  margin: 0;
+  padding: 50px 0 0 120px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 6.5rem;
+  color: #F8F8F8;
+}
+.online-therapy-container .online-therapy-text-img-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: auto;
+  padding-bottom: 40px;
+}
+.online-therapy-container .online-therapy-text-img-container .online-therapy-text {
+  height: auto;
+  width: 60%;
+  min-width: 790px;
+}
+.online-therapy-container .online-therapy-text-img-container .online-therapy-text h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #F8F8F8;
+  padding-top: 20px;
+  padding-left: 120px;
+}
+.online-therapy-container .online-therapy-text-img-container .online-therapy-text p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #F8F8F8;
+  padding-left: 120px;
+  text-align: justify;
+  line-height: 2rem;
+}
+.online-therapy-container .online-therapy-text-img-container .online-therapy-text ul {
+  padding-left: 120px;
+}
+.online-therapy-container .online-therapy-text-img-container .online-therapy-text ul li {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #F8F8F8;
+  line-height: 2.5rem;
+  list-style-position: inside;
+  text-indent: -1.4em;
+  padding-left: 1.4em;
+}
+.online-therapy-container .online-therapy-text-img-container .online-therapy-img {
+  margin: 50px 120px 50px 50px;
+  height: auto;
+  width: 40%;
+  min-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-height: 800px;
+}
+.online-therapy-container .online-therapy-text-img-container .online-therapy-img img {
+  height: auto;
+  width: 100%;
+}/*# sourceMappingURL=OnlineTherapy.css.map */

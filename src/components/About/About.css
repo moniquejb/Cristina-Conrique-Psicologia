@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap");
+.about-container {
+  height: 95vh;
+  width: 100%;
+  background-color: #D39997;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-container .about-img {
+  height: auto;
+  width: 500px;
+  padding-left: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-container .about-img img {
+  height: auto;
+  width: 100%;
+  min-width: 350px;
+  padding: 30px 30px 40px 0;
+}
+.about-container .about-h1-text-container {
+  width: auto;
+  height: auto;
+  margin: 50px 120px 50px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.about-container .about-h1-text-container h1 {
+  margin: 0;
+  padding: 10px 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 6.5rem;
+  color: #F8F8F8;
+  text-align: center;
+}
+.about-container .about-h1-text-container .about-text {
+  width: 895px;
+  min-width: 400px;
+  height: auto;
+}
+.about-container .about-h1-text-container .about-text p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #F8F8F8;
+  text-align: justify;
+  line-height: 2rem;
+}/*# sourceMappingURL=About.css.map */

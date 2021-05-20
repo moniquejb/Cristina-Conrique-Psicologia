@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap");
+.footer-container {
+  height: 100%;
+  width: 100%;
+  background-color: #4F6E72;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.footer-container .footer-text-container {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: white;
+}
+.footer-container .footer-text-container a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.footer-container .footer-text-container a:visited {
+  color: white;
+}
+.footer-container .footer-text-container a:hover {
+  color: #E7E7E7;
+}/*# sourceMappingURL=Footer.css.map */

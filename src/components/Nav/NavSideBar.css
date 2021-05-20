@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap");
+.nav-side-container {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #F9BE7B;
+  position: fixed;
+  z-index: 10;
+  filter: drop-shadow(0 0 5px rgba(216, 153, 63, 0.4));
+  transition: 0.5s;
+}
+.nav-side-container ul {
+  height: 100vh;
+  width: 200px;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #F8F8F8;
+  display: flex;
+  transition: 0.5s;
+}
+.nav-side-container li {
+  width: 200px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: 0.5s;
+}
+.nav-side-container li a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 200px;
+  height: 60px;
+  text-decoration: none;
+  cursor: default;
+  padding-left: 40px;
+  transition: 0.5s;
+}
+.nav-side-container #nav-line-1, .nav-side-container #nav-line-2 {
+  height: 2px;
+  width: 80%;
+  background-color: #FDEDDD;
+}
+.nav-side-container #nav-line-1 {
+  margin: 10px 0 0 20px;
+}
+.nav-side-container #nav-line-2 {
+  margin: 0 0 10px 20px;
+}
+.nav-side-container .li-text:link {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #F8F8F8;
+}
+.nav-side-container .li-text:visited {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #F8F8F8;
+}
+.nav-side-container .li-text:hover {
+  background-color: rgba(253, 237, 221, 0.3);
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.nav-side-container .li-text:active {
+  font-size: 1.5rem;
+}
+.nav-side-container #li-img-side {
+  height: 100px;
+  margin: 15px 0 10px -15px;
+  padding: 5px 5px;
+}
+.nav-side-container #li-img-side img {
+  height: 100px;
+  width: auto;
+  cursor: pointer;
+}
+.nav-side-container .li-img {
+  display: none;
+}
+.nav-side-container .li-icon {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  margin: 0;
+  transition: 0.5s;
+}
+.nav-side-container .li-icon a {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.nav-side-container svg {
+  transition: 0.5s;
+  height: 35px;
+  width: 35px;
+  fill: #F8F8F8;
+}
+.nav-side-container svg:hover {
+  transform: scale(1.15);
+}
+
+#terapia::before {
+  content: "";
+  display: block;
+  height: 85px;
+  margin-top: -85px;
+  visibility: hidden;
+}
+
+#sobre::before {
+  content: "";
+  display: block;
+  height: 80px;
+  margin-top: -80px;
+  visibility: hidden;
+}
+
+#contacto::before {
+  content: "";
+  display: block;
+  height: 80px;
+  margin-top: -80px;
+  visibility: hidden;
+}
+
+#tarifas::before {
+  content: "";
+  display: block;
+  height: 80px;
+  margin-top: -80px;
+  visibility: hidden;
+}/*# sourceMappingURL=NavSideBar.css.map */

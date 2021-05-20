@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap");
+@import 'utilities/variables';
+
 .no-select {
-  -webkit-user-select: none;
-  -moz-user-select: none;
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
   -ms-user-select: none;
-  user-select: none;
+  user-select: none;   
 }
 
 html {
@@ -16,7 +17,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #D39997;
+  //box-sizing:border-box;
+  background-color: $main-red;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -24,7 +26,7 @@ body {
 .nav-placeholder {
   width: 100%;
   height: 130px;
-  background-color: #F8F8F8;
+  background-color: $main-grey;
   transition: 0.5s;
 }
 
@@ -34,4 +36,4 @@ body {
     height: 0px;
     transition: 0.5s;
   }
-}/*# sourceMappingURL=index.css.map */
+}

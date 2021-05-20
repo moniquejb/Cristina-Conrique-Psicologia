@@ -1,0 +1,13 @@
+@import "../../utilities/variables.scss";
+
+.resources-container {
+  height: 1000px;
+  width: 100%;
+  background-color: $main-grey;
+
+  h1 {
+    margin: 0 0 0 120px;
+    padding: 20px 0 0 0;
+    @include main-heading($dark-2-red);
+  }
+}

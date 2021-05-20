@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap");
+.prices-container {
+  height: 94vh;
+  width: 100%;
+  background-color: #F8F8F8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.prices-container h1 {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 6.5rem;
+  color: #D8993F;
+  text-align: center;
+  padding-top: 20px;
+}
+.prices-container .price-box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 480px;
+}
+.prices-container .price-box-container .price-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 450px;
+  width: 380px;
+  border-radius: 10px;
+  background-color: #E7E7E7;
+  margin: 30px 40px;
+  text-align: center;
+}
+.prices-container .price-box-container .price-box h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #9A746D;
+  padding: 0;
+  margin: 0;
+  padding-top: 20px;
+}
+.prices-container .price-box-container .price-box p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #9A746D;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 20px;
+}
+.prices-container .price-box-container .price-box .price-box-discount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #D39997;
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+}
+.prices-container .price-box-container .price-box .price-box-discount h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 5.4rem;
+  color: #F8F8F8;
+  padding: 0;
+  margin: 0;
+}
+.prices-container .price-box-container .price-box .price-box-discount h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2.1rem;
+  color: #F8F8F8;
+  padding: 0;
+  margin: 0;
+  margin-top: -10px;
+}
+.prices-container .price-box-container .price-box #price-weekly {
+  margin-top: 0;
+}
+.prices-container .prices-consult-text {
+  width: 1320px;
+  height: auto;
+}
+.prices-container .prices-consult-text p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #D8993F;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 2rem;
+}/*# sourceMappingURL=Prices.css.map */

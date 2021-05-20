@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap");
+.resources-container {
+  height: 1000px;
+  width: 100%;
+  background-color: #F8F8F8;
+}
+.resources-container h1 {
+  margin: 0 0 0 120px;
+  padding: 20px 0 0 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 6.5rem;
+  color: #9A746D;
+}/*# sourceMappingURL=Resources.css.map */

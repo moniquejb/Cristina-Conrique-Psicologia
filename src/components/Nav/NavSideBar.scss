@@ -1,0 +1,165 @@
+@import "../../utilities/variables.scss";
+
+.nav-side-container {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: $main-yellow;
+  position: fixed;
+  z-index: 10;
+  filter: drop-shadow(0 0 5px rgba($color: $dark-2-yellow, $alpha: 0.4));
+  transition: 0.5s;
+
+  ul {
+    height: 100vh;
+    width: 200px;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include custom-Roboto($main-grey, 1.5rem, 500);
+    display: flex;
+    transition: 0.5s;
+  }
+
+  li {
+    width: 200px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: 0.5s;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 200px;
+      height: 60px;
+      text-decoration: none;
+      cursor: default;
+      padding-left: 40px;
+      transition: 0.5s;
+    }
+  }
+
+  #nav-line-1, #nav-line-2 {
+    height: 2px;
+    width: 80%;
+    background-color: $light-yellow; 
+  }
+
+  #nav-line-1 {
+    margin: 10px 0 0 20px;
+  }
+
+  #nav-line-2 {
+    margin: 0 0 10px 20px;
+  }
+
+  .li-text:link {
+    @include custom-Roboto($main-grey, 1.5rem, 500);
+  }
+
+  .li-text:visited {
+    @include custom-Roboto($main-grey, 1.5rem, 500);
+  }
+
+  .li-text:hover {
+    background-color: rgba($color: $light-yellow, $alpha: 0.3);
+    font-size: 1.7rem;
+    cursor: pointer;
+  }
+
+  .li-text:active {
+    font-size: 1.5rem;
+  }
+
+  #li-img-side {
+    height: 100px;
+    margin: 15px 0 10px -15px;
+    padding: 5px 5px;
+
+    img {
+      height: 100px;
+      width: auto;
+      cursor: pointer;
+    }
+  }
+
+  .li-img {
+    display: none;
+    // height: 100px;
+    // padding: 0px 5px;
+  }
+
+  // img {
+  //   height: 90px;
+  //   width: auto;
+  //   cursor: pointer;
+  // }
+
+  .li-icon {
+    display: flex;
+    // flex-direction: row;
+    // align-items: center;
+    // justify-content: center;
+    //background-color: aqua;
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    transition: 0.5s;
+
+    a {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.5s;
+    }
+  }
+
+  svg {
+    transition: 0.5s;
+    height: 35px;
+    width: 35px;
+    fill: $main-grey;
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+}
+
+#terapia::before {
+  content: "";
+  display: block;
+  height: 85px;
+  margin-top: -85px;
+  visibility: hidden;
+}
+
+#sobre::before {
+  content: "";
+  display: block;
+  height: 80px;
+  margin-top: -80px;
+  visibility: hidden;
+}
+
+#contacto::before {
+  content: "";
+  display: block;
+  height: 80px;
+  margin-top: -80px;
+  visibility: hidden;
+}
+
+#tarifas::before {
+  content: "";
+  display: block;
+  height: 80px;
+  margin-top: -80px;
+  visibility: hidden;
+}

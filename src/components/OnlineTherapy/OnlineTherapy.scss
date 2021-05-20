@@ -1,0 +1,69 @@
+@import "../../utilities/variables.scss";
+
+.online-therapy-container {
+  width: 100%;
+  height: auto;
+  background-color: $main-blue;
+
+  h1 {
+    margin: 0;
+    padding: 50px 0 0 120px;
+    @include main-heading ($main-grey);
+  }
+
+  .online-therapy-text-img-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+
+    .online-therapy-text {
+      height: auto;
+      width: 60%;
+      min-width: 790px;
+
+      h3 {
+        @include secondary-heading ($main-grey);
+        padding-top: 20px;
+        padding-left: 120px;
+      }
+    
+      p {
+        @include bulk-text ($main-grey);
+        padding-left: 120px;
+        text-align: justify;
+        line-height: 2rem;
+      }
+    
+      ul {
+        padding-left: 120px;
+        
+        li {
+          @include bulk-text ($main-grey);
+          line-height: 2.5rem;
+          list-style-position: inside;
+          text-indent: -1.4em;
+          padding-left: 1.4em;
+        }
+      }
+    }
+
+    .online-therapy-img {
+      margin: 50px 120px 50px 50px;
+      height: auto;
+      width: 40%;
+      min-width: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      max-height: 800px;
+
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+} 

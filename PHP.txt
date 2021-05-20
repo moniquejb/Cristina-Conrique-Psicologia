@@ -1,0 +1,340 @@
+PHP Notes
+
+-PHP is an enhanced HTML file.
+-PHP lines disappear when executing, since PHP code is replaced by output.
+
+-Open/closing tag: <?php  ?>
+-Print to console: echo
+-Define a variable:
+    $x = 1;
+    $y = "foo";
+    $z = True;
+    $anything = null;
+
+-eg.
+    <?php $user = 'John'; ?>
+    <body>
+      Hello <?php echo $user; ?>!
+    </body>
+
+-Use arithmetic operators
+    $sum = $x + $y;
+    echo $sum;
+
+-PHP double quoted strings can format strings using defined variables
+    $name = "Jake";
+    echo "Your name is $name";
+
+ARRAYS
+
+-To print info about an arr use print_r()
+-PHP also uses zero based indices
+-eg.
+    $odd_numbers = [1,3,5,7,9];
+    $first_odd_number = $odd_numbers[0];
+    $second_odd_number = $odd_numbers[1];
+
+-Just like JS we can add new variables to an idex
+    $odd_numbers = [1,3,5,7,9];
+    $odd_numbers[5] = 11;
+    print_r($odd_numbers);
+
+-To deleta an iten from an arr, use the unset function
+    unset($odd_numbers[2]);
+
+-To return number of items in arr (like length) use count
+    $odd_numbers = [1,3,5,7,9];
+    echo count($odd_numbers);
+
+-To get the first item of arr use reset (or just arr[0])
+    $odd_numbers = [1,3,5,7,9];
+    $first_item = reset($odd_numbers);
+    echo $first_item;
+
+-To push items to the end of arr use array_push
+    $numbers = [1,2,3];
+    array_push($numbers, 4);
+
+-To pop an item from the end of arr use array_pop
+-To push item to beginnig of arr use array_unshift
+-To pop an item from neginning of arr use array_unshift
+
+-To concatenate an arr use array_merge
+    $odd_numbers = [1,3,5,7,9];
+    $even_numbers = [2,4,6,8,10];
+    $all_numbers = array_merge($odd_numbers, $even_numbers);
+
+-To sort an arr use sort, use rsort to reverse sort
+-Sorting is done on the input, does not return new arr
+    $numbers = [4,2,3,1,5];
+    sort($numbers);
+
+-To return new arr with certain part of an arr use array_slice
+    $numbers = [1,2,3,4,5,6];
+    print_r(array_slice($numbers, 3, 2)); //discards first 3 and takes next two items
+
+-To remove slice returned from original arr use array_splice
+
+ARRAY KEYS
+
+-We can use arrays almost like objects in JS by giving them KEYS
+-eg.
+    $phone_numbers = [
+      "Alex" => "415-235-8573",
+      "Jessica" => "415-492-4856",
+    ];
+
+    print_r($phone_numbers);
+    echo "Alex's phone number is "$phone_numbers["Alex"]";
+
+-To add an item to an existing arr we use the brackets operators
+    $phone_numbers["Michael"] = "415-955-3857";
+
+-To check if a key exists in an arr we use array_key_exists
+    $phone_numbers = [
+      "Alex" => "415-235-8573",
+      "Jessica" => "415-492-4856",
+    ];
+
+    if (array_key_exists("Alex", $phone_numbers)) {
+        echo "Alex's phone number is "$phone_numbers["Alex"]";
+    } else {
+        echo "Alex's phone number is not in the phone book!";
+    }
+
+-To only extracts the keys from an arr we use array_keys
+    print_r(array_keys($phone_numbers));
+
+-To only get the values of an arr we use array_values
+    print_r(array_values($phone_numbers));
+
+MULITDIMENSIONAL ARRAYS
+
+-An array that contains other arrays as a value for a specific index
+-eg.
+    $multiArray = [ 
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+    ];
+
+-To get a value from any index from the inner array
+    print_r($multiArray[0][1])
+
+-You can also create an associative multidimensional array
+    $people = [
+        "john_doe" => [
+            "name" => "John",
+            "surname" => "Doe",
+            "age" => 25,
+        ],
+        "jane_doe" => [
+            "name" => "Jane",
+            "surname" => "Doe",
+            "age" => 25,
+        ]
+    ];
+
+    print_r($people);
+    print_r($people['john_doe']['name']);
+
+STRINGS
+
+-We can concatenate strings with the dot operators
+    $first_name = "John";
+    $last_name = "Doe";
+    $name = $first_name . " " . $last_name;
+    echo $name;
+
+-To measure the length of a string we use strlen()
+
+-To cut part of a string and return it as a new string we use substr
+    $filename = "image.png";
+    $extension = substr($filename, strlen($filename) - 3);
+    echo "The extension of the file is $extension";
+
+-To split a string we use explode()
+    $fruits = "apple,banana,orange";
+    $fruit_list = explode(",", $fruits);
+
+-To join a string we use implode
+    $fruit_list = ["apple","banana","orange"];
+    $fruits = implode(",", $fruit_list);  
+
+FOR LOOPS
+
+-eg.
+    $odd_numbers = [1,3,5,7,9];
+    for ($i = 0; $i < count($odd_numbers); $i++) {
+        $odd_number = $odd_numbers[$i];
+        echo $odd_number . "\n";
+    }
+
+FOREACH LOOPS
+
+-eg. 1
+    $odd_numbers = [1,3,5,7,9];
+    foreach ($odd_numbers as $odd_number) {
+      echo $odd_number . "\n";
+    }
+
+-eg. 2
+    $phone_numbers = [
+      "Alex" => "415-235-8573",
+      "Jessica" => "415-492-4856",
+    ];
+
+    foreach ($phone_numbers as $name => $number) {
+      echo "$name's number is $number.\n";
+    }
+
+WHILE LOOPS
+
+-eg.
+    $counter = 0;
+
+    while ($counter < 10) {
+        $counter += 1;
+        echo "Executing - counter is $counter.\n";
+    }
+
+FLOW STATEMENTS
+
+-Loops can be controlled using break and continue flow statements 
+-break immediately quits the loop 
+    $counter = 0;
+
+    while ($counter < 10) {
+        $counter += 1;
+
+        if ($counter > 8) {
+            echo "counter is larger than 8, stopping the loop.\n";
+            break;
+        }
+
+        if ($counter % 2 == 0) {
+            echo "Skipping number $counter because it is even.\n";
+            continue;
+        }
+
+        echo "Executing - counter is $counter.\n";
+    }
+
+-continue returns to the top of the while loop, re-checking if loop condition is met 
+    $counter = 0;
+
+    while ($counter < 10) {
+        $counter += 1;
+
+        if ($counter % 2 == 0) {
+            echo "Skipping number $counter because it is even.\n";
+            continue;
+        }
+
+        echo "Executing - counter is $counter.\n";
+    }
+
+FUNCTIONS
+
+-eg.
+    function sum ($num1, $num2) {
+      return $num1 + $num2;
+    }
+
+    echo sum (5, 10);
+
+-you can define functions in one php doc and import them into another to use them
+    include("sum.php");
+
+OBJECTS AND CLASSES
+
+-eg.
+    class Student {
+        // constructor
+        public function __construct($first_name, $last_name) {
+            $this->first_name = $first_name;
+            $this->last_name = $last_name;
+        }
+
+        public function say_name() {
+            echo "My name is " . $this->first_name . " " . $this->last_name . ".\n";
+        }
+    }
+
+    $alex = new Student("Alex", "Jones");
+    $alex->say_name();
+
+-Important definitions related to objects:
+    -Classes define how objects behave. Classes do not contain data.
+    -Objects are instances of classes, which contain data.
+    -Members are variables that belong to an object.
+    -Methods are functions that belong to an object, and have access to its members.
+    -Constructor is a special method that is executed when an object is created.
+
+INHERITANCE
+
+-This feature allows us to reuse code we've written and extend it
+    class MathStudent extends Student {
+        function sum_numbers($first_number, $second_number) {
+            $sum = $first_number + $second_number;
+            echo $this->first_name . " says that " . $first_number . " + " . $second_number . " is " . $sum;
+        }
+    }
+
+PUBLIC & PRIVATE FUNCTIONS 
+
+-We can use the public and private modifiers respectively to define functions which can be accessed from outside the object or not
+    class Student {
+        // constructor should be public
+        public function __construct($first_name, $last_name) {
+            $this->first_name = $first_name;
+            $this->last_name = $last_name;
+        }
+
+        // for external use
+        public function say_name() {
+            echo "My name is " . $this->full_name() . "\n";
+        }
+
+        // for internal use
+        private function full_name() {
+            return $this->first_name . " " . $this->last_name;
+        }
+    }
+
+    $alex = new Student("Alex", "Jones");
+
+    $alex->say_name();
+
+    // this will not work: echo $alex->full_name();
+
+EXCEPTIONS
+
+-An exception can be thrown, and caught ("catched") within PHP
+-Code may be surrounded in a try block, to facilitate the catching of potential exceptions.
+-Each try must have at least one corresponding catch or finally block
+    try {
+      echo 2 / 0;
+    } catch (Exception $e) {
+      echo "Caught exception: Division by zero!";
+    }
+
+-Multiple catch blocks can be used to catch different classes of exceptions
+-Exceptions can be thrown (or re-thrown) within a catch block
+    if (4/2 == 2) {
+      echo "Right!";
+    } else {
+      throw new Exception("Wrong answer!");
+    }
+
+FINALLY blocks
+
+-a finally block may also be specified after or instead of catch blocks
+-Code within the finally block will always be executed after the try and catch blocks, regardless of whether an exception has been thrown, and before normal execution resumes
+    try {
+      echo 4/0;
+    } catch (Exception $e) {
+      echo "Divided by zero!";
+    } finally {
+      echo "This will be outputed even if exception will happen!";
+    }
