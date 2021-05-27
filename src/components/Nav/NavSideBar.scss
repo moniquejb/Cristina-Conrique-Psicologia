@@ -1,5 +1,147 @@
 @import "../../utilities/variables.scss";
 
+.nav-side-dropdown-container-closed {
+  background-color: $main-yellow;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  transition: width 0.3s;
+  z-index: 11;
+
+  .nav-side-dropdown-icon-closed {
+    cursor: pointer;
+    height: 30px;
+    width: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    position: relative;
+
+    .nav-side-dropdown-bar-closed {
+      width: 38px;
+      height: 7px;
+      border-radius: 5px;
+      background-color: $main-grey;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &:hover {
+      .nav-side-dropdown-bar-closed {
+        background-color: $light-yellow;
+      }
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
+  }
+}
+
+.nav-side-bg {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($color: #362000, $alpha: 0.8);
+  position: fixed;
+  z-index: 9;
+}
+
+.nav-side-dropdown-container {
+  height: 50px;
+  width: 200px;
+  //background-color: $main-blue;
+  display: flex;
+  //flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  z-index: 11;
+  //padding: 15px 0 5px 15px;
+
+  .nav-side-dropdown-icon {
+    cursor: pointer;
+    height: 30px;
+    width: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px; //maybe should be 10px
+    position: relative;
+    //background-color: aqua;
+
+    .nav-side-dropdown-bar {
+      width: 38px;
+      height: 7px;
+      border-radius: 5px;
+      background-color: $main-grey;
+
+      &:nth-child(even) {
+        visibility: hidden;
+      }
+
+      &:first-child {
+        transform: rotate(45deg);
+        position: absolute;
+        top: 10px;
+        transition: transform 0.5s;
+      }
+
+      &:last-child {
+        position: absolute;
+        transform: rotate(-45deg);
+        top: 10px;
+        transition: transform 0.5s;
+      }
+    }
+
+    &:hover {
+      .nav-side-dropdown-bar {
+        background-color: $light-yellow;
+      }
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+
+    // &:hover {
+    //   .nav-side-dropdown-bar {
+    //     &:nth-child(even) {
+    //       visibility: hidden;
+    //     }
+
+    //     &:first-child {
+    //       //transform: rotate(225deg);
+    //       transform: rotate(45deg);
+    //       position: absolute;
+    //       top: 10px;
+    //       //transition: transform 0.5s;
+    //     }
+
+    //     &:last-child {
+    //       position: absolute;
+    //       //transform: rotate(315deg);
+    //       transform: rotate(-45deg);
+    //       top: 10px;
+    //       //transition: transform 0.5s;
+    //     }
+    //   }
+    // }
+
+    // &:hover {
+    //   .nav-side-dropdown-bar {
+    //     transform: scale(0.9);
+    //     background-color: $light-yellow;
+    //   }
+    // }
+  }
+}
+
 .nav-side-container {
   margin: 0;
   padding: 0;
@@ -9,7 +151,6 @@
   position: fixed;
   z-index: 10;
   filter: drop-shadow(0 0 5px rgba($color: $dark-2-yellow, $alpha: 0.4));
-  transition: 0.5s;
 
   ul {
     height: 100vh;
@@ -20,7 +161,7 @@
     list-style: none;
     @include custom-Roboto($main-grey, 1.5rem, 500);
     display: flex;
-    transition: 0.5s;
+    //transition: 0.5s;
   }
 
   li {
@@ -29,7 +170,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    transition: 0.5s;
+    //transition: 0.5s;
 
     a {
       display: flex;
@@ -40,22 +181,23 @@
       text-decoration: none;
       cursor: default;
       padding-left: 40px;
-      transition: 0.5s;
+      //transition: 0.5s;
     }
   }
 
-  #nav-line-1, #nav-line-2 {
+  #nav-line-1,
+  #nav-line-2 {
     height: 2px;
-    width: 80%;
-    background-color: $light-yellow; 
+    width: 150px;
+    background-color: $light-yellow;
   }
 
   #nav-line-1 {
-    margin: 10px 0 0 20px;
+    margin: 10px 0 0 25px;
   }
 
   #nav-line-2 {
-    margin: 0 0 10px 20px;
+    margin: 0 0 10px 25px;
   }
 
   .li-text:link {
@@ -78,7 +220,7 @@
 
   #li-img-side {
     height: 100px;
-    margin: 15px 0 10px -15px;
+    margin: 60px 0 10px -15px;
     padding: 5px 5px;
 
     img {
@@ -106,10 +248,10 @@
     // align-items: center;
     // justify-content: center;
     //background-color: aqua;
-    width: 100%;
+    width: 180px;
     height: 60px;
-    margin: 0;
-    transition: 0.5s;
+    margin-left: 10px;
+    //transition: 0.5s;
 
     a {
       padding: 0;
@@ -117,12 +259,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: 0.5s;
+      //transition: 0.5s;
     }
   }
 
   svg {
-    transition: 0.5s;
+    //transition: 0.5s;
     height: 35px;
     width: 35px;
     fill: $main-grey;
@@ -132,34 +274,120 @@
   }
 }
 
-#terapia::before {
-  content: "";
-  display: block;
-  height: 85px;
-  margin-top: -85px;
-  visibility: hidden;
+// #terapia::before {
+//   content: "";
+//   display: block;
+//   height: 85px;
+//   margin-top: -85px;
+//   visibility: hidden;
+// }
+
+// #sobre::before {
+//   content: "";
+//   display: block;
+//   height: 80px;
+//   margin-top: -80px;
+//   visibility: hidden;
+// }
+
+// #contacto::before {
+//   content: "";
+//   display: block;
+//   height: 80px;
+//   margin-top: -80px;
+//   visibility: hidden;
+// }
+
+// #tarifas::before {
+//   content: "";
+//   display: block;
+//   height: 80px;
+//   margin-top: -80px;
+//   visibility: hidden;
+// }
+
+@media only screen and (max-width: 361px) {
+  .nav-side-container {  
+    ul {
+      @include custom-Roboto($main-grey, 1.3rem, 500);
+    }
+  
+    li {
+      height: 40px;
+  
+      a {
+        height: 40px;
+        //padding-left: 40px;
+      }
+    }
+
+    .li-text:link {
+      @include custom-Roboto($main-grey, 1.3rem, 500);
+    }
+  
+    .li-text:visited {
+      @include custom-Roboto($main-grey, 1.3rem, 500);
+    }
+  
+    .li-text:hover {
+      font-size: 1.4rem;
+    }
+  
+    .li-text:active {
+      font-size: 1.3rem;
+    }
+
+    .li-icon {
+      height: 40px;
+    }
+  }
 }
 
-#sobre::before {
-  content: "";
-  display: block;
-  height: 80px;
-  margin-top: -80px;
-  visibility: hidden;
-}
+@media only screen and (max-height: 701px) {
+  .nav-side-container {  
+    ul {
+      @include custom-Roboto($main-grey, 1.3rem, 500);
+    }
+  
+    li {
+      height: 40px;
+  
+      a {
+        height: 40px;
+        //padding-left: 40px;
+      }
+    }
 
-#contacto::before {
-  content: "";
-  display: block;
-  height: 80px;
-  margin-top: -80px;
-  visibility: hidden;
-}
+    #li-img-side {
+      height: 60px;
+      margin: 50px 0 10px 0px;
+      padding: 5px 5px;
+  
+      img {
+        height: 80px;
+        width: auto;
+        cursor: pointer;
+      }
+    }
 
-#tarifas::before {
-  content: "";
-  display: block;
-  height: 80px;
-  margin-top: -80px;
-  visibility: hidden;
+    .li-text:link {
+      @include custom-Roboto($main-grey, 1.3rem, 500);
+    }
+  
+    .li-text:visited {
+      @include custom-Roboto($main-grey, 1.3rem, 500);
+    }
+  
+    .li-text:hover {
+      font-size: 1.4rem;
+    }
+  
+    .li-text:active {
+      font-size: 1.3rem;
+    }
+
+    .li-icon {
+      height: 40px;
+    }
+  }
 }

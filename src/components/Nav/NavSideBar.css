@@ -1,4 +1,95 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap");
+.nav-side-dropdown-container-closed {
+  background-color: #F9BE7B;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  transition: width 0.3s;
+  z-index: 11;
+}
+.nav-side-dropdown-container-closed .nav-side-dropdown-icon-closed {
+  cursor: pointer;
+  height: 30px;
+  width: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  position: relative;
+}
+.nav-side-dropdown-container-closed .nav-side-dropdown-icon-closed .nav-side-dropdown-bar-closed {
+  width: 38px;
+  height: 7px;
+  border-radius: 5px;
+  background-color: #F8F8F8;
+}
+.nav-side-dropdown-container-closed .nav-side-dropdown-icon-closed .nav-side-dropdown-bar-closed:first-child {
+  margin-top: 0;
+}
+.nav-side-dropdown-container-closed .nav-side-dropdown-icon-closed:hover .nav-side-dropdown-bar-closed {
+  background-color: #FDEDDD;
+}
+.nav-side-dropdown-container-closed .nav-side-dropdown-icon-closed:active {
+  transform: scale(0.9);
+}
+
+.nav-side-bg {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(54, 32, 0, 0.8);
+  position: fixed;
+  z-index: 9;
+}
+
+.nav-side-dropdown-container {
+  height: 50px;
+  width: 200px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  z-index: 11;
+}
+.nav-side-dropdown-container .nav-side-dropdown-icon {
+  cursor: pointer;
+  height: 30px;
+  width: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  position: relative;
+}
+.nav-side-dropdown-container .nav-side-dropdown-icon .nav-side-dropdown-bar {
+  width: 38px;
+  height: 7px;
+  border-radius: 5px;
+  background-color: #F8F8F8;
+}
+.nav-side-dropdown-container .nav-side-dropdown-icon .nav-side-dropdown-bar:nth-child(even) {
+  visibility: hidden;
+}
+.nav-side-dropdown-container .nav-side-dropdown-icon .nav-side-dropdown-bar:first-child {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 10px;
+  transition: transform 0.5s;
+}
+.nav-side-dropdown-container .nav-side-dropdown-icon .nav-side-dropdown-bar:last-child {
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 10px;
+  transition: transform 0.5s;
+}
+.nav-side-dropdown-container .nav-side-dropdown-icon:hover .nav-side-dropdown-bar {
+  background-color: #FDEDDD;
+}
+.nav-side-dropdown-container .nav-side-dropdown-icon:active {
+  transform: scale(0.9);
+}
+
 .nav-side-container {
   margin: 0;
   padding: 0;
@@ -8,7 +99,6 @@
   position: fixed;
   z-index: 10;
   filter: drop-shadow(0 0 5px rgba(216, 153, 63, 0.4));
-  transition: 0.5s;
 }
 .nav-side-container ul {
   height: 100vh;
@@ -22,7 +112,6 @@
   font-size: 1.5rem;
   color: #F8F8F8;
   display: flex;
-  transition: 0.5s;
 }
 .nav-side-container li {
   width: 200px;
@@ -30,7 +119,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  transition: 0.5s;
 }
 .nav-side-container li a {
   display: flex;
@@ -41,18 +129,18 @@
   text-decoration: none;
   cursor: default;
   padding-left: 40px;
-  transition: 0.5s;
 }
-.nav-side-container #nav-line-1, .nav-side-container #nav-line-2 {
+.nav-side-container #nav-line-1,
+.nav-side-container #nav-line-2 {
   height: 2px;
-  width: 80%;
+  width: 150px;
   background-color: #FDEDDD;
 }
 .nav-side-container #nav-line-1 {
-  margin: 10px 0 0 20px;
+  margin: 10px 0 0 25px;
 }
 .nav-side-container #nav-line-2 {
-  margin: 0 0 10px 20px;
+  margin: 0 0 10px 25px;
 }
 .nav-side-container .li-text:link {
   font-family: "Roboto", sans-serif;
@@ -76,7 +164,7 @@
 }
 .nav-side-container #li-img-side {
   height: 100px;
-  margin: 15px 0 10px -15px;
+  margin: 60px 0 10px -15px;
   padding: 5px 5px;
 }
 .nav-side-container #li-img-side img {
@@ -89,10 +177,9 @@
 }
 .nav-side-container .li-icon {
   display: flex;
-  width: 100%;
+  width: 180px;
   height: 60px;
-  margin: 0;
-  transition: 0.5s;
+  margin-left: 10px;
 }
 .nav-side-container .li-icon a {
   padding: 0;
@@ -100,10 +187,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.5s;
 }
 .nav-side-container svg {
-  transition: 0.5s;
   height: 35px;
   width: 35px;
   fill: #F8F8F8;
@@ -112,34 +197,83 @@
   transform: scale(1.15);
 }
 
-#terapia::before {
-  content: "";
-  display: block;
-  height: 85px;
-  margin-top: -85px;
-  visibility: hidden;
+@media only screen and (max-width: 361px) {
+  .nav-side-container ul {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #F8F8F8;
+  }
+  .nav-side-container li {
+    height: 40px;
+  }
+  .nav-side-container li a {
+    height: 40px;
+  }
+  .nav-side-container .li-text:link {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #F8F8F8;
+  }
+  .nav-side-container .li-text:visited {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #F8F8F8;
+  }
+  .nav-side-container .li-text:hover {
+    font-size: 1.4rem;
+  }
+  .nav-side-container .li-text:active {
+    font-size: 1.3rem;
+  }
+  .nav-side-container .li-icon {
+    height: 40px;
+  }
 }
-
-#sobre::before {
-  content: "";
-  display: block;
-  height: 80px;
-  margin-top: -80px;
-  visibility: hidden;
-}
-
-#contacto::before {
-  content: "";
-  display: block;
-  height: 80px;
-  margin-top: -80px;
-  visibility: hidden;
-}
-
-#tarifas::before {
-  content: "";
-  display: block;
-  height: 80px;
-  margin-top: -80px;
-  visibility: hidden;
+@media only screen and (max-height: 701px) {
+  .nav-side-container ul {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #F8F8F8;
+  }
+  .nav-side-container li {
+    height: 40px;
+  }
+  .nav-side-container li a {
+    height: 40px;
+  }
+  .nav-side-container #li-img-side {
+    height: 60px;
+    margin: 50px 0 10px 0px;
+    padding: 5px 5px;
+  }
+  .nav-side-container #li-img-side img {
+    height: 80px;
+    width: auto;
+    cursor: pointer;
+  }
+  .nav-side-container .li-text:link {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #F8F8F8;
+  }
+  .nav-side-container .li-text:visited {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #F8F8F8;
+  }
+  .nav-side-container .li-text:hover {
+    font-size: 1.4rem;
+  }
+  .nav-side-container .li-text:active {
+    font-size: 1.3rem;
+  }
+  .nav-side-container .li-icon {
+    height: 40px;
+  }
 }/*# sourceMappingURL=NavSideBar.css.map */

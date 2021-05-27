@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,6 +7,7 @@ import {
 import './App.css';
 import Nav from '../components/Nav/Nav.js';
 import NavSideBar from '../components/Nav/NavSideBar.js';
+//import NavCompactBar from '../components/Nav/NavCompactBar.js';
 import Landing from '../components/Landing/Landing.js';
 import Therapy from '../components/Therapy/Therapy.js';
 import OnlineTherapy from '../components/OnlineTherapy/OnlineTherapy.js';
@@ -19,13 +20,44 @@ import FAQs from '../components/FAQs/FAQs.js';
 import Prices from '../components/Prices/Prices.js';
 import Resources from '../components/Resources/Resources.js';
 
+let width = document.documentElement.clientWidth;
+//let height = document.documentElement.clientHeight;
+
 function App() {
-  const [toggleLegal, isToggleLegal] = useState(false); 
+  const [toggleLegal, isToggleLegal] = useState(false);
+  const [navOrientation, isNavOrientation] = useState('horizontal');
+  const [windowWidth, isWindowWidth] = useState(width);
+  //const [windowHeight, isWindowHeight] = useState(height);
+  const [navType, isNavType] = useState(width >= 915 ? <Nav /> : <NavSideBar />);
 
   const handleToggleLegal = () => {
     console.log("clicked", toggleLegal);
     isToggleLegal(toggleLegal ? false : true);
   }
+
+  function getWindowSize() {
+    // Get width and height of the window excluding scrollbars
+    isWindowWidth(document.documentElement.clientWidth);
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", getWindowSize);
+
+    if (navOrientation === 'horizontal' && windowWidth < 915) {
+      isNavOrientation('vertical');
+      isNavType(<NavSideBar />);
+    }
+    
+    if (navOrientation === 'vertical' && windowWidth >= 915) {
+      isNavOrientation('horizontal');
+      isNavType(<Nav />);
+    }
+
+    return () => {
+      window.removeEventListener("resize", getWindowSize);
+    };
+  },
+    [windowWidth, navOrientation, navType]);
 
   return (
     <Router>
@@ -42,18 +74,18 @@ function App() {
 
         <Switch>
           <Route path="/recursos">
-            <NavSideBar />
+            {navType}
             <Resources />
             <Footer />
           </Route>
           <Route path="/faqs">
-            <Nav />
+            {navType}
             <FAQs />
             <Footer />
           </Route>
           <Route path="/">
             <LegalWarning handleToggleLegal={handleToggleLegal} toggleLegal={toggleLegal} />
-            <Nav />
+            {navType}
             <Landing />
             <Therapy />
             <OnlineTherapy />

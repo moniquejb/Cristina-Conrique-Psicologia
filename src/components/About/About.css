@@ -38,6 +38,11 @@
   color: #F8F8F8;
   text-align: center;
 }
+@media only screen and (max-width: 361px) {
+  .about-container .about-h1-text-container h1 {
+    font-size: 4rem;
+  }
+}
 .about-container .about-h1-text-container .about-text {
   width: 895px;
   min-width: 400px;

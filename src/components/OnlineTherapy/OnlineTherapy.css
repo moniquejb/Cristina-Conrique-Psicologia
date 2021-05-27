@@ -12,6 +12,11 @@
   font-size: 6.5rem;
   color: #F8F8F8;
 }
+@media only screen and (max-width: 361px) {
+  .online-therapy-container h1 {
+    font-size: 4rem;
+  }
+}
 .online-therapy-container .online-therapy-text-img-container {
   display: flex;
   flex-direction: row;

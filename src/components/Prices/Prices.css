@@ -17,6 +17,11 @@
   text-align: center;
   padding-top: 20px;
 }
+@media only screen and (max-width: 361px) {
+  .prices-container h1 {
+    font-size: 4rem;
+  }
+}
 .prices-container .price-box-container {
   display: flex;
   justify-content: center;

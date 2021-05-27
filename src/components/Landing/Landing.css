@@ -50,6 +50,11 @@
   font-size: 6.5rem;
   color: #F8F8F8;
 }
+@media only screen and (max-width: 361px) {
+  .landing-wrapper .landing-top h1 {
+    font-size: 4rem;
+  }
+}
 .landing-wrapper .landing-top h2 {
   margin: 0;
   padding: 0;

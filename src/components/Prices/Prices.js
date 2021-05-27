@@ -14,10 +14,10 @@ const Prices = () => {
           <div className='price-box'>
             <h3>Plan Semanal</h3>
             <div className='price-box-discount'>
-              <h2></h2>
-              <h3 id='price-weekly'>Consultar</h3>
+              {/* <h2></h2> */}
+              <h3 id='price-weekly'>Ya</h3>
             </div>
-            <p>1 Sesión por semana<br/>(60 minutos)</p>
+            <p>1 Sesión de 1 hora <br/>(pago semanal)</p>
           </div>
           <div className='price-box'>
             <h3>Plan Mensual</h3>
