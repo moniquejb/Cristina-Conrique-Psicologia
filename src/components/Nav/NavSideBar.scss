@@ -7,6 +7,7 @@
   position: fixed;
   transition: width 0.3s;
   z-index: 11;
+  filter: drop-shadow(0 0 5px rgba($color: $dark-2-yellow, $alpha: 0.3));
 
   .nav-side-dropdown-icon-closed {
     cursor: pointer;
@@ -70,7 +71,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 10px; //maybe should be 10px
+    margin: 10px;
     position: relative;
     //background-color: aqua;
 
@@ -306,43 +307,6 @@
 //   visibility: hidden;
 // }
 
-@media only screen and (max-width: 361px) {
-  .nav-side-container {  
-    ul {
-      @include custom-Roboto($main-grey, 1.3rem, 500);
-    }
-  
-    li {
-      height: 40px;
-  
-      a {
-        height: 40px;
-        //padding-left: 40px;
-      }
-    }
-
-    .li-text:link {
-      @include custom-Roboto($main-grey, 1.3rem, 500);
-    }
-  
-    .li-text:visited {
-      @include custom-Roboto($main-grey, 1.3rem, 500);
-    }
-  
-    .li-text:hover {
-      font-size: 1.4rem;
-    }
-  
-    .li-text:active {
-      font-size: 1.3rem;
-    }
-
-    .li-icon {
-      height: 40px;
-    }
-  }
-}
-
 @media only screen and (max-height: 701px) {
   .nav-side-container {  
     ul {
@@ -391,3 +355,41 @@
     }
   }
 }
+
+@media only screen and (max-width: 361px) {
+  .nav-side-container {  
+    ul {
+      @include custom-Roboto($main-grey, 1.3rem, 500);
+    }
+  
+    li {
+      height: 40px;
+  
+      a {
+        height: 40px;
+        //padding-left: 40px;
+      }
+    }
+
+    .li-text:link {
+      @include custom-Roboto($main-grey, 1.3rem, 500);
+    }
+  
+    .li-text:visited {
+      @include custom-Roboto($main-grey, 1.3rem, 500);
+    }
+  
+    .li-text:hover {
+      font-size: 1.4rem;
+    }
+  
+    .li-text:active {
+      font-size: 1.3rem;
+    }
+
+    .li-icon {
+      height: 40px;
+    }
+  }
+}
+

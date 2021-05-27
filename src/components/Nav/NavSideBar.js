@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
 import { FacebookIcon, InstagramIcon, SkypeIcon } from '../../utilities/icons.js';
 import './NavSideBar.css';
 
 const NavSideBar = () => {
-  const [sideNavOpen, isSideNavOpen] = useState(false);
+  const [sideNavOpen, setSideNavOpen] = useState(false);
   const location = useLocation();
 
   const handleSideNavOpen = () => {
-    isSideNavOpen(prev => prev ? false : true);
+    setSideNavOpen(prev => prev ? false : true);
   }
 
   const handleNavLanding = () => {
     if (location.pathname === '/') {
-      isSideNavOpen(false);
+      setSideNavOpen(false);
     }
   }
 

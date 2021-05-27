@@ -1,0 +1,215 @@
+@import "../../utilities/variables.scss";
+
+.nav-compact-dropdown-container-closed {
+  background-color: $main-yellow;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  transition: width 0.3s;
+  z-index: 11;
+  filter: drop-shadow(0 0 5px rgba($color: $dark-2-yellow, $alpha: 0.3));
+
+  .nav-compact-dropdown-icon-closed {
+    cursor: pointer;
+    height: 30px;
+    width: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    position: relative;
+
+    .nav-compact-dropdown-bar-closed {
+      width: 38px;
+      height: 7px;
+      border-radius: 5px;
+      background-color: $main-grey;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &:hover {
+      .nav-compact-dropdown-bar-closed {
+        background-color: $light-yellow;
+      }
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
+  }
+}
+
+.nav-compact-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100px;
+  background-color: $main-yellow;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  filter: drop-shadow(0 0 5px rgba($color: $dark-2-yellow, $alpha: 0.3));
+
+  .li-img {
+    height: 100px;
+    width: 20%;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    height: auto;
+    max-height: 80px;
+    width: auto;
+    cursor: pointer;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    width: 75%;
+    list-style: none;
+    @include custom-Roboto($main-grey, 1.3rem, 500);
+    display: flex;
+  }
+
+  li {
+    width: 100%;
+    min-width: 20px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 50px;
+      text-decoration: none;
+      cursor: default;
+      //padding-left: 5px;
+    }
+  }
+
+  .li-text:link {
+    @include custom-Roboto($main-grey, 1.3rem, 500);
+  }
+
+  .li-text:visited {
+    @include custom-Roboto($main-grey, 1.3rem, 500);
+  }
+
+  .li-text:hover {
+    background-color: rgba($color: $light-yellow, $alpha: 0.3);
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+
+  .li-text:active {
+    font-size: 1.3rem;
+  }
+
+  #li-icon {
+    display: flex;
+    align-items: center;
+    a {
+      padding: 0px 8px;
+    }
+  }
+
+  svg {
+    margin: -4px;
+    height: 20px;
+    width: 20px;
+    fill: $main-grey;
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+}
+
+.nav-droplet {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  height: 30px;
+  width: 60px;
+  border-radius: 0 0 150px 150px;
+  background-color: $main-yellow;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    .nav-compact-dropdown-container {
+      .nav-compact-dropdown-icon {
+        .nav-compact-dropdown-bar {
+          background-color: $light-yellow;
+        }
+      }
+    }
+  }
+}
+
+
+
+.nav-compact-dropdown-container {
+  height: 20px;
+  width: 20px;
+  //background-color: $main-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 15;
+  top: 3px;
+
+  .nav-compact-dropdown-icon {
+    height: 20px;
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //margin: 10px;
+    position: relative;
+    //background-color: aqua;
+
+    .nav-compact-dropdown-bar {
+      width: 20px;
+      height: 3.5px;
+      border-radius: 5px;
+      background-color: $main-grey;
+
+      &:nth-child(even) {
+        visibility: hidden;
+      }
+
+      &:first-child {
+        transform: rotate(45deg);
+        position: absolute;
+        //top: 10px;
+        transition: 0.5s;
+      }
+
+      &:last-child {
+        position: absolute;
+        transform: rotate(-45deg);
+        //top: 10px;
+        transition: 0.5s;
+      }
+    }
+  }
+}

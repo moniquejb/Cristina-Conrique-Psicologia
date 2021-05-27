@@ -6,6 +6,7 @@
   position: fixed;
   transition: width 0.3s;
   z-index: 11;
+  filter: drop-shadow(0 0 5px rgba(216, 153, 63, 0.3));
 }
 .nav-side-dropdown-container-closed .nav-side-dropdown-icon-closed {
   cursor: pointer;
@@ -197,7 +198,7 @@
   transform: scale(1.15);
 }
 
-@media only screen and (max-width: 361px) {
+@media only screen and (max-height: 701px) {
   .nav-side-container ul {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -209,6 +210,16 @@
   }
   .nav-side-container li a {
     height: 40px;
+  }
+  .nav-side-container #li-img-side {
+    height: 60px;
+    margin: 50px 0 10px 0px;
+    padding: 5px 5px;
+  }
+  .nav-side-container #li-img-side img {
+    height: 80px;
+    width: auto;
+    cursor: pointer;
   }
   .nav-side-container .li-text:link {
     font-family: "Roboto", sans-serif;
@@ -232,7 +243,7 @@
     height: 40px;
   }
 }
-@media only screen and (max-height: 701px) {
+@media only screen and (max-width: 361px) {
   .nav-side-container ul {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -244,16 +255,6 @@
   }
   .nav-side-container li a {
     height: 40px;
-  }
-  .nav-side-container #li-img-side {
-    height: 60px;
-    margin: 50px 0 10px 0px;
-    padding: 5px 5px;
-  }
-  .nav-side-container #li-img-side img {
-    height: 80px;
-    width: auto;
-    cursor: pointer;
   }
   .nav-side-container .li-text:link {
     font-family: "Roboto", sans-serif;

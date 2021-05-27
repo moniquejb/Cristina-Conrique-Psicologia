@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import './App.css';
 import Nav from '../components/Nav/Nav.js';
-import NavSideBar from '../components/Nav/NavSideBar.js';
+//import NavSideBar from '../components/Nav/NavSideBar.js';
 //import NavCompactBar from '../components/Nav/NavCompactBar.js';
 import Landing from '../components/Landing/Landing.js';
 import Therapy from '../components/Therapy/Therapy.js';
@@ -21,43 +21,52 @@ import Prices from '../components/Prices/Prices.js';
 import Resources from '../components/Resources/Resources.js';
 
 let width = document.documentElement.clientWidth;
-//let height = document.documentElement.clientHeight;
+let height = document.documentElement.clientHeight;
 
 function App() {
-  const [toggleLegal, isToggleLegal] = useState(false);
-  const [navOrientation, isNavOrientation] = useState('horizontal');
-  const [windowWidth, isWindowWidth] = useState(width);
-  //const [windowHeight, isWindowHeight] = useState(height);
-  const [navType, isNavType] = useState(width >= 915 ? <Nav /> : <NavSideBar />);
+  const [toggleLegal, setToggleLegal] = useState(false);
+  const [navOrientation, setNavOrientation] = useState('horizontal');
+  const [windowWidth, setWindowWidth] = useState(width);
+  const [windowHeight, setWindowHeight] = useState(height);
+  //const [navType, setNavType] = useState(width >= 915 ? <Nav /> : <NavSideBar />);
 
   const handleToggleLegal = () => {
     console.log("clicked", toggleLegal);
-    isToggleLegal(toggleLegal ? false : true);
+    setToggleLegal(toggleLegal ? false : true);
   }
 
   function getWindowSize() {
     // Get width and height of the window excluding scrollbars
-    isWindowWidth(document.documentElement.clientWidth);
+    setWindowWidth(document.documentElement.clientWidth);
+    setWindowHeight(document.documentElement.clientHeight);
   }
 
   useEffect(() => {
     window.addEventListener("resize", getWindowSize);
 
-    if (navOrientation === 'horizontal' && windowWidth < 915) {
-      isNavOrientation('vertical');
-      isNavType(<NavSideBar />);
-    }
-    
-    if (navOrientation === 'vertical' && windowWidth >= 915) {
-      isNavOrientation('horizontal');
-      isNavType(<Nav />);
-    }
+    if ((windowHeight <= 475 && windowWidth < 915) || (windowHeight <= 300 && windowWidth > 915)) {
+      setNavOrientation('compact');
+    } else if (windowHeight > 475 && windowWidth < 915) {
+      setNavOrientation('vertical');
+    } else {
+      setNavOrientation('horizontal');
+    } 
+
+    // if (navOrientation === 'horizontal' && windowWidth < 915) {
+    //   setNavOrientation('vertical');
+    //   //setNavType(<NavSideBar />);
+    // }
+
+    // if (navOrientation === 'vertical' && windowWidth >= 915) {
+    //   setNavOrientation('horizontal');
+    //   //setNavType(<Nav />);
+    // }
 
     return () => {
       window.removeEventListener("resize", getWindowSize);
     };
   },
-    [windowWidth, navOrientation, navType]);
+    [windowWidth, navOrientation, windowHeight]);
 
   return (
     <Router>
@@ -74,18 +83,18 @@ function App() {
 
         <Switch>
           <Route path="/recursos">
-            {navType}
+            <Nav navOrientation={navOrientation} />
             <Resources />
             <Footer />
           </Route>
           <Route path="/faqs">
-            {navType}
+            <Nav navOrientation={navOrientation} />
             <FAQs />
             <Footer />
           </Route>
           <Route path="/">
             <LegalWarning handleToggleLegal={handleToggleLegal} toggleLegal={toggleLegal} />
-            {navType}
+            <Nav navOrientation={navOrientation} />
             <Landing />
             <Therapy />
             <OnlineTherapy />
