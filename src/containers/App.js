@@ -28,41 +28,87 @@ function App() {
   const [navOrientation, setNavOrientation] = useState('horizontal');
   const [windowWidth, setWindowWidth] = useState(width);
   const [windowHeight, setWindowHeight] = useState(height);
+  const [country, setCountry] = useState("ES");
+  const [price, setPrice] = useState("Consultar");
+  const [currency, setCurrency] = useState("");
   //const [navType, setNavType] = useState(width >= 915 ? <Nav /> : <NavSideBar />);
 
+  const locUrl = 'https://get.geojs.io/v1/ip/country.json';
+  const locationPrice = {
+    prices: {
+      MX: 500,
+      US: 35,
+      CA: 35,
+      ZA: 500,
+      ES: 35
+    },
+    currency: {
+      MX: 'MX$ ',
+      US: 'US$ ',
+      CA: 'CA$ ',
+      ZA: 'R',
+      ES: '€'
+    }
+  }
+
   const handleToggleLegal = () => {
+    //Display legal notice if clicked on
     console.log("clicked", toggleLegal);
     setToggleLegal(toggleLegal ? false : true);
   }
 
-  function getWindowSize() {
+  const getWindowSize = () => {
     // Get width and height of the window excluding scrollbars
     setWindowWidth(document.documentElement.clientWidth);
     setWindowHeight(document.documentElement.clientHeight);
   }
 
   useEffect(() => {
+    //Determine user's location and set country accordingly
+    const getLocation = async (locUrl) => {
+      await fetch(locUrl)
+        .then(response => response.json())
+        .then(data => {
+          let checkCountry = Object.keys(locationPrice.prices);
+          if (checkCountry.includes(data.country)) {
+            //If country is part of provided locations, set country
+            setCountry(data.country);
+          } else {
+            //If location does not match provided locations, set country to Spain
+            setCountry("ES");
+          }
+        })
+        .catch(e => {
+          //If any errors, set country to Spain
+          setCountry("ES");
+          console.error(e.message)
+        })
+    }
+    //Run function getLocation
+    getLocation(locUrl);
+  }, [])
+
+  useEffect(() => {
+    //Set currency and price according to country determined by getLocation function
+    setPrice(locationPrice.prices[country]);
+    setCurrency(locationPrice.currency[country]);
+  }, [country])
+
+  useEffect(() => {
+    //Add event listener to moniter window hieght & width on every resize
     window.addEventListener("resize", getWindowSize);
 
+    //Change navigation bar type according to current window heigth & width
     if ((windowHeight <= 475 && windowWidth < 915) || (windowHeight <= 300 && windowWidth > 915)) {
       setNavOrientation('compact');
     } else if (windowHeight > 475 && windowWidth < 915) {
       setNavOrientation('vertical');
     } else {
       setNavOrientation('horizontal');
-    } 
-
-    // if (navOrientation === 'horizontal' && windowWidth < 915) {
-    //   setNavOrientation('vertical');
-    //   //setNavType(<NavSideBar />);
-    // }
-
-    // if (navOrientation === 'vertical' && windowWidth >= 915) {
-    //   setNavOrientation('horizontal');
-    //   //setNavType(<Nav />);
-    // }
+    }
 
     return () => {
+      //Remove event listener to avoid side effects
       window.removeEventListener("resize", getWindowSize);
     };
   },
@@ -71,16 +117,6 @@ function App() {
   return (
     <Router>
       <>
-        {/* <LegalWarning handleToggleLegal={handleToggleLegal} toggleLegal={toggleLegal} />
-        <Nav />
-        <Landing />
-        <Therapy />
-        <OnlineTherapy />
-        <TherapyBenefits />
-        <About />
-        <Contact handleToggleLegal={handleToggleLegal} />
-        <Footer /> */}
-
         <Switch>
           <Route path="/recursos">
             <Nav navOrientation={navOrientation} />
@@ -100,7 +136,7 @@ function App() {
             <OnlineTherapy />
             <TherapyBenefits />
             <About />
-            <Prices />
+            <Prices price={price} currency={currency} />
             <Contact handleToggleLegal={handleToggleLegal} />
             <Footer />
           </Route>

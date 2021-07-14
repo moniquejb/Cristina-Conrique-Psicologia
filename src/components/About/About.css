@@ -34,13 +34,13 @@
   padding: 10px 0;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 6.5rem;
+  font-size: 6.5em;
   color: #F8F8F8;
   text-align: center;
 }
 @media only screen and (max-width: 361px) {
   .about-container .about-h1-text-container h1 {
-    font-size: 4rem;
+    font-size: 4em;
   }
 }
 .about-container .about-h1-text-container .about-text {
@@ -51,8 +51,8 @@
 .about-container .about-h1-text-container .about-text p {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1.3em;
   color: #F8F8F8;
   text-align: justify;
-  line-height: 2rem;
+  line-height: 1.8em;
 }/*# sourceMappingURL=About.css.map */

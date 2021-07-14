@@ -1,68 +1,77 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap");
-.landing-wrapper {
-  display: grid;
-  grid-template-columns: 62% 38%;
-}
-.landing-wrapper .landing-img {
-  width: auto;
-  min-width: 500px;
-  height: 100vh;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  display: grid;
-  position: relative;
-}
-.landing-wrapper .landing-img img {
-  position: absolute;
-  margin: 50px;
-  justify-self: center;
-  align-self: center;
-  min-width: 500px;
-  max-width: 800px;
-}
-.landing-wrapper .landing-img .landing-colour {
-  height: 50vh;
+.landing-colours {
   width: 100%;
+  position: absolute;
+}
+
+.landing-top-colour {
+  background-color: #F9BE7B;
+  height: 50vh;
+  z-index: -5;
+}
+
+.landing-bottom-colour {
+  background-color: #F8F8F8;
+  height: 100vh;
+  top: 0;
   z-index: -10;
 }
-.landing-wrapper .landing-img .top-colour {
-  background-color: #F9BE7B;
+
+.landing-container {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: "landingImage landingHeading" "landingImage landingText";
 }
-.landing-wrapper .landing-img .bottom-colour {
-  background-color: #F8F8F8;
+.landing-container .landing-image-container {
+  height: 100vh;
+  width: 100%;
+  grid-area: landingImage;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.landing-wrapper .landing-top {
-  background-color: #F9BE7B;
+.landing-container .landing-image-container img {
+  height: auto;
   width: auto;
-  min-width: 600px;
-  height: 50vh;
+  margin: 0px 30px 30px 30px;
+  padding-top: 130px;
+  transition: 0.5s;
+}
+.landing-container .landing-heading-container {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: flex-end;
+  grid-area: landingHeading;
 }
-.landing-wrapper .landing-top h1 {
+.landing-container .landing-heading-container h1 {
   margin: 0;
   padding: 0;
   margin-bottom: 7px;
   margin-top: -25px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 6.5rem;
+  font-size: 6.5em;
   color: #F8F8F8;
+  transition: 0.5s;
 }
 @media only screen and (max-width: 361px) {
-  .landing-wrapper .landing-top h1 {
-    font-size: 4rem;
+  .landing-container .landing-heading-container h1 {
+    font-size: 4em;
   }
 }
-.landing-wrapper .landing-top h2 {
+.landing-container .landing-heading-container h2 {
   margin: 0;
   padding: 0;
   margin-bottom: 20px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 2em;
   color: #F8F8F8;
+  transition: 0.5s;
 }
 @-webkit-keyframes wordChangeAnimation {
   0% {
@@ -84,37 +93,36 @@
     transform: scale(1);
   }
 }
-.landing-wrapper .landing-top .wordChangeAnimation {
+.landing-container .landing-heading-container .wordChangeAnimation {
   -webkit-animation: wordChangeAnimation 1.5s ease-out infinite alternate forwards;
           animation: wordChangeAnimation 1.5s ease-out infinite alternate forwards;
 }
-.landing-wrapper .landing-bottom {
-  background-color: #F8F8F8;
-  width: auto;
-  height: 50vh;
+.landing-container .landing-text-container {
+  grid-area: landingText;
 }
-.landing-wrapper .landing-bottom .landing-bottom-textbox {
+.landing-container .landing-text-container .landing-textbox {
   width: 500px;
   height: auto;
   display: flex;
   flex-direction: column;
 }
-.landing-wrapper .landing-bottom .landing-bottom-textbox h3 {
+.landing-container .landing-text-container .landing-textbox h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1.3em;
   color: #BC8282;
   text-align: justify;
-  line-height: 2rem;
+  line-height: 2em;
+  transition: 0.5s;
 }
-.landing-wrapper .landing-bottom .landing-bottom-textbox a {
+.landing-container .landing-text-container .landing-textbox a {
   margin-top: 10px;
   height: 60px;
   width: 300px;
   background-color: #F3DADA;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 2em;
   color: #BC8282;
   border-radius: 10px;
   align-self: center;
@@ -124,10 +132,10 @@
   justify-content: center;
   align-items: center;
 }
-.landing-wrapper .landing-bottom .landing-bottom-textbox a:hover {
+.landing-container .landing-text-container .landing-textbox a:hover {
   background-color: rgba(243, 218, 218, 0.6);
   transform: scale(1.05);
 }
-.landing-wrapper .landing-bottom .landing-bottom-textbox a:active {
+.landing-container .landing-text-container .landing-textbox a:active {
   transform: scale(1);
 }/*# sourceMappingURL=Landing.css.map */

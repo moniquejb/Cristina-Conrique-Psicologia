@@ -70,7 +70,7 @@
   list-style: none;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 1em;
   color: #F8F8F8;
   display: flex;
 }
@@ -94,22 +94,22 @@
 .nav-compact-container .li-text:link {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 1.3em;
   color: #F8F8F8;
 }
 .nav-compact-container .li-text:visited {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 1.3em;
   color: #F8F8F8;
 }
 .nav-compact-container .li-text:hover {
   background-color: rgba(253, 237, 221, 0.3);
-  font-size: 1.4rem;
+  font-size: 1.4em;
   cursor: pointer;
 }
 .nav-compact-container .li-text:active {
-  font-size: 1.3rem;
+  font-size: 1.3em;
 }
 .nav-compact-container #li-icon {
   display: flex;
@@ -119,6 +119,7 @@
   padding: 0px 8px;
 }
 .nav-compact-container svg {
+  cursor: pointer;
   margin: -4px;
   height: 20px;
   width: 20px;

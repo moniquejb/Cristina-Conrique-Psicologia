@@ -9,18 +9,21 @@
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
+  text-align: center;
 }
 .footer-container .footer-text-container {
   display: flex;
+  justify-content: center;
+  align-items: baseline;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.1em;
   color: white;
 }
 .footer-container .footer-text-container a {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.1em;
   color: white;
   text-decoration: none;
   cursor: pointer;
@@ -29,44 +32,51 @@
   color: white;
 }
 .footer-container .footer-text-container a:hover {
-  color: #E7E7E7;
+  color: #E4F3F0;
+}
+.footer-container .footer-text-container #img-cred {
+  cursor: pointer;
+}
+.footer-container .footer-text-container #img-cred:hover {
+  color: #E4F3F0;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
   .footer-container {
-    height: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
   .footer-container .footer-text-container {
+    display: initial;
+    justify-content: initial;
+    align-items: initial;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1em;
     color: white;
   }
   .footer-container .footer-text-container a {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1em;
     color: white;
   }
 }
 @media only screen and (max-width: 580px) {
   .footer-container {
-    height: 25px;
     padding-top: 5px;
     padding-bottom: 5px;
   }
   .footer-container .footer-text-container {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: 0.8em;
     color: white;
   }
   .footer-container .footer-text-container a {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
-    font-size: 0.8rem;
+    font-size: 0.9em;
     color: white;
   }
 }
@@ -74,13 +84,13 @@
   .footer-container .footer-text-container {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-size: 0.6rem;
+    font-size: 0.6em;
     color: white;
   }
   .footer-container .footer-text-container a {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
-    font-size: 0.6rem;
+    font-size: 0.7em;
     color: white;
   }
 }
@@ -88,13 +98,13 @@
   .footer-container .footer-text-container {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-size: 0.48rem;
+    font-size: 0.48em;
     color: white;
   }
   .footer-container .footer-text-container a {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
-    font-size: 0.48rem;
+    font-size: 0.5em;
     color: white;
   }
 }/*# sourceMappingURL=Footer.css.map */

@@ -9,23 +9,30 @@ const Nav = ({ navOrientation }) => {
   const [shrinkNav, setShrinkNav] = useState('');
   const [sideNavOpen, setSideNavOpen] = useState(false);
   const [compactNavOpen, setCompactNavOpen] = useState(false);
+  //Const to determin current path
   const location = useLocation();
 
   const handleSideNavOpen = () => {
+    //Toggle side navigation bar on click
     setSideNavOpen(prev => prev ? false : true);
   }
 
   const handleCompactNavOpen = () => {
+    //Toggle compact navigation bar on click
     setCompactNavOpen(prev => prev ? false : true);
   }
 
   const handleNavLanding = () => {
+    //Close side/compact navigation bar if a nav link linked to landing page is clicked
+    console.log(location.pathname);
     if (location.pathname === '/') {
       setSideNavOpen(false);
+      setCompactNavOpen(false);
     }
   }
 
   const scrollFunction = () => {
+    //Add class to shrink normal nav bar if user scrolls 150px from top, remove class if user scrolls less than 150px from top
     if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
       setShrinkNav('shrink-nav');
     } else {
@@ -33,10 +40,13 @@ const Nav = ({ navOrientation }) => {
     }
   }
 
+  //Run scrollFunction whenever user scrolls
   window.onscroll = () => scrollFunction();
 
   if (navOrientation === 'horizontal') {
+    //Sets and returns normal nav bar 
     if (compactNavOpen || sideNavOpen) {
+      //If compact or side nav bar was previously open, close them
       setCompactNavOpen(false);
       setSideNavOpen(false);
     }
@@ -77,7 +87,9 @@ const Nav = ({ navOrientation }) => {
       </nav>
     )
   } else if (navOrientation === 'vertical') {
+    //Sets and returns side nav bar
     if (compactNavOpen) {
+      //If previous nav bar was compact nav bar and it was open, side nav bar also stays open
       setCompactNavOpen(false);
       setSideNavOpen(true);
     };
@@ -144,7 +156,9 @@ const Nav = ({ navOrientation }) => {
       )
     }
   } else if (navOrientation === 'compact') {
+    //Sets and returns compact nav bar
     if (sideNavOpen) {
+      //If previous nav bar was side nav bar and it was open, compact nav bar also stays open
       setCompactNavOpen(true);
       setSideNavOpen(false);
     };
@@ -165,15 +179,15 @@ const Nav = ({ navOrientation }) => {
           <nav className='nav-compact-container no-select'>
             <a href='/#inicio' className='li-img'><img src='images/logo.svg' alt='Psicóloga Cristina Conrique Logo'></img></a>
             <ul>
-              <li><a href='/#inicio' className='li-text'>Inicio</a></li>
-              <li><a href='/#terapia' className='li-text'>Terapia</a></li>
-              <li><a href='/#sobre' className='li-text'>Sobre Mí</a></li>
-              <li><a href='/#tarifas' className='li-text'>Tarifas</a></li>
+              <li><a href='/#inicio' onClick={handleNavLanding} className='li-text'>Inicio</a></li>
+              <li><a href='/#terapia' onClick={handleNavLanding} className='li-text'>Terapia</a></li>
+              <li><a href='/#sobre' onClick={handleNavLanding} className='li-text'>Sobre Mí</a></li>
+              <li><a href='/#tarifas' onClick={handleNavLanding} className='li-text'>Tarifas</a></li>
             </ul>
             <ul>
               <li><a href='/recursos' className='li-text'>Recursos</a></li>
               <li><a href='/faqs' className='li-text'>FAQs</a></li>
-              <li><a href='/#contacto' className='li-text'>Contacto</a></li>
+              <li><a href='/#contacto' onClick={handleNavLanding} className='li-text'>Contacto</a></li>
               <li>
                 <div id='li-icon'>
                   <a

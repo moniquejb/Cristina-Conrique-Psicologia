@@ -21,11 +21,11 @@
       margin: 0;
       padding: 0;
       padding-top: 20px;
-      @include custom-Roboto ($dark-2-blue, 2rem, 400);
+      @include custom-Roboto ($dark-2-blue, 2em, 400);
     }
 
     p {
-      @include custom-Roboto ($dark-1-blue, 1rem, 400);
+      @include custom-Roboto ($dark-1-blue, 1em, 400);
     }
 
     .therapy-benefit {

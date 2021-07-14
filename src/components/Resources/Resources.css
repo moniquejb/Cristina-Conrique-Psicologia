@@ -1,19 +1,154 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap");
+.resource-height-open {
+  height: auto;
+  margin: 0;
+}
+
+.resource-height-closed {
+  height: 100vh;
+  margin-bottom: -95px;
+}
+
 .resources-container {
-  height: 1000px;
   width: 100%;
   background-color: #F8F8F8;
+  padding: 0;
+  margin-top: -130px;
 }
 .resources-container h1 {
   margin: 0 0 0 120px;
-  padding: 30px 0 0 0;
+  padding-top: 150px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 6.5rem;
-  color: #9A746D;
+  font-size: 6.5em;
+  color: #4F6E72;
 }
 @media only screen and (max-width: 361px) {
   .resources-container h1 {
-    font-size: 4rem;
+    font-size: 4em;
   }
+}
+.resources-container .resource-flex-container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.resources-container .resource-flex-container .resource-boxes-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  padding: 40px 0;
+}
+.resources-container .resource-flex-container .resource-boxes-container .resource-box {
+  z-index: 1;
+  height: 300px;
+  width: 250px;
+  min-width: 250px;
+  margin: 0 5px;
+  background-color: #F9BE7B;
+  border-radius: 20%;
+  box-shadow: 0px 0px 10px rgba(92, 64, 3, 0.3);
+}
+.resources-container .resource-flex-container .resource-boxes-container .resource-box a {
+  text-decoration: none;
+}
+.resources-container .resource-flex-container .resource-boxes-container .resource-box:hover {
+  filter: brightness(103%);
+  box-shadow: 0px 0px 6px rgba(167, 98, 9, 0.2);
+  transform: scale(1.03);
+}
+.resources-container .resource-flex-container .resource-boxes-container .resource-box:active {
+  transform: scale(1);
+}
+.resources-container .resource-flex-container .resource-boxes-container .resource-box .resource-box-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+.resources-container .resource-flex-container .resource-boxes-container .resource-box .resource-box-content img {
+  height: 300px;
+  width: auto;
+  position: absolute;
+  border-radius: 20%;
+  opacity: 75%;
+}
+.resources-container .resource-flex-container .resource-boxes-container .resource-box .resource-box-content h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 2em;
+  color: #F8F8F8;
+  z-index: 2;
+}
+.resources-container .resource-flex-container .resource-boxes-container .chosen-box {
+  background-color: #eeeeee;
+  box-shadow: 0px 0px 10px rgba(102, 102, 102, 0.5);
+}
+.resources-container .resource-flex-container .resource-boxes-container .chosen-box:hover {
+  box-shadow: 0px 0px 6px rgba(136, 136, 136, 0.2);
+}
+.resources-container .resource-flex-container .resource-boxes-container .chosen-box .resource-box-content img {
+  opacity: 25%;
+}
+.resources-container .resource-flex-container .resource-boxes-container .chosen-box .resource-box-content h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 2em;
+  color: #88612a;
+}
+.resources-container .resource-flex-container .resource-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+.resources-container .resource-flex-container .resource-content ul li {
+  margin: 0 120px 0 120px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.3em;
+  color: #4F6E72;
+  line-height: 2.5em;
+}
+.resources-container .resource-flex-container .resource-content ul li a {
+  text-decoration: none;
+}
+.resources-container .resource-flex-container .resource-content ul li a:link {
+  color: #4F6E72;
+}
+.resources-container .resource-flex-container .resource-content ul li a:visited {
+  color: #9A746D;
+}
+.resources-container .resource-flex-container .resource-content ul li a:hover {
+  color: #A0CEBF;
+}
+.resources-container .resource-flex-container .resource-content ul li a:visited:hover {
+  color: #D39997;
+}
+
+.to-top {
+  width: 100%;
+  background-color: #F8F8F8;
+  text-align: center;
+  padding: 5px 0;
+}
+.to-top a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  color: #4F6E72;
+}
+.to-top a:hover {
+  color: #9A746D;
 }/*# sourceMappingURL=Resources.css.map */

@@ -54,20 +54,20 @@
           .legal-warning-text {
             padding: 0px 20px 20px 20px;
             h3 {
-              @include custom-Roboto (black, 1.5rem, 500);
+              @include custom-Roboto (black, 1.5em, 500);
             }
   
             p {
-              @include custom-Roboto (black, 1rem, 400);
+              @include custom-Roboto (black, 1em, 400);
               text-align: justify;
-              line-height: 2rem;
+              line-height: 2em;
               margin: 0;
             }
 
             li {
-              @include custom-Roboto (black, 1rem, 400);
+              @include custom-Roboto (black, 1em, 400);
               //text-align: justify;
-              line-height: 2rem;
+              line-height: 2em;
               margin: 0;
             }
           }          

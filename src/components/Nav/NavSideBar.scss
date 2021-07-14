@@ -160,7 +160,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    @include custom-Roboto($main-grey, 1.5rem, 500);
+    @include custom-Roboto($main-grey, 1em, 500);
     display: flex;
     //transition: 0.5s;
   }
@@ -202,21 +202,21 @@
   }
 
   .li-text:link {
-    @include custom-Roboto($main-grey, 1.5rem, 500);
+    @include custom-Roboto($main-grey, 1.5em, 500);
   }
 
   .li-text:visited {
-    @include custom-Roboto($main-grey, 1.5rem, 500);
+    @include custom-Roboto($main-grey, 1.5em, 500);
   }
 
   .li-text:hover {
     background-color: rgba($color: $light-yellow, $alpha: 0.3);
-    font-size: 1.7rem;
+    font-size: 1.7em;
     cursor: pointer;
   }
 
   .li-text:active {
-    font-size: 1.5rem;
+    font-size: 1.5em;
   }
 
   #li-img-side {
@@ -265,7 +265,7 @@
   }
 
   svg {
-    //transition: 0.5s;
+    cursor: pointer;
     height: 35px;
     width: 35px;
     fill: $main-grey;
@@ -310,7 +310,7 @@
 @media only screen and (max-height: 701px) {
   .nav-side-container {  
     ul {
-      @include custom-Roboto($main-grey, 1.3rem, 500);
+      @include custom-Roboto($main-grey, 1em, 500);
     }
   
     li {
@@ -335,19 +335,19 @@
     }
 
     .li-text:link {
-      @include custom-Roboto($main-grey, 1.3rem, 500);
+      @include custom-Roboto($main-grey, 1.3em, 500);
     }
   
     .li-text:visited {
-      @include custom-Roboto($main-grey, 1.3rem, 500);
+      @include custom-Roboto($main-grey, 1.3em, 500);
     }
   
     .li-text:hover {
-      font-size: 1.4rem;
+      font-size: 1.4em;
     }
   
     .li-text:active {
-      font-size: 1.3rem;
+      font-size: 1.3em;
     }
 
     .li-icon {
@@ -359,7 +359,7 @@
 @media only screen and (max-width: 361px) {
   .nav-side-container {  
     ul {
-      @include custom-Roboto($main-grey, 1.3rem, 500);
+      @include custom-Roboto($main-grey, 1.3em, 500);
     }
   
     li {
@@ -372,19 +372,19 @@
     }
 
     .li-text:link {
-      @include custom-Roboto($main-grey, 1.3rem, 500);
+      @include custom-Roboto($main-grey, 1.3em, 500);
     }
   
     .li-text:visited {
-      @include custom-Roboto($main-grey, 1.3rem, 500);
+      @include custom-Roboto($main-grey, 1.3em, 500);
     }
   
     .li-text:hover {
-      font-size: 1.4rem;
+      font-size: 1.4em;
     }
   
     .li-text:active {
-      font-size: 1.3rem;
+      font-size: 1.3em;
     }
 
     .li-icon {

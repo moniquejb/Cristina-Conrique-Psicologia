@@ -35,7 +35,7 @@
     height: 130px;
     width: 100%;
     list-style: none;
-    @include custom-Roboto($main-grey, 1.5rem, 500);
+    @include custom-Roboto($main-grey, 1em, 500);
     display: flex;
     transition: 0.5s;
   }
@@ -61,21 +61,21 @@
   }
 
   .li-text:link {
-    @include custom-Roboto($main-grey, 1.5rem, 500);
+    @include custom-Roboto($main-grey, 1.5em, 500);
   }
 
   .li-text:visited {
-    @include custom-Roboto($main-grey, 1.5rem, 500);
+    @include custom-Roboto($main-grey, 1.5em, 500);
   }
 
   .li-text:hover {
     background-color: rgba($color: $light-yellow, $alpha: 0.3);
-    font-size: 1.6rem;
+    font-size: 1.6em;
     cursor: pointer;
   }
 
   .li-text:active {
-    font-size: 1.5rem;
+    font-size: 1.5em;
   }
 
   .li-img {
@@ -102,6 +102,7 @@
   }
 
   svg {
+    cursor: pointer;
     transition: 0.5s;
     margin: -4px;
     height: 30px;
@@ -158,15 +159,15 @@
     }
 
     .li-text:link {
-      font-size: 1.25rem;
+      font-size: 1.25em;
     }
 
     .li-text:visited {
-      font-size: 1.25rem;
+      font-size: 1.25em;
     }
   
     .li-text:hover {
-      font-size: 1.3rem;
+      font-size: 1.3em;
     }
 
     .li-img {
@@ -236,7 +237,7 @@
 //     }
 
 //     .li-text:link {
-//       font-size: 1.6rem;
+//       font-size: 1.6em;
 //     }
 
 //     .li-img {

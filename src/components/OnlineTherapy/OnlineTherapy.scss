@@ -34,7 +34,7 @@
         @include bulk-text ($main-grey);
         padding-left: 120px;
         text-align: justify;
-        line-height: 2rem;
+        line-height: 2em;
       }
     
       ul {
@@ -42,7 +42,7 @@
         
         li {
           @include bulk-text ($main-grey);
-          line-height: 2.5rem;
+          line-height: 1.8em;
           list-style-position: inside;
           text-indent: -1.4em;
           padding-left: 1.4em;

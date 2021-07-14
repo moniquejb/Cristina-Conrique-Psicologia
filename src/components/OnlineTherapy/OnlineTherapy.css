@@ -9,12 +9,12 @@
   padding: 50px 0 0 120px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 6.5rem;
+  font-size: 6.5em;
   color: #F8F8F8;
 }
 @media only screen and (max-width: 361px) {
   .online-therapy-container h1 {
-    font-size: 4rem;
+    font-size: 4em;
   }
 }
 .online-therapy-container .online-therapy-text-img-container {
@@ -33,7 +33,7 @@
 .online-therapy-container .online-therapy-text-img-container .online-therapy-text h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 2em;
   color: #F8F8F8;
   padding-top: 20px;
   padding-left: 120px;
@@ -41,11 +41,11 @@
 .online-therapy-container .online-therapy-text-img-container .online-therapy-text p {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1.3em;
   color: #F8F8F8;
   padding-left: 120px;
   text-align: justify;
-  line-height: 2rem;
+  line-height: 2em;
 }
 .online-therapy-container .online-therapy-text-img-container .online-therapy-text ul {
   padding-left: 120px;
@@ -53,9 +53,9 @@
 .online-therapy-container .online-therapy-text-img-container .online-therapy-text ul li {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1.3em;
   color: #F8F8F8;
-  line-height: 2.5rem;
+  line-height: 1.8em;
   list-style-position: inside;
   text-indent: -1.4em;
   padding-left: 1.4em;

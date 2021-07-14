@@ -24,7 +24,7 @@
       border: solid 1px $main-grey;
       outline-color: $main-grey;
       padding-left: 20px;
-      @include custom-Montserrat(black, 1.2rem, 400);
+      @include custom-Montserrat(black, 1.2em, 400);
     }
 
     .contact-details-container {
@@ -57,7 +57,7 @@
             margin-left: 20px;
   
             h3 {
-              @include custom-Montserrat($main-grey, 2rem, 400);
+              @include custom-Montserrat($main-grey, 2em, 400);
               padding: 0;
               margin: 0;
             }
@@ -67,7 +67,7 @@
   
       .contact-social-media {
         h3 {
-          @include custom-Roboto ($main-grey, 2.5rem, 500);
+          @include custom-Roboto ($main-grey, 2.5em, 500);
           padding: 0;
           margin: 50px 0 30px 120px;       
         }
@@ -115,7 +115,7 @@
   
           .contact-form-element {
             label {
-              @include custom-Montserrat($main-grey, 1.4rem, 400);
+              @include custom-Montserrat($main-grey, 1.4em, 400);
             }
   
             input {
@@ -126,7 +126,7 @@
               border: solid 1px $main-grey;
               outline-color: $main-grey;
               padding-left: 20px;
-              @include custom-Montserrat(black, 1.2rem, 400);
+              @include custom-Montserrat(black, 1.2em, 400);
             }
           }
         }
@@ -143,7 +143,7 @@
 
         .contact-form-textarea {
           label {
-            @include custom-Montserrat($main-grey, 1.4rem, 400);
+            @include custom-Montserrat($main-grey, 1.4em, 400);
           }
 
           textarea {
@@ -155,7 +155,7 @@
             border: solid 1px $main-grey;
             outline-color: $main-grey;
             padding: 15px 15px 20px 20px;
-            @include custom-Montserrat(black, 1.2rem, 400);
+            @include custom-Montserrat(black, 1.2em, 400);
           }
         }
 
@@ -170,7 +170,7 @@
           }
           .contact-form-checkbox-label {
             width: 370px;
-            @include custom-Montserrat($main-grey, 0.9rem, 400);
+            @include custom-Montserrat($main-grey, 0.9em, 400);
             padding-left: 5px;
             
             p {
@@ -188,7 +188,7 @@
           background-color: $main-grey;
           border: none;
           border-radius: 10px;
-          @include custom-Roboto ($dark-2-blue, 1.5rem, 400);
+          @include custom-Roboto ($dark-2-blue, 1.5em, 400);
           width: 150px;
           height: 50px;
           cursor: pointer;

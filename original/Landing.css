@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap");
+.landing-wrapper {
+  display: grid;
+  grid-template-columns: 62% 38%;
+  transition: 0.5s;
+}
+.landing-wrapper .landing-combined {
+  display: none;
+  width: 100%;
+}
+.landing-wrapper .landing-combined .landing-combined-text {
+  width: 90%;
+}
+.landing-wrapper .landing-combined .landing-combined-text .landing-combined-heading {
+  width: 100%;
+  margin-bottom: -10px;
+}
+.landing-wrapper .landing-combined .landing-combined-text .landing-combined-heading h1 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 7px;
+  margin-top: -25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 6.5rem;
+  color: #F8F8F8;
+  font-size: 5rem;
+  transition: 0.5s;
+}
+@media only screen and (max-width: 361px) {
+  .landing-wrapper .landing-combined .landing-combined-text .landing-combined-heading h1 {
+    font-size: 4rem;
+  }
+}
+.landing-wrapper .landing-combined .landing-combined-text .landing-combined-heading h2 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: #F8F8F8;
+  transition: 0.5s;
+}
+.landing-wrapper .landing-combined .landing-combined-text .landing-combined-textbox {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.landing-wrapper .landing-combined .landing-combined-text .landing-combined-textbox h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #F8F8F8;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  transition: 0.5s;
+  margin: 0;
+}
+.landing-wrapper .landing-combined .landing-combined-text .landing-combined-textbox a {
+  margin-top: 20px;
+  height: 50px;
+  width: 200px;
+  background-color: #F3DADA;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #BC8282;
+  border-radius: 10px;
+  align-self: center;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing-wrapper .landing-combined .landing-combined-text .landing-combined-textbox a:hover {
+  background-color: rgba(243, 218, 218, 0.6);
+  transform: scale(1.05);
+}
+.landing-wrapper .landing-combined .landing-combined-text .landing-combined-textbox a:active {
+  transform: scale(1);
+}
+.landing-wrapper .landing-img {
+  width: auto;
+  min-width: 500px;
+  height: 100vh;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: grid;
+  position: relative;
+}
+.landing-wrapper .landing-img img {
+  position: absolute;
+  margin: 50px;
+  justify-self: center;
+  align-self: center;
+  min-width: 500px;
+  max-width: 800px;
+  transition: 0.5s;
+}
+.landing-wrapper .landing-img .landing-colour {
+  height: 50vh;
+  width: 100%;
+  z-index: -10;
+}
+.landing-wrapper .landing-img .top-colour {
+  background-color: #F9BE7B;
+}
+.landing-wrapper .landing-img .bottom-colour {
+  background-color: #F8F8F8;
+}
+.landing-wrapper .landing-top {
+  background-color: #F9BE7B;
+  width: auto;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.landing-wrapper .landing-top h1 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 7px;
+  margin-top: -25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 6.5rem;
+  color: #F8F8F8;
+  transition: 0.5s;
+}
+@media only screen and (max-width: 361px) {
+  .landing-wrapper .landing-top h1 {
+    font-size: 4rem;
+  }
+}
+.landing-wrapper .landing-top h2 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #F8F8F8;
+  transition: 0.5s;
+}
+@-webkit-keyframes wordChangeAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.99, 0.96);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes wordChangeAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.99, 0.96);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.landing-wrapper .landing-top .wordChangeAnimation {
+  -webkit-animation: wordChangeAnimation 1.5s ease-out infinite alternate forwards;
+          animation: wordChangeAnimation 1.5s ease-out infinite alternate forwards;
+}
+.landing-wrapper .landing-bottom {
+  background-color: #F8F8F8;
+  width: auto;
+  height: 50vh;
+}
+.landing-wrapper .landing-bottom .landing-bottom-textbox {
+  width: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.landing-wrapper .landing-bottom .landing-bottom-textbox h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #BC8282;
+  text-align: justify;
+  line-height: 2rem;
+  transition: 0.5s;
+}
+.landing-wrapper .landing-bottom .landing-bottom-textbox a {
+  margin-top: 10px;
+  height: 60px;
+  width: 300px;
+  background-color: #F3DADA;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #BC8282;
+  border-radius: 10px;
+  align-self: center;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing-wrapper .landing-bottom .landing-bottom-textbox a:hover {
+  background-color: rgba(243, 218, 218, 0.6);
+  transform: scale(1.05);
+}
+.landing-wrapper .landing-bottom .landing-bottom-textbox a:active {
+  transform: scale(1);
+}
+
+@media only screen and (max-width: 1500px) {
+  .landing-wrapper .landing-img {
+    min-width: 500px;
+  }
+  .landing-wrapper .landing-img img {
+    margin: 30px;
+    min-width: 500px;
+    max-width: 700px;
+    transition: 0.5s;
+  }
+  .landing-wrapper .landing-top {
+    height: 50vh;
+  }
+  .landing-wrapper .landing-top h1 {
+    margin-bottom: 7px;
+    margin-top: -25px;
+    font-size: 5rem;
+    transition: 0.5s;
+  }
+  .landing-wrapper .landing-top h2 {
+    margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: #F8F8F8;
+    transition: 0.5s;
+  }
+  .landing-wrapper .landing-bottom .landing-bottom-textbox {
+    width: 400px;
+  }
+  .landing-wrapper .landing-bottom .landing-bottom-textbox h3 {
+    font-size: 1.15rem;
+    line-height: 2rem;
+    transition: 0.5s;
+  }
+  .landing-wrapper .landing-bottom .landing-bottom-textbox a {
+    margin-top: 10px;
+    height: 60px;
+    width: 300px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #BC8282;
+    border-radius: 10px;
+  }
+  .landing-wrapper .landing-bottom .landing-bottom-textbox a:hover {
+    background-color: rgba(243, 218, 218, 0.6);
+    transform: scale(1.05);
+  }
+  .landing-wrapper .landing-bottom .landing-bottom-textbox a:active {
+    transform: scale(1);
+  }
+}
+@media only screen and (max-width: 1160px) {
+  .landing-wrapper {
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+  }
+  .landing-wrapper .landing-combined {
+    bottom: 30px;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .landing-wrapper .landing-combined .landing-combined-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .landing-wrapper .landing-img {
+    min-width: 100%;
+    position: absolute;
+    height: 100vh;
+    background-color: #F9BE7B;
+  }
+  .landing-wrapper .landing-img img {
+    top: 130px;
+    margin: 10px;
+    min-width: 300px;
+    max-width: 500px;
+    transition: 0.5s;
+  }
+  .landing-wrapper .landing-img .bottom-colour,
+.landing-wrapper .landing-img .top-colour {
+    visibility: hidden;
+  }
+  .landing-wrapper .landing-top h1,
+.landing-wrapper .landing-top h2 {
+    display: none;
+  }
+  .landing-wrapper .landing-bottom {
+    visibility: hidden;
+  }
+  .landing-wrapper .landing-bottom .landing-bottom-textbox h3,
+.landing-wrapper .landing-bottom .landing-bottom-textbox a {
+    display: none;
+  }
+}
+@media only screen and (max-width: 930px) {
+  .landing-wrapper .landing-img img {
+    top: 50px;
+    margin: 10px;
+    min-width: 300px;
+    max-width: 600px;
+    transition: 0.5s;
+  }
+}
+@media only screen and (max-width: 845px) {
+  .landing-wrapper .landing-combined .landing-combined-text .landing-combined-textbox h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #F8F8F8;
+    font-size: 1.3rem;
+    text-align: justify;
+    line-height: 2.2rem;
+    transition: 0.5s;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .landing-wrapper .landing-combined {
+    margin-bottom: 30px;
+  }
+  .landing-wrapper .landing-combined .landing-combined-text .landing-combined-heading h1 {
+    margin-bottom: 7px;
+    margin-top: -25px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 6.5rem;
+    color: #F8F8F8;
+    font-size: 4.5rem;
+    transition: 0.5s;
+  }
+}
+@media only screen and (max-width: 520px) and (max-width: 361px) {
+  .landing-wrapper .landing-combined .landing-combined-text .landing-combined-heading h1 {
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .landing-wrapper .landing-combined .landing-combined-text .landing-combined-heading h2 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: #F8F8F8;
+    transition: 0.5s;
+  }
+}
+@media only screen and (min-width: 1160px) and (max-height: 800px) {
+  .landing-wrapper .landing-img img {
+    margin: 20px;
+    min-width: 300px;
+    max-width: 600px;
+    transition: 0.5s;
+  }
+}
+@media only screen and (min-width: 1160px) and (max-height: 650px) {
+  .landing-wrapper .landing-img img {
+    margin: 20px;
+    min-width: 300px;
+    max-width: 500px;
+    transition: 0.5s;
+  }
+}
+@media only screen and (max-height: 825px) and (max-width: 930px) {
+  .landing-wrapper .landing-combined {
+    margin-bottom: 0;
+  }
+  .landing-wrapper .landing-img img {
+    margin: 10px;
+    min-width: 300px;
+    max-width: 450px;
+    transition: 0.5s;
+  }
+}/*# sourceMappingURL=Landing.css.map */

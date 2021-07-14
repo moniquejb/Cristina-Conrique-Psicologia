@@ -3,7 +3,7 @@ import './LegalWarning.css';
 import AvisoLegalText from '../../utilities/aviso_legal_text.js';
 
 const LegalWarning = ({ handleToggleLegal, toggleLegal }) => {  
-
+  //Only display legal notice if it has been clicked, otherwise hide it
   if (toggleLegal) {
     return (
       <div className='legal-warning-container'>

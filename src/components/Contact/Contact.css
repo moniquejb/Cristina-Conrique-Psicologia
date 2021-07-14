@@ -10,12 +10,12 @@
   padding: 20px 0 20px 120px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 6.5rem;
+  font-size: 6.5em;
   color: #F8F8F8;
 }
 @media only screen and (max-width: 361px) {
   .contact-container h1 {
-    font-size: 4rem;
+    font-size: 4em;
   }
 }
 .contact-container .contact-details-form-container {
@@ -32,7 +32,7 @@
   padding-left: 20px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   color: black;
 }
 .contact-container .contact-details-form-container .contact-details-container {
@@ -66,7 +66,7 @@
 .contact-container .contact-details-form-container .contact-details-container .contact-detail .contact-info a h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 2em;
   color: #F8F8F8;
   padding: 0;
   margin: 0;
@@ -74,7 +74,7 @@
 .contact-container .contact-details-form-container .contact-details-container .contact-social-media h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 2.5rem;
+  font-size: 2.5em;
   color: #F8F8F8;
   padding: 0;
   margin: 50px 0 30px 120px;
@@ -116,7 +116,7 @@
 .contact-container .contact-details-form-container .contact-form-container .contact-form .contact-form-left .contact-form-element label {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.4em;
   color: #F8F8F8;
 }
 .contact-container .contact-details-form-container .contact-form-container .contact-form .contact-form-left .contact-form-element input {
@@ -129,7 +129,7 @@
   padding-left: 20px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   color: black;
 }
 .contact-container .contact-details-form-container .contact-form-container .contact-form-right {
@@ -143,7 +143,7 @@
 .contact-container .contact-details-form-container .contact-form-container .contact-form-right .contact-form-textarea label {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.4em;
   color: #F8F8F8;
 }
 .contact-container .contact-details-form-container .contact-form-container .contact-form-right .contact-form-textarea textarea {
@@ -157,7 +157,7 @@
   padding: 15px 15px 20px 20px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   color: black;
 }
 .contact-container .contact-details-form-container .contact-form-container .contact-form-right .contact-form-checkbox-container {
@@ -172,7 +172,7 @@
   width: 370px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: 0.9em;
   color: #F8F8F8;
   padding-left: 5px;
 }
@@ -189,7 +189,7 @@
   border-radius: 10px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   color: #4F6E72;
   width: 150px;
   height: 50px;

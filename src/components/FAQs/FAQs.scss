@@ -56,16 +56,17 @@
 
       .question {
         @include bulk-text ($dark-2-red);
-        line-height: 2rem;
+        font-size: 1.2em;
+        line-height: 1.5em;
         margin: 0;
         padding: 0;
         margin-left: 5px;
       }
     }
 
-    $stroke-thickness: .25rem;
+    $stroke-thickness: .25em;
     $stroke-color: $dark-2-red;
-    $size: 2rem;
+    $size: 2em;
 
     .plus-toggle {
       pointer-events: none;
@@ -120,7 +121,7 @@
   }
 
   .answer-on {
-    font-size: 1.2rem;
+    font-size: 0.9em;
     width: 980px;
     text-align: justify;
     text-justify: inter-word;
@@ -174,8 +175,8 @@
 
     .answer-on {
       width: 450px;
-      font-size: 1.1rem;
-      line-height: 24px;
+      font-size: 0.9em;
+      line-height: 1.5em;
     }
   }
 }
@@ -211,8 +212,8 @@
 
     .answer-on {
       width: 300px;
-      font-size: 1rem;
-      line-height: 22px;
+      font-size: 0.9em;
+      line-height: 1.5em;
       margin-left: 0;
     }
   }
@@ -236,8 +237,8 @@
 
     .answer-on {
       width: 290px;
-      font-size: 0.9rem;
-      line-height: 20px;
+      font-size: 0.9em;
+      line-height: 1.3em;
     }
   }
 }
@@ -254,15 +255,15 @@
 
       .questions-text-box {
         .question {
-          font-size: 1.1rem;
-          line-height: 1.8rem;
+          font-size: 0.9em;
+          line-height: 1.8em;
         }
       }
     }
 
     .answer-on {
       width: 260px;
-      font-size: 0.8rem;
+      font-size: 0.8em;
       line-height: 20px;
     }
   }
@@ -279,15 +280,15 @@
 
       .questions-text-box {
         .question {
-          font-size: 1rem;
-          line-height: 1.6rem;
+          font-size: 0.8em;
+          line-height: 1.6em;
         }
       }
     }
 
     .answer-on {
       width: 240px;
-      font-size: 0.8rem;
+      font-size: 0.8em;
       line-height: 20px;
     }
   }

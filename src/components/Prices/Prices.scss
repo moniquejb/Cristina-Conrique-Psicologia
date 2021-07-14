@@ -36,14 +36,14 @@
       text-align: center;
 
       h3 {
-        @include custom-Montserrat ($dark-2-red, 2.5rem, 600);
+        @include custom-Montserrat ($dark-2-red, 2.5em, 600);
         padding: 0;
         margin: 0;
         padding-top: 20px;
       }
 
       p {
-        @include custom-Montserrat ($dark-2-red, 1.6rem, 400);
+        @include custom-Montserrat ($dark-2-red, 1.6em, 400);
         padding: 0;
         margin: 0;
         padding-bottom: 20px;
@@ -55,26 +55,35 @@
         align-items: center;
         flex-direction: column;
         background-color: $main-red;
-        height: 220px;
-        width: 220px;
+        height: 240px;
+        width: 240px;
         border-radius: 50%;
+        padding: 0;
+        margin: 0;
 
         h2 {
-          @include custom-Montserrat ($main-grey, 5.4rem, 600);
+          @include custom-Montserrat ($main-grey, 3.3em, 600);
           padding: 0;
           margin: 0;
+          margin-top: 10px;
         }
 
         h3 {
-          @include custom-Montserrat ($main-grey, 2.1rem, 400);
+          @include custom-Montserrat ($main-grey, 1.5em, 400);
           padding: 0;
           margin: 0;
-          margin-top: -10px;
+          margin-top: 10px;
+        }
+
+        h3:first-of-type {
+          margin-top: 0px;
         }
       }
 
       #price-weekly {
         margin-top: 0;
+        font-size: 3.3em;
+        font-weight: 600;
       }
     }
   }
@@ -87,7 +96,7 @@
       @include bulk-text ($dark-2-yellow);
       text-align: justify;
       text-justify: inter-word;
-      line-height: 2rem;
+      line-height: 1.5em;
     }
   }
 }

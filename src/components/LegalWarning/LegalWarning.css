@@ -18,7 +18,7 @@
 .legal-warning-container .legal-warning-bg .legal-warning-exit {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 2em;
   color: #9A746D;
   display: flex;
   justify-content: flex-end;
@@ -35,7 +35,7 @@
 .legal-warning-container .legal-warning-bg .legal-warning-heading-text-container h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 2em;
   color: #4F6E72;
 }
 .legal-warning-container .legal-warning-bg .legal-warning-heading-text-container .legal-warning-text-box-1 {
@@ -58,23 +58,23 @@
 .legal-warning-container .legal-warning-bg .legal-warning-heading-text-container .legal-warning-text-box-1 .legal-warning-text-box-2 .legal-warning-text h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   color: black;
 }
 .legal-warning-container .legal-warning-bg .legal-warning-heading-text-container .legal-warning-text-box-1 .legal-warning-text-box-2 .legal-warning-text p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1em;
   color: black;
   text-align: justify;
-  line-height: 2rem;
+  line-height: 2em;
   margin: 0;
 }
 .legal-warning-container .legal-warning-bg .legal-warning-heading-text-container .legal-warning-text-box-1 .legal-warning-text-box-2 .legal-warning-text li {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1em;
   color: black;
-  line-height: 2rem;
+  line-height: 2em;
   margin: 0;
 }/*# sourceMappingURL=LegalWarning.css.map */

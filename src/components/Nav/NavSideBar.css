@@ -110,7 +110,7 @@
   list-style: none;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1em;
   color: #F8F8F8;
   display: flex;
 }
@@ -146,22 +146,22 @@
 .nav-side-container .li-text:link {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   color: #F8F8F8;
 }
 .nav-side-container .li-text:visited {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   color: #F8F8F8;
 }
 .nav-side-container .li-text:hover {
   background-color: rgba(253, 237, 221, 0.3);
-  font-size: 1.7rem;
+  font-size: 1.7em;
   cursor: pointer;
 }
 .nav-side-container .li-text:active {
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 .nav-side-container #li-img-side {
   height: 100px;
@@ -190,6 +190,7 @@
   justify-content: center;
 }
 .nav-side-container svg {
+  cursor: pointer;
   height: 35px;
   width: 35px;
   fill: #F8F8F8;
@@ -202,7 +203,7 @@
   .nav-side-container ul {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1em;
     color: #F8F8F8;
   }
   .nav-side-container li {
@@ -224,20 +225,20 @@
   .nav-side-container .li-text:link {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.3em;
     color: #F8F8F8;
   }
   .nav-side-container .li-text:visited {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.3em;
     color: #F8F8F8;
   }
   .nav-side-container .li-text:hover {
-    font-size: 1.4rem;
+    font-size: 1.4em;
   }
   .nav-side-container .li-text:active {
-    font-size: 1.3rem;
+    font-size: 1.3em;
   }
   .nav-side-container .li-icon {
     height: 40px;
@@ -247,7 +248,7 @@
   .nav-side-container ul {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.3em;
     color: #F8F8F8;
   }
   .nav-side-container li {
@@ -259,20 +260,20 @@
   .nav-side-container .li-text:link {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.3em;
     color: #F8F8F8;
   }
   .nav-side-container .li-text:visited {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.3em;
     color: #F8F8F8;
   }
   .nav-side-container .li-text:hover {
-    font-size: 1.4rem;
+    font-size: 1.4em;
   }
   .nav-side-container .li-text:active {
-    font-size: 1.3rem;
+    font-size: 1.3em;
   }
   .nav-side-container .li-icon {
     height: 40px;

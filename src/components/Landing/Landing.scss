@@ -1,50 +1,59 @@
 @import "../../utilities/variables.scss";
 
-.landing-wrapper {
+.landing-colours {
+  width: 100%;
+  position: absolute;
+}
+
+.landing-top-colour {
+  background-color: $main-yellow;
+  height: 50vh;
+  z-index: -5;
+}
+
+.landing-bottom-colour {
+  background-color: $main-grey;
+  height: 100vh;
+  top: 0;
+  z-index: -10;
+}
+
+.landing-container {
+  //background-color: $main-yellow;
+  height: 100vh;
+  width: 100%;
   display: grid;
-  grid-template-columns: 62% 38%;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas:
+    "landingImage landingHeading"
+    "landingImage landingText";
 
-  .landing-img {
-    width: auto;
-    min-width: 500px;
+  .landing-image-container {
     height: 100vh;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    display: grid;
-    position:relative;
-    
-    img {
-      position: absolute;
-      margin: 50px;
-      justify-self: center;
-      align-self: center;
-      min-width: 500px;
-      max-width: 800px;
-    }
+    width: 100%;
+    grid-area: landingImage;
+    //background-color: rgba($color: aqua, $alpha: 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .landing-colour {
-      height: 50vh;
-      width: 100%;
-      z-index: -10;
-    }
-    
-    .top-colour {
-      background-color: $main-yellow;
-    }
-    
-    .bottom-colour {
-      background-color: $main-grey;
+    img {
+      height: auto;
+      width: auto;
+      margin: 0px 30px 30px 30px;
+      padding-top: 130px;
+      transition: 0.5s;
     }
   }
 
-  .landing-top {
-    background-color: $main-yellow;
-    width: auto;
-    min-width: 600px;
-    height: 50vh;
+  .landing-heading-container {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: flex-end;
+    grid-area: landingHeading;
+    //background-color: rgba($color: red, $alpha: 0.5);
 
     h1 {
       margin: 0;
@@ -52,13 +61,17 @@
       margin-bottom: 7px;
       margin-top: -25px;
       @include main-heading($main-grey);
+      //font-size: 5.5vw;
+      transition: 0.5s;
     }
 
     h2 {
       margin: 0;
       padding: 0;
       margin-bottom: 20px;
-      @include custom-Roboto ($main-grey, 2rem, 500)
+      @include custom-Roboto($main-grey, 2em, 500);
+      //font-size: 1.7vw;
+      transition: 0.5s;
     }
 
     @keyframes wordChangeAnimation {
@@ -70,7 +83,7 @@
       80% {
         opacity: 1;
         transform: scale(1);
-      } 
+      }
     }
 
     .wordChangeAnimation {
@@ -78,21 +91,21 @@
     }
   }
 
-  .landing-bottom {
-    background-color: $main-grey;
-    width: auto;
-    height: 50vh;
+  .landing-text-container {
+    grid-area: landingText;
+    //background-color: rgba($color: green, $alpha: 0.5);
 
-    .landing-bottom-textbox {
+    .landing-textbox {
       width: 500px;
       height: auto;
       display: flex;
       flex-direction: column;
 
       h3 {
-        @include bulk-text ($dark-1-red);
+        @include bulk-text($dark-1-red);
         text-align: justify;
-        line-height: 2rem;
+        line-height: 2em;
+        transition: 0.5s;
       }
 
       a {
@@ -100,7 +113,7 @@
         height: 60px;
         width: 300px;
         background-color: $light-red;
-        @include custom-Roboto ($dark-1-red, 2rem, 400);
+        @include custom-Roboto($dark-1-red, 2em, 400);
         border-radius: 10px;
         align-self: center;
         cursor: pointer;
@@ -118,6 +131,8 @@
           transform: scale(1);
         }
       }
-    }     
+    }
   }
 }
+
+// MEDIA QUERIES //

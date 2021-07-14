@@ -10,13 +10,16 @@
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
+  text-align: center;
 
   .footer-text-container {
     display: flex;
-    @include custom-Roboto(white, 1.2rem, 400);
+    justify-content: center;
+    align-items: baseline;
+    @include custom-Roboto(white, 1.1em, 400);
 
     a {
-      @include custom-Roboto(white, 1.2rem, 500);
+      @include custom-Roboto(white, 1.1em, 500);
       text-decoration: none;
       cursor: pointer;
 
@@ -25,7 +28,15 @@
       }
 
       &:hover {
-        color: $dark-1-grey;
+        color: $light-blue;
+      }
+    }
+
+    #img-cred {
+      cursor: pointer;
+
+      &:hover {
+        color: $light-blue;
       }
     }
   }
@@ -35,17 +46,20 @@
 //Media Queries
 //---------------------
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
   .footer-container {
-    height: 30px;
+    //height: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
 
     .footer-text-container {
-      @include custom-Roboto(white, 1rem, 400);
+      display: initial;
+      justify-content: initial;
+      align-items: initial;
+      @include custom-Roboto(white, 1em, 400);
 
       a {
-        @include custom-Roboto(white, 1rem, 500);
+        @include custom-Roboto(white, 1em, 500);
       }
     }
   }
@@ -53,15 +67,15 @@
 
 @media only screen and (max-width: 580px) {
   .footer-container {
-    height: 25px;
+    //height: 25px;
     padding-top: 5px;
     padding-bottom: 5px;
 
     .footer-text-container {
-      @include custom-Roboto(white, 0.8rem, 400);
+      @include custom-Roboto(white, 0.8em, 400);
 
       a {
-        @include custom-Roboto(white, 0.8rem, 500);
+        @include custom-Roboto(white, 0.9em, 500);
       }
     }
   }
@@ -69,10 +83,10 @@
   @media only screen and (max-width: 450px) {
     .footer-container {  
       .footer-text-container {
-        @include custom-Roboto(white, 0.6rem, 400);
+        @include custom-Roboto(white, 0.6em, 400);
   
         a {
-          @include custom-Roboto(white, 0.6rem, 500);
+          @include custom-Roboto(white, 0.7em, 500);
         }
       }
     }
@@ -82,10 +96,10 @@
 @media only screen and (max-width: 321px) {
   .footer-container {  
     .footer-text-container {
-      @include custom-Roboto(white, 0.48rem, 400);
+      @include custom-Roboto(white, 0.48em, 400);
 
       a {
-        @include custom-Roboto(white, 0.48rem, 500);
+        @include custom-Roboto(white, 0.5em, 500);
       }
     }
   }

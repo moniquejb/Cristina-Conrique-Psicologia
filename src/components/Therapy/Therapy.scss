@@ -26,7 +26,7 @@
     p {
       @include bulk-text ($dark-1-red);
       text-align: justify;
-      line-height: 2rem;
+      line-height: 1.5em;
       align-self: center;
     }
   }
@@ -53,12 +53,12 @@
       .therapy-individuals-text {
         text-align: center;
         h3 {
-          @include custom-Roboto($dark-2-red, 2rem, 400);
+          @include custom-Roboto($dark-2-red, 2em, 400);
           margin-bottom: 0;
         }
 
         p {
-          @include custom-Montserrat($dark-1-red, 1.1rem, 400);
+          @include custom-Montserrat($dark-1-red, 1.1em, 400);
           line-height: 30px;
         }
       }
