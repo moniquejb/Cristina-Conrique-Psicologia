@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
 import { FacebookIcon, InstagramIcon, SkypeIcon } from '../../utilities/icons.js';
 import './Nav.css';
 import './NavSideBar.css';

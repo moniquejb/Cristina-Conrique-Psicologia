@@ -7,7 +7,7 @@
 
   h1 {
     margin: 0;
-    padding: 50px 0 0 120px;
+    padding: 50px 0 10px 120px;
     @include main-heading ($main-grey);
   }
 
@@ -21,40 +21,80 @@
 
     .online-therapy-text {
       height: auto;
-      width: 60%;
+      width: 62%;
       min-width: 790px;
 
+      .hr-line-break {
+        width: 50%;
+        border: 0;
+        height: 3px;
+        background-image: linear-gradient(to right, rgba(228, 243, 240, 0), rgba(228, 243, 240, 0.5), rgba(228, 243, 240, 0));
+      }
+
       h3 {
+        padding: 0 0 0 120px;
+        cursor: pointer;
+        display: inline-block;
+      }
+
+      .h3-open {
         @include secondary-heading ($main-grey);
-        padding-top: 20px;
-        padding-left: 120px;
+        margin-bottom: 10px;
+        transition: 0.5s;
+      }
+
+      .h3-closed {
+        @include bulk-text ($main-grey);  
+        transition: 0.5s;    
       }
     
-      p {
+      .p-show {
         @include bulk-text ($main-grey);
-        padding-left: 120px;
+        padding: 0 0 20px 120px;
         text-align: justify;
-        line-height: 2em;
-      }
-    
-      ul {
-        padding-left: 120px;
-        
+        line-height: 1.5em;
+        transform: scale(1);
+        transform-origin: top left;
+        transition: 0.5s;  
+
         li {
-          @include bulk-text ($main-grey);
+          text-align: left;
           line-height: 1.8em;
           list-style-position: inside;
           text-indent: -1.4em;
           padding-left: 1.4em;
         }
       }
+
+      .p-hide {
+        @include custom-Montserrat ($main-grey, 1.3em, 400);
+        padding: 0 0 20px 120px;
+        text-align: justify;
+        line-height: 1.5em;
+        transform: scale(0.95);
+        transform-origin: top left;
+        position: absolute;
+        visibility: hidden;
+      }
+
+      // ul {
+      //   padding-left: 120px;
+        
+      //   li {
+      //     @include bulk-text ($main-grey);
+      //     line-height: 1.8em;
+      //     list-style-position: inside;
+      //     text-indent: -1.4em;
+      //     padding-left: 1.4em;
+      //   }
+      // }
     }
 
     .online-therapy-img {
-      margin: 50px 120px 50px 50px;
+      margin: 0px 120px 50px 50px;
       height: auto;
-      width: 40%;
-      min-width: 500px;
+      width: 28%;
+      min-width: 450px;
       display: flex;
       justify-content: center;
       align-items: flex-start;

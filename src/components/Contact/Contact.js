@@ -30,7 +30,7 @@ const Contact = ({ handleToggleLegal }) => {
                 <a 
                   target='_blank'
                   rel="noreferrer"
-                  href="https://api.whatsapp.com/send?phone=34617019537">
+                  href="https://api.whatsapp.com/send?phone=27726406660">
                   <WhatsappIcon />
                 </a>
               </div>
@@ -38,8 +38,8 @@ const Contact = ({ handleToggleLegal }) => {
                 <a 
                   target='_blank'
                   rel="noreferrer"
-                  href="https://api.whatsapp.com/send?phone=34617019537">
-                  <h3>+34 617 01 95 37</h3>
+                  href="https://api.whatsapp.com/send?phone=27726406660">
+                  <h3>+27 72 640 6660</h3>
                 </a>
               </div>
             </div>

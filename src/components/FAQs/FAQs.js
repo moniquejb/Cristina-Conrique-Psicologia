@@ -3,7 +3,7 @@ import './FAQs.css';
 import { questions, answers } from "../../utilities/FAQ_questions_answers.js";
 
 const FAQs = () => {
-  const handleToggleAnswer = ({ target }) => {
+  const handleToggleAnswerFAQ = ({ target }) => {
     const regex = /\d+/;
     let selectedQuestion = target.id;
     let selectedId = selectedQuestion.match(regex)[0];
@@ -54,7 +54,7 @@ const FAQs = () => {
     return (
       <li id={`list_item_${index + 1}`} key={`question_${index + 1}`}>
         <div
-          onClick={handleToggleAnswer}
+          onClick={handleToggleAnswerFAQ}
           id={`question_container_${index + 1}`}
           className='question-container'>
           <div id={`question_text_box_${index + 1}`} className='questions-text-box'>

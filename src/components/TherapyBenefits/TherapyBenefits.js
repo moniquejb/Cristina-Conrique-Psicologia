@@ -13,7 +13,7 @@ const TherapyBenefits = () => {
           </Tilt>
           <h3>Comodidad</h3>
           <div className='therapy-benefit-textbox'>
-            <p>Para la obtención de una cita virtaul<br/> solo tienes que coordinar un día y un<br/> horario determinados.</p>
+            <p>Ofrece la oportunidad para ayudar a<br/> aquellas personas que por diferentes motivos<br/> no pueden acudir a una terapia presencial.</p>
           </div>
         </div>
         <div className='therapy-benefit'>
@@ -22,7 +22,7 @@ const TherapyBenefits = () => {
           </Tilt>
           <h3>Sin Desplazamientos</h3>
           <div className='therapy-benefit-textbox'>
-            <p>No requiere abondonar la<br/> comodidad de tu sofá preferido o<br/> tus obligaciones en la oficina.</p>
+            <p>No requiere abandonar la<br/> comodidad de tu casa, oficina<br/> o actividades cotidianas.</p>
           </div>
         </div>
         <div className='therapy-benefit'>
@@ -31,7 +31,7 @@ const TherapyBenefits = () => {
           </Tilt>
           <h3>Flexibilidad</h3>
           <div className='therapy-benefit-textbox'>
-            <p>Puedes programar una sesión estès<br/> donde estès y a la hora que desees,<br/> incluso estando de vacaciones.</p>
+            <p>Puedes programar una sesión estés<br/> donde estés y a la hora que desees,<br/> incluso estando de viaje.</p>
           </div> 
         </div>
       </div>
@@ -43,7 +43,7 @@ const TherapyBenefits = () => {
           </Tilt>  
           <h3>Ahorro</h3>
           <div className='therapy-benefit-textbox'>
-            <p>De tiempo y dinero. No te diriges a<br/> una consulta ni padeces los <em>tiempos<br/> muertos</em> en salas de espera.</p>
+            <p>De tiempo y dinero.<br/> Evita desplazamientos y tiempos<br/> en salas de espera.</p>
           </div>
         </div>
         <div className='therapy-benefit'>
@@ -61,7 +61,7 @@ const TherapyBenefits = () => {
           </Tilt>
           <h3>Intimidad</h3>
           <div className='therapy-benefit-textbox'>
-            <p>La máxima privacidad y la reserva<br/> garantizan un trato profesional<br/> personalizado y cercano.</p>
+            <p>Trato profesional y cercano garantizado,<br/> así como la máxima confidencialidad con<br/> el manejo de información.</p>
           </div>
         </div>
       </div>

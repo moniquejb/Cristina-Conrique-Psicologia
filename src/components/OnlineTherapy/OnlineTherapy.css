@@ -6,7 +6,7 @@
 }
 .online-therapy-container h1 {
   margin: 0;
-  padding: 50px 0 0 120px;
+  padding: 50px 0 10px 120px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 6.5em;
@@ -27,44 +27,72 @@
 }
 .online-therapy-container .online-therapy-text-img-container .online-therapy-text {
   height: auto;
-  width: 60%;
+  width: 62%;
   min-width: 790px;
 }
+.online-therapy-container .online-therapy-text-img-container .online-therapy-text .hr-line-break {
+  width: 50%;
+  border: 0;
+  height: 3px;
+  background-image: linear-gradient(to right, rgba(228, 243, 240, 0), rgba(228, 243, 240, 0.5), rgba(228, 243, 240, 0));
+}
 .online-therapy-container .online-therapy-text-img-container .online-therapy-text h3 {
+  padding: 0 0 0 120px;
+  cursor: pointer;
+  display: inline-block;
+}
+.online-therapy-container .online-therapy-text-img-container .online-therapy-text .h3-open {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 2em;
   color: #F8F8F8;
-  padding-top: 20px;
-  padding-left: 120px;
+  margin-bottom: 10px;
+  transition: 0.5s;
 }
-.online-therapy-container .online-therapy-text-img-container .online-therapy-text p {
+.online-therapy-container .online-therapy-text-img-container .online-therapy-text .h3-closed {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.3em;
   color: #F8F8F8;
-  padding-left: 120px;
+  transition: 0.5s;
+}
+.online-therapy-container .online-therapy-text-img-container .online-therapy-text .p-show {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.3em;
+  color: #F8F8F8;
+  padding: 0 0 20px 120px;
   text-align: justify;
-  line-height: 2em;
+  line-height: 1.5em;
+  transform: scale(1);
+  transform-origin: top left;
+  transition: 0.5s;
 }
-.online-therapy-container .online-therapy-text-img-container .online-therapy-text ul {
-  padding-left: 120px;
-}
-.online-therapy-container .online-therapy-text-img-container .online-therapy-text ul li {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 1.3em;
-  color: #F8F8F8;
+.online-therapy-container .online-therapy-text-img-container .online-therapy-text .p-show li {
+  text-align: left;
   line-height: 1.8em;
   list-style-position: inside;
   text-indent: -1.4em;
   padding-left: 1.4em;
 }
+.online-therapy-container .online-therapy-text-img-container .online-therapy-text .p-hide {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.3em;
+  color: #F8F8F8;
+  padding: 0 0 20px 120px;
+  text-align: justify;
+  line-height: 1.5em;
+  transform: scale(0.95);
+  transform-origin: top left;
+  position: absolute;
+  visibility: hidden;
+}
 .online-therapy-container .online-therapy-text-img-container .online-therapy-img {
-  margin: 50px 120px 50px 50px;
+  margin: 0px 120px 50px 50px;
   height: auto;
-  width: 40%;
-  min-width: 500px;
+  width: 28%;
+  min-width: 450px;
   display: flex;
   justify-content: center;
   align-items: flex-start;

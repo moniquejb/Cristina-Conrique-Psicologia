@@ -4,7 +4,7 @@ export const DepressionContent = ({ toggleContentDepression }) => {
   return (
     <>
       <div className='resource-content' id='resource-content'>
-        <ul hidden={toggleContentDepression} id='depresión'>
+        <ul hidden={toggleContentDepression}>
           <li><a target='_blank'
             rel="noreferrer"
             href='https://www.psicoglobal.com/blog/distimia'>Depresión crónica o persistente: la distimia
@@ -59,7 +59,7 @@ export const AnxietyContent = ({ toggleContentAnxiety }) => {
   return (
     <>
       <div className='resource-content' id='resource-content'>
-        <ul hidden={toggleContentAnxiety} id='ansiedad'>
+        <ul hidden={toggleContentAnxiety}>
           <li><a target='_blank'
             rel="noreferrer"
             href='https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/sites/default/files/sincfiles/wsas-media-mediafile_sasdocumento/2019/13_guia_afrontando_estres.pdf'>Afrontamiento del estrés
@@ -130,7 +130,7 @@ export const SocialContent = ({ toggleContentSocial }) => {
   return (
     <>
       <div className='resource-content' id='resource-content'>
-        <ul hidden={toggleContentSocial} id='habilidades-sociales'>
+        <ul hidden={toggleContentSocial}>
           <li><a target='_blank'
             rel="noreferrer"
             href='https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/sites/default/files/sincfiles/wsas-media-mediafile_sasdocumento/2019/13_guia_afrontando_estres.pdf'>3 técnicas asertivas para saber decir no
@@ -185,7 +185,7 @@ export const LGBTContent = ({ toggleContentLGBT }) => {
   return (
     <>
       <div className='resource-content' id='resource-content'>
-        <ul hidden={toggleContentLGBT} id='material-lgbt'>
+        <ul hidden={toggleContentLGBT}>
           <li><a target='_blank'
             rel="noreferrer"
             href='https://www.tuyopsicologoslgtb.com/salida-del-armario/'>Salida del armario, declaración pública
@@ -224,7 +224,7 @@ export const VideosContent = ({ toggleContentVideos }) => {
   return (
     <>
       <div className='resource-content' id='resource-content'>
-        <ul hidden={toggleContentVideos} id='videos'>
+        <ul hidden={toggleContentVideos}>
           <li><a target='_blank'
             rel="noreferrer"
             href='https://youtu.be/yKcjZ49lsM8'>Yo tenía un perro negro llamado DEPRESIÓN

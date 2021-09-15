@@ -6,6 +6,7 @@ const Footer = () => {
     <div className='footer-container' id='footer'>
       <div className='footer-text-container'>
         <p>© 2021 Cristina Conrique&nbsp;&nbsp;|&nbsp;&nbsp;Todos los derechos reservados&nbsp;&nbsp;|&nbsp;&nbsp;</p>
+        <div className='breakFoot'></div>
         <p>Imágenes de&nbsp;
           <a target='_blank'
             rel="noreferrer"

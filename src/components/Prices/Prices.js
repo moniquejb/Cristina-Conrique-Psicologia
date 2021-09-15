@@ -8,10 +8,11 @@ const Prices = ({ price, currency }) => {
   let [monthlyTotal, setMonthlyTotal] = useState('');
 
   useEffect(() => {
-    setWeeklyTotal(Math.round(Math.round((price * 0.85)) * 4));
-    setMonthlyTotal(Math.round(Math.round((price * 0.8)) * 8));
-    setWeeklySession(Math.round(price * 0.85));
-    setMonthlySession(Math.round(price * 0.8));
+    //Determine and round up monthly and weekly prices according to currency/price
+    setWeeklyTotal(Math.round(Math.round((price * 0.9)) * 4));
+    setMonthlyTotal(Math.round(Math.round((price * 0.85)) * 8));
+    setWeeklySession(Math.round(price * 0.9));
+    setMonthlySession(Math.round(price * 0.85));
   }, [price])
 
   return (
@@ -34,7 +35,7 @@ const Prices = ({ price, currency }) => {
           <div className='price-box'>
             <h3>Plan Mensual</h3>
             <div className='price-box-discount'>
-              <h3>-15%</h3>
+              <h3>-10%</h3>
               <h2>{currency}{weeklySession}</h2>
               <h3>Total {currency}{weeklyTotal}</h3>
             </div>
@@ -43,7 +44,7 @@ const Prices = ({ price, currency }) => {
           <div className='price-box'>
             <h3>Plan Bimestral</h3>
             <div className='price-box-discount'>
-              <h3>-20%</h3>
+              <h3>-15%</h3>
               <h2>{currency}{monthlySession}</h2>
               <h3>Total {currency}{monthlyTotal}</h3>
             </div>

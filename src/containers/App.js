@@ -53,7 +53,7 @@ function App() {
 
   const handleToggleLegal = () => {
     //Display legal notice if clicked on
-    console.log("clicked", toggleLegal);
+    //console.log("clicked", toggleLegal);
     setToggleLegal(toggleLegal ? false : true);
   }
 
@@ -99,12 +99,16 @@ function App() {
     window.addEventListener("resize", getWindowSize);
 
     //Change navigation bar type according to current window heigth & width
-    if ((windowHeight <= 475 && windowWidth < 915) || (windowHeight <= 300 && windowWidth > 915)) {
+    if ((windowHeight <= 475 && windowWidth <= 915) || (windowHeight <= 300 && windowWidth >= 915)) {
       setNavOrientation('compact');
+      //console.log('compact H', windowHeight, 'W', windowWidth);
     } else if (windowHeight > 475 && windowWidth < 915) {
       setNavOrientation('vertical');
-    } else {
+      //console.log('vertical H', windowHeight, 'W', windowWidth);
+    } 
+    else {
       setNavOrientation('horizontal');
+      //console.log('horizontal H', windowHeight, 'W', windowWidth);
     }
 
     return () => {

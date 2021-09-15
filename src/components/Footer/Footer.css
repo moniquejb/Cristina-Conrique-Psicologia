@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap");
 .footer-container {
-  height: 55px;
+  height: 75px;
   width: 100%;
+  bottom: 0;
   background-color: #4F6E72;
   z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
   text-align: center;
 }
 .footer-container .footer-text-container {
@@ -20,6 +19,13 @@
   font-size: 1.1em;
   color: white;
 }
+.footer-container .footer-text-container .breakFoot {
+  display: none;
+}
+.footer-container .footer-text-container p {
+  margin: 0;
+  padding: 0;
+}
 .footer-container .footer-text-container a {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -27,6 +33,8 @@
   color: white;
   text-decoration: none;
   cursor: pointer;
+  margin: 0;
+  padding: 0;
 }
 .footer-container .footer-text-container a:visited {
   color: white;
@@ -42,18 +50,20 @@
 }
 
 @media only screen and (max-width: 1000px) {
-  .footer-container {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
   .footer-container .footer-text-container {
-    display: initial;
-    justify-content: initial;
-    align-items: initial;
+    flex-direction: column;
+    align-items: center;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 1em;
     color: white;
+  }
+  .footer-container .footer-text-container p {
+    line-height: 1.5em;
+  }
+  .footer-container .footer-text-container .breakFoot {
+    display: flex;
+    flex-basis: 100%;
   }
   .footer-container .footer-text-container a {
     font-family: "Roboto", sans-serif;
@@ -63,10 +73,6 @@
   }
 }
 @media only screen and (max-width: 580px) {
-  .footer-container {
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
   .footer-container .footer-text-container {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -80,7 +86,7 @@
     color: white;
   }
 }
-@media only screen and (max-width: 580px) and (max-width: 450px) {
+@media only screen and (max-width: 450px) {
   .footer-container .footer-text-container {
     font-family: "Roboto", sans-serif;
     font-weight: 400;

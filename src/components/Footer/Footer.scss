@@ -1,15 +1,17 @@
 @import "../../utilities/variables.scss";
 
 .footer-container {
-  height: 55px;
+  height: 75px;
   width: 100%;
+  //position: absolute;
+  bottom: 0;
   background-color: $dark-2-blue;
   z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  //padding-top: 20px;
+  //padding-bottom: 20px;
   text-align: center;
 
   .footer-text-container {
@@ -17,11 +19,23 @@
     justify-content: center;
     align-items: baseline;
     @include custom-Roboto(white, 1.1em, 400);
+    
+
+    .breakFoot {
+      display: none;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
 
     a {
       @include custom-Roboto(white, 1.1em, 500);
       text-decoration: none;
       cursor: pointer;
+      margin: 0;
+      padding: 0;
 
       &:visited {
         color: white;
@@ -48,15 +62,19 @@
 
 @media only screen and (max-width: 1000px) {
   .footer-container {
-    //height: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
     .footer-text-container {
-      display: initial;
-      justify-content: initial;
-      align-items: initial;
+      flex-direction: column;
+      align-items: center;
       @include custom-Roboto(white, 1em, 400);
+
+      p {
+        line-height: 1.5em;
+      }
+
+      .breakFoot {
+        display: flex;
+        flex-basis: 100%;
+      }
 
       a {
         @include custom-Roboto(white, 1em, 500);
@@ -67,10 +85,6 @@
 
 @media only screen and (max-width: 580px) {
   .footer-container {
-    //height: 25px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-
     .footer-text-container {
       @include custom-Roboto(white, 0.8em, 400);
 
@@ -79,22 +93,22 @@
       }
     }
   }
-  
-  @media only screen and (max-width: 450px) {
-    .footer-container {  
-      .footer-text-container {
-        @include custom-Roboto(white, 0.6em, 400);
-  
-        a {
-          @include custom-Roboto(white, 0.7em, 500);
-        }
+}
+
+@media only screen and (max-width: 450px) {
+  .footer-container {
+    .footer-text-container {
+      @include custom-Roboto(white, 0.6em, 400);
+
+      a {
+        @include custom-Roboto(white, 0.7em, 500);
       }
     }
   }
 }
 
 @media only screen and (max-width: 321px) {
-  .footer-container {  
+  .footer-container {
     .footer-text-container {
       @include custom-Roboto(white, 0.48em, 400);
 
@@ -104,3 +118,44 @@
     }
   }
 }
+
+// @media only screen and (max-width: 580px) {
+//   .footer-container {
+//     //height: 25px;
+//     //margin-top: 30px;
+//     //padding-top: 5px;
+//     //padding-bottom: 5px;
+
+//     .footer-text-container {
+//       @include custom-Roboto(white, 0.8em, 400);
+
+//       a {
+//         @include custom-Roboto(white, 0.9em, 500);
+//       }
+//     }
+//   }
+
+//   @media only screen and (max-width: 450px) {
+//     .footer-container {
+//       .footer-text-container {
+//         @include custom-Roboto(white, 0.6em, 400);
+
+//         a {
+//           @include custom-Roboto(white, 0.7em, 500);
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @media only screen and (max-width: 321px) {
+//   .footer-container {
+//     .footer-text-container {
+//       @include custom-Roboto(white, 0.48em, 400);
+
+//       a {
+//         @include custom-Roboto(white, 0.5em, 500);
+//       }
+//     }
+//   }
+// }

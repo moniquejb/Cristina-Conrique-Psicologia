@@ -6,19 +6,23 @@
 }
 
 .resource-height-closed {
+  //min-height: 5vh;
   height: 100vh;
-  margin-bottom: -95px;
+  //padding-bottom: 95px;
+  //display: block;
+  margin-bottom: -75px;
 }
 
 .resources-container {
   width: 100%;
+  //height: 100%;
   background-color: $main-grey;
   padding: 0;
   margin-top: -130px;
 
   h1 {
     margin: 0 0 0 120px;
-    padding-top: 150px;
+    padding: 130px 0 0 0;
     @include main-heading($dark-2-blue);
   }
 
@@ -29,24 +33,28 @@
     display: flex;
     flex-direction: column;
 
+    .breakRes {
+      display: none;
+    }
+
     .resource-boxes-container {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
       flex-direction: row;
+      flex-wrap: wrap;
       width: 100%;
       height: 100%;
       padding: 40px 0;
       //background-color: aqua;
 
-
       .resource-box {
         z-index: 1;
         height: 300px;
         width: 250px;
-        min-width: 250px;
-        margin: 0 5px;
-        background-color:$main-yellow;
+        //min-width: 250px;
+        //margin: 0 5px;
+        background-color: $main-yellow;
         border-radius: 20%;
         box-shadow: 0px 0px 10px rgba(92, 64, 3, 0.3);
 
@@ -82,7 +90,7 @@
           }
 
           h3 {
-            @include secondary-heading ($main-grey);
+            @include secondary-heading($main-grey);
             z-index: 2;
           }
         }
@@ -91,12 +99,10 @@
       .chosen-box {
         background-color: #eeeeee;
         box-shadow: 0px 0px 10px rgba(102, 102, 102, 0.5);
-        
+
         &:hover {
           box-shadow: 0px 0px 6px rgba(136, 136, 136, 0.2);
         }
-
-
 
         .resource-box-content {
           img {
@@ -104,13 +110,11 @@
           }
 
           h3 {
-            @include secondary-heading (rgb(136, 97, 42));
+            @include secondary-heading(rgb(136, 97, 42));
           }
         }
+      }
     }
-    }  
-
-    
 
     .resource-content {
       display: flex;
@@ -129,13 +133,12 @@
 
         li {
           margin: 0 120px 0 120px;
-          @include bulk-text ($dark-2-blue);
+          @include bulk-text($dark-2-blue);
           line-height: 2.5em;
-          
 
           a {
             text-decoration: none;
-            
+
             &:link {
               color: $dark-2-blue;
             }
@@ -146,12 +149,12 @@
               color: $main-blue;
             }
             &:visited:hover {
-              color:$main-red;
+              color: $main-red;
             }
           }
         }
       }
-    }  
+    }
   }
 }
 
@@ -172,3 +175,203 @@
   }
 }
 
+//---------------------
+//Media Queries
+//---------------------
+
+@media only screen and (max-width: 1300px) {
+  .resources-container {
+    .resource-flex-container {
+      .resource-boxes-container {
+        .resource-box {
+          height: 225px;
+          width: 190px;
+          min-width: 190px;
+
+          .resource-box-content {
+            img {
+              height: 225px;
+              width: 190px;
+            }
+
+            h3 {
+              font-size: 1.8em;
+            }
+          }
+        }
+
+        .chosen-box {
+          .resource-box-content {
+            h3 {
+              font-size: 1.8em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .resource-height-closed {
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .resources-container {
+    .resource-flex-container {
+      .resource-boxes-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        //flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        padding: 20px 0;
+
+        .breakRes {
+          display: flex;
+          flex-basis: 100%;
+        }
+
+        .resource-box {
+          height: 300px;
+          width: 250px;
+          min-width: 250px;
+          margin: 10px;
+
+          .resource-box-content {
+            img {
+              height: 300px;
+              width: 250px;
+            }
+
+            h3 {
+              font-size: 1.5em;
+            }
+          }
+        }
+
+        .chosen-box {
+          .resource-box-content {
+            h3 {
+              font-size: 1.5em;
+            }
+          }
+        }
+      }
+      .resource-content {
+        ul {
+          li {
+            margin: 0 90px 0 90px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 931px) {
+  .resources-container {
+    margin-top: 0px;
+  
+    h1 {
+      padding: 20px 0 0 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .resource-height-closed {
+    height: 100vh;
+    margin-bottom: -75px;
+  }
+
+  .resources-container {
+    margin-top: -30px;
+
+    h1 {
+      padding: 50px 0 0 0;
+    }
+
+    .resource-flex-container {
+      .resource-boxes-container {
+        padding: 20px 0;
+        height: auto;
+        
+        .resource-box {
+          height: 220px;
+          width: 180px;
+          min-width: 180px;
+          margin: 10px;
+
+          .resource-box-content {
+            img {
+              height: 220px;
+              width: 180px;
+            }
+
+            h3 {
+              font-size: 1.5em;
+            }
+          }
+        }
+      }
+
+      .resource-content {
+        ul {
+          li {
+            margin: 0 70px 0 70px;
+            font-size: 1.2em;
+            line-height: 2.3em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .resource-height-closed {
+    height: 100vh;
+    margin-bottom: -75px;
+  }
+
+  .resources-container {
+    .resource-flex-container {
+      .resource-boxes-container {
+        padding: 40px 0;
+        height: auto;
+        
+        .resource-box {
+          height: 170px;
+          width: 140px;
+          min-width: 140px;
+          margin: 10px;
+
+          .resource-box-content {
+            img {
+              height: 170px;
+              width: 140px;
+            }
+
+            h3 {
+              font-size: 1.5em;
+            }
+          }
+        }
+      }
+
+      .resource-content {
+        ul {
+          li {
+            margin: 0 60px 0 60px;
+            font-size: 1.2em;
+            line-height: 2.3em;
+          }
+        }
+      }
+    }
+  }
+}

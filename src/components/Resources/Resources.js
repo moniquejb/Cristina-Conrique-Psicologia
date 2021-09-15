@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { DepressionContent, AnxietyContent, SocialContent, LGBTContent, VideosContent } from '../../utilities/resourceContent.js';
 import './Resources.css';
 
@@ -14,6 +15,15 @@ const Resources = () => {
   const [toggleContentVideos, setToggleContentVideos] = useState(true);
   const [toggleContainerHeight, setToggleContainerHeight] = useState('resource-height-closed');
   const [resourseClassName, setResourceClassName] = useState('');
+  const location = useLocation();
+
+  //const handleResourceLocation = () => {
+    //Close side/compact navigation bar if a nav link linked to landing page is clicked
+    //console.log(location.pathname);
+    if (location.pathname === '/recursos') {
+      console.log('path', true);
+    }
+  //}
 
   const handleToggleResource = ({ target }) => {
     let resourceName = target.className;
@@ -87,7 +97,7 @@ const Resources = () => {
               <a href='/recursos#depresión'>
                 <div className='resource-box-content' onClick={handleToggleResource}>
                   <img className='depression-click' alt='Imagen de Depresión' src='images/depression.jpg'></img>
-                  <h3 className='depression-click'>Depresión</h3>
+                  <h3 id='depresión' className='depression-click'>Depresión</h3>
                 </div>
               </a>
             </div>
@@ -95,7 +105,7 @@ const Resources = () => {
               <a href='/recursos#ansiedad'>
                 <div className='resource-box-content'>
                   <img className='anxiety-click' alt='Imagen de Ansiedad' src='images/anxiety.jpg'></img>
-                  <h3 className='anxiety-click'>Ansiedad</h3>
+                  <h3 id='ansiedad' className='anxiety-click'>Ansiedad</h3>
                 </div>
               </a>
             </div>
@@ -103,15 +113,16 @@ const Resources = () => {
               <a href='/recursos#habilidades-sociales'>
                 <div className='resource-box-content'>
                   <img className='social-click' alt='Imagen de Habilidades Sociales' src='images/social.jpg'></img>
-                  <h3 className='social-click'>Habilidades Sociales</h3>
+                  <h3 id='habilidades-sociales' className='social-click'>Habilidades Sociales</h3>
                 </div>
               </a>
             </div>
+            <div className='breakRes'></div>
             <div className='resource-box' id='resource-box-4' onClick={handleToggleResource}>
               <a href='/recursos#material-lgbt'>
                 <div className='resource-box-content'>
                   <img className='lgbt-click' alt='Imagen de Material LGBT' src='images/lgbt.jpg'></img>
-                  <h3 className='lgbt-click'>Material LGBT</h3>
+                  <h3 id='material-lgbt' className='lgbt-click'>Material LGBT</h3>
                 </div>
               </a>
             </div>
@@ -119,7 +130,7 @@ const Resources = () => {
               <a href='/recursos#videos'>
                 <div className='resource-box-content'>
                   <img className='videos-click' alt='Imagen de Videos' src='images/videos.jpg'></img>
-                  <h3 className='videos-click'>Videos</h3>
+                  <h3 id='videos' className='videos-click'>Videos</h3>
                 </div>
               </a>
             </div>
