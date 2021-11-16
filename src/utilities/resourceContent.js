@@ -227,7 +227,7 @@ export const VideosContent = ({ toggleContentVideos }) => {
         <ul hidden={toggleContentVideos}>
           <li><a target='_blank'
             rel="noreferrer"
-            href='https://youtu.be/yKcjZ49lsM8'>Yo tenía un perro negro llamado DEPRESIÓN
+            href='https://youtu.be/yKcjZ49lsM8'>Yo tenía un perro negro llamado Depresión
           </a></li>
           <li><a target='_blank'
             rel="noreferrer"

@@ -1,52 +1,95 @@
 @import "../../utilities/variables.scss";
 
+//---- MOBILE ----
+//Tested and working for the following phones/screen sizes
+//Also tested and working in landscape mode
+// ----------------
+//iPhone XR 414 x 896
+//iPhone 5/SE 320 x 568
+//iPhone 4 320 x 480
+//Galaxy S5 360 x 640
+//iPhone X 375 x 812
+//Nexus 4 384 x 640
+//JioPhone2 240 x 320
+//Galaxy Fold 280 x 653
+//Nokia N9 480 x 854
+//Nexus 6P 412 x 732
+//Pixel 2 XL 411 x 823
+//Surface Duo 540 x 720
+// ----------------
+
+//---- TABLET ----
+//Tested and working for the following tablet/screen sizes
+//Also tested and working in landscape mode
+// ----------------
+//Nexus 7 600 - 960
+//BB Playbook 600 x 1024
+//iPad/iPad Mini 768 x 1024
+//Kindle Fire HDX 800 x 1280
+//iPad Pro 1024 x 1366
+// ----------------
+
+//---- DESKTOP ----
+//Tested and working for the following desktop sizes
+// ----------------
+//Laptop with MDPI Screen 1280 x 800
+//Generic Laptop 1280 x 950
+//MacBook Air 1440 x 900
+//MacBook Pro 13" 2560 x 1600
+//MackBook Pro 15" 2880 x 1800
+//Macbook Pro 16" 3072 x 1920
+//4K Display 3840 x 2160
+//5K Display 5120 x 2880
+// ----------------
+
 .prices-container {
-  height: 94vh;
+  height: auto;
   width: 100%;
   background-color: $main-grey;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 30px 0 20px 0;
 
   h1 {
-    margin: 0;
+    margin: 0 0 20px 0;
     padding: 0;
     @include main-heading ($dark-2-yellow);
     text-align: center;
-    padding-top: 20px;
   }
 
   .price-box-container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 480px;
+    width: 100%;
+    height: auto;
 
     .price-box {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      height: 450px;
-      width: 380px;
+      width: 75%;
       border-radius: 10px;
-      //border: solid 10px $main-grey;
       background-color: $dark-1-grey;
-      margin: 30px 40px;
+      margin: 20px 0;
       text-align: center;
 
       h3 {
-        @include custom-Montserrat ($dark-2-red, 2.5em, 600);
+        @include custom-Montserrat ($dark-2-red, 2em, 600);
         padding: 0;
         margin: 0;
-        padding-top: 20px;
+        padding: 20px 0;
       }
 
       p {
-        @include custom-Montserrat ($dark-2-red, 1.6em, 400);
+        @include custom-Montserrat ($dark-2-red, 1.3em, 400);
         padding: 0;
         margin: 0;
-        padding-bottom: 20px;
+        padding: 20px 0;
+        line-height: 1.4em;
       }
 
       .price-box-discount {
@@ -55,21 +98,21 @@
         align-items: center;
         flex-direction: column;
         background-color: $main-red;
-        height: 240px;
-        width: 240px;
+        height: 50vw;
+        width: 50vw;
         border-radius: 50%;
         padding: 0;
         margin: 0;
 
         h2 {
-          @include custom-Montserrat ($main-grey, 3.3em, 600);
+          @include custom-Montserrat ($main-grey, 11vw, 600);
           padding: 0;
           margin: 0;
           margin-top: 10px;
         }
 
         h3 {
-          @include custom-Montserrat ($main-grey, 1.5em, 400);
+          @include custom-Montserrat ($main-grey, 5vw, 400);
           padding: 0;
           margin: 0;
           margin-top: 10px;
@@ -80,23 +123,426 @@
         }
       }
 
+      .smaller-text-prices {
+        h2 {
+          @include custom-Montserrat ($main-grey, 9vw, 600);
+        }
+
+        h3 {
+          @include custom-Montserrat ($main-grey, 4.5vw, 400);
+        }
+
+        #price-weekly {
+          font-size: 9vw;
+        }
+      }
+
+      .smallest-text-prices {
+        h2 {
+          @include custom-Montserrat ($main-grey, 7vw, 600);
+        }
+
+        h3 {
+          @include custom-Montserrat ($main-grey, 4vw, 400);
+        }
+
+        #price-weekly {
+          font-size: 7vw;
+        }
+      }
+
       #price-weekly {
         margin-top: 0;
-        font-size: 3.3em;
+        font-size: 11vw;
         font-weight: 600;
       }
     }
   }
   
   .prices-consult-text {
-    width: 1320px;
+    width: 90%;
     height: auto;
 
     p {
       @include bulk-text ($dark-2-yellow);
-      text-align: justify;
-      text-justify: inter-word;
-      line-height: 1.5em;
+      margin: 0;
+      padding: 0 0 10px 0;
+    }
+  }
+}
+
+//---- MEDIA QUERIES ----
+@media only screen and (max-width: 321px) {
+  .prices-container {  
+    .price-box-container {
+      .price-box {
+        width: 85%;
+        margin: 15px 0;
+  
+        h3 {
+          font-size: 1.8em;
+        }
+  
+        p {
+          font-size: 1.2em;
+          line-height: 1.3em;
+        }
+  
+        .price-box-discount {
+          height: 60vw;
+          width: 60vw;
+  
+          h2 {
+            font-size: 14vw;
+          }
+  
+          h3 {
+            font-size: 6vw;
+          }
+        }
+
+        .smaller-text-prices {
+          h2 {
+            @include custom-Montserrat ($main-grey, 11vw, 600);
+          }
+  
+          h3 {
+            @include custom-Montserrat ($main-grey, 5vw, 400);
+          }
+  
+          #price-weekly {
+            font-size: 11vw;
+          }
+        }
+
+        .smallest-text-prices {
+          h2 {
+            @include custom-Montserrat ($main-grey, 9vw, 600);
+          }
+  
+          h3 {
+            @include custom-Montserrat ($main-grey, 5vw, 400);
+          }
+  
+          #price-weekly {
+            font-size: 9vw;
+          }
+        }
+  
+        #price-weekly {
+          font-size: 15vw;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 241px) {
+  .prices-container {  
+    .price-box-container {
+      .price-box {
+        h3 {
+          font-size: 1.5em;
+        }
+  
+        p {
+          font-size: 1em;
+        }
+  
+        .price-box-discount {
+          height: 70vw;
+          width: 70vw;
+  
+          h2 {
+            font-size: 16vw;
+          }
+  
+          h3 {
+            font-size: 7vw;
+          }
+        }
+
+        .smaller-text-prices {
+          h2 {
+            @include custom-Montserrat ($main-grey, 13vw, 600);
+          }
+  
+          h3 {
+            @include custom-Montserrat ($main-grey, 6.5vw, 400);
+          }
+  
+          #price-weekly {
+            font-size: 13vw;
+          }
+        }
+
+        .smallest-text-prices {
+          h2 {
+            @include custom-Montserrat ($main-grey, 10vw, 600);
+          }
+  
+          h3 {
+            @include custom-Montserrat ($main-grey, 5.8vw, 400);
+          }
+  
+          #price-weekly {
+            font-size: 10vw;
+          }
+        }
+  
+        #price-weekly {
+          font-size: 16vw;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .prices-container {  
+    .price-box-container {
+      justify-content: space-evenly;
+      flex-direction: row;
+  
+      .price-box {
+        width: 28%;
+  
+        h3 {
+          font-size: 1.6em;
+        }
+  
+        p {
+          font-size: 1em;
+        }
+  
+        .price-box-discount {
+          height: 23vw;
+          width: 23vw;
+  
+          h2 {
+            font-size: 5.5vw;
+            margin-top: 8px;
+          }
+  
+          h3 {
+            font-size: 2.5vw;
+            margin-top: 8px;
+          }
+        }
+
+        .smaller-text-prices {
+          h2 {
+            @include custom-Montserrat ($main-grey, 4vw, 600);
+          }
+  
+          h3 {
+            @include custom-Montserrat ($main-grey, 2.3vw, 400);
+          }
+  
+          #price-weekly {
+            font-size: 4vw;
+          }
+        }
+  
+        .smallest-text-prices {
+          h2 {
+            @include custom-Montserrat ($main-grey, 3.4vw, 600);
+          }
+  
+          h3 {
+            @include custom-Montserrat ($main-grey, 2vw, 400);
+          }
+  
+          #price-weekly {
+            font-size: 3.4vw;
+          }
+        }
+  
+        #price-weekly {
+          font-size: 5.5vw;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 481px) {
+  .prices-container {  
+    .price-box-container {
+      justify-content: space-evenly;
+      flex-direction: row;
+  
+      .price-box {
+        width: 31%;
+  
+        h3 {
+          font-size: 1.3em;
+        }
+  
+        p {
+          font-size: 0.9em;
+        }
+  
+        .price-box-discount {
+          height: 24vw;
+          width: 24vw;
+  
+          h2 {
+            font-size: 5.3vw;
+            margin-top: 8px;
+          }
+  
+          h3 {
+            font-size: 2.5vw;
+            margin-top: 8px;
+          }
+        }
+
+        .smaller-text-prices {
+          h2 {
+            @include custom-Montserrat ($main-grey, 4vw, 600);
+          }
+  
+          h3 {
+            @include custom-Montserrat ($main-grey, 2.3vw, 400);
+          }
+  
+          #price-weekly {
+            font-size: 4vw;
+          }
+        }
+  
+        .smallest-text-prices {
+          h2 {
+            @include custom-Montserrat ($main-grey, 3.5vw, 600);
+          }
+  
+          h3 {
+            @include custom-Montserrat ($main-grey, 2vw, 400);
+          }
+  
+          #price-weekly {
+            font-size: 3.5vw;
+          }
+        }
+  
+        #price-weekly {
+          font-size: 5.3vw;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 812px) {
+    .prices-container {  
+      .price-box-container {
+        .price-box {
+          h3 {
+            font-size: 1.8em;
+          }
+    
+          p {
+            font-size: 1.1em;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1280px) {
+    .prices-container {  
+      padding-bottom: 30px;
+
+      .price-box-container {
+        .price-box {
+          width: 28%;
+    
+          h3 {
+            font-size: 2em;
+          }
+    
+          p {
+            font-size: 1.2em;
+          }
+    
+          .price-box-discount {
+            height: 16vw;
+            width: 16vw;
+    
+            h2 {
+              font-size: 3.4vw;
+              margin-top: 10px;
+            }
+    
+            h3 {
+              font-size: 1.6vw;
+              margin-top: 10px;
+            }
+          }
+
+          .smaller-text-prices {
+            h2 {
+              @include custom-Montserrat ($main-grey, 3vw, 600);
+            }
+    
+            h3 {
+              @include custom-Montserrat ($main-grey, 1.4vw, 400);
+            }
+    
+            #price-weekly {
+              font-size: 3vw;
+            }
+          }
+    
+          .smallest-text-prices {
+            h2 {
+              @include custom-Montserrat ($main-grey, 2.3vw, 600);
+            }
+    
+            h3 {
+              @include custom-Montserrat ($main-grey, 1.3vw, 400);
+            }
+    
+            #price-weekly {
+              font-size: 2.3vw;
+            }
+          }
+    
+          #price-weekly {
+            font-size: 3.4vw;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 2560px) {
+    .prices-container {  
+      padding: 50px 0 60px 0;
+
+      h1 {
+        margin: 0 0 50px 0;
+      }
+
+      .price-box-container {
+        .price-box {    
+          h3 {
+            font-size: 1.8vw;
+            padding-bottom: 40px;
+          }
+    
+          p {
+            font-size: 1.1vw;
+            padding-top: 40px;
+          }
+        }
+      }
+
+      .prices-consult-text {
+        p {
+          padding: 0 0 40px 0;
+        }
+      }
     }
   }
 }

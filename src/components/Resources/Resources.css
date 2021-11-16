@@ -1,38 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap");
-.resource-height-open {
-  height: auto;
-  margin: 0;
-}
-
-.resource-height-closed {
-  height: 100vh;
-  margin-bottom: -75px;
-}
-
 .resources-container {
   width: 100%;
+  height: auto;
   background-color: #F8F8F8;
-  padding: 0;
-  margin-top: -130px;
+  margin: 0;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .resources-container h1 {
-  margin: 0 0 0 120px;
-  padding: 130px 0 0 0;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 6.5em;
+  font-size: 2.8em;
   color: #4F6E72;
+  margin: 0 0 20px 0;
+  padding: 0;
 }
-@media only screen and (max-width: 361px) {
+@media only screen and (max-width: 320px) {
+  .resources-container h1 {
+    font-size: 2.4em;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .resources-container h1 {
+    font-size: 3.3em;
+  }
+}
+@media only screen and (min-width: 1280px) {
   .resources-container h1 {
     font-size: 4em;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .resources-container h1 {
+    font-size: 6em;
+  }
+}
+@media only screen and (min-width: 3840px) {
+  .resources-container h1 {
+    font-size: 8em;
   }
 }
 .resources-container .resource-flex-container {
   height: auto;
   width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 .resources-container .resource-flex-container .breakRes {
   display: none;
@@ -44,24 +57,20 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  height: 100%;
-  padding: 40px 0;
+  height: auto;
 }
 .resources-container .resource-flex-container .resource-boxes-container .resource-box {
   z-index: 1;
-  height: 300px;
-  width: 250px;
+  height: 85vw;
+  width: 70vw;
+  margin: 0 0 20px 0;
+  padding: 0;
   background-color: #F9BE7B;
   border-radius: 20%;
   box-shadow: 0px 0px 10px rgba(92, 64, 3, 0.3);
 }
 .resources-container .resource-flex-container .resource-boxes-container .resource-box a {
   text-decoration: none;
-}
-.resources-container .resource-flex-container .resource-boxes-container .resource-box:hover {
-  filter: brightness(103%);
-  box-shadow: 0px 0px 6px rgba(167, 98, 9, 0.2);
-  transform: scale(1.03);
 }
 .resources-container .resource-flex-container .resource-boxes-container .resource-box:active {
   transform: scale(1);
@@ -76,8 +85,8 @@
   cursor: pointer;
 }
 .resources-container .resource-flex-container .resource-boxes-container .resource-box .resource-box-content img {
-  height: 300px;
-  width: auto;
+  height: 85vw;
+  width: 70vw;
   position: absolute;
   border-radius: 20%;
   opacity: 75%;
@@ -85,7 +94,7 @@
 .resources-container .resource-flex-container .resource-boxes-container .resource-box .resource-box-content h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 2em;
+  font-size: 7vw;
   color: #F8F8F8;
   z-index: 2;
 }
@@ -93,34 +102,66 @@
   background-color: #eeeeee;
   box-shadow: 0px 0px 10px rgba(102, 102, 102, 0.5);
 }
-.resources-container .resource-flex-container .resource-boxes-container .chosen-box:hover {
-  box-shadow: 0px 0px 6px rgba(136, 136, 136, 0.2);
-}
 .resources-container .resource-flex-container .resource-boxes-container .chosen-box .resource-box-content img {
   opacity: 25%;
 }
 .resources-container .resource-flex-container .resource-boxes-container .chosen-box .resource-box-content h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 2em;
+  font-size: 7vw;
   color: #88612a;
 }
 .resources-container .resource-flex-container .resource-content {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
   width: 100%;
   height: auto;
 }
+.resources-container .resource-flex-container .resource-content ul {
+  width: 90%;
+  padding: 0 0 0 15px;
+}
 .resources-container .resource-flex-container .resource-content ul li {
-  margin: 0 120px 0 120px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.3em;
+  font-size: 1em;
   color: #4F6E72;
-  line-height: 2.5em;
+  line-height: 1.6em;
+  line-height: 1.8em;
+  margin: 0 0 8px 0;
+}
+@media only screen and (max-width: 320px) {
+  .resources-container .resource-flex-container .resource-content ul li {
+    font-size: 0.9em;
+    line-height: 1.5em;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .resources-container .resource-flex-container .resource-content ul li {
+    font-size: 1.2em;
+    line-height: 1.6em;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .resources-container .resource-flex-container .resource-content ul li {
+    font-size: 1.25em;
+    line-height: 1.65em;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .resources-container .resource-flex-container .resource-content ul li {
+    font-size: 1.9em;
+    line-height: 1.8em;
+  }
+}
+@media only screen and (min-width: 3840px) {
+  .resources-container .resource-flex-container .resource-content ul li {
+    font-size: 2.4em;
+    line-height: 2em;
+  }
 }
 .resources-container .resource-flex-container .resource-content ul li a {
   text-decoration: none;
@@ -131,18 +172,12 @@
 .resources-container .resource-flex-container .resource-content ul li a:visited {
   color: #9A746D;
 }
-.resources-container .resource-flex-container .resource-content ul li a:hover {
-  color: #A0CEBF;
-}
-.resources-container .resource-flex-container .resource-content ul li a:visited:hover {
-  color: #D39997;
-}
 
 .to-top {
   width: 100%;
   background-color: #F8F8F8;
   text-align: center;
-  padding: 5px 0;
+  padding-bottom: 10px;
 }
 .to-top a {
   text-decoration: none;
@@ -151,135 +186,229 @@
   font-size: 1.2em;
   color: #4F6E72;
 }
-.to-top a:hover {
-  color: #9A746D;
-}
 
-@media only screen and (max-width: 1300px) {
-  .resources-container .resource-flex-container .resource-boxes-container .resource-box {
-    height: 225px;
-    width: 190px;
-    min-width: 190px;
+@media only screen and (orientation: portrait) and (min-width: 540px) {
+  .resources-container {
+    min-height: 100vh;
+    min-height: expression(calc(calc(var(--vh, 1vh) * 100) - 50px));
+    min-height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
+    min-height: calc(calc(var(--vh, 1vh) * 100) - 50px);
+    justify-content: flex-start;
   }
-  .resources-container .resource-flex-container .resource-boxes-container .resource-box .resource-box-content img {
-    height: 225px;
-    width: 190px;
-  }
-  .resources-container .resource-flex-container .resource-boxes-container .resource-box .resource-box-content h3 {
-    font-size: 1.8em;
-  }
-  .resources-container .resource-flex-container .resource-boxes-container .chosen-box .resource-box-content h3 {
-    font-size: 1.8em;
-  }
-}
-@media only screen and (max-width: 1000px) {
-  .resource-height-closed {
-    height: auto;
-    margin-bottom: 0;
-  }
-
   .resources-container .resource-flex-container .resource-boxes-container {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    padding: 20px 0;
-  }
-  .resources-container .resource-flex-container .resource-boxes-container .breakRes {
-    display: flex;
-    flex-basis: 100%;
   }
   .resources-container .resource-flex-container .resource-boxes-container .resource-box {
-    height: 300px;
-    width: 250px;
-    min-width: 250px;
+    height: 46vw;
+    width: 40vw;
     margin: 10px;
+    padding: 0;
   }
   .resources-container .resource-flex-container .resource-boxes-container .resource-box .resource-box-content img {
-    height: 300px;
-    width: 250px;
+    height: 46vw;
+    width: 40vw;
   }
   .resources-container .resource-flex-container .resource-boxes-container .resource-box .resource-box-content h3 {
-    font-size: 1.5em;
+    font-size: 5vw;
   }
   .resources-container .resource-flex-container .resource-boxes-container .chosen-box .resource-box-content h3 {
-    font-size: 1.5em;
+    font-size: 5vw;
   }
-  .resources-container .resource-flex-container .resource-content ul li {
-    margin: 0 90px 0 90px;
-  }
-}
-@media only screen and (max-width: 931px) {
-  .resources-container {
-    margin-top: 0px;
-  }
-  .resources-container h1 {
-    padding: 20px 0 0 0;
+  .resources-container .resource-flex-container .resource-content ul {
+    padding: 0 0 0 15px;
   }
 }
-@media only screen and (max-width: 830px) {
-  .resource-height-closed {
-    height: 100vh;
-    margin-bottom: -75px;
-  }
-
-  .resources-container {
-    margin-top: -30px;
-  }
-  .resources-container h1 {
-    padding: 50px 0 0 0;
-  }
-  .resources-container .resource-flex-container .resource-boxes-container {
-    padding: 20px 0;
-    height: auto;
-  }
+@media only screen and (orientation: portrait) and (min-width: 600px) {
   .resources-container .resource-flex-container .resource-boxes-container .resource-box {
-    height: 220px;
-    width: 180px;
-    min-width: 180px;
-    margin: 10px;
+    height: 34vw;
+    width: 28vw;
   }
   .resources-container .resource-flex-container .resource-boxes-container .resource-box .resource-box-content img {
-    height: 220px;
-    width: 180px;
+    height: 34vw;
+    width: 28vw;
   }
   .resources-container .resource-flex-container .resource-boxes-container .resource-box .resource-box-content h3 {
-    font-size: 1.5em;
+    font-size: 3.5vw;
   }
-  .resources-container .resource-flex-container .resource-content ul li {
-    margin: 0 70px 0 70px;
-    font-size: 1.2em;
-    line-height: 2.3em;
+  .resources-container .resource-flex-container .resource-boxes-container .chosen-box .resource-box-content h3 {
+    font-size: 3.5vw;
   }
 }
-@media only screen and (max-width: 620px) {
-  .resource-height-closed {
-    height: 100vh;
-    margin-bottom: -75px;
-  }
-
-  .resources-container .resource-flex-container .resource-boxes-container {
-    padding: 40px 0;
+@media only screen and (orientation: landscape) and (max-width: 481px) {
+  .resources-container .resource-flex-container {
     height: auto;
+    width: 100%;
+  }
+  .resources-container .resource-flex-container .breakRes {
+    display: none;
   }
   .resources-container .resource-flex-container .resource-boxes-container .resource-box {
-    height: 170px;
-    width: 140px;
-    min-width: 140px;
-    margin: 10px;
+    height: 55vw;
+    width: 45vw;
+    margin: 0 0 20px 0;
   }
   .resources-container .resource-flex-container .resource-boxes-container .resource-box .resource-box-content img {
-    height: 170px;
-    width: 140px;
+    height: 55vw;
+    width: 45vw;
   }
   .resources-container .resource-flex-container .resource-boxes-container .resource-box .resource-box-content h3 {
-    font-size: 1.5em;
+    font-size: 5vw;
+  }
+  .resources-container .resource-flex-container .resource-boxes-container .chosen-box .resource-box-content h3 {
+    font-size: 5vw;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 481px) {
+  .resources-container {
+    min-height: 100vh;
+    min-height: expression(calc(calc(var(--vh, 1vh) * 100) - 50px));
+    min-height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
+    min-height: calc(calc(var(--vh, 1vh) * 100) - 50px);
+    justify-content: flex-start;
+  }
+  .resources-container .resource-flex-container .resource-boxes-container .resource-box {
+    height: 23vw;
+    width: 18vw;
+    margin: 0;
+    padding: 0;
+  }
+  .resources-container .resource-flex-container .resource-boxes-container .resource-box .resource-box-content img {
+    height: 23vw;
+    width: 18vw;
+  }
+  .resources-container .resource-flex-container .resource-boxes-container .resource-box .resource-box-content h3 {
+    font-size: 2.6vw;
+  }
+  .resources-container .resource-flex-container .resource-boxes-container .chosen-box .resource-box-content h3 {
+    font-size: 2.6vw;
+  }
+  .resources-container .resource-flex-container .resource-content ul {
+    padding: 15px 0 0 15px;
+    margin-bottom: -30px;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .resources-container {
+    margin-bottom: 35px;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 1280px) {
+  .resources-container .resource-flex-container .resource-boxes-container .resource-box {
+    height: 20vw;
+    width: 16vw;
+  }
+  .resources-container .resource-flex-container .resource-boxes-container .resource-box:hover {
+    filter: brightness(103%);
+    box-shadow: 0px 0px 6px rgba(167, 98, 9, 0.2);
+    transform: scale(1.03);
+  }
+  .resources-container .resource-flex-container .resource-boxes-container .resource-box .resource-box-content img {
+    height: 20vw;
+    width: 16vw;
+  }
+  .resources-container .resource-flex-container .resource-boxes-container .resource-box .resource-box-content h3 {
+    font-size: 2.3vw;
+  }
+  .resources-container .resource-flex-container .resource-boxes-container .chosen-box:hover {
+    box-shadow: 0px 0px 6px rgba(136, 136, 136, 0.2);
+  }
+  .resources-container .resource-flex-container .resource-boxes-container .chosen-box .resource-box-content h3 {
+    font-size: 2.3vw;
+  }
+  .resources-container .resource-flex-container .resource-content ul {
+    padding: 15px 0 5px 15px;
   }
   .resources-container .resource-flex-container .resource-content ul li {
-    margin: 0 60px 0 60px;
-    font-size: 1.2em;
-    line-height: 2.3em;
+    line-height: 2em;
+  }
+  .resources-container .resource-flex-container .resource-content ul li a:hover {
+    color: #9accbb;
+  }
+  .resources-container .resource-flex-container .resource-content ul li a:visited:hover {
+    color: #D39997;
+  }
+
+  .to-top a:hover {
+    color: #9A746D;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 2560px) {
+  .resources-container {
+    padding: 50px 0;
+  }
+  .resources-container h1 {
+    margin: 0px 0 50px 0;
+  }
+  .resources-container .resource-flex-container .resource-boxes-container .resource-box {
+    height: 18vw;
+    width: 15vw;
+  }
+  .resources-container .resource-flex-container .resource-boxes-container .resource-box .resource-box-content img {
+    height: 18vw;
+    width: 15vw;
+  }
+  .resources-container .resource-flex-container .resource-boxes-container .resource-box .resource-box-content h3 {
+    font-size: 2.2vw;
+  }
+  .resources-container .resource-flex-container .resource-boxes-container .chosen-box .resource-box-content h3 {
+    font-size: 2.2vw;
+  }
+  .resources-container .resource-flex-container .resource-content ul {
+    padding: 30px 0 20px 15px;
+  }
+
+  .to-top {
+    padding-bottom: 20px;
+  }
+  .to-top a {
+    font-size: 1.6em;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 3840px) {
+  .resources-container {
+    padding: 70px 0;
+  }
+  .resources-container h1 {
+    margin: 0px 0 80px 0;
+  }
+}
+@media only screen and (min-width: 914px) {
+  .resources-container {
+    min-height: 100vh;
+    min-height: expression(calc(calc(var(--vh, 1vh) * 100) - 130px));
+    min-height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 130px));
+    min-height: calc(calc(var(--vh, 1vh) * 100) - 130px);
+  }
+}
+@media only screen and (orientation: landscape) and (min-height: 768px) and (min-width: 1024px) {
+  .resources-container {
+    min-height: 100vh;
+    min-height: expression(calc(calc(var(--vh, 1vh) * 100) - 245px));
+    min-height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 245px));
+    min-height: calc(calc(var(--vh, 1vh) * 100) - 245px);
+  }
+}
+@media only screen and (orientation: landscape) and (min-height: 768px) and (min-width: 2560px) {
+  .resources-container {
+    min-height: 100vh;
+    min-height: expression(calc(calc(var(--vh, 1vh) * 100) - 315px));
+    min-height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 315px));
+    min-height: calc(calc(var(--vh, 1vh) * 100) - 315px);
+  }
+}
+@media only screen and (orientation: portrait) and (min-height: 960px) and (min-width: 600px) {
+  .resources-container {
+    min-height: 100vh;
+    min-height: expression(calc(calc(var(--vh, 1vh) * 100) - 165px));
+    min-height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 165px));
+    min-height: calc(calc(var(--vh, 1vh) * 100) - 165px);
+  }
+}
+@media only screen and (orientation: portrait) and (min-height: 960px) and (min-width: 914px) {
+  .resources-container {
+    min-height: 100vh;
+    min-height: expression(calc(calc(var(--vh, 1vh) * 100) - 245px));
+    min-height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 245px));
+    min-height: calc(calc(var(--vh, 1vh) * 100) - 245px);
   }
 }/*# sourceMappingURL=Resources.css.map */

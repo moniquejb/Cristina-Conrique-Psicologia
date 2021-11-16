@@ -5,8 +5,9 @@ const Footer = () => {
   return (
     <div className='footer-container' id='footer'>
       <div className='footer-text-container'>
-        <p>© 2021 Cristina Conrique&nbsp;&nbsp;|&nbsp;&nbsp;Todos los derechos reservados&nbsp;&nbsp;|&nbsp;&nbsp;</p>
-        <div className='breakFoot'></div>
+        <p>© 2021 Cristina Conrique&nbsp;&nbsp;|<br className='break-foot-small-mobile'/>&nbsp;&nbsp;Todos los derechos reservados&nbsp;&nbsp;|&nbsp;&nbsp;</p>
+        <div className='break-foot-large-mobile'></div>
+        <div className='break-foot-small-mobile'></div>
         <p>Imágenes de&nbsp;
           <a target='_blank'
             rel="noreferrer"
@@ -15,7 +16,7 @@ const Footer = () => {
           <a target='_blank'
             rel="noreferrer"
             href="https://www.linkedin.com/in/monique-blignaut-48173485/">Monique Blignaut</a>
-          &nbsp;&nbsp;|&nbsp;
+          &nbsp;&nbsp;|<br className='break-foot-small-mobile'/>&nbsp;
           Creado por&nbsp;
           <a target='_blank'
             rel="noreferrer"

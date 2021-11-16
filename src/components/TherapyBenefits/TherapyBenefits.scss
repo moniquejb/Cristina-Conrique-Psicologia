@@ -1,53 +1,329 @@
 @import "../../utilities/variables.scss";
 
+//---- MOBILE ----
+//Tested and working for the following phones/screen sizes
+//Also tested and working in landscape mode
+// ----------------
+//iPhone XR 414 x 896
+//iPhone 5/SE 320 x 568
+//iPhone 4 320 x 480
+//Galaxy S5 360 x 640
+//iPhone X 375 x 812
+//Nexus 4 384 x 640
+//JioPhone2 240 x 320
+//Galaxy Fold 280 x 653
+//Nokia N9 480 x 854
+//Nexus 6P 412 x 732
+//Pixel 2 XL 411 x 823
+//Surface Duo 540 x 720
+// ----------------
+
+//---- TABLET ----
+//Tested and working for the following tablet/screen sizes
+//Also tested and working in landscape mode
+// ----------------
+//Nexus 7 600 - 960
+//BB Playbook 600 x 1024
+//iPad/iPad Mini 768 x 1024
+//Kindle Fire HDX 800 x 1280
+//iPad Pro 1024 x 1366
+// ----------------
+
+//---- DESKTOP ----
+//Tested and working for the following desktop sizes
+// ----------------
+//Laptop with MDPI Screen 1280 x 800
+//Generic Laptop 1280 x 950
+//MacBook Air 1440 x 900
+//MacBook Pro 13" 2560 x 1600
+//MackBook Pro 15" 2880 x 1800
+//Macbook Pro 16" 3072 x 1920
+//4K Display 3840 x 2160
+//5K Display 5120 x 2880
+// ----------------
+
 .therapy-benefits-container {
   background-color: $main-grey;
   width: 100%;
   height: auto;
-  padding-bottom: 50px;
+  margin: 0;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   h3 {
     margin: 0;
     @include secondary-heading ($dark-2-blue);
-    padding: 50px 0 20px 120px;
+    text-align: center;
+    padding: 0 10px;
+    line-height: 1.4em;
   }
 
   .therapy-benefits-row {
+    width: 100%;
+    height: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: flex-start;
+    flex-wrap: wrap;
 
     h3 {
       margin: 0;
       padding: 0;
       padding-top: 20px;
-      @include custom-Roboto ($dark-2-blue, 2em, 400);
+      @include custom-Roboto ($dark-2-blue, 1.2em, 400);
     }
 
     p {
       @include custom-Roboto ($dark-1-blue, 1em, 400);
+      display: none;
     }
 
     .therapy-benefit {
-      width: 450px;
-      min-width: 320px;
+      width: 48%;
       height: auto;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
+      text-align: center;
 
       img {
-        height: 190px;
-        width: auto;
-        margin-top: 40px;
+        height: auto;
+        width: 75%;
+        margin-top: 30px;
       }
 
       .therapy-benefit-textbox {
         text-align: center;
-        width: 300px;
+        width: 95%;
         height: auto;
-        line-height: 23px;
+        line-height: 25px;
+      }
+    }
+  }
+}
+
+//---- MEDIA QUERIES ----
+
+//For mobiles below 360px width
+@media only screen and (max-width: 361px) {
+  .therapy-benefits-container {
+    .therapy-benefits-row {
+      h3 {
+        font-size: 1em;
+      }
+  
+      .therapy-benefit {
+        img {
+          width: 80%;
+        }
+  
+        .therapy-benefit-textbox {
+          width: 95%;
+        }
+      }
+    }
+  }
+}
+
+//For mobiles below 280px width
+@media only screen and (max-width: 281px) {
+  .therapy-benefits-container {
+    h3 {
+      font-size: 1.1em;
+    }
+
+    .therapy-benefits-row {
+      h3 {
+        font-size: 0.85em;
+      }
+  
+      .therapy-benefit {
+        img {
+          width: 75%;
+        }
+      }
+    }
+  }
+}
+
+//For mobiles/tablets in portrait mode and above 768px width
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .therapy-benefits-container {
+    //padding-bottom: 40px;
+  
+    .therapy-benefits-row {  
+      h3 {
+        padding-bottom: 10px;
+        font-size: 1.4em;
+      }
+  
+      .therapy-benefit {
+        width: 30%;
+  
+        img {
+          width: 75%;
+        }
+      }
+    }
+  } 
+}
+
+//For desktops and mobiles/tablets in landscape mode
+@media only screen and (orientation: landscape) {
+  .therapy-benefits-container {
+    //padding-bottom: 40px;
+  
+    .therapy-benefits-row {  
+      h3 {
+        padding-bottom: 10px;
+        font-size: 1.4em;
+      }
+  
+      .therapy-benefit {
+        width: 33%;
+  
+        img {
+          width: 70%;
+        }
+      }
+    }
+  } 
+
+  @media only screen and (max-width: 569px) {
+    .therapy-benefits-container {
+      //padding-bottom: 45px;
+
+      h3 {
+        font-size: 1.3em;
+      }
+    
+      .therapy-benefits-row {  
+        h3 {
+          padding-bottom: 5px;
+          font-size: 1em;
+        }
+    
+        .therapy-benefit {
+          img {
+            width: 80%;
+          }
+        }
+      }
+    } 
+  }
+
+  @media only screen and (max-width: 321px) {
+    .therapy-benefits-container {
+      //padding-bottom: 40px;
+    
+      .therapy-benefits-row {  
+        h3 {
+          padding-bottom: 0px;
+          padding-top: 10px;
+          font-size: 0.95em;
+        }
+    
+        .therapy-benefit {
+          width: 50%;
+
+          img {
+            width: 70%;
+          }
+        }
+      }
+    } 
+  }
+
+  @media only screen and (min-width: 1280px) {
+    .therapy-benefits-container {
+      align-items: flex-start;
+
+      h3 {
+        margin: 0 0 20px 0;
+        @include secondary-heading ($dark-2-blue);
+        font-size: 2em;
+        padding: 0 10px 0 120px;
+      }
+    
+      .therapy-benefits-row {  
+        h3 {
+          padding-bottom: 10px;
+          font-size: 2em;
+        }
+        
+      p {
+        display: initial;
+      }
+    
+        .therapy-benefit {
+          padding-bottom: 10px;
+    
+          img {
+            width: 90%;
+            min-width: 160px;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 2560px) {
+    .therapy-benefits-container {
+      padding: 50px 0 50px 0;
+
+      h3 {
+        margin: 0 0 50px 0;
+        font-size: 1.5vw;
+        padding: 0 10px 0px 150px;
+      }
+    
+      .therapy-benefits-row {  
+        h3 {
+          padding-bottom: 20px;
+          font-size: 1.4vw;
+        }
+        
+      p {
+        font-size: 0.9vw;
+        line-height: 1.3vw;
+      }
+    
+        .therapy-benefit {
+          padding-bottom: 40px;
+    
+          img {
+            min-width: 10vw;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 5120px) {
+    .therapy-benefits-container {
+      h3 {
+        margin: 0 0 50px 0;
+        font-size: 1.4vw;
+        padding: 0 10px 0 150px;
+      }
+    
+      .therapy-benefits-row {  
+        h3 {
+          padding-bottom: 20px;
+        }
+        
+      p {
+        font-size: 0.7vw;
+        line-height: 1vw;
+      }
+    
+        .therapy-benefit {
+          padding-bottom: 40px;
+        }
       }
     }
   }

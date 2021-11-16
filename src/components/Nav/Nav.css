@@ -24,7 +24,7 @@
   background-color: #F9BE7B;
   position: fixed;
   transition: 0.5s;
-  z-index: 10;
+  z-index: 50;
 }
 .nav-container ul {
   margin: 0;
@@ -70,8 +70,6 @@
   color: #F8F8F8;
 }
 .nav-container .li-text:hover {
-  background-color: rgba(253, 237, 221, 0.3);
-  font-size: 1.6em;
   cursor: pointer;
 }
 .nav-container .li-text:active {
@@ -103,9 +101,6 @@
   height: 30px;
   width: 30px;
   fill: #F8F8F8;
-}
-.nav-container svg:hover {
-  transform: scale(1.15);
 }
 
 #terapia::before {
@@ -140,7 +135,40 @@
   visibility: hidden;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 914px) {
+  #terapia::before {
+    content: "";
+    display: block;
+    height: 25px;
+    margin-top: -25px;
+    visibility: hidden;
+  }
+
+  #sobre::before {
+    content: "";
+    display: block;
+    height: 25px;
+    margin-top: -25px;
+    visibility: hidden;
+  }
+
+  #contacto::before {
+    content: "";
+    display: block;
+    height: 25px;
+    margin-top: -25px;
+    visibility: hidden;
+  }
+
+  #tarifas::before {
+    content: "";
+    display: block;
+    height: 25px;
+    margin-top: -25px;
+    visibility: hidden;
+  }
+}
+@media only screen and (max-width: 1025px) {
   .nav-container {
     min-width: 920px;
   }
@@ -153,19 +181,165 @@
   .nav-container .li-text:visited {
     font-size: 1.25em;
   }
-  .nav-container .li-text:hover {
-    font-size: 1.3em;
-  }
   .nav-container .li-img {
     height: 100px;
     padding: 0px 5px;
   }
   .nav-container img {
-    height: 90px;
+    height: 80px;
   }
   .nav-container svg {
     margin: -5px;
     height: 25px;
     width: 25px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .nav-container .li-text:hover {
+    background-color: rgba(253, 237, 221, 0.3);
+    font-size: 1.6em;
+    cursor: pointer;
+  }
+  .nav-container svg:hover {
+    transform: scale(1.15);
+  }
+}
+@media only screen and (min-width: 2560px) {
+  #shrink-nav {
+    height: 160px;
+  }
+  #shrink-nav ul,
+#shrink-nav li,
+#shrink-nav a {
+    height: 160px;
+    font-size: 1.4vw;
+  }
+  #shrink-nav img {
+    height: 140px;
+  }
+
+  .nav-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-width: 2350px;
+    height: 200px;
+    background-color: #F9BE7B;
+    position: fixed;
+    transition: 0.5s;
+    z-index: 10;
+  }
+  .nav-container ul {
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    width: 100%;
+    list-style: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    color: #F8F8F8;
+    display: flex;
+    transition: 0.5s;
+  }
+  .nav-container li {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+  }
+  .nav-container li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    width: 100%;
+    height: 200px;
+    text-decoration: none;
+    cursor: default;
+  }
+  .nav-container .li-text:link {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.5vw;
+    color: #F8F8F8;
+  }
+  .nav-container .li-text:visited {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.5vw;
+    color: #F8F8F8;
+  }
+  .nav-container .li-text:hover {
+    background-color: rgba(253, 237, 221, 0.3);
+    font-size: 1.6vw;
+    cursor: pointer;
+  }
+  .nav-container .li-text:active {
+    font-size: 1.5vw;
+  }
+  .nav-container .li-img {
+    height: 200px;
+    padding: 0px 10px;
+  }
+  .nav-container img {
+    height: 170px;
+    width: auto;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  .nav-container #li-icon {
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+  }
+  .nav-container #li-icon a {
+    padding: 0px 10px;
+    transition: 0.5s;
+  }
+  .nav-container svg {
+    cursor: pointer;
+    transition: 0.5s;
+    margin: 0px;
+    height: 50px;
+    width: 50px;
+    fill: #F8F8F8;
+  }
+  .nav-container svg:hover {
+    transform: scale(1.15);
+  }
+
+  #terapia::before {
+    content: "";
+    display: block;
+    height: 150px;
+    margin-top: -150px;
+    visibility: hidden;
+  }
+
+  #sobre::before {
+    content: "";
+    display: block;
+    height: 150px;
+    margin-top: -150px;
+    visibility: hidden;
+  }
+
+  #contacto::before {
+    content: "";
+    display: block;
+    height: 150px;
+    margin-top: -150px;
+    visibility: hidden;
+  }
+
+  #tarifas::before {
+    content: "";
+    display: block;
+    height: 150px;
+    margin-top: -150px;
+    visibility: hidden;
   }
 }/*# sourceMappingURL=Nav.css.map */

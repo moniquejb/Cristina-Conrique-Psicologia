@@ -1,77 +1,109 @@
 @import "../../utilities/variables.scss";
 
-.landing-colours {
-  width: 100%;
-  position: absolute;
-}
+//---- MOBILE ----
+//Tested and working for the following phones/screen sizes
+//Also tested and working in landscape mode
+// ----------------
+//iPhone XR 414 x 896
+//iPhone 5/SE 320 x 568
+//iPhone 4 320 x 480
+//Galaxy S5 360 x 640
+//iPhone X 375 x 812
+//Nexus 4 384 x 640
+//JioPhone2 240 x 320
+//Galaxy Fold 280 x 653
+//Nokia N9 480 x 854
+//Nexus 6P 412 x 732
+//Pixel 2 XL 411 x 823
+//Surface Duo 540 x 720
+// ----------------
 
-.landing-top-colour {
+//---- TABLET ----
+//Tested and working for the following tablet/screen sizes
+//Also tested and working in landscape mode
+// ----------------
+//Nexus 7 600 - 960
+//BB Playbook 600 x 1024
+//iPad/iPad Mini 768 x 1024
+//Kindle Fire HDX 800 x 1280
+//iPad Pro 1024 x 1366
+// ----------------
+
+//---- DESKTOP ----
+//Tested and working for the following desktop sizes
+// ----------------
+//Laptop with MDPI Screen 1280 x 800
+//Generic Laptop 1280 x 950
+//MacBook Air 1440 x 900
+//MacBook Pro 13" 2560 x 1600
+//MackBook Pro 15" 2880 x 1800
+//Macbook Pro 16" 3072 x 1920
+//4K Display 3840 x 2160
+//5K Display 5120 x 2880
+// ----------------
+
+//For tested phones except for adjustments for
+//JioPhone2 240 x 320, Surface Duo 540 x 720 and iPhone 4 320 x 480
+.landing-header-image {
+  width: 100%;
+  height: 75vh;
+  //Other height values weren't included previously
+  height: -webkit-calc(calc(var(--vh, 1vh) * 75));
+  height: -moz-calc(calc(var(--vh, 1vh) * 75));
+  height: expression(calc(var(--vh, 1vh) * 75));
+  height: -o-calc(calc(var(--vh, 1vh) * 75));
+  height: calc(var(--vh, 1vh) * 75);
   background-color: $main-yellow;
-  height: 50vh;
-  z-index: -5;
-}
-
-.landing-bottom-colour {
-  background-color: $main-grey;
-  height: 100vh;
-  top: 0;
-  z-index: -10;
-}
-
-.landing-container {
-  //background-color: $main-yellow;
-  height: 100vh;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 60% 40%;
-  grid-template-rows: 50% 50%;
-  grid-template-areas:
-    "landingImage landingHeading"
-    "landingImage landingText";
-
-  .landing-image-container {
-    height: 100vh;
-    width: 100%;
-    grid-area: landingImage;
-    //background-color: rgba($color: aqua, $alpha: 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    img {
-      height: auto;
-      width: auto;
-      margin: 0px 30px 30px 30px;
-      padding-top: 130px;
-      transition: 0.5s;
-    }
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 
   .landing-heading-container {
+    width: 100%;
+    padding-top: 20px;
+    height: auto;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-    grid-area: landingHeading;
-    //background-color: rgba($color: red, $alpha: 0.5);
+    justify-content: center;
+    align-items: center;
+
+    .landing-heading-text {
+      h2:first-of-type {
+        margin-bottom: 25px;
+      }
+    }
 
     h1 {
       margin: 0;
       padding: 0;
-      margin-bottom: 7px;
+      margin-bottom: 5px;
       margin-top: -25px;
-      @include main-heading($main-grey);
-      //font-size: 5.5vw;
+      @include custom-Roboto($main-grey, 11vw, 500);
       transition: 0.5s;
     }
 
     h2 {
       margin: 0;
       padding: 0;
-      margin-bottom: 20px;
-      @include custom-Roboto($main-grey, 2em, 500);
-      //font-size: 1.7vw;
+      margin-bottom: 5px;
+      @include custom-Roboto($main-grey, 4.6vw, 500);
       transition: 0.5s;
+    }
+
+    .landing-tablet-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h3 {
+        width: 81%;
+        //display: none;
+        @include custom-Montserrat ($main-grey, 1em, 400);
+        text-align: left;
+        line-height: 1.5em;
+        transition: 0.5s;
+      }
     }
 
     @keyframes wordChangeAnimation {
@@ -91,29 +123,827 @@
     }
   }
 
+  .landing-image-container {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: auto;
+      width: 80%;
+      margin: 10px 10px 10px 10px;
+      transition: 0.5s;
+    }
+  }
+}
+
+.landing-text-container {
+  background-color: white;
+  width: 100%;
+  height: 25vh;
+  height: -webkit-calc(calc(calc(var(--vh, 1vh) * 25) - 50px));
+  height: -moz-calc(calc(calc(var(--vh, 1vh) * 25) - 50px));
+  height: expression(calc(calc(var(--vh, 1vh) * 25) - 50px));
+  height: -o-calc(calc(calc(var(--vh, 1vh) * 25) - 50px));
+  height: calc(calc(var(--vh, 1vh) * 25) - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  .landing-textbox {
+    width: 85%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+      @include custom-Montserrat ($dark-1-red, 1em, 400);
+      text-align: left;
+      line-height: 1.5em;
+      transition: 0.5s;
+      display: none;
+      //margin-bottom: 6px;
+    }
+
+    .center-text {
+      font-size: 1em;
+      text-align: justify;
+      line-height: 1.4em;
+      margin: 0 0 4px 0;
+    }
+
+    a {
+      margin-top: 0px;
+      height: 40px;
+      width: 70%;
+      background-color: $light-red;
+      @include custom-Roboto($dark-1-red, 1.1em, 400);
+      border-radius: 10px;
+      align-self: center;
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+//---- MEDIA QUERIES ----
+//For JioPhone2 240 x 320
+@media only screen and (max-width: 241px) {
+  .landing-header-image {
+    height: 100vh;
+    height: -webkit-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
+    height: -moz-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
+    height: expression(calc(calc(var(--vh, 1vh) * 100) - 50px));
+    height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
+    height: calc(calc(var(--vh, 1vh) * 100) - 50px);
+    justify-content: center;
+
+    .landing-heading-container {
+      h2 {
+        @include custom-Roboto($main-grey, 5vw, 500);
+      }
+
+      h3 {
+        display: none;
+      }
+    }
+
+    .landing-image-container {
+      max-width: 225px;
+
+      img {
+        margin: 10px 10px 10px 10px;
+      }
+    }
+  }
+
   .landing-text-container {
-    grid-area: landingText;
-    //background-color: rgba($color: green, $alpha: 0.5);
+    height: auto;
+    align-items: center;
 
     .landing-textbox {
-      width: 500px;
+      margin-top: 10px;
+      max-width: 85%;
+
+      h3 {
+        display: initial;
+      }
+
+      .center-text {
+        text-align: center;
+        font-size: 0.9em;
+      }
+
+      a {
+        margin: 10px 0 20px 0;
+        height: 40px;
+        @include custom-Roboto($dark-1-red, 1em, 400);
+      }
+    }
+  }
+}
+
+//For iPhone 4 320 x 480
+@media only screen and (orientation: portrait) and (min-width: 320px) and (max-height: 480px) {
+  .landing-header-image {
+    .landing-heading-container {
+      h2 {
+        margin-bottom: 5px;
+        @include custom-Roboto($main-grey, 4.5vw, 500);
+      }
+
+      .landing-tablet-text {
+        h3 {
+          width: 85%;
+          text-align: center;
+        }
+      }
+    }
+
+    .landing-image-container {
+      img {
+        width: 60%;
+        margin: 5px 5px 10px 5px;
+      }
+    }
+  }
+
+  .landing-text-container {
+    .landing-textbox {
+      a {
+        height: 35px;
+      }
+    }
+  }
+}
+
+//For Surface Duo 540 x 720
+@media only screen and (min-width: 540px) {
+  .landing-header-image {
+    height: 80vh;
+    height: -webkit-calc(calc(var(--vh, 1vh) * 80));
+    height: -moz-calc(calc(var(--vh, 1vh) * 80));
+    height: expression(calc(var(--vh, 1vh) * 80));
+    height: -o-calc(calc(var(--vh, 1vh) * 80));
+    height: calc(var(--vh, 1vh) * 80);
+
+    .landing-heading-container {
+      h1 {
+        font-size: 10vw;
+      }
+
+      // h2 {
+      //   @include custom-Roboto($main-grey, 4vw, 500);
+      // }
+    }
+
+    .landing-image-container {
+      img {
+        width: 70%;
+      }
+    }
+  }
+
+  .landing-text-container {
+    height: 20vh;
+    height: -webkit-calc(calc(calc(var(--vh, 1vh) * 20) - 50px));
+    height: -moz-calc(calc(calc(var(--vh, 1vh) * 20) - 50px));
+    height: expression(calc(calc(var(--vh, 1vh) * 20) - 50px));
+    height: -o-calc(calc(calc(var(--vh, 1vh) * 20) - 50px));
+    height: calc(calc(var(--vh, 1vh) * 20) - 50px);
+
+    .landing-textbox {
+      a {
+        height: 7vh;
+        width: 60%;
+        @include custom-Roboto($dark-1-red, 3vw, 400);
+      }
+    }
+  }
+}
+
+//Adjustments for tablets except iPad Pro
+@media only screen and (min-width: 600px) {
+  .landing-header-image {
+    height: 75vh;
+    height: -webkit-calc(calc(var(--vh, 1vh) * 75));
+    height: -moz-calc(calc(var(--vh, 1vh) * 75));
+    height: expression(calc(var(--vh, 1vh) * 75));
+    height: -o-calc(calc(var(--vh, 1vh) * 75));
+    height: calc(var(--vh, 1vh) * 75);
+
+    .landing-heading-container {
+      .landing-tablet-text {
+        h3 {
+          font-size: 1.2em;
+          letter-spacing: 0.3px;
+        }
+      }
+    }
+  }
+
+  .landing-text-container {
+    height: 25vh;
+    height: -webkit-calc(calc(calc(var(--vh, 1vh) * 25) - 50px));
+    height: -moz-calc(calc(calc(var(--vh, 1vh) * 25) - 50px));
+    height: expression(calc(calc(var(--vh, 1vh) * 25) - 50px));
+    height: -o-calc(calc(calc(var(--vh, 1vh) * 25) - 50px));
+    height: calc(calc(var(--vh, 1vh) * 25) - 50px);
+
+    .landing-textbox {
+      h3 {
+        font-size: 3.4vw;
+        line-height: 1.8em;
+      }
+
+      a {
+        @include custom-Roboto($dark-1-red, 4vw, 400);
+      }
+    }
+  }
+}
+
+//For iPad Pro 1024 x 1366 and to adjust to Nav becoming horizontal
+@media only screen and (min-width: 914px) {
+  .landing-header-image {
+    .landing-heading-container {
+      .landing-tablet-text {
+        h3 {
+          font-size: 1.4em;
+          letter-spacing: 0.3px;
+        }
+      }
+    }
+  }
+
+  .landing-text-container {
+    height: 25vh;
+    height: -webkit-calc(calc(calc(var(--vh, 1vh) * 25) - 130px));
+    height: -moz-calc(calc(calc(var(--vh, 1vh) * 25) - 130px));
+    height: expression(calc(calc(var(--vh, 1vh) * 25) - 130px));
+    height: -o-calc(calc(calc(var(--vh, 1vh) * 25) - 130px));
+    height: calc(calc(var(--vh, 1vh) * 25) - 130px);
+
+    .landing-textbox {
+      h3 {
+        font-size: 2.8vw;
+        line-height: 1.8em;
+      }
+    }
+  }
+}
+
+//Landscape mode all phones
+@media only screen and (orientation: landscape) {
+  .landing-container {
+    height: auto;
+    min-height: -webkit-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
+    min-height: -moz-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
+    min-height: expression(calc(calc(var(--vh, 1vh) * 100) - 50px));
+    min-height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
+    min-height: calc(calc(var(--vh, 1vh) * 100) - 50px);
+    width: 100%;
+    background-color: $main-grey;
+  }
+
+  .landing-header-image {
+    height: auto;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .landing-heading-container {
+      padding-top: initial;
+      width: 100%;
+      //padding-top: 20px;
+      //height: auto;
+      display: initial;
+      flex-direction: initial;
+      justify-content: initial;
+      align-items: initial;
+
+      .landing-heading-text {
+        h2:first-of-type {
+          margin-bottom: 25px;
+        }
+      }
+
+      h1 {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 5px;
+        margin-top: -25px;
+        @include custom-Roboto($main-grey, 6.5vw, 500);
+        transition: 0.5s;
+      }
+
+      h2 {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 5px;
+        @include custom-Roboto($main-grey, 0.78em, 500);
+        transition: 0.5s;
+      }
+
+      .landing-tablet-text {
+        display: initial;
+        justify-content: initial;
+        align-items: initial;
+        //width: 100%;
+
+        h3 {
+          margin: 0;
+          //width: 95%;
+          //display: none;
+          @include custom-Montserrat ($main-grey, 0.75em, 400);
+          text-align: left;
+          line-height: 1.7em;
+          transition: 0.5s;
+        }
+      }
+    }
+
+    .landing-image-container {
+      height: auto;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        height: auto;
+        width: 70%;
+        margin: 30px 10px 30px 10px;
+      }
+    }
+  }
+
+  .landing-text-container {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    min-height: 35vh;
+    min-height: -webkit-calc(calc(var(--vh, 1vh) * 35));
+    min-height: -moz-calc(calc(var(--vh, 1vh) * 35));
+    min-height: expression(calc(var(--vh, 1vh) * 35));
+    min-height: -o-calc(calc(var(--vh, 1vh) * 35));
+    min-height: calc(var(--vh, 1vh) * 35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .landing-textbox {
+      max-width: 70%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h3 {
+        @include custom-Montserrat ($dark-1-red, 1.1em, 400);
+        text-align: justify;
+        line-height: 1.7em;
+        transition: 0.5s;
+      }
+
+      .center-text {
+        font-size: 1.2em;
+        text-align: justify;
+        line-height: 1.6em;
+      }
+
+      a {
+        margin: 3px;
+        height: 50px;
+        width: 70%;
+        background-color: $light-red;
+        @include custom-Roboto($dark-1-red, 1.2em, 400);
+        border-radius: 10px;
+        align-self: center;
+        cursor: pointer;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  //For JioPhone2 240 x 320
+  @media only screen and (max-width: 321px) {
+    .landing-header-image {
+      .landing-heading-container {
+        h2 {
+          margin-bottom: 25px;
+          @include custom-Roboto($main-grey, 4vw, 500);
+        }
+
+        h3 {
+          display: none;
+        }
+      }
+    }
+
+    .landing-text-container {
+      .landing-textbox {
+        .center-text {
+          margin: 15px 0 10px 0;
+          font-size: 1em;
+          text-align: left;
+          line-height: 1.5em;
+          display: initial;
+        }
+
+        a {
+          margin: 5px 5px 30px 5px;
+          height: 40px;
+          width: 80%;
+          background-color: $light-red;
+          @include custom-Roboto($dark-1-red, 1.1em, 400);
+        }
+      }
+    }
+  }
+
+  //Phones and some landcape tablets
+  @media only screen and (min-width: 568px) {
+    .landing-container {
+      min-height: -webkit-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
+      min-height: -moz-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
+      min-height: expression(calc(calc(var(--vh, 1vh) * 100) - 50px));
+      min-height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
+      min-height: calc(calc(var(--vh, 1vh) * 100) - 50px);
+    }
+
+    .landing-header-image {
+      height: 65vh;
+      height: -webkit-calc(calc(var(--vh, 1vh) * 65));
+      height: -moz-calc(calc(var(--vh, 1vh) * 65));
+      height: expression(calc(var(--vh, 1vh) * 65));
+      height: -o-calc(calc(var(--vh, 1vh) * 65));
+      height: calc(var(--vh, 1vh) * 65);
+
+      .landing-heading-container {
+        width: 50%;
+
+        h2 {
+          font-size: 2.2vw;
+        }
+
+        .landing-tablet-text {
+          //width: 80px;
+          text-align: left;
+
+          h3 {
+            width: 95%;
+            //display: initial;
+            @include custom-Montserrat ($main-grey, 1em, 400);
+            line-height: 1.7em;
+            transition: 0.5s;
+            //color: red;
+          }
+        }
+      }
+
+      .landing-image-container {
+        height: auto;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          height: auto;
+          width: 80%;
+          margin: 20px 10px 20px 10px;
+        }
+      }
+    }
+
+    .landing-text-container {
+      min-height: -webkit-calc(calc(calc(var(--vh, 1vh) * 35) - 50px));
+      min-height: -moz-calc(calc(calc(var(--vh, 1vh) * 35) - 50px));
+      min-height: expression(calc(calc(var(--vh, 1vh) * 35) - 50px));
+      min-height: -o-calc(calc(calc(var(--vh, 1vh) * 35) - 50px));
+      min-height: calc(calc(var(--vh, 1vh) * 35) - 50px);
+
+      .landing-textbox {
+        h3 {
+          display: none;
+        }
+
+        a {
+          height: 7vw;
+          width: 35vw;
+          @include custom-Roboto($dark-1-red, 2.8vw, 400);
+        }
+      }
+    }
+
+    //For iPhone 5/SE 568 x 320
+    @media only screen and (max-height: 321px) {
+      .landing-header-image {
+        height: 60vh;
+        height: -webkit-calc(calc(var(--vh, 1vh) * 60));
+        height: -moz-calc(calc(var(--vh, 1vh) * 60));
+        height: expression(calc(var(--vh, 1vh) * 60));
+        height: -o-calc(calc(var(--vh, 1vh) * 60));
+        height: calc(var(--vh, 1vh) * 60);
+
+        .landing-heading-container {
+          width: 60%;
+          h1 {
+            font-size: 2.4em;
+          }
+
+          h2 {
+            font-size: 1em;
+          }
+
+          .landing-tablet-text {
+            h3 {
+              font-size: 0.9em;
+              line-height: 1.4em;
+            }
+          }
+        }
+
+        .landing-image-container {
+          width: 40%;
+
+          img {
+            width: 90%;
+            margin: 10px 10px 10px 10px;
+          }
+        }
+      }
+
+      .landing-text-container {
+        min-height: -webkit-calc(calc(calc(var(--vh, 1vh) * 40) - 50px));
+        min-height: -moz-calc(calc(calc(var(--vh, 1vh) * 40) - 50px));
+        min-height: expression(calc(calc(var(--vh, 1vh) * 40) - 50px));
+        min-height: -o-calc(calc(calc(var(--vh, 1vh) * 40) - 50px));
+        min-height: calc(calc(var(--vh, 1vh) * 40) - 50px);
+      }
+    }
+
+    //For Galaxy Fold 653 x 280
+    @media only screen and (max-height: 281px) {
+      .landing-header-image {
+        .landing-heading-container {
+          width: 60%;
+          h2 {
+            font-size: 0.95em;
+          }
+
+          .landing-tablet-text {
+            h3 {
+              font-size: 0.9em;
+            }
+          }
+        }
+
+        .landing-image-container {
+          width: 40%;
+          img {
+            width: 80%;
+          }
+        }
+      }
+
+      .landing-text-container {
+        .landing-textbox {
+          a {
+            height: 5vw;
+            width: 30vw;
+            @include custom-Roboto($dark-1-red, 2vw, 400);
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 914px) {
+    .landing-container {
+      min-height: -webkit-calc(calc(calc(var(--vh, 1vh) * 100) - 130px));
+      min-height: -moz-calc(calc(calc(var(--vh, 1vh) * 100) - 130px));
+      min-height: expression(calc(calc(var(--vh, 1vh) * 100) - 130px));
+      min-height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 130px));
+      min-height: calc(calc(var(--vh, 1vh) * 100) - 130px);
+    }
+
+    .landing-header-image {
+      height: 60vh;
+      height: -webkit-calc(calc(var(--vh, 1vh) * 60));
+      height: -moz-calc(calc(var(--vh, 1vh) * 60));
+      height: expression(calc(var(--vh, 1vh) * 60));
+      height: -o-calc(calc(var(--vh, 1vh) * 60));
+      height: calc(var(--vh, 1vh) * 60);
+
+      .landing-heading-container {
+        h2 {
+          font-size: 2vw;
+        }
+      }
+    }
+
+    .landing-text-container {
+      min-height: -webkit-calc(calc(calc(var(--vh, 1vh) * 40) - 130px));
+      min-height: -moz-calc(calc(calc(var(--vh, 1vh) * 40) - 130px));
+      min-height: expression(calc(calc(var(--vh, 1vh) * 40) - 130px));
+      min-height: -o-calc(calc(calc(var(--vh, 1vh) * 40) - 130px));
+      min-height: calc(calc(var(--vh, 1vh) * 40) - 130px);
+
+      .landing-textbox {
+        a {
+          height: 5vw;
+          width: 30vw;
+          @include custom-Roboto($dark-1-red, 2vw, 400);
+        }
+      }
+    }
+  }
+}
+
+//For desktops
+@media only screen and (min-width: 1280px) {
+  .landing-placeholder {
+    height: 100vh;
+    height: -webkit-calc(calc(calc(var(--vh, 1vh) * 100) - 130px));
+    height: -moz-calc(calc(calc(var(--vh, 1vh) * 100) - 130px));
+    height: expression(calc(calc(var(--vh, 1vh) * 100) - 130px));
+    height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 130px));
+    height: calc(calc(var(--vh, 1vh) * 100) - 130px);
+    width: 100%;
+  }
+
+  .bg-landing-colours {
+    width: 100%;
+    position: absolute;
+  }
+
+  .bg-landing-top-colour {
+    top: 0;
+    left: 0;
+    background-color: $main-yellow;
+    height: 55vh;
+    height: -webkit-calc(calc(var(--vh, 1vh) * 55));
+    height: -moz-calc(calc(var(--vh, 1vh) * 55));
+    height: expression(calc(var(--vh, 1vh) * 55));
+    height: -o-calc(calc(var(--vh, 1vh) * 55));
+    height: calc(calc(var(--vh, 1vh) * 55));
+    z-index: -5;
+  }
+
+  .bg-landing-bottom-colour {
+    top: 0;
+    left: 0;
+    background-color: $main-grey;
+    height: 100vh;
+    height: -webkit-calc(calc(var(--vh, 1vh) * 100));
+    height: -moz-calc(calc(var(--vh, 1vh) * 100));
+    height: expression(calc(var(--vh, 1vh) * 100));
+    height: -o-calc(calc(var(--vh, 1vh) * 100));
+    height: calc(calc(var(--vh, 1vh) * 100));
+    top: 0;
+    z-index: -10;
+  }
+
+  .landing-container {
+    background-color: initial;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    height: -webkit-calc(calc(var(--vh, 1vh) * 100));
+    height: -moz-calc(calc(var(--vh, 1vh) * 100));
+    height: expression(calc(var(--vh, 1vh) * 100));
+    height: -o-calc(calc(var(--vh, 1vh) * 100));
+    height: calc(calc(var(--vh, 1vh) * 100));
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 55% 45%;
+    grid-template-areas:
+      "landingImage landingHeading"
+      "landingImage landingText";
+  }
+
+  .landing-image-container {
+    height: 100vh;
+    height: -webkit-calc(calc(var(--vh, 1vh) * 100));
+    height: -moz-calc(calc(var(--vh, 1vh) * 100));
+    height: expression(calc(var(--vh, 1vh) * 100));
+    height: -o-calc(calc(var(--vh, 1vh) * 100));
+    height: calc(calc(var(--vh, 1vh) * 100));
+    width: 100%;
+    grid-area: landingImage;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: auto;
+      width: 85%;
+      margin: 130px 30px 30px 30px;
+      transition: 0.5s;
+    }
+  }
+
+  .landing-header-image {
+    width: 100%;
+    height: 55vh;
+    height: -webkit-calc(calc(var(--vh, 1vh) * 55));
+    height: -moz-calc(calc(var(--vh, 1vh) * 55));
+    height: expression(calc(var(--vh, 1vh) * 55));
+    height: -o-calc(calc(var(--vh, 1vh) * 55));
+    height: calc(calc(var(--vh, 1vh) * 55));
+    background-color: initial;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    grid-area: landingHeading;
+
+    .landing-heading-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+
+      padding-top: initial;
+      height: initial;
+
+      h1 {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 7px;
+        margin-top: -25px;
+        @include custom-Roboto($main-grey, 6vw, 500);
+        transition: 0.5s;
+      }
+
+      h2 {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+        @include custom-Roboto($main-grey, 2em, 500);
+        font-size: 1.8vw;
+        transition: 0.5s;
+      }
+
+      .landing-tablet-text {
+        display: none;
+      }
+    }
+  }
+
+  .landing-text-container {
+    grid-area: landingText;
+    background-color: initial;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .landing-textbox {
+      width: 90%;
       height: auto;
       display: flex;
       flex-direction: column;
 
+      max-width: initial;
+      justify-content: initial;
+      align-items: initial;
+
       h3 {
-        @include bulk-text($dark-1-red);
-        text-align: justify;
+        @include custom-Montserrat ($dark-1-red, 1em, 400);
+        text-align: left;
         line-height: 2em;
         transition: 0.5s;
+        display: initial;
+      }
+
+      .center-text {
+        font-size: initial;
+        text-align: initial;
+        line-height: initial;
+        margin: initial;
       }
 
       a {
         margin-top: 10px;
-        height: 60px;
-        width: 300px;
+        height: 6vh;
+        width: 50%;
         background-color: $light-red;
-        @include custom-Roboto($dark-1-red, 2em, 400);
+        @include custom-Roboto($dark-1-red, 1.5vw, 400);
         border-radius: 10px;
         align-self: center;
         cursor: pointer;
@@ -135,4 +965,13 @@
   }
 }
 
-// MEDIA QUERIES //
+//For MacBook Pro 13" and upwards
+@media only screen and (min-width: 2560px) {
+  .landing-text-container {
+    .landing-textbox {
+      h3 {
+        font-size: 1vw;
+      }
+    }
+  }
+}

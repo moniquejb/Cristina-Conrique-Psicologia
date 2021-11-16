@@ -27,7 +27,7 @@
   background-color: $main-yellow;
   position: fixed;
   transition: 0.5s;
-  z-index: 10;
+  z-index: 50;
 
   ul {
     margin: 0;
@@ -69,8 +69,8 @@
   }
 
   .li-text:hover {
-    background-color: rgba($color: $light-yellow, $alpha: 0.3);
-    font-size: 1.6em;
+    // background-color: rgba($color: $light-yellow, $alpha: 0.3);
+    // font-size: 1.6em;
     cursor: pointer;
   }
 
@@ -108,9 +108,9 @@
     height: 30px;
     width: 30px;
     fill: $main-grey;
-    &:hover {
-      transform: scale(1.15);
-    }
+    // &:hover {
+    //   transform: scale(1.15);
+    // }
   }
 }
 
@@ -146,11 +146,44 @@
   visibility: hidden;
 }
 
-//---------------------
-//Media Queries
-//---------------------
+//---- MEDIA QUERIES ----
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 914px) {
+  //Fix scroll on jump to for new nav size
+  #terapia::before {
+    content: "";
+    display: block;
+    height: 25px;
+    margin-top: -25px;
+    visibility: hidden;
+  }
+
+  #sobre::before {
+    content: "";
+    display: block;
+    height: 25px;
+    margin-top: -25px;
+    visibility: hidden;
+  }
+
+  #contacto::before {
+    content: "";
+    display: block;
+    height: 25px;
+    margin-top: -25px;
+    visibility: hidden;
+  }
+
+  #tarifas::before {
+    content: "";
+    display: block;
+    height: 25px;
+    margin-top: -25px;
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
   .nav-container {
     min-width: 920px;
 
@@ -166,9 +199,9 @@
       font-size: 1.25em;
     }
   
-    .li-text:hover {
-      font-size: 1.3em;
-    }
+    // .li-text:hover {
+    //   font-size: 1.3em;
+    // }
 
     .li-img {
       height: 100px;
@@ -176,7 +209,7 @@
     }
 
     img {
-      height: 90px;
+      height: 80px;
     }
 
     svg {
@@ -187,88 +220,165 @@
   }
 }
 
-// @media only screen and (max-width: 768px) {
-//   #shrink-nav {
-//     height: 100vh;
-//     filter: initial;
-//     transition: initial;
-  
-//     ul,
-//     li,
-//     a {
-//       height: 60px;
-//       transition: initial;
-//     }
-  
-//     img {
-//       display: none;
-//     }
-//   }
+@media only screen and (min-width: 1280px) {
+  .nav-container {  
+    .li-text:hover {
+      background-color: rgba($color: $light-yellow, $alpha: 0.3);
+      font-size: 1.6em;
+      cursor: pointer;
+    }
 
-//   .nav-container {
-//     filter: drop-shadow(0 0 5px rgba($color: $dark-2-yellow, $alpha: 0.4));
-//     width: 200px;
-//     height: 100vh;
-//     min-width: initial;
-//     transition: initial;
-  
-//     ul {
-//       height: 100vh;
-//       width: 200px;
-//       flex-direction: column;
-//       transition: initial;
-//     }
-  
-//     li {
-//       width: 200px;
-//       height: 60px;
-//       justify-content: flex-start;
-//       align-items: center;
-//       transition: initial;
-  
-//       a {
-//         width: 200px;
-//         height: 60px;
-//         justify-content: flex-start;
-//         align-items: center;
-//         padding-left: 20px;
-//         transition: initial;
-//       }
-//     }
+    svg {
+      &:hover {
+        transform: scale(1.15);
+      }
+    }
+  }
+}
 
-//     .li-text:link {
-//       font-size: 1.6em;
-//     }
-
-//     .li-img {
-//       display: none;
-//     }
-
-//     img {
-//       height: initial;
-//     }
+@media only screen and (min-width: 2560px) {
+  #shrink-nav {
+    height: 160px;
   
-//     #li-icon {
-//       display: flex;
-//       flex-direction: row;
-//       align-items: center;
-//       justify-content: center;
-//       //width: 10vw;
-//       width: 100%;
-//       height: 60px;
-//       margin: 0;
-//       padding-left: 20px;
+    ul,
+    li,
+    a {
+      height: 160px;
+      font-size: 1.4vw;
+    }
   
-//       a {
-//         padding-right: 0px 0px;
-//         margin: 0;
-//       }
+    img {
+      height: 140px;
+    }
+  }
+  
+  .nav-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-width: 2350px;
+    height: 200px;
+    background-color: $main-yellow;
+    position: fixed;
+    transition: 0.5s;
+    z-index: 10;
+  
+    ul {
+      margin: 0;
+      padding: 0;
+      height: 200px;
+      width: 100%;
+      list-style: none;
+      @include custom-Roboto($main-grey, 1em, 500);
+      display: flex;
+      transition: 0.5s;
+    }
+  
+    li {
+      width: 100%;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.5s;
+  
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+        width: 100%;
+        height: 200px;
+        text-decoration: none;
+        cursor: default;
+      }
+    }
+  
+    .li-text:link {
+      @include custom-Roboto($main-grey, 1.5vw, 500);
+    }
+  
+    .li-text:visited {
+      @include custom-Roboto($main-grey, 1.5vw, 500);
+    }
+  
+    .li-text:hover {
+      background-color: rgba($color: $light-yellow, $alpha: 0.3);
+      font-size: 1.6vw;
+      cursor: pointer;
+    }
+  
+    .li-text:active {
+      font-size: 1.5vw;
+    }
+  
+    .li-img {
+      height: 200px;
+      padding: 0px 10px;
+    }
+  
+    img {
+      height: 170px;
+      width: auto;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+  
+    #li-icon {
+      display: flex;
+      align-items: center;
+      transition: 0.5s;
+  
+      a {
+        padding: 0px 10px;
+        transition: 0.5s;
+      }
+    }
+  
+    svg {
+      cursor: pointer;
+      transition: 0.5s;
+      margin: 0px;
+      height: 50px;
+      width: 50px;
+      fill: $main-grey;
 
-//       svg {
-//         margin: -15px;
-//         height: 30px;
-//         width: 30px;
-//       }
-//     }
-//   }
-// }
+      &:hover {
+        transform: scale(1.15);
+      }
+    }
+  }
+
+  //Fix scroll on jump to for new nav size
+  #terapia::before {
+    content: "";
+    display: block;
+    height: 150px;
+    margin-top: -150px;
+    visibility: hidden;
+  }
+
+  #sobre::before {
+    content: "";
+    display: block;
+    height: 150px;
+    margin-top: -150px;
+    visibility: hidden;
+  }
+
+  #contacto::before {
+    content: "";
+    display: block;
+    height: 150px;
+    margin-top: -150px;
+    visibility: hidden;
+  }
+
+  #tarifas::before {
+    content: "";
+    display: block;
+    height: 150px;
+    margin-top: -150px;
+    visibility: hidden;
+  }
+}

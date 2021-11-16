@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+//import { useLocation } from 'react-router-dom';
 import { DepressionContent, AnxietyContent, SocialContent, LGBTContent, VideosContent } from '../../utilities/resourceContent.js';
 import './Resources.css';
 
-  // ************************
-  //TODO- figure out how to change class of only selected resourse using React instead of directly changing DOM
-  // ************************
+// ************************
+//TODO- figure out how to change class of only selected resourse using React instead of directly changing DOM
+// ************************
 
-const Resources = () => {
+const Resources = ({ windowHeight, windowWidth }) => {
   const [toggleContentDepression, setToggleContentDepression] = useState(true);
   const [toggleContentAnxiety, setToggleContentAnxiety] = useState(true);
   const [toggleContentSocial, setToggleContentSocial] = useState(true);
@@ -15,14 +15,14 @@ const Resources = () => {
   const [toggleContentVideos, setToggleContentVideos] = useState(true);
   const [toggleContainerHeight, setToggleContainerHeight] = useState('resource-height-closed');
   const [resourseClassName, setResourceClassName] = useState('');
-  const location = useLocation();
-
+  
+  //const location = useLocation();
   //const handleResourceLocation = () => {
-    //Close side/compact navigation bar if a nav link linked to landing page is clicked
-    //console.log(location.pathname);
-    if (location.pathname === '/recursos') {
-      console.log('path', true);
-    }
+  //Close side/compact navigation bar if a nav link linked to landing page is clicked
+  //console.log(location.pathname);
+  // if (location.pathname === '/recursos') {
+  //   console.log('path', true);
+  // }
   //}
 
   const handleToggleResource = ({ target }) => {
@@ -81,7 +81,7 @@ const Resources = () => {
     setToggleContentVideos(true);
 
     //Remove class that displays list
-    for(let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 5; i++) {
       document.getElementById(`resource-box-${i}`).classList.remove('chosen-box');
     }
   }
@@ -89,18 +89,21 @@ const Resources = () => {
   return (
     <>
       <div className='nav-placeholder' id='top'></div>
-      <div className={`resources-container ${toggleContainerHeight}`}>
+      <div className='resources-container'>
         <h1>Recursos</h1>
         <div className='resource-flex-container'>
           <div className='resource-boxes-container' id='resource-boxes-container'>
             <div className='resource-box' id='resource-box-1'>
-              <a href='/recursos#depresión'>
+              <a href='/recursos#depresion'>
                 <div className='resource-box-content' onClick={handleToggleResource}>
                   <img className='depression-click' alt='Imagen de Depresión' src='images/depression.jpg'></img>
-                  <h3 id='depresión' className='depression-click'>Depresión</h3>
+                  <h3 id='depresion' className='depression-click'>Depresión</h3>
                 </div>
               </a>
             </div>
+            {(((windowHeight > windowWidth) && windowWidth < 600)
+              || ((windowHeight < windowWidth) && windowWidth <= 480))
+              && <DepressionContent toggleContentDepression={toggleContentDepression} />}
             <div className='resource-box' id='resource-box-2' onClick={handleToggleResource}>
               <a href='/recursos#ansiedad'>
                 <div className='resource-box-content'>
@@ -109,6 +112,9 @@ const Resources = () => {
                 </div>
               </a>
             </div>
+            {(((windowHeight > windowWidth) && windowWidth < 600)
+              || ((windowHeight < windowWidth) && windowWidth <= 480))
+              && <AnxietyContent toggleContentAnxiety={toggleContentAnxiety} />}
             <div className='resource-box' id='resource-box-3' onClick={handleToggleResource}>
               <a href='/recursos#habilidades-sociales'>
                 <div className='resource-box-content'>
@@ -117,7 +123,10 @@ const Resources = () => {
                 </div>
               </a>
             </div>
-            <div className='breakRes'></div>
+            {(((windowHeight > windowWidth) && windowWidth < 600)
+              || ((windowHeight < windowWidth) && windowWidth <= 480))
+              && <SocialContent toggleContentSocial={toggleContentSocial} />}
+            {/* <div className='breakRes'></div> */}
             <div className='resource-box' id='resource-box-4' onClick={handleToggleResource}>
               <a href='/recursos#material-lgbt'>
                 <div className='resource-box-content'>
@@ -126,6 +135,9 @@ const Resources = () => {
                 </div>
               </a>
             </div>
+            {(((windowHeight > windowWidth) && windowWidth < 600)
+              || ((windowHeight < windowWidth) && windowWidth <= 480))
+              && <LGBTContent toggleContentLGBT={toggleContentLGBT} />}
             <div className='resource-box' id='resource-box-5' onClick={handleToggleResource}>
               <a href='/recursos#videos'>
                 <div className='resource-box-content'>
@@ -134,17 +146,22 @@ const Resources = () => {
                 </div>
               </a>
             </div>
+            {(((windowHeight > windowWidth) && windowWidth < 600) ||
+              ((windowHeight < windowWidth) && windowWidth <= 480)) && <VideosContent toggleContentVideos={toggleContentVideos} />}
           </div>
-          <DepressionContent toggleContentDepression={toggleContentDepression} />
-          <AnxietyContent toggleContentAnxiety={toggleContentAnxiety} />
-          <SocialContent toggleContentSocial={toggleContentSocial} />
-          <LGBTContent toggleContentLGBT={toggleContentLGBT} />
-          <VideosContent toggleContentVideos={toggleContentVideos} />
+          {(((windowHeight < windowWidth) && windowWidth > 480) || windowWidth >= 600) &&
+            <>
+              <DepressionContent toggleContentDepression={toggleContentDepression} />
+              <AnxietyContent toggleContentAnxiety={toggleContentAnxiety} />
+              <SocialContent toggleContentSocial={toggleContentSocial} />
+              <LGBTContent toggleContentLGBT={toggleContentLGBT} />
+              <VideosContent toggleContentVideos={toggleContentVideos} />
+            </>}
         </div>
       </div>
       {/* Only display "Return to top" icon if a resource list is currently open */}
       <div hidden={toggleContainerHeight === 'resource-height-open' ? false : true} className='to-top'>
-        <a href='/recursos#top'>⮤ Volver arriba</a>
+        <a href='/recursos#top'>↥ Volver arriba ↥</a>
       </div>
     </>
   )

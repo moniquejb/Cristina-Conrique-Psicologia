@@ -19,8 +19,8 @@ const NavSideBar = () => {
 
   if (!sideNavOpen) {
     return (
-      <div className='nav-side-dropdown-container-closed'>
-        <div onClick={handleSideNavOpen} className='nav-side-dropdown-icon-closed'>
+      <div className='nav-side-dropdown-container-closed no-select'>
+        <div onClick={handleSideNavOpen} className='nav-side-dropdown-icon-closed no-select'>
           <div className='nav-side-dropdown-bar-closed'></div>
           <div className='nav-side-dropdown-bar-closed'></div>
           <div className='nav-side-dropdown-bar-closed'></div>
@@ -30,8 +30,8 @@ const NavSideBar = () => {
   } else {
     return (
       <>
-        <div className='nav-side-dropdown-container'>
-          <div onClick={handleSideNavOpen} className='nav-side-dropdown-icon'>
+        <div className='nav-side-dropdown-container no-select'>
+          <div onClick={handleSideNavOpen} className='nav-side-dropdown-icon no-select'>
             <div className='nav-side-dropdown-bar'></div>
             <div className='nav-side-dropdown-bar'></div>
             <div className='nav-side-dropdown-bar'></div>

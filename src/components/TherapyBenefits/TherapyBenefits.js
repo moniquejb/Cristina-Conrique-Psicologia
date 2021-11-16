@@ -31,12 +31,9 @@ const TherapyBenefits = () => {
           </Tilt>
           <h3>Flexibilidad</h3>
           <div className='therapy-benefit-textbox'>
-            <p>Puedes programar una sesión estés<br/> donde estés y a la hora que desees,<br/> incluso estando de viaje.</p>
+            <p>Puedes programar una sesión<br/> donde estés y a la hora que desees,<br/> incluso estando de viaje.</p>
           </div> 
         </div>
-      </div>
-
-      <div className='therapy-benefits-row'>
         <div className='therapy-benefit'>
           <Tilt>
             <img src='images/ahorro_icon.svg' alt='Ahorro Icono'></img>

@@ -1,62 +1,84 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap");
 .prices-container {
-  height: 94vh;
+  height: auto;
   width: 100%;
   background-color: #F8F8F8;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 30px 0 20px 0;
 }
 .prices-container h1 {
-  margin: 0;
+  margin: 0 0 20px 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 6.5em;
+  font-size: 2.8em;
   color: #D8993F;
   text-align: center;
-  padding-top: 20px;
 }
-@media only screen and (max-width: 361px) {
+@media only screen and (max-width: 320px) {
+  .prices-container h1 {
+    font-size: 2.4em;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .prices-container h1 {
+    font-size: 3.3em;
+  }
+}
+@media only screen and (min-width: 1280px) {
   .prices-container h1 {
     font-size: 4em;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .prices-container h1 {
+    font-size: 6em;
+  }
+}
+@media only screen and (min-width: 3840px) {
+  .prices-container h1 {
+    font-size: 8em;
   }
 }
 .prices-container .price-box-container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 480px;
+  width: 100%;
+  height: auto;
 }
 .prices-container .price-box-container .price-box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 450px;
-  width: 380px;
+  width: 75%;
   border-radius: 10px;
   background-color: #E7E7E7;
-  margin: 30px 40px;
+  margin: 20px 0;
   text-align: center;
 }
 .prices-container .price-box-container .price-box h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 2.5em;
+  font-size: 2em;
   color: #9A746D;
   padding: 0;
   margin: 0;
-  padding-top: 20px;
+  padding: 20px 0;
 }
 .prices-container .price-box-container .price-box p {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.6em;
+  font-size: 1.3em;
   color: #9A746D;
   padding: 0;
   margin: 0;
-  padding-bottom: 20px;
+  padding: 20px 0;
+  line-height: 1.4em;
 }
 .prices-container .price-box-container .price-box .price-box-discount {
   display: flex;
@@ -64,8 +86,8 @@
   align-items: center;
   flex-direction: column;
   background-color: #D39997;
-  height: 240px;
-  width: 240px;
+  height: 50vw;
+  width: 50vw;
   border-radius: 50%;
   padding: 0;
   margin: 0;
@@ -73,7 +95,7 @@
 .prices-container .price-box-container .price-box .price-box-discount h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 3.3em;
+  font-size: 11vw;
   color: #F8F8F8;
   padding: 0;
   margin: 0;
@@ -82,7 +104,7 @@
 .prices-container .price-box-container .price-box .price-box-discount h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.5em;
+  font-size: 5vw;
   color: #F8F8F8;
   padding: 0;
   margin: 0;
@@ -91,21 +113,395 @@
 .prices-container .price-box-container .price-box .price-box-discount h3:first-of-type {
   margin-top: 0px;
 }
+.prices-container .price-box-container .price-box .smaller-text-prices h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 9vw;
+  color: #F8F8F8;
+}
+.prices-container .price-box-container .price-box .smaller-text-prices h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 4.5vw;
+  color: #F8F8F8;
+}
+.prices-container .price-box-container .price-box .smaller-text-prices #price-weekly {
+  font-size: 9vw;
+}
+.prices-container .price-box-container .price-box .smallest-text-prices h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 7vw;
+  color: #F8F8F8;
+}
+.prices-container .price-box-container .price-box .smallest-text-prices h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 4vw;
+  color: #F8F8F8;
+}
+.prices-container .price-box-container .price-box .smallest-text-prices #price-weekly {
+  font-size: 7vw;
+}
 .prices-container .price-box-container .price-box #price-weekly {
   margin-top: 0;
-  font-size: 3.3em;
+  font-size: 11vw;
   font-weight: 600;
 }
 .prices-container .prices-consult-text {
-  width: 1320px;
+  width: 90%;
   height: auto;
 }
 .prices-container .prices-consult-text p {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.3em;
+  font-size: 1em;
   color: #D8993F;
-  text-align: justify;
-  text-justify: inter-word;
-  line-height: 1.5em;
+  line-height: 1.6em;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+@media only screen and (max-width: 320px) {
+  .prices-container .prices-consult-text p {
+    font-size: 0.9em;
+    line-height: 1.5em;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .prices-container .prices-consult-text p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .prices-container .prices-consult-text p {
+    font-size: 1.25em;
+    line-height: 1.65em;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .prices-container .prices-consult-text p {
+    font-size: 1.9em;
+    line-height: 1.8em;
+  }
+}
+@media only screen and (min-width: 3840px) {
+  .prices-container .prices-consult-text p {
+    font-size: 2.4em;
+    line-height: 2em;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .prices-container .price-box-container .price-box {
+    width: 85%;
+    margin: 15px 0;
+  }
+  .prices-container .price-box-container .price-box h3 {
+    font-size: 1.8em;
+  }
+  .prices-container .price-box-container .price-box p {
+    font-size: 1.2em;
+    line-height: 1.3em;
+  }
+  .prices-container .price-box-container .price-box .price-box-discount {
+    height: 60vw;
+    width: 60vw;
+  }
+  .prices-container .price-box-container .price-box .price-box-discount h2 {
+    font-size: 14vw;
+  }
+  .prices-container .price-box-container .price-box .price-box-discount h3 {
+    font-size: 6vw;
+  }
+  .prices-container .price-box-container .price-box .smaller-text-prices h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 11vw;
+    color: #F8F8F8;
+  }
+  .prices-container .price-box-container .price-box .smaller-text-prices h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 5vw;
+    color: #F8F8F8;
+  }
+  .prices-container .price-box-container .price-box .smaller-text-prices #price-weekly {
+    font-size: 11vw;
+  }
+  .prices-container .price-box-container .price-box .smallest-text-prices h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 9vw;
+    color: #F8F8F8;
+  }
+  .prices-container .price-box-container .price-box .smallest-text-prices h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 5vw;
+    color: #F8F8F8;
+  }
+  .prices-container .price-box-container .price-box .smallest-text-prices #price-weekly {
+    font-size: 9vw;
+  }
+  .prices-container .price-box-container .price-box #price-weekly {
+    font-size: 15vw;
+  }
+}
+@media only screen and (max-width: 241px) {
+  .prices-container .price-box-container .price-box h3 {
+    font-size: 1.5em;
+  }
+  .prices-container .price-box-container .price-box p {
+    font-size: 1em;
+  }
+  .prices-container .price-box-container .price-box .price-box-discount {
+    height: 70vw;
+    width: 70vw;
+  }
+  .prices-container .price-box-container .price-box .price-box-discount h2 {
+    font-size: 16vw;
+  }
+  .prices-container .price-box-container .price-box .price-box-discount h3 {
+    font-size: 7vw;
+  }
+  .prices-container .price-box-container .price-box .smaller-text-prices h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 13vw;
+    color: #F8F8F8;
+  }
+  .prices-container .price-box-container .price-box .smaller-text-prices h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 6.5vw;
+    color: #F8F8F8;
+  }
+  .prices-container .price-box-container .price-box .smaller-text-prices #price-weekly {
+    font-size: 13vw;
+  }
+  .prices-container .price-box-container .price-box .smallest-text-prices h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 10vw;
+    color: #F8F8F8;
+  }
+  .prices-container .price-box-container .price-box .smallest-text-prices h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 5.8vw;
+    color: #F8F8F8;
+  }
+  .prices-container .price-box-container .price-box .smallest-text-prices #price-weekly {
+    font-size: 10vw;
+  }
+  .prices-container .price-box-container .price-box #price-weekly {
+    font-size: 16vw;
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+  .prices-container .price-box-container {
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+  .prices-container .price-box-container .price-box {
+    width: 28%;
+  }
+  .prices-container .price-box-container .price-box h3 {
+    font-size: 1.6em;
+  }
+  .prices-container .price-box-container .price-box p {
+    font-size: 1em;
+  }
+  .prices-container .price-box-container .price-box .price-box-discount {
+    height: 23vw;
+    width: 23vw;
+  }
+  .prices-container .price-box-container .price-box .price-box-discount h2 {
+    font-size: 5.5vw;
+    margin-top: 8px;
+  }
+  .prices-container .price-box-container .price-box .price-box-discount h3 {
+    font-size: 2.5vw;
+    margin-top: 8px;
+  }
+  .prices-container .price-box-container .price-box .smaller-text-prices h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 4vw;
+    color: #F8F8F8;
+  }
+  .prices-container .price-box-container .price-box .smaller-text-prices h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 2.3vw;
+    color: #F8F8F8;
+  }
+  .prices-container .price-box-container .price-box .smaller-text-prices #price-weekly {
+    font-size: 4vw;
+  }
+  .prices-container .price-box-container .price-box .smallest-text-prices h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 3.4vw;
+    color: #F8F8F8;
+  }
+  .prices-container .price-box-container .price-box .smallest-text-prices h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 2vw;
+    color: #F8F8F8;
+  }
+  .prices-container .price-box-container .price-box .smallest-text-prices #price-weekly {
+    font-size: 3.4vw;
+  }
+  .prices-container .price-box-container .price-box #price-weekly {
+    font-size: 5.5vw;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 481px) {
+  .prices-container .price-box-container {
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+  .prices-container .price-box-container .price-box {
+    width: 31%;
+  }
+  .prices-container .price-box-container .price-box h3 {
+    font-size: 1.3em;
+  }
+  .prices-container .price-box-container .price-box p {
+    font-size: 0.9em;
+  }
+  .prices-container .price-box-container .price-box .price-box-discount {
+    height: 24vw;
+    width: 24vw;
+  }
+  .prices-container .price-box-container .price-box .price-box-discount h2 {
+    font-size: 5.3vw;
+    margin-top: 8px;
+  }
+  .prices-container .price-box-container .price-box .price-box-discount h3 {
+    font-size: 2.5vw;
+    margin-top: 8px;
+  }
+  .prices-container .price-box-container .price-box .smaller-text-prices h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 4vw;
+    color: #F8F8F8;
+  }
+  .prices-container .price-box-container .price-box .smaller-text-prices h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 2.3vw;
+    color: #F8F8F8;
+  }
+  .prices-container .price-box-container .price-box .smaller-text-prices #price-weekly {
+    font-size: 4vw;
+  }
+  .prices-container .price-box-container .price-box .smallest-text-prices h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 3.5vw;
+    color: #F8F8F8;
+  }
+  .prices-container .price-box-container .price-box .smallest-text-prices h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 2vw;
+    color: #F8F8F8;
+  }
+  .prices-container .price-box-container .price-box .smallest-text-prices #price-weekly {
+    font-size: 3.5vw;
+  }
+  .prices-container .price-box-container .price-box #price-weekly {
+    font-size: 5.3vw;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 481px) and (min-width: 812px) {
+  .prices-container .price-box-container .price-box h3 {
+    font-size: 1.8em;
+  }
+  .prices-container .price-box-container .price-box p {
+    font-size: 1.1em;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 481px) and (min-width: 1280px) {
+  .prices-container {
+    padding-bottom: 30px;
+  }
+  .prices-container .price-box-container .price-box {
+    width: 28%;
+  }
+  .prices-container .price-box-container .price-box h3 {
+    font-size: 2em;
+  }
+  .prices-container .price-box-container .price-box p {
+    font-size: 1.2em;
+  }
+  .prices-container .price-box-container .price-box .price-box-discount {
+    height: 16vw;
+    width: 16vw;
+  }
+  .prices-container .price-box-container .price-box .price-box-discount h2 {
+    font-size: 3.4vw;
+    margin-top: 10px;
+  }
+  .prices-container .price-box-container .price-box .price-box-discount h3 {
+    font-size: 1.6vw;
+    margin-top: 10px;
+  }
+  .prices-container .price-box-container .price-box .smaller-text-prices h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 3vw;
+    color: #F8F8F8;
+  }
+  .prices-container .price-box-container .price-box .smaller-text-prices h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.4vw;
+    color: #F8F8F8;
+  }
+  .prices-container .price-box-container .price-box .smaller-text-prices #price-weekly {
+    font-size: 3vw;
+  }
+  .prices-container .price-box-container .price-box .smallest-text-prices h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 2.3vw;
+    color: #F8F8F8;
+  }
+  .prices-container .price-box-container .price-box .smallest-text-prices h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.3vw;
+    color: #F8F8F8;
+  }
+  .prices-container .price-box-container .price-box .smallest-text-prices #price-weekly {
+    font-size: 2.3vw;
+  }
+  .prices-container .price-box-container .price-box #price-weekly {
+    font-size: 3.4vw;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 481px) and (min-width: 2560px) {
+  .prices-container {
+    padding: 50px 0 60px 0;
+  }
+  .prices-container h1 {
+    margin: 0 0 50px 0;
+  }
+  .prices-container .price-box-container .price-box h3 {
+    font-size: 1.8vw;
+    padding-bottom: 40px;
+  }
+  .prices-container .price-box-container .price-box p {
+    font-size: 1.1vw;
+    padding-top: 40px;
+  }
+  .prices-container .prices-consult-text p {
+    padding: 0 0 40px 0;
+  }
 }/*# sourceMappingURL=Prices.css.map */

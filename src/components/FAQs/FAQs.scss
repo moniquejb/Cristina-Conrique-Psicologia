@@ -1,119 +1,158 @@
 @import "../../utilities/variables.scss";
 
+//---- MOBILE ----
+//Tested and working for the following phones/screen sizes
+//Also tested and working in landscape mode
+// ----------------
+//iPhone XR 414 x 896
+//iPhone 5/SE 320 x 568
+//iPhone 4 320 x 480
+//Galaxy S5 360 x 640
+//iPhone X 375 x 812
+//Nexus 4 384 x 640
+//JioPhone2 240 x 320
+//Galaxy Fold 280 x 653
+//Nokia N9 480 x 854
+//Nexus 6P 412 x 732
+//Pixel 2 XL 411 x 823
+//Surface Duo 540 x 720
+// ----------------
+
+//---- TABLET ----
+//Tested and working for the following tablet/screen sizes
+//Also tested and working in landscape mode
+// ----------------
+//Nexus 7 600 - 960
+//BB Playbook 600 x 1024
+//iPad/iPad Mini 768 x 1024
+//Kindle Fire HDX 800 x 1280
+//iPad Pro 1024 x 1366
+// ----------------
+
+//---- DESKTOP ----
+//Tested and working for the following desktop sizes
+// ----------------
+//Laptop with MDPI Screen 1280 x 800
+//Generic Laptop 1280 x 950
+//MacBook Air 1440 x 900
+//MacBook Pro 13" 2560 x 1600
+//MackBook Pro 15" 2880 x 1800
+//Macbook Pro 16" 3072 x 1920
+//4K Display 3840 x 2160
+//5K Display 5120 x 2880
+// ----------------
+
 .faqs-container {
   width: 100%;
   height: auto;
   background-color: $main-grey;
   margin: 0;
-  padding: 0;
-  //padding-top: 130px;
+  padding: 30px 0 15px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  //padding-left: 120px;
-  padding-bottom: 20px;
+  align-items: center;
 
   h1 {
-    margin: 0 0 0 120px;
-    padding: 20px 0 0 0;
-    @include main-heading ($dark-2-red);
+    @include main-heading($dark-2-red);
+    margin: 0 0 20px 0;
+    padding: 0;
   }
 
-  ol {
+  #faq-list {
+    width: 100%;
     margin: 0;
     padding: 0;
-    margin-top: 20px;
-  }
 
-  li {
-    @include bulk-text ($dark-2-red);
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  .question-container {
-    cursor: pointer;
-    width: 1000px;
-    border-radius: 10px;
-    padding: 0 20px;
-    height: auto;
-    margin: 0 0 20px 120px;
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    background-color: $dark-1-grey;
-    transition: 0.5s;
-
-    .questions-text-box {
-      width: 100%;
-      padding: 10px 0 10px 10px;
-
-      .question {
-        @include bulk-text ($dark-2-red);
-        font-size: 1.2em;
-        line-height: 1.5em;
-        margin: 0;
-        padding: 0;
-        margin-left: 5px;
-      }
+    li {
+      @include bulk-text($dark-2-red);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
     }
 
-    $stroke-thickness: .25em;
-    $stroke-color: $dark-2-red;
-    $size: 2em;
+    .question-container {
+      width: 90%;
+      cursor: pointer;
+      border-radius: 10px;
+      padding: 0 10px;
+      height: auto;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      background-color: $dark-1-grey;
+      transition: 0.5s;
 
-    .plus-toggle {
-      pointer-events: none;
-      > label {
-        width: $size;
-        height: $size;
-        cursor: pointer;
-        position: relative;
-        top: -10px;
-        display: block;
-        
-        &:before,
-        &:after {
-          content: "";
-          display: block;
-          position: absolute;
-          width: $stroke-thickness;
-          background: $stroke-color;
-          border-radius: $stroke-thickness;
-          height: $size / 1.8;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          margin: auto;
-          transition: all .3s ease;
-        }
-        
-        &:after {
-          width: $size / 1.8;
-          height: $stroke-thickness;
+      .questions-text-box {
+        width: 100%;
+        padding: 10px 0 10px 5px;
+
+        .question {
+          @include bulk-text($dark-2-red);
+          //font-size: 1.2em;
+          //line-height: 1.5em;
+          margin: 0;
+          padding: 0;
+          margin-left: 5px;
         }
       }
-      
-      > input {
-        height: 0;
-        width: 0;
-        overflow: hidden;
-        
-        &:checked + label {
-          &:before {
-            transform: rotate(-90deg);
-          }
-          
+
+      $stroke-thickness: 0.25em;
+      $stroke-color: $dark-2-red;
+      $size: 2em;
+
+      .plus-toggle {
+        pointer-events: none;
+        > label {
+          width: $size;
+          height: $size;
+          cursor: pointer;
+          position: relative;
+          top: -10px;
+          display: block;
+
+          &:before,
           &:after {
-            transform: rotate(-180deg);
-            opacity: 0;
+            content: "";
+            display: block;
+            position: absolute;
+            width: $stroke-thickness;
+            background: $stroke-color;
+            border-radius: $stroke-thickness;
+            height: $size / 1.8;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            transition: all 0.3s ease;
+          }
+
+          &:after {
+            width: $size / 1.8;
+            height: $stroke-thickness;
+          }
+        }
+
+        > input {
+          height: 0;
+          width: 0;
+          overflow: hidden;
+
+          &:checked + label {
+            &:before {
+              transform: rotate(-90deg);
+            }
+
+            &:after {
+              transform: rotate(-180deg);
+              opacity: 0;
+            }
           }
         }
       }
@@ -121,12 +160,10 @@
   }
 
   .answer-on {
-    font-size: 0.9em;
-    width: 980px;
-    text-align: justify;
-    text-justify: inter-word;
-    line-height: 26px;
-    margin: 0 0 20px 120px;
+    font-size: 1em;
+    width: 85%;
+    line-height: 1.6em;
+    margin: 0 0 20px 0;
     color: $dark-2-blue;
   }
 
@@ -150,146 +187,113 @@
   animation: animateAnswer 0.5s 1;
 }
 
-//---------------------
-//Media Queries
-//---------------------
-
-@media only screen and (max-width: 1200px) {
-  .faqs-container {
-    .question-container {
-      width: 700px;
-      transition: 0.5s;
-    }
-
-    .answer-on {
-      width: 650px;
-    }
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .faqs-container {
-    .question-container {
-      width: 500px;
-    }
-
-    .answer-on {
-      width: 450px;
-      font-size: 0.9em;
-      line-height: 1.5em;
-    }
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  .faqs-container {
-    .question-container {
-      width: 400px;
-    }
-
-    .answer-on {
-      width: 350px;
-    }
-  }
-}
-
-@media only screen and (max-width: 590px) {
-  .faqs-container {
-    padding-left: 0px;
-    padding-bottom: 10px;
-    align-items: center;
-    
-    h1 {
-      align-self: flex-start;
-      margin-left: 50px;
-    }
-
-    .question-container {
-      width: 320px;
-      margin: 0 0 10px 0;
-      padding: 0 10px;
-    }
-
-    .answer-on {
-      width: 300px;
-      font-size: 0.9em;
-      line-height: 1.5em;
-      margin-left: 0;
-    }
-  }
-}
-
-@media only screen and (max-width: 361px) {
-  .faqs-container {
-    padding-bottom: 5px;
-
-    ol {
-      margin-top: 10px;
-    }
-    
-    h1 {
-      margin-left: 20px;
-    }
-
-    .question-container {
-      width: 310px;
-    }
-
-    .answer-on {
-      width: 290px;
-      font-size: 0.9em;
-      line-height: 1.3em;
-    }
-  }
-}
+//---- MEDIA QUERIES ----
 
 @media only screen and (max-width: 321px) {
   .faqs-container {
-    
-    h1 {
-      margin-left: 10px;
-    }
-
-    .question-container {
-      width: 280px;
-
-      .questions-text-box {
-        .question {
-          font-size: 0.9em;
-          line-height: 1.8em;
-        }
+    #faq-list {   
+      .question-container {
+        margin-bottom: 15px;
       }
     }
-
+  
     .answer-on {
-      width: 260px;
-      font-size: 0.8em;
-      line-height: 20px;
+      font-size: 0.9em;
+      line-height: 1.5em;
     }
   }
 }
 
-@media only screen and (max-width: 281px) {
-  .faqs-container {
-    h1 {
-      margin-left: 10px;
+@media only screen and (orientation: portrait) {
+  @media only screen and (min-width: 600px) {
+    .faqs-container {    
+      .answer-on {
+        line-height: 1.7em;
+      }
     }
+  }
+}
 
-    .question-container {
-      width: 250px;
-
-      .questions-text-box {
-        .question {
-          font-size: 0.8em;
-          line-height: 1.6em;
+@media only screen and (orientation: landscape) {
+  @media only screen and (min-width: 1280px) {
+    .faqs-container {
+      #faq-list {    
+        .question-container {  
+          margin-bottom: 25px;      
+          .plus-toggle {
+            pointer-events: none;
+            > label {
+              top: -18px;
+            }
+          }
         }
       }
     }
+  }
 
-    .answer-on {
-      width: 240px;
-      font-size: 0.8em;
-      line-height: 20px;
+  @media only screen and (min-width: 2560px) {
+    .faqs-container {
+      padding: 50px 0 15px 0;
+
+      h1 {
+        margin: 0 0 50px 0;
+      }
+
+      #faq-list {
+        .question-container {    
+          padding: 0 40px 0 20px;
+          margin-bottom: 35px;
+
+          .questions-text-box {
+            padding: 25px 0 25px 15px;
+
+            .question {
+              @include custom-Montserrat ($dark-2-red, 1.3em, 400);
+              line-height: 1.65em;
+            }
+          }
+    
+          .plus-toggle {
+            pointer-events: none;
+            > label {
+              top: -28px;
+            }
+          }
+        }
+      }
+
+      .answer-on {
+        margin: 0 0 40px 0;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 3500px) {
+    .faqs-container {
+      padding: 50px 0 0px 0;
+
+      #faq-list {    
+        .question-container {    
+          margin-bottom: 50px;
+    
+          .plus-toggle {
+            pointer-events: none;
+            > label {
+              top: -40px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 3840px) {
+    .faqs-container {
+      padding: 70px 0 20px 0;
+
+      h1 {
+        margin: 0 0 80px 0;
+      }
     }
   }
 }

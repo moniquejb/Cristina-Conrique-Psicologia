@@ -1,52 +1,292 @@
 @import "../../utilities/variables.scss";
 
+//---- MOBILE ----
+//Tested and working for the following phones/screen sizes
+//Also tested and working in landscape mode
+// ----------------
+//iPhone XR 414 x 896
+//iPhone 5/SE 320 x 568
+//iPhone 4 320 x 480
+//Galaxy S5 360 x 640
+//iPhone X 375 x 812
+//Nexus 4 384 x 640
+//JioPhone2 240 x 320
+//Galaxy Fold 280 x 653
+//Nokia N9 480 x 854
+//Nexus 6P 412 x 732
+//Pixel 2 XL 411 x 823
+//Surface Duo 540 x 720
+// ----------------
+
+//---- TABLET ----
+//Tested and working for the following tablet/screen sizes
+//Also tested and working in landscape mode
+// ----------------
+//Nexus 7 600 - 960
+//BB Playbook 600 x 1024
+//iPad/iPad Mini 768 x 1024
+//Kindle Fire HDX 800 x 1280
+//iPad Pro 1024 x 1366
+// ----------------
+
+//---- DESKTOP ----
+//Tested and working for the following desktop sizes
+// ----------------
+//Laptop with MDPI Screen 1280 x 800
+//Generic Laptop 1280 x 950
+//MacBook Air 1440 x 900
+//MacBook Pro 13" 2560 x 1600
+//MackBook Pro 15" 2880 x 1800
+//Macbook Pro 16" 3072 x 1920
+//4K Display 3840 x 2160
+//5K Display 5120 x 2880
+// ----------------
+
 .about-container {
-  height: 95vh;
+  height: auto;
   width: 100%;
   background-color: $main-red;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin: 0;
+  padding: 30px 0 40px;
 
   .about-img {
     height: auto;
-    width: 500px;
-    padding-left: 120px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    order: 2;
+
     img {
       height: auto;
-      width: 100%;
-      min-width: 350px;
-      padding: 30px 30px 40px 0;
+      width: 50%;
+      padding: 0px 0 20px 0;
     }
   }
 
-  .about-h1-text-container {
+  .about-h1-container {
     width: auto;
     height: auto;
-    margin: 50px 120px 50px 30px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    order: 1;
 
     h1 {
-      margin: 0;
-      padding: 10px 0;
-      @include main-heading ($main-grey);
+      margin: 0 0 20px 0;
+      padding: 0;
+      @include main-heading($main-grey);
       text-align: center;
     }
+  }
 
-    .about-text {
-      width: 895px;
-      min-width: 400px;
-      height: auto;
+  .about-text-container {
+    width: 90%;
+    height: auto;
+    order: 3;
 
-      p {
-        @include bulk-text ($main-grey);
-        text-align: justify;
-        line-height: 1.8em;
+    p {
+      @include bulk-text($main-grey);
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      display: none;
+    }
+  }
+}
+
+//---- MEDIA QUERIES ----
+
+@media only screen and (orientation: portrait) {
+  @media only screen and (min-width: 600px) {
+    .about-container {
+      .about-img {
+        img {
+          width: 45%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .about-container {
+      .about-img {
+        img {
+          width: 35%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .about-container {
+      .about-img {
+        img {
+          width: 30%;
+          padding-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .about-container {
+    .about-img {
+      display: none;
+    }
+
+    .about-h1-container {
+      width: 100%;
+
+      h1 {
+        margin: 0 0 20px 0;
+        padding: 0;
+      }
+    }
+
+    .about-text-container {
+      img {
+        display: initial;
+        height: auto;
+        width: 40%;
+        float: left;
+        padding: 0px 30px 0px 0px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 321px) {
+    .about-container {
+      .about-img {
+        display: none;
+      }
+  
+      .about-h1-container {
+        width: 100%;
+  
+        // h1 {
+        //   padding: 30px 0 10px 0;
+        // }
+      }
+  
+      .about-text-container {
+        img {
+          display: initial;
+          height: auto;
+          width: 32%;
+          float: left;
+          margin-right: 15px;
+          padding: 5px 0px 0px 0px;
+        }
+      }
+    }
+  }
+
+  //Correct image float in relation to text on iPhone 4
+  @media only screen and (min-height: 320px) and (max-width: 481px) {
+    .about-container {
+      .about-text-container {
+        img {
+          width: 30%;
+          padding: 5px 20px 0 0;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 960px) {
+    .about-container {
+      .about-text-container {
+        img {
+          width: 32%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1366px) {
+    .about-container {
+      .about-text-container {
+        img {
+          width: 24%; //was 25%
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1440px) {
+    .about-container {
+      .about-text-container {
+        img {
+          //padding-top: 10px;
+          width: 20%; //was 22%
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 2560px) {
+    .about-container {
+      padding: 50px 0 70px;
+
+      .about-h1-container {
+        h1 {
+          margin: 0 0 50px 0;
+        }
+      }
+
+      .about-text-container {
+        img {
+          padding-top: 20px;
+          width: 20%;
+        }
+      }
+    }
+  }
+
+  //Remove image float
+  @media only screen and (min-width: 2880px) {
+    .about-container {
+      .about-text-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 20%;
+          min-width: 20%;
+          padding: 0 30px 0 0;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 3072px) {
+    .about-container {
+      .about-text-container {
+        img {
+          width: 18%;
+          min-width: 18%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 4000px) {
+    .about-container {
+      .about-text-container {
+        img {
+          width: 12%;
+          min-width: 13%;
+          max-height: 850px;
+        }
       }
     }
   }

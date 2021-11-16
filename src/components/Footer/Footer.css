@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap");
 .footer-container {
-  height: 75px;
+  height: auto;
   width: 100%;
   bottom: 0;
   background-color: #4F6E72;
@@ -9,28 +9,36 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 10px 0;
 }
 .footer-container .footer-text-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 1.1em;
+  font-size: 2.7vw;
   color: white;
 }
-.footer-container .footer-text-container .breakFoot {
+.footer-container .footer-text-container .break-foot-large-mobile {
+  display: flex;
+  flex-basis: 100%;
+}
+.footer-container .footer-text-container .break-foot-small-mobile {
   display: none;
 }
 .footer-container .footer-text-container p {
+  line-height: 4vw;
   margin: 0;
   padding: 0;
 }
 .footer-container .footer-text-container a {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 1.1em;
+  font-size: 2.75vw;
   color: white;
+  line-height: 4vw;
   text-decoration: none;
   cursor: pointer;
   margin: 0;
@@ -39,78 +47,137 @@
 .footer-container .footer-text-container a:visited {
   color: white;
 }
-.footer-container .footer-text-container a:hover {
-  color: #E4F3F0;
-}
 .footer-container .footer-text-container #img-cred {
   cursor: pointer;
 }
-.footer-container .footer-text-container #img-cred:hover {
-  color: #E4F3F0;
-}
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (orientation: portrait) and (max-width: 321px) {
   .footer-container .footer-text-container {
-    flex-direction: column;
-    align-items: center;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    font-size: 0.8em;
+  }
+  .footer-container .footer-text-container .break-foot-large-mobile {
+    display: none;
+  }
+  .footer-container .footer-text-container .break-foot-small-mobile {
+    display: initial;
+  }
+  .footer-container .footer-text-container p {
+    line-height: 1.2em;
+  }
+  .footer-container .footer-text-container a {
+    font-size: 0.9em;
+    line-height: 1.2em;
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 600px) {
+  .footer-container .footer-text-container {
     font-size: 1em;
-    color: white;
+  }
+  .footer-container .footer-text-container .break-foot-large-mobile {
+    display: flex;
+    flex-basis: 100%;
+  }
+  .footer-container .footer-text-container .break-foot-small-mobile {
+    display: none;
   }
   .footer-container .footer-text-container p {
     line-height: 1.5em;
   }
-  .footer-container .footer-text-container .breakFoot {
-    display: flex;
-    flex-basis: 100%;
-  }
   .footer-container .footer-text-container a {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
     font-size: 1em;
-    color: white;
+    line-height: 1.5em;
   }
 }
-@media only screen and (max-width: 580px) {
+@media only screen and (orientation: landscape) {
   .footer-container .footer-text-container {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 0.8em;
-    color: white;
-  }
-  .footer-container .footer-text-container a {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
     font-size: 0.9em;
-    color: white;
   }
-}
-@media only screen and (max-width: 450px) {
-  .footer-container .footer-text-container {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 0.6em;
-    color: white;
+  .footer-container .footer-text-container p {
+    line-height: 1.5em;
   }
   .footer-container .footer-text-container a {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 0.7em;
-    color: white;
+    font-size: 1em;
+    line-height: 1.5em;
   }
 }
-@media only screen and (max-width: 321px) {
+@media only screen and (orientation: landscape) and (max-width: 479px) {
   .footer-container .footer-text-container {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 0.48em;
-    color: white;
+    font-size: 0.8em;
+  }
+  .footer-container .footer-text-container .break-foot-large-mobile {
+    display: none;
+  }
+  .footer-container .footer-text-container .break-foot-small-mobile {
+    display: initial;
+  }
+  .footer-container .footer-text-container p {
+    line-height: 1.2em;
   }
   .footer-container .footer-text-container a {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 0.5em;
-    color: white;
+    font-size: 1em;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 960px) {
+  .footer-container {
+    padding: 15px 0;
+  }
+  .footer-container .footer-text-container {
+    flex-direction: row;
+    font-size: 0.9em;
+  }
+  .footer-container .footer-text-container .break-foot-large-mobile {
+    flex-basis: initial;
+    display: none;
+  }
+  .footer-container .footer-text-container a {
+    font-size: 1em;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 1280px) {
+  .footer-container {
+    padding: 20px 0;
+  }
+  .footer-container .footer-text-container {
+    flex-direction: row;
+    font-size: 1.2em;
+  }
+  .footer-container .footer-text-container .break-foot-large-mobile {
+    flex-basis: initial;
+    display: none;
+  }
+  .footer-container .footer-text-container a {
+    font-size: 1.1em;
+  }
+  .footer-container .footer-text-container a:hover {
+    color: #FDEDDD;
+  }
+  .footer-container .footer-text-container #img-cred:hover {
+    color: #FDEDDD;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 3072px) {
+  .footer-container {
+    padding: 30px 0;
+  }
+  .footer-container .footer-text-container {
+    flex-direction: row;
+    font-size: 1.5em;
+  }
+  .footer-container .footer-text-container .break-foot-large-mobile {
+    flex-basis: initial;
+    display: none;
+  }
+  .footer-container .footer-text-container a {
+    font-size: 1.1em;
+  }
+}
+@media only screen and (orientation: landscape) and (min-height: 768px) and (min-width: 1024px) {
+  .footer-container {
+    height: 80px;
+  }
+}
+@media only screen and (orientation: portrait) and (min-height: 960px) and (min-width: 600px) {
+  .footer-container {
+    height: 80px;
   }
 }/*# sourceMappingURL=Footer.css.map */

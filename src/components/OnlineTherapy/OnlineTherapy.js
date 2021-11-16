@@ -19,7 +19,7 @@ const OnlineTherapy = () => {
 
     for (let i = 4; i > 0; i--) {
       //Only apply following to UNselected questions
-      if (i != Number(selectedItemId)) {
+      if (i !== Number(selectedItemId)) {
         let currentQuestion = document.getElementById(`online-q-${i}`);
         let currentAnswer = document.getElementById(`online-answer-${i}`);
 
@@ -108,30 +108,41 @@ const OnlineTherapy = () => {
       <h1>Terapia Online</h1>
       <div className='online-therapy-text-img-container'>
         <div className='online-therapy-text'>
-          <h3 id='online-q-1' className='h3-open' onClick={handleSelection}>{arrow1} ¿Qué es la terapia Online?</h3>
-          <p id='online-answer-1' className='p-show'>La terapia Online es una modalidad y opción de tratamiento cada vez más común, y frecuente en nuestros días. Sigue la misma técnica que la terapia presencial, es decir, evaluar y tratar las dificultades que nos hacen sufrir, en relación con el entorno y con nosotros mismos.
-            Se trata de una videoconferencia/ video llamada, en donde un usuario y un psicólogo profesional trabajan en conjunto en tiempo real a través de un dispositivo electrónico.
-          </p>
+          <h3 id='online-q-1' className='h3-open no-select' onClick={handleSelection}>{arrow1} ¿Qué es la terapia Online?</h3>
+          <div className='therapy-answer-container'>
+            <p id='online-answer-1' className='p-show'>La terapia Online es una modalidad y opción de trata&shy;miento cada vez más común, y frecuente en nuestros días. Sigue la misma técnica que la terapia presencial, es decir, evaluar y tratar las dificul&shy;tades que nos hacen sufrir, en relación con el entorno y con nosotros mismos.
+            Se trata de una video&shy;conferen&shy;cia/ video llamada, en donde un usuario y un psicólogo profesio&shy;nal trabajan en conjunto en tiempo real a través de un dispositivo electrónico.
+            </p>
+          </div>
           <hr className='hr-line-break' />
-          <h3 id='online-q-2' className='h3-closed' onClick={handleSelection}>{arrow2} ¿Qué pasos sigo para comenzar?</h3>
-          <p id='online-answer-2' className='p-hide'>Como en una cita presencial, los pasos son los mismos, puede contactar directamente con el profesional, se pide una cita y se asiste a la sesión, sólo que la sesión se realiza vía online; o puedes agendar por medio de la página web una cita en el horario disponible que mejor convenga de acuerdo a tus horarios.</p>
+          
+          <h3 id='online-q-2' className='h3-closed no-select' onClick={handleSelection}>{arrow2} ¿Cuándo acudir a terapia Online?</h3>
+          <div className='therapy-answer-container'>
+            <ul id='online-answer-2' className='p-hide'>
+              <li>Cuando tenemos pensamientos negativos despropor&shy;cionados, sensaciones de vacío y desespe&shy;ranza.</li>
+              <li>Nos exigimos demasiado y nos sobre&shy;cargamos con lo nuestro y lo de los demás.</li>
+              <li>Sentimos estrés y/o ansiedad.</li>
+              <li>Cuando quieres tener un espacio para ti.</li>
+              <li>Comprender realmente lo que sucede.</li>
+              <li>Aprender a gestionar tus emociones, pensa&shy;mientos y comporta&shy;mientos.</li>
+              <li>Si tu sueño o alimentación están alterados.</li>
+              <li>Si no funcionas adecuada&shy;mente, o al menos como te gustaría, en algunas áreas de tu vida.</li>
+              <li>Si tienes una sensación de vacío o aburri&shy;miento constante y nada te motiva lo suficiente.</li>
+              <li>Si quieres conocerte mejor o tienes dudas de tu identidad.</li>
+            </ul>
+          </div>
           <hr className='hr-line-break' />
-          <h3 id='online-q-3' className='h3-closed' onClick={handleSelection}>{arrow3} ¿Cuál es la duración de la sesión?</h3>
-          <p id='online-answer-3' className='p-hide'>La duración de cada sesión es de 50 minutos a una hora, y por lo general es una vez a la semana.</p>
+          
+          <h3 id='online-q-3' className='h3-closed no-select' onClick={handleSelection}>{arrow3} ¿Cuál es la duración de la sesión?</h3>
+          <div className='therapy-answer-container'>
+            <p id='online-answer-3' className='p-hide'>La duración de cada sesión es de 50 minutos a una hora, y por lo general es una vez a la semana.</p>
+          </div>
           <hr className='hr-line-break' />
-          <h3 id='online-q-4' className='h3-closed' onClick={handleSelection}>{arrow4} ¿Cuándo acudir a terapia Online?</h3>
-          <ul id='online-answer-4' className='p-hide'>
-            <li>Cuando tenemos pensamientos negativos desproporcionados, sensaciones de vacío y desesperanza.</li>
-            <li>Nos exigimos demasiado y nos sobrecargamos con lo nuestro y lo de los demás.</li>
-            <li>Sentimos estrés y/o ansiedad.</li>
-            <li>Cuando quieres tener un espacio para ti.</li>
-            <li>Comprender realmente lo que sucede.</li>
-            <li>Aprender a gestionar tus emociones, pensamientos y comportamientos.</li>
-            <li>Si tu sueño o alimentación están alterados.</li>
-            <li>Si no funcionas adecuadamente, o al menos como te gustaría, en algunas áreas de tu vida.</li>
-            <li>Si tienes una sensación de vacío o aburrimiento constante y nada te motiva lo suficiente.</li>
-            <li>Si quieres conocerte mejor o tienes dudas de tu identidad.</li>
-          </ul>
+          
+          <h3 id='online-q-4' className='h3-closed no-select' onClick={handleSelection}>{arrow4} ¿Qué pasos sigo para comenzar?</h3>
+          <div className='therapy-answer-container'>
+            <p id='online-answer-4' className='p-hide'>Como en una cita presencial, los pasos son los mismos, puede contactar directa&shy;mente con el profesional, se pide una cita y se asiste a la sesión, sólo que la sesión se realiza vía online; o puedes agendar por medio de la página web una cita en el horario disponible que mejor convenga de acuerdo a tus horarios.</p>
+          </div>
         </div>
         <div className='online-therapy-img'>
           <img src='images/terapia_online.svg' alt='Terapia Online'></img>

@@ -1,74 +1,413 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap");
 .therapy-container {
-  height: 95vh;
+  height: auto;
   width: 100%;
   background-color: #F8F8F8;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
+  padding: 30px 0;
 }
 .therapy-container h1 {
-  margin: 0;
+  margin: 0 0 20px 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 6.5em;
+  font-size: 2.8em;
   color: #9A746D;
   text-align: center;
-  padding-top: 20px;
 }
-@media only screen and (max-width: 361px) {
+@media only screen and (max-width: 320px) {
+  .therapy-container h1 {
+    font-size: 2.4em;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .therapy-container h1 {
+    font-size: 3.3em;
+  }
+}
+@media only screen and (min-width: 1280px) {
   .therapy-container h1 {
     font-size: 4em;
   }
 }
+@media only screen and (min-width: 2560px) {
+  .therapy-container h1 {
+    font-size: 6em;
+  }
+}
+@media only screen and (min-width: 3840px) {
+  .therapy-container h1 {
+    font-size: 8em;
+  }
+}
 .therapy-container .therapy-text {
-  width: 85%;
-  min-width: 1020px;
+  width: 90%;
   height: auto;
-  padding-bottom: 20px;
 }
 .therapy-container .therapy-text p {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.3em;
+  font-size: 1em;
   color: #BC8282;
-  text-align: justify;
+  line-height: 1.6em;
+  text-align: left;
   line-height: 1.5em;
   align-self: center;
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+@media only screen and (max-width: 320px) {
+  .therapy-container .therapy-text p {
+    font-size: 0.9em;
+    line-height: 1.5em;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .therapy-container .therapy-text p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .therapy-container .therapy-text p {
+    font-size: 1.25em;
+    line-height: 1.65em;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .therapy-container .therapy-text p {
+    font-size: 1.9em;
+    line-height: 1.8em;
+  }
+}
+@media only screen and (min-width: 3840px) {
+  .therapy-container .therapy-text p {
+    font-size: 2.4em;
+    line-height: 2em;
+  }
 }
 .therapy-container .therapy-individuals-container {
-  width: 85%;
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
-  padding-bottom: 30px;
+  align-items: center;
+  flex-direction: column;
 }
 .therapy-container .therapy-individuals-container .therapy-individuals {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  padding-top: 25px;
 }
-.therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-img {
-  width: 220px;
-  height: auto;
-}
-.therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-text {
+.therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-heading {
+  width: 90%;
   text-align: center;
 }
-.therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-text h3 {
+.therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-heading h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 2em;
+  font-size: 1.5em;
   color: #9A746D;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
 }
-.therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-text p {
+.therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-img {
+  width: 35%;
+  height: auto;
+}
+.therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-img img {
+  width: 95%;
+  height: auto;
+  padding-right: 5px;
+}
+.therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-text {
+  width: 55%;
+}
+.therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-text ul {
+  margin: 0;
+  padding: 20px 5px 20px 20px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.1em;
+  font-size: 0.8em;
   color: #BC8282;
-  line-height: 30px;
+  line-height: 20px;
+}
+.therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-text ul li {
+  margin: 0;
+  padding: 0;
+}
+.therapy-container .therapy-individuals-container .therapy-white-bg {
+  background-color: white;
+  padding-bottom: 15px;
+}
+
+@media only screen and (max-width: 281px) {
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-img {
+    width: 30%;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-text {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 241px) {
+  .therapy-container .therapy-text p {
+    font-size: 0.9em;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-heading {
+    padding-bottom: 20px;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-img {
+    width: 100%;
+    text-align: center;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-img img {
+    width: 50%;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-text ul {
+    margin: 0;
+    padding: 20px 0 20px 0;
+  }
+}
+@media only screen and (orientation: landscape) and (max-width: 641px) {
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-img img {
+    width: 60%;
+    padding-right: 0px;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-text {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-text ul {
+    margin: 0;
+    padding: 20px 5px 20px 20px;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 640px) {
+  .therapy-container .therapy-individuals-container {
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals {
+    width: 33%;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-heading h3 {
+    padding-bottom: 20px;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-img {
+    width: 50%;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-img img {
+    padding-right: 0px;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-text {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-text ul {
+    margin: 0;
+    padding: 20px 5px 20px 5px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 0.85em;
+    color: #BC8282;
+    line-height: 22px;
+  }
+  .therapy-container .therapy-individuals-container .therapy-white-bg {
+    background-color: initial;
+    padding-bottom: 0px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .therapy-container .therapy-individuals-container {
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals {
+    width: 33%;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-heading h3 {
+    padding-bottom: 20px;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-img {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-img img {
+    width: 100%;
+    padding-right: 0px;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-text {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-text ul {
+    margin: 0;
+    padding: 20px 5px 20px 5px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 0.85em;
+    color: #BC8282;
+    line-height: 23px;
+  }
+  .therapy-container .therapy-individuals-container .therapy-white-bg {
+    background-color: initial;
+    padding-bottom: 0px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .therapy-container .therapy-text {
+    width: 90%;
+  }
+  .therapy-container .therapy-text p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #BC8282;
+    line-height: 1.6em;
+    font-size: 1.2em;
+    line-height: 1.6em;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 320px) {
+  .therapy-container .therapy-text p {
+    font-size: 0.9em;
+    line-height: 1.5em;
+  }
+}
+@media only screen and (min-width: 800px) and (min-width: 800px) {
+  .therapy-container .therapy-text p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+  }
+}
+@media only screen and (min-width: 800px) and (min-width: 1280px) {
+  .therapy-container .therapy-text p {
+    font-size: 1.25em;
+    line-height: 1.65em;
+  }
+}
+@media only screen and (min-width: 800px) and (min-width: 2560px) {
+  .therapy-container .therapy-text p {
+    font-size: 1.9em;
+    line-height: 1.8em;
+  }
+}
+@media only screen and (min-width: 800px) and (min-width: 3840px) {
+  .therapy-container .therapy-text p {
+    font-size: 2.4em;
+    line-height: 2em;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-heading h3 {
+    font-size: 1.8em;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-text ul {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #BC8282;
+    line-height: 25px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .therapy-container .therapy-individuals-container {
+    justify-content: space-evenly;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals {
+    width: auto;
+    max-width: 33%;
+    min-width: 20%;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-heading h3 {
+    font-size: 1.8em;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-img img {
+    min-width: 180px;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-text {
+    width: 100%;
+    min-width: 90%;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-text ul {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #BC8282;
+    line-height: 28px;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .therapy-container {
+    padding: 50px 0;
+  }
+  .therapy-container h1 {
+    margin: 0 0 50px 0;
+  }
+  .therapy-container .therapy-text p {
+    padding: 0 0 50px 0;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-heading h3 {
+    font-size: 3em;
+    padding-bottom: 40px;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-img img {
+    min-width: 300px;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-text ul {
+    padding: 40px 5px 40px 5px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    color: #BC8282;
+    line-height: 45px;
+  }
+}
+@media only screen and (min-width: 3072px) {
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-heading h3 {
+    font-size: 4em;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-img img {
+    min-width: 450px;
+  }
+  .therapy-container .therapy-individuals-container .therapy-individuals .therapy-individuals-text ul {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.7em;
+    color: #BC8282;
+    line-height: 55px;
+  }
 }/*# sourceMappingURL=Therapy.css.map */

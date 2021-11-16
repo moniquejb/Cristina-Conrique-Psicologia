@@ -2,103 +2,263 @@
 .online-therapy-container {
   width: 100%;
   height: auto;
-  background-color: #A0CEBF;
+  background-color: #92C8B6;
+  margin: 0;
+  padding: 30px 0;
 }
 .online-therapy-container h1 {
-  margin: 0;
-  padding: 50px 0 10px 120px;
+  margin: 0 0 20px 0;
+  padding: 0;
+  text-align: center;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 6.5em;
+  font-size: 2.8em;
   color: #F8F8F8;
 }
-@media only screen and (max-width: 361px) {
+@media only screen and (max-width: 320px) {
+  .online-therapy-container h1 {
+    font-size: 2.4em;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .online-therapy-container h1 {
+    font-size: 3.3em;
+  }
+}
+@media only screen and (min-width: 1280px) {
   .online-therapy-container h1 {
     font-size: 4em;
   }
 }
+@media only screen and (min-width: 2560px) {
+  .online-therapy-container h1 {
+    font-size: 6em;
+  }
+}
+@media only screen and (min-width: 3840px) {
+  .online-therapy-container h1 {
+    font-size: 8em;
+  }
+}
 .online-therapy-container .online-therapy-text-img-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: auto;
-  padding-bottom: 40px;
 }
 .online-therapy-container .online-therapy-text-img-container .online-therapy-text {
   height: auto;
-  width: 62%;
-  min-width: 790px;
+  width: 100%;
 }
 .online-therapy-container .online-therapy-text-img-container .online-therapy-text .hr-line-break {
-  width: 50%;
+  width: 60%;
   border: 0;
   height: 3px;
   background-image: linear-gradient(to right, rgba(228, 243, 240, 0), rgba(228, 243, 240, 0.5), rgba(228, 243, 240, 0));
 }
 .online-therapy-container .online-therapy-text-img-container .online-therapy-text h3 {
-  padding: 0 0 0 120px;
+  padding: 20px 10px 20px 20px;
   cursor: pointer;
   display: inline-block;
+  margin: 0;
 }
 .online-therapy-container .online-therapy-text-img-container .online-therapy-text .h3-open {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 2em;
+  font-size: 1.5em;
   color: #F8F8F8;
   margin-bottom: 10px;
-  transition: 0.5s;
+  transition: 0.05s;
 }
 .online-therapy-container .online-therapy-text-img-container .online-therapy-text .h3-closed {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.3em;
-  color: #F8F8F8;
-  transition: 0.5s;
+  font-size: 1em;
+  color: white;
+  transition: 0.05s;
 }
-.online-therapy-container .online-therapy-text-img-container .online-therapy-text .p-show {
+.online-therapy-container .online-therapy-text-img-container .online-therapy-text .therapy-answer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.online-therapy-container .online-therapy-text-img-container .online-therapy-text .therapy-answer-container .p-show {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.3em;
-  color: #F8F8F8;
-  padding: 0 0 20px 120px;
-  text-align: justify;
+  font-size: 1em;
+  color: white;
+  line-height: 1.6em;
+  width: 90%;
   line-height: 1.5em;
-  transform: scale(1);
-  transform-origin: top left;
-  transition: 0.5s;
+  margin: 0 0 20px 0;
 }
-.online-therapy-container .online-therapy-text-img-container .online-therapy-text .p-show li {
+@media only screen and (max-width: 320px) {
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-text .therapy-answer-container .p-show {
+    font-size: 0.9em;
+    line-height: 1.5em;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-text .therapy-answer-container .p-show {
+    font-size: 1.2em;
+    line-height: 1.6em;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-text .therapy-answer-container .p-show {
+    font-size: 1.25em;
+    line-height: 1.65em;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-text .therapy-answer-container .p-show {
+    font-size: 1.9em;
+    line-height: 1.8em;
+  }
+}
+@media only screen and (min-width: 3840px) {
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-text .therapy-answer-container .p-show {
+    font-size: 2.4em;
+    line-height: 2em;
+  }
+}
+.online-therapy-container .online-therapy-text-img-container .online-therapy-text .therapy-answer-container .p-show li {
   text-align: left;
   line-height: 1.8em;
-  list-style-position: inside;
-  text-indent: -1.4em;
-  padding-left: 1.4em;
+  list-style-position: outside;
 }
-.online-therapy-container .online-therapy-text-img-container .online-therapy-text .p-hide {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 1.3em;
-  color: #F8F8F8;
-  padding: 0 0 20px 120px;
-  text-align: justify;
-  line-height: 1.5em;
-  transform: scale(0.95);
-  transform-origin: top left;
+.online-therapy-container .online-therapy-text-img-container .online-therapy-text .therapy-answer-container .p-hide {
   position: absolute;
   visibility: hidden;
 }
 .online-therapy-container .online-therapy-text-img-container .online-therapy-img {
-  margin: 0px 120px 50px 50px;
+  margin-top: 20px;
   height: auto;
-  width: 28%;
-  min-width: 450px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  max-height: 800px;
 }
 .online-therapy-container .online-therapy-text-img-container .online-therapy-img img {
   height: auto;
-  width: 100%;
+  width: 55%;
+}
+
+@media only screen and (max-width: 281px) {
+  .online-therapy-container h1 {
+    margin: 0 0 10px 0;
+  }
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-text h3 {
+    padding: 10px 10px 10px 20px;
+  }
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-text .therapy-answer-container .p-show {
+    margin: 0 0 10px 0;
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 600px) {
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-text .h3-open {
+    font-size: 4vw;
+  }
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-text .h3-closed {
+    font-size: 3vw;
+  }
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-img img {
+    width: 40%;
+  }
+}
+@media only screen and (orientation: landscape) {
+  .online-therapy-container .online-therapy-text-img-container {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-text {
+    width: 60%;
+  }
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-text .h3-closed {
+    font-size: 1.2em;
+  }
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-img {
+    margin-top: 40px;
+    width: 40%;
+  }
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-img img {
+    width: 80%;
+  }
+}
+@media only screen and (orientation: landscape) and (max-width: 481px) {
+  .online-therapy-container h1 {
+    margin: 0;
+  }
+  .online-therapy-container .online-therapy-text-img-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-text {
+    width: 95%;
+  }
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-text .h3-open {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+  }
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-text .h3-closed {
+    font-size: 0.9em;
+  }
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-img {
+    margin-top: 10px;
+    width: 50%;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 1280px) {
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-text .h3-open {
+    font-size: 2.6vw;
+  }
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-text .h3-closed {
+    font-size: 1.4em;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 1920px) {
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-text .h3-closed {
+    font-size: 2vw;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 2560px) {
+  .online-therapy-container {
+    padding: 50px 0;
+  }
+  .online-therapy-container h1 {
+    margin: 0 0 50px 0;
+  }
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-text h3 {
+    padding: 50px 10px 50px 20px;
+  }
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-text .therapy-answer-container .p-show {
+    margin: 0 0 50px 0;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 3070px) {
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-text .h3-open {
+    font-size: 2.2vw;
+  }
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-text .h3-closed {
+    font-size: 1.6vw;
+  }
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-img {
+    margin: 0 0 20px 0;
+    width: 40%;
+  }
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-img img {
+    width: 75%;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 4000px) {
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-img {
+    margin: 0 0 30px 0;
+    width: 40%;
+  }
+  .online-therapy-container .online-therapy-text-img-container .online-therapy-img img {
+    width: 60%;
+  }
 }/*# sourceMappingURL=OnlineTherapy.css.map */

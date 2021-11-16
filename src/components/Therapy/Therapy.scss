@@ -1,67 +1,543 @@
 @import "../../utilities/variables.scss";
 
+//---- MOBILE ----
+//Tested and working for the following phones/screen sizes
+//Also tested and working in landscape mode
+// ----------------
+//iPhone XR 414 x 896
+//iPhone 5/SE 320 x 568
+//iPhone 4 320 x 480
+//Galaxy S5 360 x 640
+//iPhone X 375 x 812
+//Nexus 4 384 x 640
+//JioPhone2 240 x 320
+//Galaxy Fold 280 x 653
+//Nokia N9 480 x 854
+//Nexus 6P 412 x 732
+//Pixel 2 XL 411 x 823
+//Surface Duo 540 x 720
+// ----------------
+
+//---- TABLET ----
+//Tested and working for the following tablet/screen sizes
+//Also tested and working in landscape mode
+// ----------------
+//Nexus 7 600 - 960
+//BB Playbook 600 x 1024
+//iPad/iPad Mini 768 x 1024
+//Kindle Fire HDX 800 x 1280
+//iPad Pro 1024 x 1366
+// ----------------
+
+//---- DESKTOP ----
+//Tested and working for the following desktop sizes
+// ----------------
+//Laptop with MDPI Screen 1280 x 800
+//Generic Laptop 1280 x 950
+//MacBook Air 1440 x 900
+//MacBook Pro 13" 2560 x 1600
+//MackBook Pro 15" 2880 x 1800
+//Macbook Pro 16" 3072 x 1920
+//4K Display 3840 x 2160
+//5K Display 5120 x 2880
+// ----------------
+
+//For tested phones except for adjustments for
+//JioPhone2 240 x 320 and Galaxy Fold 280 x 653
 .therapy-container {
-  height: 95vh;
+  height: auto;
   width: 100%;
   background-color: $main-grey;
   display: flex;
   flex-direction: column;
   align-items: center;
-  //padding-top: 20px;
+  margin: 0;
+  padding: 30px 0;
 
   h1 {
-    margin: 0;
+    margin: 0 0 20px 0;
     padding: 0;
-    @include main-heading ($dark-2-red);
+    @include main-heading($dark-2-red);
     text-align: center;
-    padding-top: 20px;
+    // padding-top: 30px;
+    // padding-bottom: 10px;
   }
 
   .therapy-text {
-    width: 85%;
-    min-width: 1020px;
+    width: 90%;
     height: auto;
-    padding-bottom: 20px;
 
     p {
-      @include bulk-text ($dark-1-red);
-      text-align: justify;
+      @include bulk-text($dark-1-red);
+      text-align: left;
       line-height: 1.5em;
       align-self: center;
+      margin: 0;
+      padding: 0 0 20px 0;
     }
   }
 
   .therapy-individuals-container {
-    width: 85%;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
-    padding-bottom: 30px;
+    align-items: center;
+    flex-direction: column;
+    //padding-bottom: 20px;
 
     .therapy-individuals {
+      width: 100%;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
+      padding-top: 25px;
+
+      .therapy-individuals-heading {
+        width: 90%;
+        text-align: center;
+
+        h3 {
+          @include custom-Roboto($dark-2-red, 1.5em, 400);
+          margin: 0;
+          padding: 0;
+        }
+      }
 
       .therapy-individuals-img {
-        width: 220px;
+        width: 35%;
         height: auto;
-      }
-  
-      .therapy-individuals-text {
-        text-align: center;
-        h3 {
-          @include custom-Roboto($dark-2-red, 2em, 400);
-          margin-bottom: 0;
-        }
 
-        p {
-          @include custom-Montserrat($dark-1-red, 1.1em, 400);
-          line-height: 30px;
+        img {
+          width: 95%;
+          height: auto;
+          padding-right: 5px;
         }
       }
-    } 
+
+      .therapy-individuals-text {
+        width: 55%;
+
+        ul {
+          margin: 0;
+          padding: 20px 5px 20px 20px;
+          @include custom-Montserrat($dark-1-red, 0.8em, 400);
+          line-height: 20px;
+
+          li {
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    .therapy-white-bg {
+      background-color: white;
+      padding-bottom: 15px;
+    }
   }
 }
+
+//---- MEDIA QUERIES ----
+
+//For Galaxy Fold 280 x 653
+@media only screen and (max-width: 281px) {
+  .therapy-container {
+    .therapy-individuals-container {
+      .therapy-individuals {
+        .therapy-individuals-img {
+          width: 30%;
+        }
+
+        .therapy-individuals-text {
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+
+//For JioPhone2 240 x 320
+@media only screen and (max-width: 241px) {
+  .therapy-container {
+    .therapy-text {
+      p {
+        font-size: 0.9em;
+      }
+    }
+
+    .therapy-individuals-container {
+      .therapy-individuals {
+        .therapy-individuals-heading {
+          padding-bottom: 20px;
+        }
+
+        .therapy-individuals-img {
+          width: 100%;
+          text-align: center;
+
+          img {
+            width: 50%;
+          }
+        }
+
+        .therapy-individuals-text {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+
+          ul {
+            margin: 0;
+            padding: 20px 0 20px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+//For landscape under 640px width
+@media only screen and (orientation: landscape) and (max-width: 641px) {
+  .therapy-container {
+    .therapy-individuals-container {
+      .therapy-individuals {
+        .therapy-individuals-img {
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+
+          img {
+            width: 60%;
+            padding-right: 0px;
+          }
+        }
+
+        .therapy-individuals-text {
+          width: 50%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          ul {
+            margin: 0;
+            padding: 20px 5px 20px 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//For landscape above 640px width
+@media only screen and (orientation: landscape) and (min-width: 640px) {
+  .therapy-container {    
+    .therapy-individuals-container {
+      justify-content: center;
+      align-items: stretch;
+      flex-direction: row;
+      //padding-bottom: 10px;
+
+      .therapy-individuals {
+        width: 33%;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .therapy-individuals-heading {
+          h3 {
+            padding-bottom: 20px;
+          }
+        }
+
+        .therapy-individuals-img {
+          width: 50%;
+
+          img {
+            padding-right: 0px;
+          }
+        }
+
+        .therapy-individuals-text {
+          width: 90%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          ul {
+            margin: 0;
+            padding: 20px 5px 20px 5px;
+            @include custom-Montserrat($dark-1-red, 0.85em, 400);
+            line-height: 22px;
+          }
+        }
+      }
+
+      .therapy-white-bg {
+        background-color: initial;
+        padding-bottom: 0px;
+      }
+    }
+  }
+
+  // @media only screen and (max-width: 640px) {
+  //   .therapy-container {
+  //     .therapy-individuals-container {
+  //       justify-content: center;
+  //       align-items: stretch;
+  //       flex-direction: row;
+  //       padding-bottom: 10px;
+
+  //       .therapy-individuals {
+  //         width: 33%;
+  //         flex-direction: column;
+  //         justify-content: flex-start;
+
+  //         .therapy-individuals-heading {
+  //           h3 {
+  //             padding-bottom: 20px;
+  //           }
+  //         }
+
+  //         .therapy-individuals-img {
+  //           width: 50%;
+
+  //           img {
+  //             padding-right: 0px;
+  //           }
+  //         }
+
+  //         .therapy-individuals-text {
+  //           width: 90%;
+  //           display: flex;
+  //           justify-content: center;
+  //           align-items: center;
+
+  //           ul {
+  //             margin: 0;
+  //             padding: 20px 5px 20px 5px;
+  //             @include custom-Montserrat($dark-1-red, 0.85em, 400);
+  //             line-height: 22px;
+  //           }
+  //         }
+  //       }
+
+  //       .therapy-white-bg {
+  //         background-color: initial;
+  //         padding-bottom: 0px;
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+//For most tablets
+@media only screen and (min-width: 600px) {
+  .therapy-container {
+    .therapy-individuals-container {
+      justify-content: center;
+      align-items: stretch;
+      flex-direction: row;
+      //padding-bottom: 10px;
+
+      .therapy-individuals {
+        width: 33%;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .therapy-individuals-heading {
+          h3 {
+            padding-bottom: 20px;
+          }
+        }
+
+        .therapy-individuals-img {
+          width: 70%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            width: 100%;
+            padding-right: 0px;
+          }
+        }
+
+        .therapy-individuals-text {
+          width: 90%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          ul {
+            margin: 0;
+            padding: 20px 5px 20px 5px;
+            @include custom-Montserrat($dark-1-red, 0.85em, 400);
+            line-height: 23px;
+          }
+        }
+      }
+
+      .therapy-white-bg {
+        background-color: initial;
+        padding-bottom: 0px;
+      }
+    }
+  }
+}
+
+//For Kindle Fire HDX 800 x 1280 and iPad Pro 1024 x 1366
+@media only screen and (min-width: 800px) {
+  .therapy-container {
+    // h1 {
+    //   margin: 0;
+    //   //padding: 0;
+    //   @include main-heading($dark-2-red);
+    //   text-align: center;
+    //   //padding-top: 30px;
+    // }
+    
+    .therapy-text {
+      width: 90%;
+  
+      p {
+        @include bulk-text($dark-1-red);
+        font-size: 1.2em;
+        line-height: 1.6em;
+      }
+    }
+    .therapy-individuals-container {
+      .therapy-individuals {
+        .therapy-individuals-heading {
+          h3 {
+            font-size: 1.8em;
+          }
+        }
+
+        .therapy-individuals-text {
+          ul {
+            @include custom-Montserrat($dark-1-red, 1em, 400);
+            line-height: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//For desktops
+@media only screen and (min-width: 1280px) {
+  .therapy-container {
+    .therapy-individuals-container {
+      justify-content: space-evenly;
+  
+      .therapy-individuals {
+        width: auto;
+        max-width: 33%;
+        min-width: 20%;
+  
+        .therapy-individuals-heading {  
+          h3 {
+            font-size: 1.8em;
+          }
+        }
+
+        .therapy-individuals-img {
+          img {
+            min-width: 180px;
+          }
+        }
+  
+        .therapy-individuals-text {
+          width: 100%;
+          min-width: 90%;
+          
+          ul {
+            @include custom-Montserrat($dark-1-red, 1em, 400);
+            line-height: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//For MacBook Pro 13" & 15"
+@media only screen and (min-width: 2560px) {
+  .therapy-container {
+    padding: 50px 0;
+
+    h1 {
+      margin: 0 0 50px 0;
+    }
+
+    .therapy-text {
+  
+      p {
+        padding: 0 0 50px 0;
+      }
+    }
+
+    .therapy-individuals-container {
+      .therapy-individuals {
+        .therapy-individuals-heading {  
+          h3 {
+            font-size: 3em;
+            padding-bottom: 40px;
+          }
+        }
+
+        .therapy-individuals-img {
+          img {
+            min-width: 300px;
+          }
+        }
+  
+        .therapy-individuals-text {  
+          ul {
+            padding: 40px 5px 40px 5px;
+            @include custom-Montserrat($dark-1-red, 1.5em, 400);
+            line-height: 45px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//For MacBook Pro 16" and upwards
+@media only screen and (min-width: 3072px) {
+  .therapy-container {
+    .therapy-individuals-container {
+      .therapy-individuals {
+        .therapy-individuals-heading {  
+          h3 {
+            font-size: 4em;
+          }
+        }
+
+        .therapy-individuals-img {
+          img {
+            min-width: 450px;
+          }
+        }
+  
+        .therapy-individuals-text {  
+          ul {
+            @include custom-Montserrat($dark-1-red, 1.7em, 400);
+            line-height: 55px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+

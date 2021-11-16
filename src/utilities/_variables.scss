@@ -2,7 +2,8 @@
 
 $main-yellow: #F9BE7B;
 $main-red: #D39997;
-$main-blue: #A0CEBF;
+$main-blue: #9accbb;
+$main-blue-bg: #92C8B6;
 $main-grey: #F8F8F8;
 
 $light-yellow: #FDEDDD;
@@ -22,26 +23,68 @@ $dark-2-grey: #BCBCBC;
 @mixin main-heading ($color) {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  font-size: 6.5em;
+  font-size: 2.8em;
   color: $color;
 
-  @media only screen and (max-width: 361px) {
+  @media only screen and (max-width: 320px) {
+    font-size: 2.4em;
+  }
+
+  @media only screen and (min-width: 800px) {
+    font-size: 3.3em;
+  }
+
+  @media only screen and (min-width: 1280px) {
     font-size: 4em;
+  }
+
+  @media only screen and (min-width: 2560px) {
+    font-size: 6em;
+  }
+
+  @media only screen and (min-width: 3840px) {
+    font-size: 8em;
   }
 }
 
 @mixin secondary-heading ($color) {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 2em;
+  font-size: 1.5em;
   color: $color;
 }
 
 @mixin bulk-text ($color) {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 1.3em;
+  font-size: 1em;
   color: $color;
+  line-height: 1.6em;
+
+  @media only screen and (max-width: 320px) {
+    font-size: 0.9em;
+    line-height: 1.5em;
+  }
+
+  @media only screen and (min-width: 800px) {
+    font-size: 1.2em;
+    line-height: 1.6em;
+  }
+
+  @media only screen and (min-width: 1280px) {
+    font-size: 1.25em; //was 1.3em
+    line-height: 1.65em;
+  }
+
+  @media only screen and (min-width: 2560px) {
+    font-size: 1.9em; //was 2em
+    line-height: 1.8em;
+  }
+
+  @media only screen and (min-width: 3840px) {
+    font-size: 2.4em; //was 2.5em
+    line-height: 2em;
+  }
 }
 
 @mixin custom-Roboto ($color, $size, $weight) {
