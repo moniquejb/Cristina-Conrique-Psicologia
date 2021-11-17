@@ -250,13 +250,57 @@
   }
 }
 
+// @media only screen and (orientation: portrait) and (max-height: 690px) {
+//   .landing-header-image {
+//     .landing-heading-container {
+//       h2 {
+//         margin-bottom: 5px;
+//         @include custom-Roboto($main-grey, 4.2vw, 500);
+//       }
+
+//       .landing-tablet-text {
+//         h3 {
+//           width: 85%;
+//           text-align: center;
+//         }
+//       }
+//     }
+
+//     .landing-image-container {
+//       img {
+//         width: 40%;
+//         margin: 3px 3px 8px 3px;
+//       }
+//     }
+//   }
+
+//   .landing-text-container {
+//     .landing-textbox {
+//       a {
+//         height: 35px;
+//       }
+//     }
+//   }
+// }
+
+// @media only screen and (orientation: portrait) and (max-height: 500px) {
+//   .landing-header-image {
+//     height: auto;
+//   }
+
+//   .landing-text-container {
+//     height: auto;
+//     padding: 10px 0;
+//   }
+// }
+
 //For iPhone 4 320 x 480
-@media only screen and (orientation: portrait) and (min-width: 320px) and (max-height: 480px) {
+@media only screen and (orientation: portrait) and (min-width: 320px) and (max-height: 530px) {
   .landing-header-image {
     .landing-heading-container {
       h2 {
         margin-bottom: 5px;
-        @include custom-Roboto($main-grey, 4.5vw, 500);
+        @include custom-Roboto($main-grey, 4.2vw, 500);
       }
 
       .landing-tablet-text {
@@ -269,8 +313,8 @@
 
     .landing-image-container {
       img {
-        width: 60%;
-        margin: 5px 5px 10px 5px;
+        width: 40%;
+        margin: 3px 3px 8px 3px;
       }
     }
   }

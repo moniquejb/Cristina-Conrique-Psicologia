@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import emailjs from "emailjs-com";
 // import CountryList from '../../utilities/country_list.js';
 import { FacebookIcon, InstagramIcon, SkypeIcon, EmailIcon, WhatsappIcon } from '../../utilities/icons.js';
 import './Contact.css';
@@ -9,6 +10,23 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
   let [isMessageValid, setIsMessageValid] = useState(false);
   let [isPrivacyChecked, setIsPrivacyChecked] = useState(false);
   let [submitButtonColor, setSubmitButtonColor] = useState('');
+
+  const form = useRef();
+  
+  const sendEmail = (e) => {
+    if (submitButtonColor === 'form-fields-filled') {
+      e.preventDefault();
+
+      emailjs.sendForm('service_pt2n8ym', 'template_1jl06pl', form.current, 'user_4lPfz90TSSp9NOxFjUaTy')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+  
+        form.current.reset();
+    }
+  }
 
   //Checks that required fields are entered 
   const checkInputs = ({ target }) => {
@@ -41,6 +59,7 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
     }
 
     if (currentField === 'checkbox') {
+      console.log(currentField);
       if (target.checked) {
         setIsPrivacyChecked(true);
       } else {
@@ -99,13 +118,13 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
                 <div className='contact-detail'>
                   <div className='contact-icon'>
                     <a
-                      href='mailto:cris.conrique@outlook.com'>
+                      href='mailto:info@psicologaconrique.com'>
                       <EmailIcon />
                     </a>
                   </div>
                   <div className='contact-info'>
-                    <a href='mailto:cris.conrique@outlook.com'>
-                      <h3>cris.conrique@outlook.com</h3>
+                    <a href='mailto:info@psicologaconrique.com'>
+                      <h3>info@psicologaconrique.com</h3>
                     </a>
                   </div>
                 </div>
@@ -205,7 +224,7 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
 
           <div className='contact-form-container'>
             <div className='contact-form-box'>
-              <form lang='es' className='contact-form' id='contact-form' action='mailto:cris.conrique@outlook.com' method='POST' encType='multipart/form-data'>
+              <form ref={form} lang='es' className='contact-form' id='contact-form' encType='multipart/form-data' onSubmit={sendEmail}>
                 <div className='contact-form-left'>
                   <div className='contact-form-element bottom-margin'>
                     <label htmlFor='name'>Nombre</label><br />
@@ -234,7 +253,7 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
                   </div>
                   <div className='contact-form-checkbox-container'>
                     <div className='contact-form-checkbox'>
-                      <input required onChange={checkInputs} type="checkbox" id="checkbox" name="checkbox" defaultValue="Aceptado"></input>
+                      <input required onChange={checkInputs} type="checkbox" id="checkbox" name="checkbox" defaultValue="aceptado"></input>
                     </div>
                     <div className='contact-form-checkbox-label'>
                       <label htmlFor="checkbox">He leído y acepto el aviso legal y la política de privacidad *</label>

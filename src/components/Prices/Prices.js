@@ -30,7 +30,7 @@ const Prices = ({ price, currency, country }) => {
       <div className='prices-container'>
         <h1>Tarifas</h1>
         <div className='prices-consult-text'>
-          <p>Como persona que ha inmigrado a diferen&shy;tes países de América Latina y Europa, te ofrezco aten&shy;ción psicoló&shy;gica no importa en donde vivas. Si hablas español, puedes tomar terapia online sin importar la distan&shy;cia. Si deseas consul&shy;tar&shy;me el precio en tu tipo de cambio, no dudes en escribir&shy;me.</p>
+          <p>Como persona que ha inmigrado a diferen&shy;tes países de América Latina, Europa y África, te ofrezco aten&shy;ción psicoló&shy;gica no importa en donde vivas. Si hablas español, puedes tomar terapia online sin importar la distan&shy;cia. Si deseas consul&shy;tar&shy;me el precio en tu tipo de cambio, no dudes en escribir&shy;me.</p>
         </div> 
         <div className='price-box-container'>
           <div className='price-box'>

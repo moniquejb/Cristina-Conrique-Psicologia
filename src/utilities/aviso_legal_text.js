@@ -30,11 +30,11 @@ const AvisoLegalText = () => {
       <h3>Responsable del tratamiento de tus datos personales</h3>
       <ul>
         <li><strong>Identidad del Responsable:</strong> Ana Cristina Romo Conrique</li>
-        <li><strong>Nombre comercial:</strong> Psicóloga Cristina Conrique</li>
-        <li><strong>Número de cédula profesional:</strong></li>
-        <li><strong>INE:</strong> XXX</li>
-        <li><strong>Dirección:</strong> Calle Isla Eliot 3968, Guadalajara, Jalisco. México</li>
-        <li><strong>Correo electrónico: </strong> psiccristinaconriquemail.com</li>
+        <li><strong>Nombre comercial:</strong> Cristina Conrique Psicología</li>
+        {/* <li><strong>Número de cédula profesional:</strong></li> */}
+        {/* <li><strong>INE:</strong> XXX</li> */}
+        <li><strong>Dirección:</strong> Guadalajara, Jalisco. México</li>
+        <li><strong>Correo electrónico: </strong> atencion@psicologaconrique.com</li>
         <li><strong>Actividad:</strong> Servicios de salud</li>
       </ul>
       <p>
