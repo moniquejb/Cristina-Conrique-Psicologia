@@ -21,7 +21,7 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
         setIsEmailValid(true);
       } else {
         setIsEmailValid(false);
-      } 
+      }
     }
 
     if (currentField === 'country') {
@@ -168,7 +168,8 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
                 : <div className='mobile-contact-details'>
                   <div className='contact-detail'>
                     <div className='contact-icon'>
-                      <a
+                      <a target='_blank'
+                        rel="noreferrer"
                         href='https://www.facebook.com/Psic%C3%B3loga-Cristina-Romo-Conrique-337878334034461'>
                         <FacebookIcon />
                       </a>
@@ -176,15 +177,16 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
                     <div className='contact-info'>
                       <a target='_blank'
                         rel="noreferrer"
-                        href='mailto:cris.conrique@outlook.com'>
+                        href='https://www.facebook.com/Psic%C3%B3loga-Cristina-Romo-Conrique-337878334034461'>
                         <h3>Psicóloga Cristina Romo Conrique</h3>
                       </a>
                     </div>
                   </div>
                   <div className='contact-detail'>
                     <div className='contact-icon'>
-                      <a
-                        href='mailto:cris.conrique@outlook.com'>
+                      <a target='_blank'
+                        rel="noreferrer"
+                        href='https://www.instagram.com/psicologa_cristinaconrique/'>
                         <InstagramIcon />
                       </a>
                     </div>
