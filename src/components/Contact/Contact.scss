@@ -42,6 +42,14 @@
 //5K Display 5120 x 2880
 // ----------------
 
+.show-item {
+  display: initial;
+}
+
+.hide-item {
+  display: none;
+}
+
 .contact-container {
   height: auto;
   width: 100%;

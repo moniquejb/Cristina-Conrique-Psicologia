@@ -1,44 +1,61 @@
 import React, { useState, useEffect, useRef } from 'react';
 import emailjs from "emailjs-com";
+import ReCAPTCHA from "react-google-recaptcha";
 // import CountryList from '../../utilities/country_list.js';
 import { FacebookIcon, InstagramIcon, SkypeIcon, EmailIcon, WhatsappIcon } from '../../utilities/icons.js';
 import './Contact.css';
-import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry }) => {
-  let [isEmailValid, setIsEmailValid] = useState(false);
-  let [isCountryValid, setIsCountryValid] = useState(false);
-  let [isMessageValid, setIsMessageValid] = useState(false);
-  let [isPrivacyChecked, setIsPrivacyChecked] = useState(false);
-  let [submitButtonColor, setSubmitButtonColor] = useState('');
+  const [isEmailValid, setIsEmailValid] = useState(false);
+  const [isCountryValid, setIsCountryValid] = useState(false);
+  const [isMessageValid, setIsMessageValid] = useState(false);
+  const [isPrivacyChecked, setIsPrivacyChecked] = useState(false);
+  const [submitButtonColor, setSubmitButtonColor] = useState('');
+  const [detectCaptcha, setDetectCaptcha] = useState(false);
+  const [toggleCaptcha, setToggleCaptcha] = useState('hide-item');
+  const [toggleSubmit, setToggleSubmit] = useState('show-item');
 
   const form = useRef();
-  const recaptchaRef = React.createRef();
+  const grecaptchaObject = window.grecaptcha;
+
   function onChangeCaptcha(value) {
-    console.log("Captcha value:", value);
+    // let countryField = document.getElementById('country').value.length;
+    // console.log("Captcha value:", value);
+    setDetectCaptcha(true);
+    setTimeout(() => {
+      if(detectCaptcha) {
+        // grecaptchaObject.reset();
+        setDetectCaptcha(false);
+      }
+    }, 1990);
+    // grecaptchaObject.reset();
+    console.log(grecaptchaObject.getResponse().length);
   }
 
   const sendEmail = (e) => {
     if (submitButtonColor === 'form-fields-filled') {
-      recaptchaRef.current.execute();
       e.preventDefault();
 
-      emailjs.sendForm('service_pt2n8ymERASETHIS', 'ERASETHIStemplate_1jl06pl', form.current, 'ERASETHISuser_4lPfz90TSSp9NOxFjUaTy')
+      emailjs.sendForm('service_pt2n8ym', 'template_1jl06pl', form.current, 'user_4lPfz90TSSp9NOxFjUaTy')
         .then((result) => {
-            console.log(result.text);
+          console.log(result.text);
         }, (error) => {
-            console.log(error.text);
+          console.log(error.text);
         });
-  
-        form.current.reset();
 
-        // Clear form checks
-        setIsCountryValid(false);
-        setIsEmailValid(false);
-        setIsMessageValid(false);
-        setIsPrivacyChecked(false);
-        setSubmitButtonColor('');
-        document.getElementById('checkbox').checked = false;
+      form.current.reset();
+
+      // Clear form checks
+      setIsCountryValid(false);
+      setIsEmailValid(false);
+      setIsMessageValid(false);
+      setIsPrivacyChecked(false);
+      setSubmitButtonColor('');
+      setDetectCaptcha(false);
+      setToggleCaptcha('hide-item');
+      setToggleSubmit('show-item');
+      grecaptchaObject.reset();
+      document.getElementById('checkbox').checked = false;
     }
   }
 
@@ -53,6 +70,7 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
         setIsEmailValid(true);
       } else {
         setIsEmailValid(false);
+        // setDetectCaptcha(false);
       }
     }
 
@@ -61,6 +79,7 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
         setIsCountryValid(true);
       } else {
         setIsCountryValid(false);
+        // setDetectCaptcha(false);
       }
     }
 
@@ -71,14 +90,18 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
         setIsMessageValid(true);
       } else {
         setIsMessageValid(false);
+        // setDetectCaptcha(false);
       }
     }
 
     if (currentField === 'checkbox') {
       if (target.checked) {
         setIsPrivacyChecked(true);
+        // console.log(target.checked);
       } else {
         setIsPrivacyChecked(false);
+        // setDetectCaptcha(false);
+        // console.log(target.checked);
       }
     }
   }
@@ -111,25 +134,34 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
     }
   }, [originalCountry]);
 
-  
+
   useEffect(() => {
     let countryField = document.getElementById('country').value.length;
     //Add class to change submit button color if required fields are filled out
-    if ((isCountryValid && isEmailValid && isMessageValid && isPrivacyChecked)
-    || ((countryField > 0) && isEmailValid && isMessageValid && isPrivacyChecked)) {
-      setSubmitButtonColor('form-fields-filled');
+    if ((isCountryValid && isEmailValid && isMessageValid && isPrivacyChecked && detectCaptcha)
+      || ((countryField > 0) && isEmailValid && isMessageValid && isPrivacyChecked && detectCaptcha)) {
+      if (grecaptchaObject && grecaptchaObject.getResponse().length !== 0) {
+        // console.log('captcha success');
+        setSubmitButtonColor('form-fields-filled');
+        setToggleCaptcha('hide-item');
+        setToggleSubmit('show-item');
+      }
+    } else if ((isCountryValid && isEmailValid && isMessageValid && isPrivacyChecked)
+      || ((countryField > 0) && isEmailValid && isMessageValid && isPrivacyChecked)) {
+      setSubmitButtonColor('showCaptcha');
+      setToggleCaptcha('show-item');
+      setToggleSubmit('hide-item');
+      // setDetectCaptcha(false);
     } else {
       setSubmitButtonColor('');
+      // setDetectCaptcha(false);
     }
-  }, [isCountryValid, isEmailValid, isMessageValid, isPrivacyChecked, submitButtonColor]);
+
+    // console.log(countryField, isCountryValid, isEmailValid, isMessageValid, isPrivacyChecked, submitButtonColor, detectCaptcha);
+
+  }, [isCountryValid, isEmailValid, isMessageValid, isPrivacyChecked, submitButtonColor, detectCaptcha]);
 
   return (
-    <ReCAPTCHA
-    sitekey="6LczbUEdAAAAALktFSLP9zmhzsAoxtJNwxYdp6Xh"
-    onChange={onChangeCaptcha}
-    ref={recaptchaRef}
-    size="invisible"
-    badge="bottomright">
     <>
       <div id='contacto'></div>
       <div className='contact-container'>
@@ -248,7 +280,7 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
 
           <div className='contact-form-container'>
             <div className='contact-form-box'>
-              <form data-netlify-recaptcha="true" ref={form} lang='es' className='contact-form' id='contact-form' encType='multipart/form-data' onSubmit={sendEmail}>
+              <form ref={form} lang='es' className='contact-form' id='contact-form' encType='multipart/form-data' onSubmit={sendEmail}>
                 <div className='contact-form-left'>
                   <div className='contact-form-element bottom-margin'>
                     <label htmlFor='name'>Nombre</label><br />
@@ -284,7 +316,14 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
                       <p id='legal-warning-label' onClick={handleToggleLegal}><strong id='legal-warning-label-strong'>Ver aviso legal y la política de privacidad</strong></p>
                     </div>
                   </div>
-                  <button data-sitekey="6LczbUEdAAAAALktFSLP9zmhzsAoxtJNwxYdp6Xh" data-callback='onSubmit' className={`${submitButtonColor} g-recaptcha`} type='sumbit' form='contact-form'>Enviar</button>
+                  <ReCAPTCHA className={toggleCaptcha} sitekey="6LfVskEdAAAAADY9H39WjrRtdmTrYLhtd-QgHrEk" onChange={onChangeCaptcha} />
+                  <button className={`${submitButtonColor} ${toggleSubmit}`} type='sumbit' form='contact-form'>Enviar</button>
+                  {/* {submitButtonColor === ''
+                    ? <button className={submitButtonColor} type='sumbit' form='contact-form'>Enviar</button>
+                    : submitButtonColor === 'showCaptcha'
+                      ? <ReCAPTCHA sitekey="6LfVskEdAAAAADY9H39WjrRtdmTrYLhtd-QgHrEk" onChange={onChangeCaptcha} />
+                      : <button className={submitButtonColor} type='sumbit' form='contact-form'>Enviar</button>
+                  } */}
                 </div>
               </form>
             </div>
@@ -292,7 +331,6 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
         </div>
       </div>
     </>
-    </ReCAPTCHA>
   )
 }
 
