@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 // import CountryList from '../../utilities/country_list.js';
 import { FacebookIcon, InstagramIcon, SkypeIcon, EmailIcon, WhatsappIcon } from '../../utilities/icons.js';
 import './Contact.css';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry }) => {
   let [isEmailValid, setIsEmailValid] = useState(false);
@@ -12,12 +13,17 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
   let [submitButtonColor, setSubmitButtonColor] = useState('');
 
   const form = useRef();
-  
+  const recaptchaRef = React.createRef();
+  function onChangeCaptcha(value) {
+    console.log("Captcha value:", value);
+  }
+
   const sendEmail = (e) => {
     if (submitButtonColor === 'form-fields-filled') {
+      recaptchaRef.current.execute();
       e.preventDefault();
 
-      emailjs.sendForm('service_pt2n8ym', 'template_1jl06pl', form.current, 'user_4lPfz90TSSp9NOxFjUaTy')
+      emailjs.sendForm('service_pt2n8ymERASETHIS', 'ERASETHIStemplate_1jl06pl', form.current, 'ERASETHISuser_4lPfz90TSSp9NOxFjUaTy')
         .then((result) => {
             console.log(result.text);
         }, (error) => {
@@ -25,6 +31,14 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
         });
   
         form.current.reset();
+
+        // Clear form checks
+        setIsCountryValid(false);
+        setIsEmailValid(false);
+        setIsMessageValid(false);
+        setIsPrivacyChecked(false);
+        setSubmitButtonColor('');
+        document.getElementById('checkbox').checked = false;
     }
   }
 
@@ -50,6 +64,8 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
       }
     }
 
+
+
     if (currentField === 'message') {
       if (currentInput.length >= 2) {
         setIsMessageValid(true);
@@ -59,7 +75,6 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
     }
 
     if (currentField === 'checkbox') {
-      console.log(currentField);
       if (target.checked) {
         setIsPrivacyChecked(true);
       } else {
@@ -67,15 +82,6 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
       }
     }
   }
-
-  useEffect(() => {
-    //Add class to change submit button color if required fields are filled out
-    if (isCountryValid && isEmailValid && isMessageValid && isPrivacyChecked) {
-      setSubmitButtonColor('form-fields-filled');
-    } else {
-      setSubmitButtonColor('');
-    }
-  }, [isCountryValid, isEmailValid, isMessageValid, isPrivacyChecked]);
 
   useEffect(() => {
     //Predetermine and fill in current country on form, leave blank if not on predetermined list
@@ -105,7 +111,25 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
     }
   }, [originalCountry]);
 
+  
+  useEffect(() => {
+    let countryField = document.getElementById('country').value.length;
+    //Add class to change submit button color if required fields are filled out
+    if ((isCountryValid && isEmailValid && isMessageValid && isPrivacyChecked)
+    || ((countryField > 0) && isEmailValid && isMessageValid && isPrivacyChecked)) {
+      setSubmitButtonColor('form-fields-filled');
+    } else {
+      setSubmitButtonColor('');
+    }
+  }, [isCountryValid, isEmailValid, isMessageValid, isPrivacyChecked, submitButtonColor]);
+
   return (
+    <ReCAPTCHA
+    sitekey="6LczbUEdAAAAALktFSLP9zmhzsAoxtJNwxYdp6Xh"
+    onChange={onChangeCaptcha}
+    ref={recaptchaRef}
+    size="invisible"
+    badge="bottomright">
     <>
       <div id='contacto'></div>
       <div className='contact-container'>
@@ -224,7 +248,7 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
 
           <div className='contact-form-container'>
             <div className='contact-form-box'>
-              <form ref={form} lang='es' className='contact-form' id='contact-form' encType='multipart/form-data' onSubmit={sendEmail}>
+              <form data-netlify-recaptcha="true" ref={form} lang='es' className='contact-form' id='contact-form' encType='multipart/form-data' onSubmit={sendEmail}>
                 <div className='contact-form-left'>
                   <div className='contact-form-element bottom-margin'>
                     <label htmlFor='name'>Nombre</label><br />
@@ -260,7 +284,7 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
                       <p id='legal-warning-label' onClick={handleToggleLegal}><strong id='legal-warning-label-strong'>Ver aviso legal y la política de privacidad</strong></p>
                     </div>
                   </div>
-                  <button className={submitButtonColor} type='sumbit' form='contact-form'>Enviar</button>
+                  <button data-sitekey="6LczbUEdAAAAALktFSLP9zmhzsAoxtJNwxYdp6Xh" data-callback='onSubmit' className={`${submitButtonColor} g-recaptcha`} type='sumbit' form='contact-form'>Enviar</button>
                 </div>
               </form>
             </div>
@@ -268,6 +292,7 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
         </div>
       </div>
     </>
+    </ReCAPTCHA>
   )
 }
 
