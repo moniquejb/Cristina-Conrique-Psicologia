@@ -54,7 +54,12 @@
   transition: 0.5s;
   width: 100%;
   height: 130px;
-  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-style: none;
+  -moz-text-decoration-line: none;
+  -moz-text-decoration-style: none;
+  -webkit-text-decoration-line: none;
+  -webkit-text-decoration-style: none;
   cursor: default;
 }
 .nav-container .li-text:link {
@@ -257,7 +262,12 @@
     transition: 0.5s;
     width: 100%;
     height: 200px;
-    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-style: none;
+    -moz-text-decoration-line: none;
+    -moz-text-decoration-style: none;
+    -webkit-text-decoration-line: none;
+    -webkit-text-decoration-style: none;
     cursor: default;
   }
   .nav-container .li-text:link {

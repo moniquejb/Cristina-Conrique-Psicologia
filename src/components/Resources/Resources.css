@@ -70,7 +70,12 @@
   box-shadow: 0px 0px 10px rgba(92, 64, 3, 0.3);
 }
 .resources-container .resource-flex-container .resource-boxes-container .resource-box a {
-  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-style: none;
+  -moz-text-decoration-line: none;
+  -moz-text-decoration-style: none;
+  -webkit-text-decoration-line: none;
+  -webkit-text-decoration-style: none;
 }
 .resources-container .resource-flex-container .resource-boxes-container .resource-box:active {
   transform: scale(1);
@@ -164,7 +169,12 @@
   }
 }
 .resources-container .resource-flex-container .resource-content ul li a {
-  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-style: none;
+  -moz-text-decoration-line: none;
+  -moz-text-decoration-style: none;
+  -webkit-text-decoration-line: none;
+  -webkit-text-decoration-style: none;
 }
 .resources-container .resource-flex-container .resource-content ul li a:link {
   color: #4F6E72;
@@ -180,7 +190,12 @@
   padding-bottom: 10px;
 }
 .to-top a {
-  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-style: none;
+  -moz-text-decoration-line: none;
+  -moz-text-decoration-style: none;
+  -webkit-text-decoration-line: none;
+  -webkit-text-decoration-style: none;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 1.2em;

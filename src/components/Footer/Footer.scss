@@ -79,7 +79,12 @@
     a {
       @include custom-Roboto(white, 2.75vw, 500);
       line-height: 4vw;
-      text-decoration: none;
+      text-decoration-line: none;
+      text-decoration-style: none;
+      -moz-text-decoration-line: none;
+      -moz-text-decoration-style: none;
+      -webkit-text-decoration-line: none;
+      -webkit-text-decoration-style: none;
       cursor: pointer;
       margin: 0;
       padding: 0;
@@ -231,9 +236,9 @@
           }
         }
 
-        #img-cred {    
+        #img-cred {
           &:hover {
-            color:$light-yellow;;
+            color: $light-yellow;
           }
         }
       }

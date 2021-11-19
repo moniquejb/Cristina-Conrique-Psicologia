@@ -156,7 +156,12 @@
       justify-content: flex-start;
       width: 200px;
       height: 60px;
-      text-decoration: none;
+      text-decoration-line: none;
+      text-decoration-style: none;
+      -moz-text-decoration-line: none;
+      -moz-text-decoration-style: none;
+      -webkit-text-decoration-line: none;
+      -webkit-text-decoration-style: none;
       cursor: default;
       padding-left: 40px;
     }

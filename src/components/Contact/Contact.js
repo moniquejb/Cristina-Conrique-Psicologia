@@ -10,10 +10,11 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
   const [isCountryValid, setIsCountryValid] = useState(false);
   const [isMessageValid, setIsMessageValid] = useState(false);
   const [isPrivacyChecked, setIsPrivacyChecked] = useState(false);
-  const [submitButtonColor, setSubmitButtonColor] = useState('');
+  const [submitButtonColor, setSubmitButtonColor] = useState('form-disabled');
   const [detectCaptcha, setDetectCaptcha] = useState(false);
   const [toggleCaptcha, setToggleCaptcha] = useState('hide-item');
   const [toggleSubmit, setToggleSubmit] = useState('show-item');
+  const [submitButtonText, setSubmitButtonText] = useState('Enviar');
 
   const form = useRef();
   const grecaptchaObject = window.grecaptcha;
@@ -36,7 +37,7 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
     if (submitButtonColor === 'form-fields-filled') {
       e.preventDefault();
 
-      emailjs.sendForm('service_pt2n8ym', 'template_1jl06pl', form.current, 'user_4lPfz90TSSp9NOxFjUaTy')
+      emailjs.sendForm('service_pt2n8ymERASE', 'ERASEtemplate_1jl06pl', form.current, 'ERASEuser_4lPfz90TSSp9NOxFjUaTy')
         .then((result) => {
           console.log(result.text);
         }, (error) => {
@@ -46,11 +47,12 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
       form.current.reset();
 
       // Clear form checks
+      setSubmitButtonText('¡Enviado!')
       setIsCountryValid(false);
       setIsEmailValid(false);
       setIsMessageValid(false);
       setIsPrivacyChecked(false);
-      setSubmitButtonColor('');
+      setSubmitButtonColor('form-submitted');
       setDetectCaptcha(false);
       setToggleCaptcha('hide-item');
       setToggleSubmit('show-item');
@@ -70,6 +72,7 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
         setIsEmailValid(true);
       } else {
         setIsEmailValid(false);
+        setSubmitButtonColor('form-disabled');
         // setDetectCaptcha(false);
       }
     }
@@ -79,6 +82,7 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
         setIsCountryValid(true);
       } else {
         setIsCountryValid(false);
+        setSubmitButtonColor('form-disabled');
         // setDetectCaptcha(false);
       }
     }
@@ -90,6 +94,7 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
         setIsMessageValid(true);
       } else {
         setIsMessageValid(false);
+        setSubmitButtonColor('form-disabled');
         // setDetectCaptcha(false);
       }
     }
@@ -100,6 +105,7 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
         // console.log(target.checked);
       } else {
         setIsPrivacyChecked(false);
+        setSubmitButtonColor('form-disabled');
         // setDetectCaptcha(false);
         // console.log(target.checked);
       }
@@ -145,6 +151,10 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
         setSubmitButtonColor('form-fields-filled');
         setToggleCaptcha('hide-item');
         setToggleSubmit('show-item');
+
+        if(submitButtonText === '¡Enviado!'){
+          setSubmitButtonText('Enviar');
+        }
       }
     } else if ((isCountryValid && isEmailValid && isMessageValid && isPrivacyChecked)
       || ((countryField > 0) && isEmailValid && isMessageValid && isPrivacyChecked)) {
@@ -153,13 +163,21 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
       setToggleSubmit('hide-item');
       // setDetectCaptcha(false);
     } else {
-      setSubmitButtonColor('');
+      if(submitButtonText === '¡Enviado!'){
+        setSubmitButtonColor('form-submitted');
+        setToggleCaptcha('hide-item');
+        setToggleSubmit('show-item');
+      } else {
+        setSubmitButtonColor('form-disabled');
+        setToggleCaptcha('hide-item');
+        setToggleSubmit('show-item');
+      }
       // setDetectCaptcha(false);
     }
 
     // console.log(countryField, isCountryValid, isEmailValid, isMessageValid, isPrivacyChecked, submitButtonColor, detectCaptcha);
 
-  }, [isCountryValid, isEmailValid, isMessageValid, isPrivacyChecked, submitButtonColor, detectCaptcha]);
+  }, [isCountryValid, isEmailValid, isMessageValid, isPrivacyChecked, submitButtonColor, detectCaptcha, submitButtonText]);
 
   return (
     <>
@@ -316,8 +334,8 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
                       <p id='legal-warning-label' onClick={handleToggleLegal}><strong id='legal-warning-label-strong'>Ver aviso legal y la política de privacidad</strong></p>
                     </div>
                   </div>
-                  <ReCAPTCHA className={toggleCaptcha} sitekey="6LfVskEdAAAAADY9H39WjrRtdmTrYLhtd-QgHrEk" onChange={onChangeCaptcha} />
-                  <button className={`${submitButtonColor} ${toggleSubmit}`} type='sumbit' form='contact-form'>Enviar</button>
+                  <ReCAPTCHA className={`${toggleCaptcha} g-captcha`} sitekey="6LfVskEdAAAAADY9H39WjrRtdmTrYLhtd-QgHrEk" onChange={onChangeCaptcha} />
+                  <button className={`${submitButtonColor} ${toggleSubmit}`} type='sumbit' form='contact-form'>{submitButtonText}</button>
                   {/* {submitButtonColor === ''
                     ? <button className={submitButtonColor} type='sumbit' form='contact-form'>Enviar</button>
                     : submitButtonColor === 'showCaptcha'

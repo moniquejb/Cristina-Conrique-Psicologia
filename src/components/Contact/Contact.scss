@@ -50,6 +50,24 @@
   display: none;
 }
 
+.form-submitted {
+  background-color: $light-red;
+  opacity: 1;
+  color: #a06156;
+}
+
+.form-fields-filled {
+  background-color: $light-yellow;
+  opacity: 1;
+  color: #c28412;
+}
+
+.form-disabled {
+  background-color: $main-grey;
+  color: $dark-2-blue;
+  opacity: 0.5;
+}
+
 .contact-container {
   height: auto;
   width: 100%;
@@ -113,7 +131,12 @@
             align-items: center;
 
             a {
-              text-decoration: none;
+              text-decoration-line: none;
+              text-decoration-style: none;
+              -moz-text-decoration-line: none;
+              -moz-text-decoration-style: none;
+              -webkit-text-decoration-line: none;
+              -webkit-text-decoration-style: none;
               padding-left: 10px;
 
               h3 {
@@ -222,15 +245,27 @@
             }
           }
 
+          .g-captcha {
+            transform: scale(1);
+            -webkit-transform: scale(1);
+            transform-origin: center bottom;
+            -webkit-transform-origin: center bottom;
+            margin: 0;
+            padding: 15px 0 0 0;
+          }
+
           button {
-            background-color: $main-grey;
+            // background-color: $main-grey;
             border: none;
             border-radius: 10px;
-            @include custom-Roboto($dark-2-blue, 1.5em, 400);
+            // @include custom-Roboto($dark-2-blue, 1.5em, 400);
             width: 60%;
             height: 60px;
             margin-top: 20px;
-            opacity: 0.5;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 1.5em;
+            // opacity: 0.5;
           }
 
           .form-fields-filled {
@@ -304,6 +339,10 @@
 
               .contact-form-checkbox-container {
                 justify-content: flex-start;
+              }
+
+              .g-captcha {
+                padding-top: 20px;
               }
 
               button {
@@ -447,6 +486,24 @@
                 width: 65%;
                 height: 55px;
                 margin-top: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 301px) {
+    .contact-container {
+      .contact-details-form-container {
+        .contact-form-container {
+          .contact-form-box {
+            .contact-form-right {
+              .g-captcha {
+                transform: scale(0.72);
+                -webkit-transform: scale(0.72);
+                padding-top: 0px;
               }
             }
           }
@@ -844,13 +901,22 @@
                 justify-content: flex-start;
                 padding: 15px 0;
 
-                .contact-form-checkbox-label {    
-                  p {  
+                .contact-form-checkbox-label {
+                  p {
                     &:hover {
                       color: $dark-2-blue;
                     }
                   }
                 }
+              }
+
+              .g-captcha {
+                transform: scale(0.95);
+                -webkit-transform: scale(0.95);
+                transform-origin: left bottom;
+                -webkit-transform-origin: left bottom;
+                margin: 0;
+                padding: 0;
               }
 
               button {
@@ -864,7 +930,7 @@
                 &:hover {
                   transform: scale(1.01);
                 }
-    
+
                 &:active {
                   transform: scale(1);
                 }
@@ -915,14 +981,14 @@
               }
 
               .contact-social-icons {
-                a{
+                a {
                   svg {
                     height: 100px;
                     width: 100px;
                     min-height: 80px;
                     min-width: 80px;
                   }
-                }          
+                }
               }
             }
           }
@@ -1015,14 +1081,14 @@
               }
 
               .contact-social-icons {
-                a{
+                a {
                   svg {
                     height: 120px;
                     width: 120px;
                     min-height: 80px;
                     min-width: 80px;
                   }
-                }          
+                }
               }
             }
           }
@@ -1032,7 +1098,6 @@
           .contact-form-box {
             .contact-form {
               .contact-form-left {
-
                 .bottom-margin {
                   margin-bottom: 30px;
                 }

@@ -28,7 +28,7 @@ const Landing = ({ windowHeight, windowWidth }) => {
       <div className='bg-landing-colours bg-landing-top-colour'></div>
       <div className='bg-landing-colours bg-landing-bottom-colour'></div>
       <div className='landing-container'>
-        {windowWidth >= 1264
+        {window.innerWidth >= 1280
           ? <div className='landing-image-container'>
             <img src='images/landing-img.svg' alt='Terapia Individual'></img>
           </div>
@@ -45,12 +45,12 @@ const Landing = ({ windowHeight, windowWidth }) => {
               <h2>¿Estás pasando por un momento difícil?</h2>
             </div>
             <div className='landing-tablet-text'>
-              {(windowWidth < 823 && windowHeight < 411) || (windowWidth <= 320 && windowHeight < 653)
+              {(windowWidth < 900 && windowHeight < 420) || (windowWidth <= 384 && windowHeight < 655)
                 ? <h3 className='center-text'>Toma la decisión de agen&shy;dar tu cita y trabaja&shy;remos en conjunto.</h3>
                 : <h3>Si llegaste aquí, segura&shy;mente estás bus&shy;cando superar esos momentos. Toma la decisión de agen&shy;dar tu cita y trabaja&shy;remos en conjunto.</h3>}
             </div>
           </div>
-          {windowWidth < 1264
+          {window.innerWidth < 1280
             ? <div className='landing-image-container'>
               <img src='images/landing-img.svg' alt='Terapia Individual'></img>
             </div>

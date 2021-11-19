@@ -55,7 +55,12 @@
       transition: 0.5s;
       width: 100%;
       height: 130px;
-      text-decoration: none;
+      text-decoration-line: none;
+      text-decoration-style: none;
+      -moz-text-decoration-line: none;
+      -moz-text-decoration-style: none;
+      -webkit-text-decoration-line: none;
+      -webkit-text-decoration-style: none;
       cursor: default;
     }
   }
@@ -198,7 +203,7 @@
     .li-text:visited {
       font-size: 1.25em;
     }
-  
+
     // .li-text:hover {
     //   font-size: 1.3em;
     // }
@@ -221,7 +226,7 @@
 }
 
 @media only screen and (min-width: 1280px) {
-  .nav-container {  
+  .nav-container {
     .li-text:hover {
       background-color: rgba($color: $light-yellow, $alpha: 0.3);
       font-size: 1.6em;
@@ -239,19 +244,19 @@
 @media only screen and (min-width: 2560px) {
   #shrink-nav {
     height: 160px;
-  
+
     ul,
     li,
     a {
       height: 160px;
       font-size: 1.4vw;
     }
-  
+
     img {
       height: 140px;
     }
   }
-  
+
   .nav-container {
     margin: 0;
     padding: 0;
@@ -262,7 +267,7 @@
     position: fixed;
     transition: 0.5s;
     z-index: 10;
-  
+
     ul {
       margin: 0;
       padding: 0;
@@ -273,7 +278,7 @@
       display: flex;
       transition: 0.5s;
     }
-  
+
     li {
       width: 100%;
       height: 200px;
@@ -281,7 +286,7 @@
       align-items: center;
       justify-content: center;
       transition: 0.5s;
-  
+
       a {
         display: flex;
         align-items: center;
@@ -289,52 +294,57 @@
         transition: 0.5s;
         width: 100%;
         height: 200px;
-        text-decoration: none;
+        text-decoration-line: none;
+        text-decoration-style: none;
+        -moz-text-decoration-line: none;
+        -moz-text-decoration-style: none;
+        -webkit-text-decoration-line: none;
+        -webkit-text-decoration-style: none;
         cursor: default;
       }
     }
-  
+
     .li-text:link {
       @include custom-Roboto($main-grey, 1.5vw, 500);
     }
-  
+
     .li-text:visited {
       @include custom-Roboto($main-grey, 1.5vw, 500);
     }
-  
+
     .li-text:hover {
       background-color: rgba($color: $light-yellow, $alpha: 0.3);
       font-size: 1.6vw;
       cursor: pointer;
     }
-  
+
     .li-text:active {
       font-size: 1.5vw;
     }
-  
+
     .li-img {
       height: 200px;
       padding: 0px 10px;
     }
-  
+
     img {
       height: 170px;
       width: auto;
       transition: 0.5s;
       cursor: pointer;
     }
-  
+
     #li-icon {
       display: flex;
       align-items: center;
       transition: 0.5s;
-  
+
       a {
         padding: 0px 10px;
         transition: 0.5s;
       }
     }
-  
+
     svg {
       cursor: pointer;
       transition: 0.5s;

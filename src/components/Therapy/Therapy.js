@@ -9,7 +9,7 @@ const Therapy = () => {
       <div className='therapy-container'>
         <h1>Terapia</h1>
         <div className='therapy-text'>
-          <p>La terapia es individuali&shy;zada, es tu espacio seguro y buscare&shy;mos abordar el problema para mejorar y solucio&shy;nar aquello que te genera malestar. Aprende&shy;rás habilida&shy;des para afrontar las situacio&shy;nes de la vida cotidiana de una forma más tranquila, con más confianza, sintiendo que dominas las situacio&shy;nes que se presentan.</p>
+          <p>La terapia es individuali&shy;zada y es tu espacio seguro, buscare&shy;mos abordar el problema para mejorar y solucio&shy;nar aquello que te genera malestar. Aprende&shy;rás habilida&shy;des para afrontar las situacio&shy;nes de la vida cotidiana de una forma más tranquila, con más confianza, sintiendo que dominas las situacio&shy;nes que se presentan.</p>
         </div>
         <div className='therapy-individuals-container'>
           <div className='therapy-individuals'>
