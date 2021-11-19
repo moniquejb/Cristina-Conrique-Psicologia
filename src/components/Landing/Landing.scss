@@ -890,11 +890,11 @@
     //For Galaxy Fold 653 x 280
     @media only screen and (max-height: 281px) {
       .landing-container {
-        min-height: 232.99px;
+        min-height: 198px;
       }
 
       .landing-header-image {
-        min-height: 169.8px;
+        min-height: 148.8px;
 
         .landing-heading-container {
           width: 60%;
@@ -918,15 +918,15 @@
       }
 
       .landing-text-container {
-        min-height: 63.19px;
+        min-height: 49.2px;
 
         .landing-textbox {
           a {
-            height: 5vw;
-            min-height: 40px;
+            height: 5.5vw;
+            min-height: 30px;
             width: 30vw;
-            min-width: 230px;
-            @include custom-Roboto($dark-1-red, 1.1em, 400);
+            min-width: 220px;
+            @include custom-Roboto($dark-1-red, 1.05em, 400);
           }
         }
       }

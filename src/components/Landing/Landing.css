@@ -715,11 +715,11 @@
 }
 @media only screen and (orientation: landscape) and (min-width: 568px) and (max-height: 281px) {
   .landing-container {
-    min-height: 232.99px;
+    min-height: 198px;
   }
 
   .landing-header-image {
-    min-height: 169.8px;
+    min-height: 148.8px;
   }
   .landing-header-image .landing-heading-container {
     width: 60%;
@@ -738,16 +738,16 @@
   }
 
   .landing-text-container {
-    min-height: 63.19px;
+    min-height: 49.2px;
   }
   .landing-text-container .landing-textbox a {
-    height: 5vw;
-    min-height: 40px;
+    height: 5.5vw;
+    min-height: 30px;
     width: 30vw;
-    min-width: 230px;
+    min-width: 220px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-size: 1.1em;
+    font-size: 1.05em;
     color: #BC8282;
   }
 }
