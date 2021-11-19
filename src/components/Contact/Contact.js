@@ -37,7 +37,7 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
     if (submitButtonColor === 'form-fields-filled') {
       e.preventDefault();
 
-      emailjs.sendForm('service_pt2n8ymERASE', 'ERASEtemplate_1jl06pl', form.current, 'ERASEuser_4lPfz90TSSp9NOxFjUaTy')
+      emailjs.sendForm('service_pt2n8ym', 'template_1jl06pl', form.current, 'user_4lPfz90TSSp9NOxFjUaTy')
         .then((result) => {
           console.log(result.text);
         }, (error) => {
