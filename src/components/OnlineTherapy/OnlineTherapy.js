@@ -108,7 +108,9 @@ const OnlineTherapy = () => {
       <h1 id='online-heading'>Terapia Online</h1>
       <div className='online-therapy-text-img-container'>
         <div className='online-therapy-text'>
-          <a href={arrow1 === arrowOpen ? '#online-heading' : null}><h3 id='online-q-1' className='h3-open no-select' onClick={handleSelection}>{arrow1} ¿Qué es la terapia Online?</h3></a>
+          {arrow1 === arrowOpen 
+          ? <a href='#online-heading'><h3 id='online-q-1' className='h3-open no-select' onClick={handleSelection}>{arrow1} ¿Qué es la terapia Online?</h3></a>
+          : <h3 id='online-q-1' className='h3-open no-select' onClick={handleSelection}>{arrow1} ¿Qué es la terapia Online?</h3>}
           <div className='therapy-answer-container'>
             <p id='online-answer-1' className='p-show'>La terapia Online es una modalidad y opción de trata&shy;miento cada vez más común, y frecuente en nuestros días. Sigue la misma técnica que la terapia presencial, es decir, evaluar y tratar las dificul&shy;tades que nos hacen sufrir, en relación con el entorno y con nosotros mismos.
             Se trata de una video&shy;conferen&shy;cia/ video llamada, en donde un usuario y un psicólogo profesio&shy;nal trabajan en conjunto en tiempo real a través de un dispositivo electrónico.
@@ -116,7 +118,9 @@ const OnlineTherapy = () => {
           </div>
           <hr className='hr-line-break' />
           
-          <a href={arrow2 === arrowOpen ? '#online-q-1' : null}><h3 id='online-q-2' className='h3-closed no-select' onClick={handleSelection}>{arrow2} ¿Cuándo acudir a terapia Online?</h3></a>
+          {arrow2 === arrowOpen 
+          ? <a href='#online-q-1'><h3 id='online-q-2' className='h3-closed no-select' onClick={handleSelection}>{arrow2} ¿Cuándo acudir a terapia Online?</h3></a>
+          : <h3 id='online-q-2' className='h3-closed no-select' onClick={handleSelection}>{arrow2} ¿Cuándo acudir a terapia Online?</h3>}          
           <div className='therapy-answer-container'>
             <ul id='online-answer-2' className='p-hide'>
               <li>Cuando tenemos pensamientos negativos despropor&shy;cionados, sensaciones de vacío y desespe&shy;ranza.</li>
@@ -133,13 +137,19 @@ const OnlineTherapy = () => {
           </div>
           <hr className='hr-line-break' />
           
-          <a href={arrow3 === arrowOpen ? '#online-q-2' : null}><h3 id='online-q-3' className='h3-closed no-select' onClick={handleSelection}>{arrow3} ¿Cuál es la duración de la sesión?</h3></a>
+          {arrow3 === arrowOpen 
+          ? <a href= '#online-q-2'><h3 id='online-q-3' className='h3-closed no-select' onClick={handleSelection}>{arrow3} ¿Cuál es la duración de la sesión?</h3></a>
+          : <h3 id='online-q-3' className='h3-closed no-select' onClick={handleSelection}>{arrow3} ¿Cuál es la duración de la sesión?</h3>}
+          
           <div className='therapy-answer-container'>
             <p id='online-answer-3' className='p-hide'>La duración de cada sesión es de 50 minutos a una hora, y por lo general es una vez a la semana.</p>
           </div>
           <hr className='hr-line-break' />
           
-          <a href={arrow4 === arrowOpen ? '#online-q-3' : null}><h3 id='online-q-4' className='h3-closed no-select' onClick={handleSelection}>{arrow4} ¿Qué pasos sigo para comenzar?</h3></a>
+          {arrow4 === arrowOpen 
+          ? <a href='#online-q-3'><h3 id='online-q-4' className='h3-closed no-select' onClick={handleSelection}>{arrow4} ¿Qué pasos sigo para comenzar?</h3></a>
+          : <h3 id='online-q-4' className='h3-closed no-select' onClick={handleSelection}>{arrow4} ¿Qué pasos sigo para comenzar?</h3>}
+          
           <div className='therapy-answer-container'>
             <p id='online-answer-4' className='p-hide'>Como en una cita presencial, los pasos son los mismos, puede contactar directa&shy;mente con el profesional, se pide una cita y se asiste a la sesión, sólo que la sesión se realiza vía online; o puedes agendar por medio de la página web una cita en el horario disponible que mejor convenga de acuerdo a tus horarios.</p>
           </div>

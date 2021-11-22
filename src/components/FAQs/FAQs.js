@@ -56,7 +56,8 @@ const FAQs = () => {
   }
 
   useEffect(() => {
-  }, [isQuestionOpen])
+    console.log ('');
+  }, [isQuestionOpen]);
 
   const questionContainer = questions.map((question, index) => {
     return (
