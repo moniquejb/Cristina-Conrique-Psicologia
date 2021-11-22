@@ -92,6 +92,15 @@
         width: 100%;
         padding: 10px 0 10px 5px;
 
+        a {
+          text-decoration-line: none;
+          text-decoration-style: none;
+          -moz-text-decoration-line: none;
+          -moz-text-decoration-style: none;
+          -webkit-text-decoration-line: none;
+          -webkit-text-decoration-style: none;
+        }
+
         .question {
           @include bulk-text($dark-2-red);
           //font-size: 1.2em;

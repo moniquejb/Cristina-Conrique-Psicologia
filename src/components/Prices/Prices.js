@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './Prices.css';
 
 const Prices = ({ price, currency, country }) => {
-  let [weeklySession, setWeeklySession] = useState('Consultar');
-  let [monthlySession, setMonthlySession] = useState('Consultar');
-  let [weeklyTotal, setWeeklyTotal] = useState('');
-  let [monthlyTotal, setMonthlyTotal] = useState('');
-  let [smallerTextPrices, setSmallerTextPrices] = useState('');
+  const [weeklySession, setWeeklySession] = useState('Consultar');
+  const [monthlySession, setMonthlySession] = useState('Consultar');
+  const [weeklyTotal, setWeeklyTotal] = useState('');
+  const [monthlyTotal, setMonthlyTotal] = useState('');
+  const [smallerTextPrices, setSmallerTextPrices] = useState('');
 
   useEffect(() => {
     //Shrink text for countries with large price digit length

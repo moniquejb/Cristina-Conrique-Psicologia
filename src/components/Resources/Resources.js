@@ -15,15 +15,35 @@ const Resources = ({ windowHeight, windowWidth }) => {
   const [toggleContentVideos, setToggleContentVideos] = useState(true);
   const [toggleContainerHeight, setToggleContainerHeight] = useState('resource-height-closed');
   const [resourseClassName, setResourceClassName] = useState('');
-  
-  //const location = useLocation();
-  //const handleResourceLocation = () => {
-  //Close side/compact navigation bar if a nav link linked to landing page is clicked
-  //console.log(location.pathname);
-  // if (location.pathname === '/recursos') {
-  //   console.log('path', true);
-  // }
-  //}
+  const [imageClass, setImageClass] = useState('images-loading');
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  // Array of topic images to preload
+  let resourceImages = [
+    "images/depression.jpg",
+    "images/anxiety.jpg",
+    "images/social.jpg",
+    "images/lgbt.jpg",
+    "images/videos.jpg"
+  ];
+
+  // Funtion to preload images
+  const preload = async (images) => {
+    let load = resourceImages.map(async a => {
+      let img = new Image();
+      img.src = a;
+      return await new Promise(res => {
+        img.onload = () => res(img);
+      })
+    })
+
+    // Change from loader svg to image once all loaded
+    await Promise.all(load);
+    setIsImageLoaded(true);
+    setImageClass('images-loaded')
+  }
+
+  preload(resourceImages);
 
   const handleToggleResource = ({ target }) => {
     let resourceName = target.className;
@@ -93,33 +113,33 @@ const Resources = ({ windowHeight, windowWidth }) => {
         <h1>Recursos</h1>
         <div className='resource-flex-container'>
           <div className='resource-boxes-container' id='resource-boxes-container'>
-            <div className='resource-box' id='resource-box-1'>
+            <div className={`${imageClass} resource-box`} id='resource-box-1'>
               <a href='/recursos#depresion'>
                 <div className='resource-box-content' onClick={handleToggleResource}>
-                  <img className='depression-click' alt='Imagen de Depresión' src='images/depression.jpg'></img>
-                  <h3 id='depresion' className='depression-click'>Depresión</h3>
+                  <img className='depression-click' alt='Imagen de Depresión' src={!isImageLoaded ? 'images/loading-resource.svg' : resourceImages[0]}></img>
+                  <h3 id='depresion' className='depression-click'>{!isImageLoaded ? '' : 'Depresión'}</h3>
                 </div>
               </a>
             </div>
             {(((windowHeight > windowWidth) && windowWidth < 600)
               || ((windowHeight < windowWidth) && windowWidth <= 480))
               && <DepressionContent toggleContentDepression={toggleContentDepression} />}
-            <div className='resource-box' id='resource-box-2' onClick={handleToggleResource}>
+            <div className={`${imageClass} resource-box`} id='resource-box-2' onClick={handleToggleResource}>
               <a href='/recursos#ansiedad'>
-                <div className='resource-box-content'>
-                  <img className='anxiety-click' alt='Imagen de Ansiedad' src='images/anxiety.jpg'></img>
-                  <h3 id='ansiedad' className='anxiety-click'>Ansiedad</h3>
+                <div className={'resource-box-content'}>
+                  <img className='anxiety-click' alt='Imagen de Ansiedad' src={!isImageLoaded ? 'images/loading-resource.svg' : resourceImages[1]}></img>
+                  <h3 id='ansiedad' className='anxiety-click'>{!isImageLoaded ? '' : 'Ansiedad'}</h3>
                 </div>
               </a>
             </div>
             {(((windowHeight > windowWidth) && windowWidth < 600)
               || ((windowHeight < windowWidth) && windowWidth <= 480))
               && <AnxietyContent toggleContentAnxiety={toggleContentAnxiety} />}
-            <div className='resource-box' id='resource-box-3' onClick={handleToggleResource}>
+            <div className={`${imageClass} resource-box`} id='resource-box-3' onClick={handleToggleResource}>
               <a href='/recursos#habilidades-sociales'>
                 <div className='resource-box-content'>
-                  <img className='social-click' alt='Imagen de Habilidades Sociales' src='images/social.jpg'></img>
-                  <h3 id='habilidades-sociales' className='social-click'>Habilidades Sociales</h3>
+                  <img className='social-click' alt='Imagen de Habilidades Sociales' src={!isImageLoaded ? 'images/loading-resource.svg' : resourceImages[2]}></img>
+                  <h3 id='habilidades-sociales' className='social-click'>{!isImageLoaded ? '' : 'Habilidades Sociales'}</h3>
                 </div>
               </a>
             </div>
@@ -127,22 +147,22 @@ const Resources = ({ windowHeight, windowWidth }) => {
               || ((windowHeight < windowWidth) && windowWidth <= 480))
               && <SocialContent toggleContentSocial={toggleContentSocial} />}
             {/* <div className='breakRes'></div> */}
-            <div className='resource-box' id='resource-box-4' onClick={handleToggleResource}>
+            <div className={`${imageClass} resource-box`} id='resource-box-4' onClick={handleToggleResource}>
               <a href='/recursos#material-lgbt'>
                 <div className='resource-box-content'>
-                  <img className='lgbt-click' alt='Imagen de Material LGBT' src='images/lgbt.jpg'></img>
-                  <h3 id='material-lgbt' className='lgbt-click'>Material LGBT</h3>
+                  <img className='lgbt-click' alt='Imagen de Material LGBTIQ+' src={!isImageLoaded ? 'images/loading-resource.svg' : resourceImages[3]}></img>
+                  <h3 id='material-lgbt' className='lgbt-click'>{!isImageLoaded ? '' : 'Material LGBTIQ+'}</h3>
                 </div>
               </a>
             </div>
             {(((windowHeight > windowWidth) && windowWidth < 600)
               || ((windowHeight < windowWidth) && windowWidth <= 480))
               && <LGBTContent toggleContentLGBT={toggleContentLGBT} />}
-            <div className='resource-box' id='resource-box-5' onClick={handleToggleResource}>
+            <div className={`${imageClass} resource-box`} id='resource-box-5' onClick={handleToggleResource}>
               <a href='/recursos#videos'>
                 <div className='resource-box-content'>
-                  <img className='videos-click' alt='Imagen de Videos' src='images/videos.jpg'></img>
-                  <h3 id='videos' className='videos-click'>Videos</h3>
+                  <img className='videos-click' alt='Imagen de Videos' src={!isImageLoaded ? 'images/loading-resource.svg' : resourceImages[4]}></img>
+                  <h3 id='videos' className='videos-click'>{!isImageLoaded ? '' : 'Videos'}</h3>
                 </div>
               </a>
             </div>

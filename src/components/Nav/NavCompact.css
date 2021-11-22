@@ -8,7 +8,7 @@
   z-index: 11;
   filter: drop-shadow(0 0 5px rgba(216, 153, 63, 0.3));
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 .nav-compact-dropdown-container-closed .nav-compact-dropdown-icon-closed {
   cursor: pointer;

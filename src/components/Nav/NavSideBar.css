@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap");
 .nav-side-dropdown-container-closed {
   background-color: #F9BE7B;
-  width: 100%;
+  width: 100vw;
   height: 50px;
   position: fixed;
   transition: width 0.3s;
   z-index: 11;
   filter: drop-shadow(0 0 5px rgba(216, 153, 63, 0.3));
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   top: 0;
-  right: 0;
+  left: 0;
 }
 .nav-side-dropdown-container-closed .nav-side-dropdown-icon-closed {
   cursor: pointer;
@@ -53,7 +53,7 @@
   position: fixed;
   z-index: 11;
   top: 0;
-  right: 0;
+  left: 0;
   -webkit-tap-highlight-color: transparent;
 }
 .nav-side-dropdown-container .nav-side-dropdown-icon {
@@ -105,7 +105,7 @@
   z-index: 10;
   filter: drop-shadow(0 0 5px rgba(216, 153, 63, 0.4));
   top: 0;
-  right: 0;
+  left: 0;
 }
 .nav-side-container ul {
   height: 100vh;

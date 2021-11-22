@@ -2,16 +2,16 @@
 
 .nav-side-dropdown-container-closed {
   background-color: $main-yellow;
-  width: 100%;
+  width: 100vw;
   height: 50px;
   position: fixed;
   transition: width 0.3s;
   z-index: 11;
   filter: drop-shadow(0 0 5px rgba($color: $dark-2-yellow, $alpha: 0.3));
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   top: 0;
-  right: 0;
+  left: 0;
 
   .nav-side-dropdown-icon-closed {
     cursor: pointer;
@@ -64,7 +64,7 @@
   position: fixed;
   z-index: 11;
   top: 0;
-  right: 0;
+  left: 0;
   -webkit-tap-highlight-color: transparent;
 
   .nav-side-dropdown-icon {
@@ -130,7 +130,7 @@
   z-index: 10;
   filter: drop-shadow(0 0 5px rgba($color: $dark-2-yellow, $alpha: 0.4));
   top: 0;
-  right: 0;
+  left: 0;
 
   ul {
     height: 100vh;

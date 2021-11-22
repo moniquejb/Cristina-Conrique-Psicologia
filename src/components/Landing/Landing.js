@@ -3,20 +3,21 @@ import './Landing.css';
 
 const Landing = ({ windowHeight, windowWidth }) => {
   const [landingWord, setLandingWord] = useState('preocupación');
-  const [animateWords, setAnimateWords] = useState('');
+  const [animateWords, setAnimateWords] = useState('wordChangeAnimation');
 
   useEffect(() => {
     //Set up changing words on landing page
     let i = -1;
     const landingWordArr = ['ansiedad', 'estrés', 'tristeza', 'miedo', 'soledad', 'confusión', 'dudas', 'preocupación'];
     const wordChange = setInterval(() => {
-      setAnimateWords('wordChangeAnimation');
+      document.getElementById('landing-word').style.animationPlayState = 'running';
+      // setAnimateWords('wordChangeAnimation');
       //Once all words have been used, reset i and start from beggining of array- otherwise continue through list
       i === 7 ? i = 0 : i += 1;
       setLandingWord(landingWordArr[i])
     }, 3000);
     return () => {
-      setAnimateWords('');
+      // setAnimateWords('');
       clearInterval(wordChange);
     };
   }, [])
@@ -41,7 +42,7 @@ const Landing = ({ windowHeight, windowWidth }) => {
             <div className='landing-heading-text'>
               <h2>Sientes...</h2>
               {/* Below should be {landingWord} and classname wordChangeAnimation */}
-              <h1 className={animateWords}>{landingWord}</h1>
+              <h1 id='landing-word' className={`${animateWords} js-loading`}>{landingWord}</h1>
               <h2>¿Estás pasando por un momento difícil?</h2>
             </div>
             <div className='landing-tablet-text'>

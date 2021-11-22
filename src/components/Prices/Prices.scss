@@ -105,7 +105,7 @@
         margin: 0;
 
         h2 {
-          @include custom-Montserrat ($main-grey, 11vw, 600);
+          @include custom-Montserrat ($main-grey, 10vw, 600);
           padding: 0;
           margin: 0;
           margin-top: 10px;
@@ -193,7 +193,7 @@
           width: 60vw;
   
           h2 {
-            font-size: 14vw;
+            font-size: 12vw;
           }
   
           h3 {
@@ -230,7 +230,7 @@
         }
   
         #price-weekly {
-          font-size: 15vw;
+          font-size: 12vw;
         }
       }
     }
@@ -254,7 +254,7 @@
           width: 70vw;
   
           h2 {
-            font-size: 16vw;
+            font-size: 14vw;
           }
   
           h3 {
@@ -291,7 +291,7 @@
         }
   
         #price-weekly {
-          font-size: 16vw;
+          font-size: 14vw;
         }
       }
     }

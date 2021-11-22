@@ -109,6 +109,14 @@
   width: 100%;
   padding: 10px 0 10px 5px;
 }
+.faqs-container #faq-list .question-container .questions-text-box a {
+  text-decoration-line: none;
+  text-decoration-style: none;
+  -moz-text-decoration-line: none;
+  -moz-text-decoration-style: none;
+  -webkit-text-decoration-line: none;
+  -webkit-text-decoration-style: none;
+}
 .faqs-container #faq-list .question-container .questions-text-box .question {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;

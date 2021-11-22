@@ -95,7 +95,7 @@
 .prices-container .price-box-container .price-box .price-box-discount h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 11vw;
+  font-size: 10vw;
   color: #F8F8F8;
   padding: 0;
   margin: 0;
@@ -209,7 +209,7 @@
     width: 60vw;
   }
   .prices-container .price-box-container .price-box .price-box-discount h2 {
-    font-size: 14vw;
+    font-size: 12vw;
   }
   .prices-container .price-box-container .price-box .price-box-discount h3 {
     font-size: 6vw;
@@ -245,7 +245,7 @@
     font-size: 9vw;
   }
   .prices-container .price-box-container .price-box #price-weekly {
-    font-size: 15vw;
+    font-size: 12vw;
   }
 }
 @media only screen and (max-width: 241px) {
@@ -260,7 +260,7 @@
     width: 70vw;
   }
   .prices-container .price-box-container .price-box .price-box-discount h2 {
-    font-size: 16vw;
+    font-size: 14vw;
   }
   .prices-container .price-box-container .price-box .price-box-discount h3 {
     font-size: 7vw;
@@ -296,7 +296,7 @@
     font-size: 10vw;
   }
   .prices-container .price-box-container .price-box #price-weekly {
-    font-size: 16vw;
+    font-size: 14vw;
   }
 }
 @media only screen and (orientation: portrait) and (min-width: 768px) {
