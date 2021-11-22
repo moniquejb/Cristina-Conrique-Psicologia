@@ -114,7 +114,7 @@ const Resources = ({ windowHeight, windowWidth }) => {
         <div className='resource-flex-container'>
           <div className='resource-boxes-container' id='resource-boxes-container'>
             <div className={`${imageClass} resource-box`} id='resource-box-1'>
-              <a href='/recursos#depresion'>
+              <a href={!toggleContentDepression ? `/recursos#depresion` : 'javascript:void(0);'}>
                 <div className='resource-box-content' onClick={handleToggleResource}>
                   <img className='depression-click' alt='Imagen de Depresión' src={!isImageLoaded ? 'images/loading-resource.svg' : resourceImages[0]}></img>
                   <h3 id='depresion' className='depression-click'>{!isImageLoaded ? '' : 'Depresión'}</h3>
@@ -125,7 +125,7 @@ const Resources = ({ windowHeight, windowWidth }) => {
               || ((windowHeight < windowWidth) && windowWidth <= 480))
               && <DepressionContent toggleContentDepression={toggleContentDepression} />}
             <div className={`${imageClass} resource-box`} id='resource-box-2' onClick={handleToggleResource}>
-              <a href='/recursos#ansiedad'>
+              <a href={!toggleContentAnxiety ? `/recursos#ansiedad` : 'javascript:void(0);'}>
                 <div className={'resource-box-content'}>
                   <img className='anxiety-click' alt='Imagen de Ansiedad' src={!isImageLoaded ? 'images/loading-resource.svg' : resourceImages[1]}></img>
                   <h3 id='ansiedad' className='anxiety-click'>{!isImageLoaded ? '' : 'Ansiedad'}</h3>
@@ -136,7 +136,7 @@ const Resources = ({ windowHeight, windowWidth }) => {
               || ((windowHeight < windowWidth) && windowWidth <= 480))
               && <AnxietyContent toggleContentAnxiety={toggleContentAnxiety} />}
             <div className={`${imageClass} resource-box`} id='resource-box-3' onClick={handleToggleResource}>
-              <a href='/recursos#habilidades-sociales'>
+              <a href={!toggleContentSocial ? `/recursos#habilidades-sociales` : 'javascript:void(0);'}>
                 <div className='resource-box-content'>
                   <img className='social-click' alt='Imagen de Habilidades Sociales' src={!isImageLoaded ? 'images/loading-resource.svg' : resourceImages[2]}></img>
                   <h3 id='habilidades-sociales' className='social-click'>{!isImageLoaded ? '' : 'Habilidades Sociales'}</h3>
@@ -148,7 +148,7 @@ const Resources = ({ windowHeight, windowWidth }) => {
               && <SocialContent toggleContentSocial={toggleContentSocial} />}
             {/* <div className='breakRes'></div> */}
             <div className={`${imageClass} resource-box`} id='resource-box-4' onClick={handleToggleResource}>
-              <a href='/recursos#material-lgbt'>
+              <a href={!toggleContentLGBT ? `/recursos#material-lgbt` : 'javascript:void(0);'}>
                 <div className='resource-box-content'>
                   <img className='lgbt-click' alt='Imagen de Material LGBTIQ+' src={!isImageLoaded ? 'images/loading-resource.svg' : resourceImages[3]}></img>
                   <h3 id='material-lgbt' className='lgbt-click'>{!isImageLoaded ? '' : 'Material LGBTIQ+'}</h3>
@@ -159,7 +159,7 @@ const Resources = ({ windowHeight, windowWidth }) => {
               || ((windowHeight < windowWidth) && windowWidth <= 480))
               && <LGBTContent toggleContentLGBT={toggleContentLGBT} />}
             <div className={`${imageClass} resource-box`} id='resource-box-5' onClick={handleToggleResource}>
-              <a href='/recursos#videos'>
+              <a href={!toggleContentVideos ? `/recursos#videos` : 'javascript:void(0);'}>
                 <div className='resource-box-content'>
                   <img className='videos-click' alt='Imagen de Videos' src={!isImageLoaded ? 'images/loading-resource.svg' : resourceImages[4]}></img>
                   <h3 id='videos' className='videos-click'>{!isImageLoaded ? '' : 'Videos'}</h3>
