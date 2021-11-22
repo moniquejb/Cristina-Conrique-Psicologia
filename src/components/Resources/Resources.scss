@@ -402,6 +402,10 @@
                 width: 18vw;
               }
 
+              img:-moz-loading {
+                visibility: hidden;
+              }
+
               h3 {
                 font-size: 2.6vw;
               }

@@ -302,6 +302,9 @@
     height: 23vw;
     width: 18vw;
   }
+  .resources-container .resource-flex-container .resource-boxes-container .resource-box .resource-box-content img:-moz-loading {
+    visibility: hidden;
+  }
   .resources-container .resource-flex-container .resource-boxes-container .resource-box .resource-box-content h3 {
     font-size: 2.6vw;
   }
