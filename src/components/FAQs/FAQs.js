@@ -1,11 +1,8 @@
 import React from 'react';
 import './FAQs.css';
 import { questions, answers } from "../../utilities/FAQ_questions_answers.js";
-import { useState } from 'react/cjs/react.development';
 
 const FAQs = () => {
-  // const [isQuestionOpen, setIsQuestionOpen] = useState(false);
-
   const handleToggleAnswerFAQ = ({ target }) => {
     const regex = /\d+/;
     let selectedQuestion = target.id;
@@ -47,10 +44,8 @@ const FAQs = () => {
     if (plusElement.id.includes(selectedId)) {
       if (plusElement.hasAttribute('checked')) {
         plusElement.removeAttribute('checked');
-        // setIsQuestionOpen(false);
       } else {
         plusElement.setAttribute("checked", true);
-        // setIsQuestionOpen(true);
       }
     }
   }
@@ -67,7 +62,7 @@ const FAQs = () => {
           id={`question_container_${index + 1}`}
           className='question-container'>
           <div id={`question_text_box_${index + 1}`} className='questions-text-box'>
-            <a href={`#question_container_${index}`}><p id={`question_${index + 1}`} className='question'>{`${question}`}</p></a>
+            <p id={`question_${index + 1}`} className='question'>{`${question}`}</p>
           </div>
           <div id={`plus_toggle_${index + 1}`} className="plus-toggle">
             <input readOnly type="checkbox" id={`plus_input_${index + 1}`} />
