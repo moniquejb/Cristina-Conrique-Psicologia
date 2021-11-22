@@ -67,7 +67,7 @@ const FAQs = () => {
           id={`question_container_${index + 1}`}
           className='question-container'>
           <div id={`question_text_box_${index + 1}`} className='questions-text-box'>
-            <a href={isQuestionOpen ? `#question_container_${index}` : null}><p id={`question_${index + 1}`} className='question'>{`${question}`}</p></a>
+            <a href={true && isQuestionOpen ? `#question_container_${index}` : null}><p id={`question_${index + 1}`} className='question'>{`${question}`}</p></a>
           </div>
           <div id={`plus_toggle_${index + 1}`} className="plus-toggle">
             <input readOnly type="checkbox" id={`plus_input_${index + 1}`} />
