@@ -1,10 +1,10 @@
 import React from 'react';
 import './FAQs.css';
 import { questions, answers } from "../../utilities/FAQ_questions_answers.js";
-import { useState, useEffect } from 'react/cjs/react.development';
+import { useState } from 'react/cjs/react.development';
 
 const FAQs = () => {
-  const [isQuestionOpen, setIsQuestionOpen] = useState(false);
+  // const [isQuestionOpen, setIsQuestionOpen] = useState(false);
 
   const handleToggleAnswerFAQ = ({ target }) => {
     const regex = /\d+/;
@@ -47,17 +47,17 @@ const FAQs = () => {
     if (plusElement.id.includes(selectedId)) {
       if (plusElement.hasAttribute('checked')) {
         plusElement.removeAttribute('checked');
-        setIsQuestionOpen(false);
+        // setIsQuestionOpen(false);
       } else {
         plusElement.setAttribute("checked", true);
-        setIsQuestionOpen(true);
+        // setIsQuestionOpen(true);
       }
     }
   }
 
-  useEffect(() => {
-    console.log ('');
-  }, [isQuestionOpen]);
+  // useEffect(() => {
+  //   console.log ('');
+  // }, [isQuestionOpen]);
 
   const questionContainer = questions.map((question, index) => {
     return (
@@ -67,7 +67,7 @@ const FAQs = () => {
           id={`question_container_${index + 1}`}
           className='question-container'>
           <div id={`question_text_box_${index + 1}`} className='questions-text-box'>
-            <a href={true && isQuestionOpen ? `#question_container_${index}` : null}><p id={`question_${index + 1}`} className='question'>{`${question}`}</p></a>
+            <a href={`#question_container_${index}`}><p id={`question_${index + 1}`} className='question'>{`${question}`}</p></a>
           </div>
           <div id={`plus_toggle_${index + 1}`} className="plus-toggle">
             <input readOnly type="checkbox" id={`plus_input_${index + 1}`} />
