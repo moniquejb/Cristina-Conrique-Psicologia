@@ -84,22 +84,25 @@
       margin-bottom: 15px;
       display: flex;
       align-items: center;
+      justify-content: flex-end;
       flex-direction: row-reverse;
       background-color: $dark-1-grey;
       transition: 0.5s;
+      
+      a {
+        text-decoration-line: none;
+        text-decoration-style: none;
+        -moz-text-decoration-line: none;
+        -moz-text-decoration-style: none;
+        -webkit-text-decoration-line: none;
+        -webkit-text-decoration-style: none;
+      }
 
       .questions-text-box {
         width: 100%;
         padding: 10px 0 10px 5px;
 
-        a {
-          text-decoration-line: none;
-          text-decoration-style: none;
-          -moz-text-decoration-line: none;
-          -moz-text-decoration-style: none;
-          -webkit-text-decoration-line: none;
-          -webkit-text-decoration-style: none;
-        }
+        
 
         .question {
           @include bulk-text($dark-2-red);
