@@ -9,7 +9,7 @@ const TherapyBenefits = () => {
       <div className='therapy-benefits-row'>
         <div className='therapy-benefit'>
           <Tilt>
-            <img src='images/comodidad_icon.svg' alt='Comodidad Icono'></img>
+            <img loading='lazy' src='images/comodidad_icon.svg' alt='Comodidad Icono'></img>
           </Tilt>
           <h3>Comodidad</h3>
           <div className='therapy-benefit-textbox'>
@@ -18,7 +18,7 @@ const TherapyBenefits = () => {
         </div>
         <div className='therapy-benefit'>
           <Tilt>
-            <img src='images/sin_desplazamientos_icon.svg' alt='Sin Desplazamientos Icono'></img>
+            <img loading='lazy' src='images/sin_desplazamientos_icon.svg' alt='Sin Desplazamientos Icono'></img>
           </Tilt>
           <h3>Sin Desplazamientos</h3>
           <div className='therapy-benefit-textbox'>
@@ -27,7 +27,7 @@ const TherapyBenefits = () => {
         </div>
         <div className='therapy-benefit'>
           <Tilt>
-            <img src='images/flexibilidad_icon.svg' alt='Flexibilidad Icono'></img>
+            <img loading='lazy' src='images/flexibilidad_icon.svg' alt='Flexibilidad Icono'></img>
           </Tilt>
           <h3>Flexibilidad</h3>
           <div className='therapy-benefit-textbox'>
@@ -36,7 +36,7 @@ const TherapyBenefits = () => {
         </div>
         <div className='therapy-benefit'>
           <Tilt>
-            <img src='images/ahorro_icon.svg' alt='Ahorro Icono'></img>
+            <img loading='lazy' src='images/ahorro_icon.svg' alt='Ahorro Icono'></img>
           </Tilt>  
           <h3>Ahorro</h3>
           <div className='therapy-benefit-textbox'>
@@ -45,7 +45,7 @@ const TherapyBenefits = () => {
         </div>
         <div className='therapy-benefit'>
           <Tilt>
-            <img src='images/continuidad_icon.svg' alt='Continuidad Icono'></img>
+            <img loading='lazy' src='images/continuidad_icon.svg' alt='Continuidad Icono'></img>
           </Tilt>
           <h3>Continuidad</h3>
           <div className='therapy-benefit-textbox'>
@@ -54,7 +54,7 @@ const TherapyBenefits = () => {
         </div>
         <div className='therapy-benefit'>
           <Tilt>
-            <img src='images/intimidad_icon.svg' alt='Intimidad Icono'></img>
+            <img loading='lazy' src='images/intimidad_icon.svg' alt='Intimidad Icono'></img>
           </Tilt>
           <h3>Intimidad</h3>
           <div className='therapy-benefit-textbox'>

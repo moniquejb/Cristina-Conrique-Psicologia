@@ -145,7 +145,7 @@ const OnlineTherapy = () => {
           </div>
         </div>
         <div className='online-therapy-img'>
-          <img src='images/terapia_online.svg' alt='Terapia Online'></img>
+          <img loading='lazy' src='images/terapia_online.svg' alt='Terapia Online'></img>
         </div>
       </div>
     </div>
