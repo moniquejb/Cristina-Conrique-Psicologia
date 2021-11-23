@@ -29,7 +29,7 @@ const Resources = ({ windowHeight, windowWidth }) => {
 
   // Funtion to preload images
   const preload = async (images) => {
-    let load = resourceImages.map(async a => {
+    let load = images.map(async a => {
       let img = new Image();
       img.src = a;
       return await new Promise(res => {
