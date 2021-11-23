@@ -10,15 +10,17 @@ const Landing = ({ windowHeight, windowWidth }) => {
     const landingWordArr = ['ansiedad', 'estrés', 'tristeza', 'miedo', 'soledad', 'confusión', 'dudas', 'preocupación'];
     const wordChange = setInterval(() => {
       document.getElementById('landing-word').classList.remove('wordChangeOnce');
-      document.getElementById('landing-word').classList.add('wordChangeAnimation');
-      
+            
       //Once all words have been used, reset i and start from beggining of array- otherwise continue through list
       i === 7 ? i = 0 : i += 1;
-      setLandingWord(landingWordArr[i])
+      setLandingWord(landingWordArr[i]);
+      document.getElementById('landing-word').classList.add('wordChangeAnimation');
+      console.log('going');
     }, 3000);
     return () => {
-      clearInterval(wordChange);
       document.getElementById('landing-word').classList.remove('wordChangeAnimation');
+      clearInterval(wordChange);
+      console.log('cleared');
     };
   }, [])
 

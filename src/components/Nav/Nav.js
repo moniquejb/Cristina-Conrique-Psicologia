@@ -116,13 +116,13 @@ const Nav = ({ navOrientation }) => {
           </div>
           <nav className='nav-side-container no-select'>
             <ul>
-              <li id='li-img-side'><a href='/#inicio'><img src='images/logo.svg' alt='Psicóloga Cristina Conrique Logo'></img></a></li>
+              <li id='li-img-side'><a href='/#inicio'><img src='images/logo-small.png' alt='Psicóloga Cristina Conrique Logo'></img></a></li>
               <li id='nav-line-1'></li>
               <li><a onClick={handleNavLanding} href='/#inicio' className='li-text'>Inicio</a></li>
               <li><a onClick={handleNavLanding} href='/#terapia' className='li-text'>Terapia</a></li>
               <li><a onClick={handleNavLanding} href='/#sobre' className='li-text'>Sobre Mí</a></li>
               <li><a onClick={handleNavLanding} href='/#tarifas' className='li-text'>Tarifas</a></li>
-              <li className='li-img'><a onClick={handleNavLanding} href='/#inicio'><img src='images/logo.svg' alt='Psicóloga Cristina Conrique Logo'></img></a></li>
+              <li className='li-img'><a onClick={handleNavLanding} href='/#inicio'><img src='images/logo-small.png' alt='Psicóloga Cristina Conrique Logo'></img></a></li>
               <li><a href='/recursos' className='li-text'>Recursos</a></li>
               <li><a href='/faqs' className='li-text'>FAQs</a></li>
               <li><a onClick={handleNavLanding} href='/#contacto' className='li-text'>Contacto</a></li>
@@ -177,7 +177,7 @@ const Nav = ({ navOrientation }) => {
       return (
         <>
           <nav className='nav-compact-container no-select'>
-            <a href='/#inicio' className='li-img'><img src='images/logo.svg' alt='Psicóloga Cristina Conrique Logo'></img></a>
+            <a href='/#inicio' className='li-img'><img src='images/logo-small.png' alt='Psicóloga Cristina Conrique Logo'></img></a>
             <ul>
               <li><a href='/#inicio' onClick={handleNavLanding} className='li-text'>Inicio</a></li>
               <li><a href='/#terapia' onClick={handleNavLanding} className='li-text'>Terapia</a></li>
