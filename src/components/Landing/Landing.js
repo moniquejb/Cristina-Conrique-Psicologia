@@ -15,12 +15,10 @@ const Landing = ({ windowHeight, windowWidth }) => {
       i === 7 ? i = 0 : i += 1;
       setLandingWord(landingWordArr[i]);
       document.getElementById('landing-word').classList.add('wordChangeAnimation');
-      console.log('going');
     }, 3000);
     return () => {
       document.getElementById('landing-word').classList.remove('wordChangeAnimation');
       clearInterval(wordChange);
-      console.log('cleared');
     };
   }, [])
 
