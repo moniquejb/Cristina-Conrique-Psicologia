@@ -5,12 +5,12 @@ const Landing = ({ windowHeight, windowWidth }) => {
   const [landingWord, setLandingWord] = useState('preocupación');
 
   useEffect(() => {
-    //Set up changing words on landing page
+    //Set up changing words & animations on landing page
     let i = -1;
     const landingWordArr = ['ansiedad', 'estrés', 'tristeza', 'miedo', 'soledad', 'confusión', 'dudas', 'preocupación'];
     const wordChange = setInterval(() => {
       document.getElementById('landing-word').classList.remove('wordChangeOnce');
-      document.getElementById('landing-word').style.animationPlayState = 'running';
+      document.getElementById('landing-word').classList.add('wordChangeAnimation');
       
       //Once all words have been used, reset i and start from beggining of array- otherwise continue through list
       i === 7 ? i = 0 : i += 1;
@@ -18,6 +18,7 @@ const Landing = ({ windowHeight, windowWidth }) => {
     }, 3000);
     return () => {
       clearInterval(wordChange);
+      document.getElementById('landing-word').classList.remove('wordChangeAnimation');
     };
   }, [])
 
@@ -33,15 +34,11 @@ const Landing = ({ windowHeight, windowWidth }) => {
             <img src='images/landing-img.svg' alt='Terapia Individual'></img>
           </div>
           : <></>}
-        {/* <div className='laptop-image-container'>
-          <img src='images/landing-img.svg' alt='Terapia Individual'></img>
-        </div> */}
         <div className='landing-header-image'>
           <div className='landing-heading-container'>
             <div className='landing-heading-text'>
               <h2>Sientes...</h2>
-              {/* Below should be {landingWord} and classname wordChangeAnimation */}
-              <h1 id='landing-word' className='wordChangeOnce wordChangeAnimation'>{landingWord}</h1>
+              <h1 id='landing-word' className='wordChangeOnce'>{landingWord}</h1>
               <h2>¿Estás pasando por un momento difícil?</h2>
             </div>
             <div className='landing-tablet-text'>
@@ -55,9 +52,6 @@ const Landing = ({ windowHeight, windowWidth }) => {
               <img src='images/landing-img.svg' alt='Terapia Individual'></img>
             </div>
             : <></>}
-          {/* <div className='landing-image-container'>
-            <img src='images/landing-img.svg' alt='Terapia Individual'></img>
-          </div> */}
         </div>
 
         <div className='landing-text-container'>

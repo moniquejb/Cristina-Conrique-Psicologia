@@ -73,6 +73,10 @@
     opacity: 0;
     transform: scale(0.99, 0.96);
   }
+  20% {
+    opacity: 0;
+    transform: scale(0.99, 0.96);
+  }
   80% {
     opacity: 1;
     transform: scale(1);
@@ -80,6 +84,10 @@
 }
 @keyframes wordChangeAnimation {
   0% {
+    opacity: 0;
+    transform: scale(0.99, 0.96);
+  }
+  20% {
     opacity: 0;
     transform: scale(0.99, 0.96);
   }
@@ -97,6 +105,10 @@
     opacity: 0;
     transform: scale(0.99, 0.96);
   }
+  20% {
+    opacity: 0;
+    transform: scale(0.99, 0.96);
+  }
   80% {
     opacity: 1;
     transform: scale(1);
@@ -104,6 +116,10 @@
 }
 @keyframes wordChangeOnce {
   0% {
+    opacity: 0;
+    transform: scale(0.99, 0.96);
+  }
+  20% {
     opacity: 0;
     transform: scale(0.99, 0.96);
   }
