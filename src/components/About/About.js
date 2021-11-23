@@ -11,7 +11,7 @@ const About = ({ windowHeight, windowWidth}) => {
           <img src='images/headshot_square.jpg' alt='Foto de Psicóloga Cristina Conrique'></img>
         </div>
       : <div className='about-img'>
-          <img loading='lazy' src='images/headshot_portrait.jpg' alt='Foto de Psicóloga Cristina Conrique'></img>
+          <img src='images/headshot_portrait.jpg' alt='Foto de Psicóloga Cristina Conrique'></img>
         </div>
       }
         <div className='about-h1-container'>

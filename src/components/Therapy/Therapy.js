@@ -18,7 +18,7 @@ const Therapy = () => {
             </div>
             <div className='therapy-individuals-img'>
               <Tilt>
-                <img loading='lazy' src='images/adultos.svg' alt='Terapia para Adultos'></img>
+                <img src='images/adultos.svg' alt='Terapia para Adultos'></img>
               </Tilt>
             </div>
             <div className='therapy-individuals-text'>
@@ -41,7 +41,7 @@ const Therapy = () => {
             </div>
             <div className='therapy-individuals-img'>
               <Tilt>
-                <img loading='lazy' src='images/inclusiva.svg' alt='Terapia Inclusiva'></img>
+                <img src='images/inclusiva.svg' alt='Terapia Inclusiva'></img>
               </Tilt>
             </div>
             <div className='therapy-individuals-text'>
@@ -61,7 +61,7 @@ const Therapy = () => {
             </div>
             <div className='therapy-individuals-img'>
               <Tilt>
-                <img loading='lazy' src='images/adolescentes.svg' alt='Terapia para Adolescentes'></img>
+                <img src='images/adolescentes.svg' alt='Terapia para Adolescentes'></img>
               </Tilt>
             </div>
             <div className='therapy-individuals-text'>
