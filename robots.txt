@@ -1,24 +1,4 @@
-User-agent: Twitterbot
-Disallow: *
+User-agent: *
+Allow: /
 
-Allow: /images
-Allow: /archives
-
-Sitemap: http://www.psicologaconrique.com/sitemap.xml
-
-User-agent: Facebot
-Disallow: *
-
-Allow: /images
-Allow: /archives
-
-Sitemap: http://www.psicologaconrique.com/sitemap.xml
-
-User-agent: Googlebot
-Disallow: *
-
-Allow: /images
-Allow: /archives
-
-Sitemap: http://www.psicologaconrique.com/sitemap.xml
 
