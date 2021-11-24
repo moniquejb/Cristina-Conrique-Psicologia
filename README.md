@@ -1,4 +1,4 @@
-[![Untitled-1-01-01.jpg](https://i.postimg.cc/3JTvjhYm/Untitled-1-01-01.jpg)](https://postimg.cc/Cdc5YWZx)
+[![Banner](https://i.postimg.cc/sDqbHTHY/Untitled-1-01.jpg)](https://postimg.cc/hf8Cf1Bv)
 
 # Cristina Conrique Psychology Website
 
@@ -20,7 +20,7 @@ This website, created from scratch, was made to promote the online services of M
 ### Design
 As a trained Information Designer, I was able to use my graphic design skills to create a realistic wireframe of each section of the website using Adobe Illustrator & Photoshop (screenshot below). I mostly based my code on these layouts, but made multiple changes when something didn't translate well from static images to a functioning website. I also designed the logo, created or modified all of the images used and shot the photo of Cristina Conrique for the _'Sobre Mí (About Me)'_ section. 
 
-[![image.png](https://i.postimg.cc/Y9bN82rh/image.png)](https://postimg.cc/r0Rtwktk)
+[![Layout](https://i.postimg.cc/Y9bN82rh/image.png)](https://postimg.cc/r0Rtwktk)
 
 ### Responsive Testing
 I used [Responsively](https://responsively.app/) and Chrome Devtools to guide me in creating media queries and for testing them. I also frequently served the localhost onto a mobile and tablet for testing media queries or general functionality.
