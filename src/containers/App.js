@@ -1,30 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import loadable from '@loadable/component';
 
 import Nav from '../components/Nav/Nav.js';
 import Landing from '../components/Landing/Landing.js';
 import Therapy from '../components/Therapy/Therapy.js';
-// import OnlineTherapy from '../components/OnlineTherapy/OnlineTherapy.js';
-// import TherapyBenefits from '../components/TherapyBenefits/TherapyBenefits.js';
 import About from '../components/About/About.js';
 import Contact from '../components/Contact/Contact.js';
-// import LegalWarning from '../components/LegalWarning/LegalWarning.js';
-// import Footer from '../components/Footer/Footer.js';
-// import FAQs from '../components/FAQs/FAQs.js';
+import Footer from '../components/Footer/Footer.js';
 import Prices from '../components/Prices/Prices.js';
-// import Resources from '../components/Resources/Resources.js';
 
-const OnlineTherapy = loadable(() => import('../components/OnlineTherapy/OnlineTherapy.js'));
-const TherapyBenefits = loadable(() => import('../components/TherapyBenefits/TherapyBenefits.js'));
-const LegalWarning = loadable(() => import('../components/LegalWarning/LegalWarning.js'));
-const Footer = loadable(() => import('../components/Footer/Footer.js'));
-const FAQs = loadable(() => import('../components/FAQs/FAQs.js'));
-const Resources = loadable(() => import('../components/Resources/Resources.js'));
+const OnlineTherapy = lazy(() => import('../components/OnlineTherapy/OnlineTherapy.js'));
+const TherapyBenefits = lazy(() => import('../components/TherapyBenefits/TherapyBenefits.js'));
+const FAQs = lazy(() => import('../components/FAQs/FAQs.js'));
+const Resources = lazy(() => import('../components/Resources/Resources.js'));
+const LegalWarning = lazy(() => import('../components/LegalWarning/LegalWarning.js'));
+const renderLoader = () => <img height="30px" width="auto" src='images/loading-resource.svg'></img>;
 
 let width = document.documentElement.clientWidth;
 let height = document.documentElement.clientHeight;
@@ -166,30 +160,32 @@ function App() {
   return (
     <Router>
       <>
+        <Nav navOrientation={navOrientation} />
         <Switch>
           <Route path="/recursos">
-            <Nav navOrientation={navOrientation} />
-            <Resources windowHeight={windowHeight} windowWidth={windowWidth} />
-            <Footer />
+            <Suspense fallback={renderLoader}>
+              <Resources windowHeight={windowHeight} windowWidth={windowWidth} />
+            </Suspense>
           </Route>
           <Route path="/faqs">
-            <Nav navOrientation={navOrientation} />
-            <FAQs />
-            <Footer />
+            <Suspense fallback={renderLoader}>
+              <FAQs />
+            </Suspense>
           </Route>
-          <Route path="/">
-            <LegalWarning handleToggleLegal={handleToggleLegal} toggleLegal={toggleLegal} />
-            <Nav navOrientation={navOrientation} />
-            <Landing windowHeight={windowHeight} windowWidth={windowWidth} />
-            <Therapy />
-            <OnlineTherapy />
-            <TherapyBenefits />
-            <About windowHeight={windowHeight} windowWidth={windowWidth} />
-            <Prices price={price} currency={currency} country={country} />
-            <Contact handleToggleLegal={handleToggleLegal} windowHeight={windowHeight} windowWidth={windowWidth} originalCountry={originalCountry} />
-            <Footer />
+          <Route path="/">       
+              <Landing windowHeight={windowHeight} windowWidth={windowWidth} />
+              <Therapy />
+              <Suspense fallback={renderLoader}>
+                <LegalWarning handleToggleLegal={handleToggleLegal} toggleLegal={toggleLegal} />
+                <OnlineTherapy />
+                <TherapyBenefits />
+              </Suspense>
+              <About windowHeight={windowHeight} windowWidth={windowWidth} />
+              <Prices price={price} currency={currency} country={country} />
+              <Contact handleToggleLegal={handleToggleLegal} windowHeight={windowHeight} windowWidth={windowWidth} originalCountry={originalCountry} />
           </Route>
         </Switch>
+        <Footer />
       </>
     </Router>
   );
