@@ -1,4 +1,4 @@
-[![Untitled-1-01.jpg](https://i.postimg.cc/SxRHDwGN/Untitled-1-01.jpg)](https://postimg.cc/nX8dLS56)
+[![Untitled-1-01-01.jpg](https://i.postimg.cc/3JTvjhYm/Untitled-1-01-01.jpg)](https://postimg.cc/Cdc5YWZx)
 
 # Cristina Conrique Psychology Website
 
