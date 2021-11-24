@@ -4,19 +4,34 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import './App.css';
-import Nav from '../components/Nav/Nav.js';
-import Landing from '../components/Landing/Landing.js';
-import Therapy from '../components/Therapy/Therapy.js';
-import OnlineTherapy from '../components/OnlineTherapy/OnlineTherapy.js';
-import TherapyBenefits from '../components/TherapyBenefits/TherapyBenefits.js';
-import About from '../components/About/About.js';
-import Contact from '../components/Contact/Contact.js';
-import LegalWarning from '../components/LegalWarning/LegalWarning.js';
-import Footer from '../components/Footer/Footer.js';
-import FAQs from '../components/FAQs/FAQs.js';
-import Prices from '../components/Prices/Prices.js';
-import Resources from '../components/Resources/Resources.js';
+import loadable from '@loadable/component';
+
+const Nav = loadable(() => import('../components/Nav/Nav.js'));
+const Landing = loadable(() => import('../components/Landing/Landing.js'));
+const Therapy = loadable(() => import('../components/Therapy/Therapy.js'));
+const OnlineTherapy = loadable(() => import('../components/OnlineTherapy/OnlineTherapy.js'));
+const TherapyBenefits = loadable(() => import('../components/TherapyBenefits/TherapyBenefits.js'));
+const About = loadable(() => import('../components/About/About.js'));
+const Contact = loadable(() => import('../components/Contact/Contact.js'));
+const LegalWarning = loadable(() => import('../components/LegalWarning/LegalWarning.js'));
+const Footer = loadable(() => import('../components/Footer/Footer.js'));
+const FAQs = loadable(() => import('../components/FAQs/FAQs.js'));
+const Prices = loadable(() => import('../components/Prices/Prices.js'));
+const Resources = loadable(() => import('../components/Resources/Resources.js'));
+
+
+// import Nav from '../components/Nav/Nav.js';
+// import Landing from '../components/Landing/Landing.js';
+// import Therapy from '../components/Therapy/Therapy.js';
+// import OnlineTherapy from '../components/OnlineTherapy/OnlineTherapy.js';
+// import TherapyBenefits from '../components/TherapyBenefits/TherapyBenefits.js';
+// import About from '../components/About/About.js';
+// import Contact from '../components/Contact/Contact.js';
+// import LegalWarning from '../components/LegalWarning/LegalWarning.js';
+// import Footer from '../components/Footer/Footer.js';
+// import FAQs from '../components/FAQs/FAQs.js';
+// import Prices from '../components/Prices/Prices.js';
+// import Resources from '../components/Resources/Resources.js';
 
 let width = document.documentElement.clientWidth;
 let height = document.documentElement.clientHeight;
