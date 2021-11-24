@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Cristina Conrique Psychology Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://psicologaconrique.com/
 
-## Available Scripts
+This website, created from scratch, was made to promote the online services of Mexican psychologist, Cristina Conrique. As she operates solely in Spanish, the website content was created in Spanish only (feel free to use that translator :wink:). The website is hosted on [Netlify](https://www.netlify.com/) but the custom domain and email are registered through [Hostinger](https://www.hostinger.com/).
 
-In the project directory, you can run:
+## Technologies
+* Javascript
+* React.js
+* CSS (SASS)
+* HTML
 
-### `npm start`
+## Features
+* **Email.js & Google reCAPTCHA:** As this project was created entirely using the Front End, I made use of Email.js to send the messages from the contact form directly to the client's professional email address. The Google reCAPTCHA checkbox appears when a user completes the required fields, and a form cannot be submitted without this step being successful. The token received is then verified on the Back End by Email.js once the form is submitted.
+* **GeoJS API:** As the client works online, she treats patients from all over the world and works in multiple currencies. I used the [GeoJS API](https://geojs.io/) to fetch the user's country location and apply the correct currency and rates to the _'Tarifas (Prices)'_ page. The user's country is also automatically entered into the contact form using this API, but can be edited by the user if necessary.    
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Developement Process
+### Design
+As a trained Information Designer, I was able to use my graphic design skills to create a realistic wireframe of each section of the website using Adobe Illustrator & Photoshop (screenshot below). I mostly based my code on these layouts, but made multiple changes when something didn't translate well from static images to a functioning website. I also designed the logo, created or modified all of the images used and shot the photo of Cristina Conrique for the _'Sobre Mí (About Me)'_ section. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[![image.png](https://i.postimg.cc/Y9bN82rh/image.png)](https://postimg.cc/r0Rtwktk)
 
-### `npm test`
+### Responsive Testing
+I used [Responsively](https://responsively.app/) and Chrome Devtools to guide me in creating media queries and for testing them. I also frequently served the localhost onto a mobile and tablet for testing media queries or general functionality.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Overcoming Challenges
+As a self-taught Front-End Web Developer, I encountered many challenges in creating this website from scratch to the final result. I spent countless hours scouring the web to find ways of implementing something new to me, or resolving unexpected errors- and with no regrets! I still have a lot to learn (Redux is next on my list!), but I know that I have the drive, ambition and willingness to keep growing in this field. Bring on the next challenge! :nerd_face:
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![LinkedIn badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/monique-blignaut-48173485) [![Instagram badge](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/monique.jaimee/) [![Behance badge](https://img.shields.io/badge/Behance-blue?style=for-the-badge&logo=behance)](https://www.behance.net/MoniqueBlignaut) [![Gmail badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:moniblig@gmail.com)
