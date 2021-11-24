@@ -1,47 +1,5 @@
 @import "../../utilities/variables.scss";
 
-//---- MOBILE ----
-//Tested and working for the following phones/screen sizes
-//Also tested and working in landscape mode
-// ----------------
-//iPhone XR 414 x 896
-//iPhone 5/SE 320 x 568
-//iPhone 4 320 x 480
-//Galaxy S5 360 x 640
-//iPhone X 375 x 812
-//Nexus 4 384 x 640
-//JioPhone2 240 x 320
-//Galaxy Fold 280 x 653
-//Nokia N9 480 x 854
-//Nexus 6P 412 x 732
-//Pixel 2 XL 411 x 823
-//Surface Duo 540 x 720
-// ----------------
-
-//---- TABLET ----
-//Tested and working for the following tablet/screen sizes
-//Also tested and working in landscape mode
-// ----------------
-//Nexus 7 600 - 960
-//BB Playbook 600 x 1024
-//iPad/iPad Mini 768 x 1024
-//Kindle Fire HDX 800 x 1280
-//iPad Pro 1024 x 1366
-// ----------------
-
-//---- DESKTOP ----
-//Tested and working for the following desktop sizes
-// ----------------
-//Laptop with MDPI Screen 1280 x 800
-//Generic Laptop 1280 x 950
-//MacBook Air 1440 x 900
-//MacBook Pro 13" 2560 x 1600
-//MackBook Pro 15" 2880 x 1800
-//Macbook Pro 16" 3072 x 1920
-//4K Display 3840 x 2160
-//5K Display 5120 x 2880
-// ----------------
-
 .resources-container {
   width: 100%;
   height: auto;
@@ -117,12 +75,6 @@
           -webkit-text-decoration-style: none;
         }
 
-        // &:hover {
-        //   filter: brightness(103%);
-        //   box-shadow: 0px 0px 6px rgba(167, 98, 9, 0.2);
-        //   transform: scale(1.03);
-        // }
-
         &:active {
           transform: scale(1);
         }
@@ -141,7 +93,6 @@
             width: 70vw;
             position: absolute;
             border-radius: 20%;
-            // opacity: 0.65;
           }
 
           h3 {
@@ -154,10 +105,6 @@
       .chosen-box {
         background-color: #eeeeee;
         box-shadow: 0px 0px 10px rgba(102, 102, 102, 0.5);
-
-        // &:hover {
-        //   box-shadow: 0px 0px 6px rgba(136, 136, 136, 0.2);
-        // }
 
         .resource-box-content {
           img {
@@ -203,12 +150,6 @@
             &:visited {
               color: $dark-2-red;
             }
-            // &:hover {
-            //   color: $main-blue;
-            // }
-            // &:visited:hover {
-            //   color: $main-red;
-            // }
           }
         }
       }
@@ -230,10 +171,6 @@
     -webkit-text-decoration-line: none;
     -webkit-text-decoration-style: none;
     @include custom-Roboto($dark-2-blue, 1.2em, 400);
-
-    // &:hover {
-    //   color: $dark-2-red;
-    // }
   }
 }
 
@@ -249,11 +186,6 @@
       min-height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
       min-height: calc(calc(var(--vh, 1vh) * 100) - 50px);
       justify-content: flex-start;
-      //margin-bottom: 35px;
-
-      // h1 {
-      //   margin: 15px 0 25px 0;
-      // }
 
       .resource-flex-container {
         .resource-boxes-container {
@@ -288,7 +220,6 @@
         .resource-content {
           ul {
             padding: 0 0 0 15px;
-            //margin-bottom: -30px;
           }
         }
       }
@@ -331,10 +262,6 @@
 @media only screen and (orientation: landscape) {
   @media only screen and (max-width: 481px) {
     .resources-container {
-      // h1 {
-      //   margin: 15px 0 20px 0;
-      // }
-
       .resource-flex-container {
         height: auto;
         width: 100%;
@@ -382,11 +309,6 @@
       min-height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
       min-height: calc(calc(var(--vh, 1vh) * 100) - 50px);
       justify-content: flex-start;
-      //margin-bottom: 35px;
-
-      // h1 {
-      //   margin: 15px 0 25px 0;
-      // }
 
       .resource-flex-container {
         .resource-boxes-container {
@@ -439,7 +361,6 @@
 
   @media only screen and (min-width: 1280px) {
     .resources-container {
-      //margin-bottom: 35px;
       .resource-flex-container {
         .resource-boxes-container {
           .resource-box {
@@ -597,7 +518,6 @@
 
 @media only screen and (orientation: landscape) and (min-height: 768px) and (min-width: 2560px) {
   .resources-container {
-    //margin-top: 70px;
     min-height: 100vh;
     min-height: -webkit-calc(calc(calc(var(--vh, 1vh) * 100) - 315px));
     min-height: -moz-calc(calc(calc(var(--vh, 1vh) * 100) - 315px));

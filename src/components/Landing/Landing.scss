@@ -1,52 +1,7 @@
 @import "../../utilities/variables.scss";
 
-//---- MOBILE ----
-//Tested and working for the following phones/screen sizes
-//Also tested and working in landscape mode
-// ----------------
-//iPhone XR 414 x 896
-//iPhone 5/SE 320 x 568
-//iPhone 4 320 x 480
-//Galaxy S5 360 x 640
-//iPhone X 375 x 812
-//Nexus 4 384 x 640
-//JioPhone2 240 x 320
-//Galaxy Fold 280 x 653
-//Nokia N9 480 x 854
-//Nexus 6P 412 x 732
-//Pixel 2 XL 411 x 823
-//Surface Duo 540 x 720
-// ----------------
-
-//---- TABLET ----
-//Tested and working for the following tablet/screen sizes
-//Also tested and working in landscape mode
-// ----------------
-//Nexus 7 600 - 960
-//BB Playbook 600 x 1024
-//iPad/iPad Mini 768 x 1024
-//Kindle Fire HDX 800 x 1280
-//iPad Pro 1024 x 1366
-// ----------------
-
-//---- DESKTOP ----
-//Tested and working for the following desktop sizes
-// ----------------
-//Laptop with MDPI Screen 1280 x 800
-//Generic Laptop 1280 x 950
-//MacBook Air 1440 x 900
-//MacBook Pro 13" 2560 x 1600
-//MackBook Pro 15" 2880 x 1800
-//Macbook Pro 16" 3072 x 1920
-//4K Display 3840 x 2160
-//5K Display 5120 x 2880
-// ----------------
-
-//For tested phones except for adjustments for
-//JioPhone2 240 x 320, Surface Duo 540 x 720 and iPhone 4 320 x 480
 .landing-container {
   height: 100vh;
-  //Other height values weren't included previously
   height: -webkit-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
   height: -moz-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
   height: expression(calc(calc(var(--vh, 1vh) * 100) - 50px));
@@ -135,7 +90,6 @@
 
     .wordChangeAnimation {
       animation: wordChangeAnimation 1.5s ease-out infinite alternate forwards;
-      // animation-play-state: paused;
     }
 
     @keyframes wordChangeOnce {
@@ -204,7 +158,6 @@
       line-height: 1.5em;
       transition: 0.5s;
       display: none;
-      //margin-bottom: 6px;
     }
 
     .center-text {
@@ -296,8 +249,6 @@
     height: expression(calc(calc(var(--vh, 1vh) * 100) - 50px));
     height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
     height: calc(calc(var(--vh, 1vh) * 100) - 50px);
-    // max-height: initial;
-    // min-height: initial;
     justify-content: center;
 
     .landing-heading-container {
@@ -406,11 +357,6 @@
   }
   .landing-header-image {
     min-height: 331.5px;
-    // .landing-image-container {
-    //   img {
-    //     width: 50%;
-    //   }
-    // }
   }
 
   .landing-text-container {
@@ -437,10 +383,6 @@
       h1 {
         font-size: 9vw;
       }
-
-      // h2 {
-      //   @include custom-Roboto($main-grey, 4vw, 500);
-      // }
     }
 
     .landing-image-container {
@@ -601,8 +543,6 @@
     .landing-heading-container {
       padding-top: initial;
       width: 100%;
-      //padding-top: 20px;
-      //height: auto;
       display: initial;
       flex-direction: initial;
       justify-content: initial;
@@ -635,12 +575,9 @@
         display: initial;
         justify-content: initial;
         align-items: initial;
-        //width: 100%;
 
         h3 {
           margin: 0;
-          //width: 95%;
-          //display: none;
           @include custom-Montserrat($main-grey, 0.75em, 400);
           text-align: left;
           line-height: 1.7em;
@@ -797,16 +734,13 @@
         }
 
         .landing-tablet-text {
-          //width: 80px;
           text-align: left;
 
           h3 {
             width: 95%;
-            //display: initial;
             @include custom-Montserrat($main-grey, 1em, 400);
             line-height: 1.7em;
             transition: 0.5s;
-            //color: red;
           }
         }
       }

@@ -1,47 +1,5 @@
 @import "../../utilities/variables.scss";
 
-//---- MOBILE ----
-//Tested and working for the following phones/screen sizes
-//Also tested and working in landscape mode
-// ----------------
-//iPhone XR 414 x 896
-//iPhone 5/SE 320 x 568
-//iPhone 4 320 x 480
-//Galaxy S5 360 x 640
-//iPhone X 375 x 812
-//Nexus 4 384 x 640
-//JioPhone2 240 x 320
-//Galaxy Fold 280 x 653
-//Nokia N9 480 x 854
-//Nexus 6P 412 x 732
-//Pixel 2 XL 411 x 823
-//Surface Duo 540 x 720
-// ----------------
-
-//---- TABLET ----
-//Tested and working for the following tablet/screen sizes
-//Also tested and working in landscape mode
-// ----------------
-//Nexus 7 600 - 960
-//BB Playbook 600 x 1024
-//iPad/iPad Mini 768 x 1024
-//Kindle Fire HDX 800 x 1280
-//iPad Pro 1024 x 1366
-// ----------------
-
-//---- DESKTOP ----
-//Tested and working for the following desktop sizes
-// ----------------
-//Laptop with MDPI Screen 1280 x 800
-//Generic Laptop 1280 x 950
-//MacBook Air 1440 x 900
-//MacBook Pro 13" 2560 x 1600
-//MackBook Pro 15" 2880 x 1800
-//Macbook Pro 16" 3072 x 1920
-//4K Display 3840 x 2160
-//5K Display 5120 x 2880
-// ----------------
-
 .therapy-benefits-container {
   background-color: $main-grey;
   width: 100%;
@@ -153,8 +111,6 @@
 //For mobiles/tablets in portrait mode and above 768px width
 @media only screen and (orientation: portrait) and (min-width: 768px) {
   .therapy-benefits-container {
-    //padding-bottom: 40px;
-  
     .therapy-benefits-row {  
       h3 {
         padding-bottom: 10px;
@@ -175,8 +131,6 @@
 //For desktops and mobiles/tablets in landscape mode
 @media only screen and (orientation: landscape) {
   .therapy-benefits-container {
-    //padding-bottom: 40px;
-  
     .therapy-benefits-row {  
       h3 {
         padding-bottom: 10px;
@@ -195,8 +149,6 @@
 
   @media only screen and (max-width: 569px) {
     .therapy-benefits-container {
-      //padding-bottom: 45px;
-
       h3 {
         font-size: 1.3em;
       }
@@ -218,8 +170,6 @@
 
   @media only screen and (max-width: 321px) {
     .therapy-benefits-container {
-      //padding-bottom: 40px;
-    
       .therapy-benefits-row {  
         h3 {
           padding-bottom: 0px;

@@ -6,8 +6,6 @@ import {
 } from "react-router-dom";
 import './App.css';
 import Nav from '../components/Nav/Nav.js';
-//import NavSideBar from '../components/Nav/NavSideBar.js';
-//import NavCompactBar from '../components/Nav/NavCompactBar.js';
 import Landing from '../components/Landing/Landing.js';
 import Therapy from '../components/Therapy/Therapy.js';
 import OnlineTherapy from '../components/OnlineTherapy/OnlineTherapy.js';
@@ -34,7 +32,6 @@ function App() {
   const [originalCountry, setOriginalCountry] = useState("");
   const [price, setPrice] = useState("Consultar");
   const [currency, setCurrency] = useState("");
-  //const [navType, setNavType] = useState(width >= 915 ? <Nav /> : <NavSideBar />);
 
   const locUrl = 'https://get.geojs.io/v1/ip/country.json';
   const locationPrice = {
@@ -144,14 +141,11 @@ function App() {
       setNavOrientation('vertical');
     } else if ((windowHeight <= 475 && windowWidth <= 915) || (windowHeight <= 300 && windowWidth >= 915)) {
       setNavOrientation('compact');
-      //console.log('compact H', windowHeight, 'W', windowWidth);
     } else if (windowHeight > 475 && windowWidth < 915) {
       setNavOrientation('vertical');
-      //console.log('vertical H', windowHeight, 'W', windowWidth);
     }
     else {
       setNavOrientation('horizontal');
-      //console.log('horizontal H', windowHeight, 'W', windowWidth);
     }
 
     return () => {

@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import emailjs from "emailjs-com";
 import ReCAPTCHA from "react-google-recaptcha";
-// import CountryList from '../../utilities/country_list.js';
 import { FacebookIcon, InstagramIcon, SkypeIcon, EmailIcon, WhatsappIcon } from '../../utilities/icons.js';
 import './Contact.css';
 
@@ -19,18 +18,13 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
   const form = useRef();
   const grecaptchaObject = window.grecaptcha;
 
-  function onChangeCaptcha(value) {
-    // let countryField = document.getElementById('country').value.length;
-    // console.log("Captcha value:", value);
+  function onChangeCaptcha() {
     setDetectCaptcha(true);
     setTimeout(() => {
       if(detectCaptcha) {
-        // grecaptchaObject.reset();
         setDetectCaptcha(false);
       }
     }, 1990);
-    // grecaptchaObject.reset();
-    console.log(grecaptchaObject.getResponse().length);
   }
 
   const sendEmail = (e) => {
@@ -73,7 +67,6 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
       } else {
         setIsEmailValid(false);
         setSubmitButtonColor('form-disabled');
-        // setDetectCaptcha(false);
       }
     }
 
@@ -83,7 +76,6 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
       } else {
         setIsCountryValid(false);
         setSubmitButtonColor('form-disabled');
-        // setDetectCaptcha(false);
       }
     }
 
@@ -95,19 +87,15 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
       } else {
         setIsMessageValid(false);
         setSubmitButtonColor('form-disabled');
-        // setDetectCaptcha(false);
       }
     }
 
     if (currentField === 'checkbox') {
       if (target.checked) {
         setIsPrivacyChecked(true);
-        // console.log(target.checked);
       } else {
         setIsPrivacyChecked(false);
         setSubmitButtonColor('form-disabled');
-        // setDetectCaptcha(false);
-        // console.log(target.checked);
       }
     }
   }
@@ -147,7 +135,6 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
     if ((isCountryValid && isEmailValid && isMessageValid && isPrivacyChecked && detectCaptcha)
       || ((countryField > 0) && isEmailValid && isMessageValid && isPrivacyChecked && detectCaptcha)) {
       if (grecaptchaObject && grecaptchaObject.getResponse().length !== 0) {
-        // console.log('captcha success');
         setSubmitButtonColor('form-fields-filled');
         setToggleCaptcha('hide-item');
         setToggleSubmit('show-item');
@@ -161,7 +148,6 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
       setSubmitButtonColor('showCaptcha');
       setToggleCaptcha('show-item');
       setToggleSubmit('hide-item');
-      // setDetectCaptcha(false);
     } else {
       if(submitButtonText === '¡Enviado!'){
         setSubmitButtonColor('form-submitted');
@@ -172,11 +158,7 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
         setToggleCaptcha('hide-item');
         setToggleSubmit('show-item');
       }
-      // setDetectCaptcha(false);
     }
-
-    // console.log(countryField, isCountryValid, isEmailValid, isMessageValid, isPrivacyChecked, submitButtonColor, detectCaptcha);
-
   }, [isCountryValid, isEmailValid, isMessageValid, isPrivacyChecked, submitButtonColor, detectCaptcha, submitButtonText]);
 
   return (
@@ -314,9 +296,6 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
                   </div>
                   <div className='contact-form-element'>
                     <label required htmlFor='country'>País de Residencia *</label><br />
-                    {/* <select className='contact-form-dropdown' name='country' id='country'>
-                    <CountryList />
-                  </select> */}
                     <input required minLength={2} onChange={checkInputs} className='contact-form-input' name='country' id='country' type='text'></input>
                   </div>
                 </div>
@@ -336,12 +315,6 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
                   </div>
                   <ReCAPTCHA className={`${toggleCaptcha} g-captcha`} sitekey="6LfVskEdAAAAADY9H39WjrRtdmTrYLhtd-QgHrEk" onChange={onChangeCaptcha} />
                   <button className={`${submitButtonColor} ${toggleSubmit}`} type='sumbit' form='contact-form'>{submitButtonText}</button>
-                  {/* {submitButtonColor === ''
-                    ? <button className={submitButtonColor} type='sumbit' form='contact-form'>Enviar</button>
-                    : submitButtonColor === 'showCaptcha'
-                      ? <ReCAPTCHA sitekey="6LfVskEdAAAAADY9H39WjrRtdmTrYLhtd-QgHrEk" onChange={onChangeCaptcha} />
-                      : <button className={submitButtonColor} type='sumbit' form='contact-form'>Enviar</button>
-                  } */}
                 </div>
               </form>
             </div>

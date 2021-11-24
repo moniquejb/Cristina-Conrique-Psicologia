@@ -74,8 +74,6 @@
   }
 
   .li-text:hover {
-    // background-color: rgba($color: $light-yellow, $alpha: 0.3);
-    // font-size: 1.6em;
     cursor: pointer;
   }
 
@@ -113,9 +111,6 @@
     height: 30px;
     width: 30px;
     fill: $main-grey;
-    // &:hover {
-    //   transform: scale(1.15);
-    // }
   }
 }
 
@@ -203,10 +198,6 @@
     .li-text:visited {
       font-size: 1.25em;
     }
-
-    // .li-text:hover {
-    //   font-size: 1.3em;
-    // }
 
     .li-img {
       height: 100px;

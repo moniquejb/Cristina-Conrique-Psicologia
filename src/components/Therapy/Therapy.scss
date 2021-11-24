@@ -1,49 +1,5 @@
 @import "../../utilities/variables.scss";
 
-//---- MOBILE ----
-//Tested and working for the following phones/screen sizes
-//Also tested and working in landscape mode
-// ----------------
-//iPhone XR 414 x 896
-//iPhone 5/SE 320 x 568
-//iPhone 4 320 x 480
-//Galaxy S5 360 x 640
-//iPhone X 375 x 812
-//Nexus 4 384 x 640
-//JioPhone2 240 x 320
-//Galaxy Fold 280 x 653
-//Nokia N9 480 x 854
-//Nexus 6P 412 x 732
-//Pixel 2 XL 411 x 823
-//Surface Duo 540 x 720
-// ----------------
-
-//---- TABLET ----
-//Tested and working for the following tablet/screen sizes
-//Also tested and working in landscape mode
-// ----------------
-//Nexus 7 600 - 960
-//BB Playbook 600 x 1024
-//iPad/iPad Mini 768 x 1024
-//Kindle Fire HDX 800 x 1280
-//iPad Pro 1024 x 1366
-// ----------------
-
-//---- DESKTOP ----
-//Tested and working for the following desktop sizes
-// ----------------
-//Laptop with MDPI Screen 1280 x 800
-//Generic Laptop 1280 x 950
-//MacBook Air 1440 x 900
-//MacBook Pro 13" 2560 x 1600
-//MackBook Pro 15" 2880 x 1800
-//Macbook Pro 16" 3072 x 1920
-//4K Display 3840 x 2160
-//5K Display 5120 x 2880
-// ----------------
-
-//For tested phones except for adjustments for
-//JioPhone2 240 x 320 and Galaxy Fold 280 x 653
 .therapy-container {
   height: auto;
   width: 100%;
@@ -59,8 +15,6 @@
     padding: 0;
     @include main-heading($dark-2-red);
     text-align: center;
-    // padding-top: 30px;
-    // padding-bottom: 10px;
   }
 
   .therapy-text {
@@ -84,7 +38,6 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    //padding-bottom: 20px;
 
     .therapy-individuals {
       width: 100%;
@@ -240,7 +193,6 @@
       justify-content: center;
       align-items: stretch;
       flex-direction: row;
-      //padding-bottom: 10px;
 
       .therapy-individuals {
         width: 33%;
@@ -282,56 +234,6 @@
       }
     }
   }
-
-  // @media only screen and (max-width: 640px) {
-  //   .therapy-container {
-  //     .therapy-individuals-container {
-  //       justify-content: center;
-  //       align-items: stretch;
-  //       flex-direction: row;
-  //       padding-bottom: 10px;
-
-  //       .therapy-individuals {
-  //         width: 33%;
-  //         flex-direction: column;
-  //         justify-content: flex-start;
-
-  //         .therapy-individuals-heading {
-  //           h3 {
-  //             padding-bottom: 20px;
-  //           }
-  //         }
-
-  //         .therapy-individuals-img {
-  //           width: 50%;
-
-  //           img {
-  //             padding-right: 0px;
-  //           }
-  //         }
-
-  //         .therapy-individuals-text {
-  //           width: 90%;
-  //           display: flex;
-  //           justify-content: center;
-  //           align-items: center;
-
-  //           ul {
-  //             margin: 0;
-  //             padding: 20px 5px 20px 5px;
-  //             @include custom-Montserrat($dark-1-red, 0.85em, 400);
-  //             line-height: 22px;
-  //           }
-  //         }
-  //       }
-
-  //       .therapy-white-bg {
-  //         background-color: initial;
-  //         padding-bottom: 0px;
-  //       }
-  //     }
-  //   }
-  // }
 }
 
 //For most tablets
@@ -341,7 +243,6 @@
       justify-content: center;
       align-items: stretch;
       flex-direction: row;
-      //padding-bottom: 10px;
 
       .therapy-individuals {
         width: 33%;
@@ -391,15 +292,7 @@
 
 //For Kindle Fire HDX 800 x 1280 and iPad Pro 1024 x 1366
 @media only screen and (min-width: 800px) {
-  .therapy-container {
-    // h1 {
-    //   margin: 0;
-    //   //padding: 0;
-    //   @include main-heading($dark-2-red);
-    //   text-align: center;
-    //   //padding-top: 30px;
-    // }
-    
+  .therapy-container {    
     .therapy-text {
       width: 90%;
   

@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
-//import { useLocation } from 'react-router-dom';
 import { DepressionContent, AnxietyContent, SocialContent, LGBTContent, VideosContent } from '../../utilities/resourceContent.js';
 import './Resources.css';
-
-// ************************
-//TODO- figure out how to change class of only selected resourse using React instead of directly changing DOM
-// ************************
 
 const Resources = ({ windowHeight, windowWidth }) => {
   const [toggleContentDepression, setToggleContentDepression] = useState(true);
@@ -146,7 +141,6 @@ const Resources = ({ windowHeight, windowWidth }) => {
             {(((windowHeight > windowWidth) && windowWidth < 600)
               || ((windowHeight < windowWidth) && windowWidth <= 480))
               && <SocialContent toggleContentSocial={toggleContentSocial} />}
-            {/* <div className='breakRes'></div> */}
             <div className={`${imageClass} resource-box`} id='resource-box-4' onClick={handleToggleResource}>
               <a href={!toggleContentLGBT ? `/recursos#material-lgbt` : 'javascript:void(0);'}>
                 <div className='resource-box-content'>
