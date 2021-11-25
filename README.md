@@ -9,7 +9,7 @@ This website, created from scratch, was made to promote the online services of M
 ## Technologies
 * JavaScript
 * React.js
-* CSS (SASS)
+* CSS (SCSS)
 * HTML
 
 ## Features
