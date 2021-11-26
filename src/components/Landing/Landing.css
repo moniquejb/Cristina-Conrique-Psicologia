@@ -99,6 +99,8 @@
 .landing-header-image .landing-heading-container .wordChangeAnimation {
   -webkit-animation: wordChangeAnimation 1.5s ease-out infinite alternate forwards;
           animation: wordChangeAnimation 1.5s ease-out infinite alternate forwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 @-webkit-keyframes wordChangeOnce {
   0% {

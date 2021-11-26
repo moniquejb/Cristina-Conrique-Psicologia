@@ -14,10 +14,10 @@ const Landing = ({ windowHeight, windowWidth }) => {
       //Once all words have been used, reset i and start from beggining of array- otherwise continue through list
       i === 7 ? i = 0 : i += 1;
       setLandingWord(landingWordArr[i]);
-      document.getElementById('landing-word').classList.add('wordChangeAnimation');
+      document.getElementById('landing-word').style.animationPlayState = 'running';
     }, 3000);
     return () => {
-      document.getElementById('landing-word').classList.remove('wordChangeAnimation');
+      document.getElementById('landing-word').style.animationPlayState = 'paused';
       clearInterval(wordChange);
     };
   }, [])
@@ -38,7 +38,7 @@ const Landing = ({ windowHeight, windowWidth }) => {
           <div className='landing-heading-container'>
             <div className='landing-heading-text'>
               <h2>Sientes...</h2>
-              <h1 id='landing-word' className='wordChangeOnce'>{landingWord}</h1>
+              <h1 id='landing-word' className='wordChangeOnce wordChangeAnimation'>{landingWord}</h1>
               <h2>¿Estás pasando por un momento difícil?</h2>
             </div>
             <div className='landing-tablet-text'>

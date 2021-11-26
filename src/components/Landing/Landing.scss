@@ -90,6 +90,7 @@
 
     .wordChangeAnimation {
       animation: wordChangeAnimation 1.5s ease-out infinite alternate forwards;
+      animation-play-state: paused;
     }
 
     @keyframes wordChangeOnce {
