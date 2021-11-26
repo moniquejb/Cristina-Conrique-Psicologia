@@ -15,11 +15,14 @@ const Nav = ({ navOrientation }) => {
   const handleSideNavOpen = () => {
     //Toggle side navigation bar on click
     setSideNavOpen(prev => prev ? false : true);
+    !sideNavOpen ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto';
+    console.log('open');
   }
 
   const handleCompactNavOpen = () => {
     //Toggle compact navigation bar on click
     setCompactNavOpen(prev => prev ? false : true);
+    !compactNavOpen ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto';
   }
 
   const handleNavLanding = () => {
