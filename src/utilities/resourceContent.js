@@ -133,7 +133,7 @@ export const SocialContent = ({ toggleContentSocial }) => {
         <ul hidden={toggleContentSocial}>
           <li><a target='_blank'
             rel="noreferrer"
-            href='https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/sites/default/files/sincfiles/wsas-media-mediafile_sasdocumento/2019/13_guia_afrontando_estres.pdf'>3 técnicas asertivas para saber decir no
+            href='https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/sites/default/files/sincfiles/wsas-media-mediafile_sasdocumento/2019/13_guia_afrontando_estres.pdf'>3 técnicas asertivas afrontando el estrés
           </a></li>
           <li><a target='_blank'
             rel="noreferrer"
