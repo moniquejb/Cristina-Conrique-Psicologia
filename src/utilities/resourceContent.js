@@ -49,6 +49,10 @@ export const DepressionContent = ({ toggleContentDepression }) => {
             rel="noreferrer"
             href='https://imagenysalud14.files.wordpress.com/2016/03/2013_depresion_que_puedo_hacer_para_ayudarme_guia_autoayuda_consejeria3.pdf'>Guía de autoayuda, ¿qué puedo hacer para ayudarme a mí mismo si tengo depresión?
           </a></li>
+          <li><a target='_blank'
+            rel="noreferrer"
+            href='https://jaimeburque.com/blog/las-distorsiones-cognitivas-por-homer-simpson/'>Distorsiones Cognitivas Explicadas
+          </a></li>
         </ul>
       </div>
     </>
