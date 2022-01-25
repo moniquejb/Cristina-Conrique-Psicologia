@@ -18,7 +18,7 @@ This website, created from scratch, was made to promote the online services of M
 
 ## Development Process
 ### Design
-As a trained Information Designer, I was able to use my graphic design skills to create a realistic wireframe of each section of the website using Adobe Illustrator & Photoshop (screenshot below). I mostly based my code on these layouts, but made multiple changes when something didn't translate well from static images to a functioning website. I also designed the logo, created or modified all of the images used and shot the photo of Cristina Conrique for the _'Sobre Mí (About Me)'_ section. 
+As a trained Information Designer, I was able to use my graphic design skills to create a designs of each section of the website using Adobe Illustrator & Photoshop (screenshot below). I mostly based my code on these layouts, but made multiple changes when something didn't translate well from static images to a functioning website. I also designed the logo, created or modified all of the images used and shot the photo of Cristina Conrique for the _'Sobre Mí (About Me)'_ section. 
 
 [![Layout](https://i.postimg.cc/Y9bN82rh/image.png)](https://postimg.cc/r0Rtwktk)
 
