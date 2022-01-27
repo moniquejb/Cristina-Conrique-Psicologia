@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className='footer-container' id='footer'>
       <div className='footer-text-container'>
-        <p>© 2021 Cristina Conrique&nbsp;&nbsp;|<br className='break-foot-small-mobile'/>&nbsp;&nbsp;Todos los derechos reservados&nbsp;&nbsp;|&nbsp;&nbsp;</p>
+        <p>© {new Date().getFullYear()} Cristina Conrique&nbsp;&nbsp;|<br className='break-foot-small-mobile'/>&nbsp;&nbsp;Todos los derechos reservados&nbsp;&nbsp;|&nbsp;&nbsp;</p>
         <div className='break-foot-large-mobile'></div>
         <div className='break-foot-small-mobile'></div>
         <p>Imágenes de&nbsp;
