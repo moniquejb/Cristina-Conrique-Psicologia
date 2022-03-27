@@ -189,7 +189,7 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
                     <a
                       target='_blank'
                       rel="noreferrer"
-                      href="https://api.whatsapp.com/send?phone=27726406660">
+                      href="https://api.whatsapp.com/send?phone=34687114633">
                       <WhatsappIcon />
                     </a>
                   </div>
@@ -197,8 +197,8 @@ const Contact = ({ handleToggleLegal, windowHeight, windowWidth, originalCountry
                     <a
                       target='_blank'
                       rel="noreferrer"
-                      href="https://api.whatsapp.com/send?phone=27726406660">
-                      <h3>+27 72 640 6660</h3>
+                      href="https://api.whatsapp.com/send?phone=34687114633">
+                      <h3>+34 687 11 46 33</h3>
                     </a>
                   </div>
                 </div>
