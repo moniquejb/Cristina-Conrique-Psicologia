@@ -3,7 +3,7 @@
   height: 100vh;
   height: expression(calc(calc(var(--vh, 1vh) * 100) - 50px));
   height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
-  height: calc(calc(var(--vh, 1vh) * 100) - 50px);
+  height: calc(var(--vh, 1vh) * 100 - 50px);
   min-height: 592px;
 }
 
@@ -120,7 +120,7 @@
   height: 20vh;
   height: expression(calc(calc(var(--vh, 1vh) * 20) - 50px));
   height: -o-calc(calc(calc(var(--vh, 1vh) * 20) - 50px));
-  height: calc(calc(var(--vh, 1vh) * 20) - 50px);
+  height: calc(var(--vh, 1vh) * 20 - 50px);
   min-height: 78.4px;
   display: flex;
   justify-content: center;
@@ -178,7 +178,7 @@
     height: 100vh;
     height: expression(calc(calc(var(--vh, 1vh) * 100) - 50px));
     height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
-    height: calc(calc(var(--vh, 1vh) * 100) - 50px);
+    height: calc(var(--vh, 1vh) * 100 - 50px);
     min-height: 435px;
     width: 100%;
     background-color: #F8F8F8;
@@ -196,7 +196,7 @@
     height: 35vh;
     height: expression(calc(calc(var(--vh, 1vh) * 35) - 50px));
     height: -o-calc(calc(calc(var(--vh, 1vh) * 35) - 50px));
-    height: calc(calc(var(--vh, 1vh) * 35) - 50px);
+    height: calc(var(--vh, 1vh) * 35 - 50px);
     min-height: 119.74px;
     align-items: center;
   }
@@ -220,7 +220,7 @@
     height: 100vh;
     height: expression(calc(calc(var(--vh, 1vh) * 100) - 50px));
     height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
-    height: calc(calc(var(--vh, 1vh) * 100) - 50px);
+    height: calc(var(--vh, 1vh) * 100 - 50px);
     justify-content: center;
   }
   .landing-header-image .landing-heading-container h2 {
@@ -295,7 +295,7 @@
     height: 25vh;
     height: expression(calc(calc(var(--vh, 1vh) * 25) - 50px));
     height: -o-calc(calc(calc(var(--vh, 1vh) * 25) - 50px));
-    height: calc(calc(var(--vh, 1vh) * 25) - 50px);
+    height: calc(var(--vh, 1vh) * 25 - 50px);
     min-height: initial;
   }
   .landing-text-container .landing-textbox a {
@@ -338,7 +338,7 @@
     height: 20vh;
     height: expression(calc(calc(var(--vh, 1vh) * 20) - 50px));
     height: -o-calc(calc(calc(var(--vh, 1vh) * 20) - 50px));
-    height: calc(calc(var(--vh, 1vh) * 20) - 50px);
+    height: calc(var(--vh, 1vh) * 20 - 50px);
     min-height: 73.99px;
   }
   .landing-text-container .landing-textbox a {
@@ -376,7 +376,7 @@
     height: 25vh;
     height: expression(calc(calc(var(--vh, 1vh) * 20) - 50px));
     height: -o-calc(calc(calc(var(--vh, 1vh) * 20) - 50px));
-    height: calc(calc(var(--vh, 1vh) * 20) - 50px);
+    height: calc(var(--vh, 1vh) * 20 - 50px);
     min-height: 82.99px;
   }
   .landing-text-container .landing-textbox h3 {
@@ -394,7 +394,7 @@
   .landing-container {
     height: expression(calc(calc(var(--vh, 1vh) * 100) - 130px));
     height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 130px));
-    height: calc(calc(var(--vh, 1vh) * 100) - 130px);
+    height: calc(var(--vh, 1vh) * 100 - 130px);
     min-height: 850px;
   }
 
@@ -414,7 +414,7 @@
     height: 25vh;
     height: expression(calc(calc(var(--vh, 1vh) * 25) - 130px));
     height: -o-calc(calc(calc(var(--vh, 1vh) * 25) - 130px));
-    height: calc(calc(var(--vh, 1vh) * 25) - 130px);
+    height: calc(var(--vh, 1vh) * 25 - 130px);
     min-height: 115px;
   }
   .landing-text-container .landing-textbox h3 {
@@ -427,7 +427,7 @@
     height: 100vh;
     height: expression(calc(calc(var(--vh, 1vh) * 100) - 50px));
     height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
-    height: calc(calc(var(--vh, 1vh) * 100) - 50px);
+    height: calc(var(--vh, 1vh) * 100 - 50px);
     min-height: 250px;
     width: 100%;
     background-color: #F8F8F8;
@@ -509,7 +509,7 @@
     height: 40vh;
     height: expression(calc(calc(var(--vh, 1vh) * 40) - 50px));
     height: -o-calc(calc(calc(var(--vh, 1vh) * 40) - 50px));
-    height: calc(calc(var(--vh, 1vh) * 40) - 50px);
+    height: calc(var(--vh, 1vh) * 40 - 50px);
     min-height: 70px;
     display: flex;
     justify-content: center;
@@ -609,7 +609,7 @@
   .landing-container {
     height: expression(calc(calc(var(--vh, 1vh) * 100) - 50px));
     height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
-    height: calc(calc(var(--vh, 1vh) * 100) - 50px);
+    height: calc(var(--vh, 1vh) * 100 - 50px);
     min-height: 297px;
   }
 
@@ -654,7 +654,7 @@
   .landing-text-container {
     height: expression(calc(calc(var(--vh, 1vh) * 40) - 50px));
     height: -o-calc(calc(calc(var(--vh, 1vh) * 40) - 50px));
-    height: calc(calc(var(--vh, 1vh) * 40) - 50px);
+    height: calc(var(--vh, 1vh) * 40 - 50px);
     min-height: 88.8px;
   }
   .landing-text-container .landing-textbox h3 {
@@ -707,7 +707,7 @@
   .landing-text-container {
     min-height: expression(calc(calc(var(--vh, 1vh) * 40) - 50px));
     min-height: -o-calc(calc(calc(var(--vh, 1vh) * 40) - 50px));
-    min-height: calc(calc(var(--vh, 1vh) * 40) - 50px);
+    min-height: calc(var(--vh, 1vh) * 40 - 50px);
     min-height: initial;
   }
   .landing-text-container .landing-textbox a {
@@ -763,7 +763,7 @@
   .landing-container {
     height: expression(calc(calc(var(--vh, 1vh) * 100) - 130px));
     height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 130px));
-    height: calc(calc(var(--vh, 1vh) * 100) - 130px);
+    height: calc(var(--vh, 1vh) * 100 - 130px);
     min-height: 510px;
   }
 
@@ -781,7 +781,7 @@
   .landing-text-container {
     height: expression(calc(calc(var(--vh, 1vh) * 40) - 130px));
     height: -o-calc(calc(calc(var(--vh, 1vh) * 40) - 130px));
-    height: calc(calc(var(--vh, 1vh) * 40) - 130px);
+    height: calc(var(--vh, 1vh) * 40 - 130px);
     min-height: 94px;
   }
   .landing-text-container .landing-textbox a {
@@ -798,7 +798,7 @@
     height: 100vh;
     height: expression(calc(calc(var(--vh, 1vh) * 100) - 130px));
     height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 130px));
-    height: calc(calc(var(--vh, 1vh) * 100) - 130px);
+    height: calc(var(--vh, 1vh) * 100 - 130px);
     min-height: 472px;
     width: 100%;
   }
@@ -815,7 +815,7 @@
     height: 55vh;
     height: expression(calc(var(--vh, 1vh) * 55));
     height: -o-calc(calc(var(--vh, 1vh) * 55));
-    height: calc(calc(var(--vh, 1vh) * 55));
+    height: calc(var(--vh, 1vh) * 55);
     min-height: 331.09px;
     z-index: -5;
   }
@@ -827,7 +827,7 @@
     height: 100vh;
     height: expression(calc(var(--vh, 1vh) * 100));
     height: -o-calc(calc(var(--vh, 1vh) * 100));
-    height: calc(calc(var(--vh, 1vh) * 100));
+    height: calc(var(--vh, 1vh) * 100);
     min-height: 601.99px;
     top: 0;
     z-index: -10;
@@ -841,7 +841,7 @@
     height: 100vh;
     height: expression(calc(var(--vh, 1vh) * 100));
     height: -o-calc(calc(var(--vh, 1vh) * 100));
-    height: calc(calc(var(--vh, 1vh) * 100));
+    height: calc(var(--vh, 1vh) * 100);
     min-height: 601.99px;
     width: 100%;
     display: grid;
@@ -854,7 +854,7 @@
     height: 100vh;
     height: expression(calc(var(--vh, 1vh) * 100));
     height: -o-calc(calc(var(--vh, 1vh) * 100));
-    height: calc(calc(var(--vh, 1vh) * 100));
+    height: calc(var(--vh, 1vh) * 100);
     min-height: 601.99px;
     width: 100%;
     grid-area: landingImage;
@@ -875,7 +875,7 @@
     height: 55vh;
     height: expression(calc(var(--vh, 1vh) * 55));
     height: -o-calc(calc(var(--vh, 1vh) * 55));
-    height: calc(calc(var(--vh, 1vh) * 55));
+    height: calc(var(--vh, 1vh) * 55);
     min-height: 331.09px;
     background-color: initial;
     display: flex;

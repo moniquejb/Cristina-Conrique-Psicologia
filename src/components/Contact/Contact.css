@@ -497,7 +497,7 @@
     min-width: 45px;
   }
   .contact-container .contact-details-form-container .contact-details-container .contact-details-box .contact-detail .contact-info a h3 {
-    font-size: 2vw;
+    font-size: 1.7vw;
   }
   .contact-container .contact-details-form-container .contact-details-container .contact-details-box .contact-social-media {
     display: flex;
@@ -506,7 +506,7 @@
   .contact-container .contact-details-form-container .contact-details-container .contact-details-box .contact-social-media h3 {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
-    font-size: 2.5em;
+    font-size: 2.3em;
     color: #F8F8F8;
     padding: 0;
     margin: 40px 0 30px 0;
@@ -515,8 +515,8 @@
     margin: 0 30px 20px 0;
   }
   .contact-container .contact-details-form-container .contact-details-container .contact-details-box .contact-social-media .contact-social-icons a svg {
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     min-height: 60px;
     min-width: 60px;
     fill: #F8F8F8;
@@ -550,11 +550,11 @@
     width: 100%;
   }
   .contact-container .contact-details-form-container .contact-form-container .contact-form-box .contact-form .contact-form-left .contact-form-element label {
-    font-size: 1.7vw;
+    font-size: 1.4vw;
   }
   .contact-container .contact-details-form-container .contact-form-container .contact-form-box .contact-form .contact-form-left .contact-form-element input {
     width: 85%;
-    height: 50px;
+    height: 45px;
   }
   .contact-container .contact-details-form-container .contact-form-container .contact-form-box .contact-form-right {
     width: 60%;
@@ -566,7 +566,7 @@
     height: 100%;
   }
   .contact-container .contact-details-form-container .contact-form-container .contact-form-box .contact-form-right .contact-form-textarea label {
-    font-size: 1.7vw;
+    font-size: 1.4vw;
   }
   .contact-container .contact-details-form-container .contact-form-container .contact-form-box .contact-form-right .contact-form-textarea textarea {
     height: 85%;
@@ -637,7 +637,7 @@
     font-size: 1.4vw;
   }
   .contact-container .contact-details-form-container .contact-form-container .contact-form-box .contact-form .contact-form-left .contact-form-element input {
-    height: 80px;
+    height: 60px;
     font-size: 2em;
     padding-left: 20px;
   }
@@ -694,7 +694,7 @@
     font-size: 1.2vw;
   }
   .contact-container .contact-details-form-container .contact-form-container .contact-form-box .contact-form .contact-form-left .contact-form-element input {
-    height: 100px;
+    height: 80px;
   }
   .contact-container .contact-details-form-container .contact-form-container .contact-form-box .contact-form-right .contact-form-textarea label {
     font-size: 1.2vw;

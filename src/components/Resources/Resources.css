@@ -125,7 +125,7 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 7vw;
-  color: #88612a;
+  color: rgb(136, 97, 42);
 }
 .resources-container .resource-flex-container .resource-content {
   display: flex;
@@ -218,7 +218,7 @@
     min-height: 100vh;
     min-height: expression(calc(calc(var(--vh, 1vh) * 100) - 50px));
     min-height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
-    min-height: calc(calc(var(--vh, 1vh) * 100) - 50px);
+    min-height: calc(var(--vh, 1vh) * 100 - 50px);
     justify-content: flex-start;
   }
   .resources-container .resource-flex-container .resource-boxes-container {
@@ -289,7 +289,7 @@
     min-height: 100vh;
     min-height: expression(calc(calc(var(--vh, 1vh) * 100) - 50px));
     min-height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 50px));
-    min-height: calc(calc(var(--vh, 1vh) * 100) - 50px);
+    min-height: calc(var(--vh, 1vh) * 100 - 50px);
     justify-content: flex-start;
   }
   .resources-container .resource-flex-container .resource-boxes-container .resource-box {
@@ -406,7 +406,7 @@
     min-height: 100vh;
     min-height: expression(calc(calc(var(--vh, 1vh) * 100) - 130px));
     min-height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 130px));
-    min-height: calc(calc(var(--vh, 1vh) * 100) - 130px);
+    min-height: calc(var(--vh, 1vh) * 100 - 130px);
   }
 }
 @media only screen and (orientation: landscape) and (min-height: 768px) and (min-width: 1024px) {
@@ -414,7 +414,7 @@
     min-height: 100vh;
     min-height: expression(calc(calc(var(--vh, 1vh) * 100) - 245px));
     min-height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 245px));
-    min-height: calc(calc(var(--vh, 1vh) * 100) - 245px);
+    min-height: calc(var(--vh, 1vh) * 100 - 245px);
   }
 }
 @media only screen and (orientation: landscape) and (min-height: 768px) and (min-width: 2560px) {
@@ -422,7 +422,7 @@
     min-height: 100vh;
     min-height: expression(calc(calc(var(--vh, 1vh) * 100) - 315px));
     min-height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 315px));
-    min-height: calc(calc(var(--vh, 1vh) * 100) - 315px);
+    min-height: calc(var(--vh, 1vh) * 100 - 315px);
   }
 }
 @media only screen and (orientation: portrait) and (min-height: 960px) and (min-width: 600px) {
@@ -430,7 +430,7 @@
     min-height: 100vh;
     min-height: expression(calc(calc(var(--vh, 1vh) * 100) - 165px));
     min-height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 165px));
-    min-height: calc(calc(var(--vh, 1vh) * 100) - 165px);
+    min-height: calc(var(--vh, 1vh) * 100 - 165px);
   }
 }
 @media only screen and (orientation: portrait) and (min-height: 960px) and (min-width: 914px) {
@@ -438,6 +438,6 @@
     min-height: 100vh;
     min-height: expression(calc(calc(var(--vh, 1vh) * 100) - 245px));
     min-height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 245px));
-    min-height: calc(calc(var(--vh, 1vh) * 100) - 245px);
+    min-height: calc(var(--vh, 1vh) * 100 - 245px);
   }
 }/*# sourceMappingURL=Resources.css.map */

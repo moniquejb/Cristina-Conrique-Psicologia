@@ -5,7 +5,7 @@
   height: 100vh;
   height: expression(calc(calc(var(--vh, 1vh) * 100) - 48px));
   height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 48px));
-  height: calc(calc(var(--vh, 1vh) * 100) - 48px);
+  height: calc(var(--vh, 1vh) * 100 - 48px);
   position: fixed;
   bottom: 0;
   left: 0;
@@ -170,7 +170,7 @@
     height: 100vh;
     height: expression(calc(calc(var(--vh, 1vh) * 100) - 83px));
     height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 83px));
-    height: calc(calc(var(--vh, 1vh) * 100) - 83px);
+    height: calc(var(--vh, 1vh) * 100 - 83px);
   }
   .legal-warning-container .legal-warning-bg .legal-warning-heading-text-container h1 {
     font-size: 3vw;
@@ -181,7 +181,7 @@
     height: 100vh;
     height: expression(calc(calc(var(--vh, 1vh) * 100) - 158px));
     height: -o-calc(calc(calc(var(--vh, 1vh) * 100) - 158px));
-    height: calc(calc(var(--vh, 1vh) * 100) - 158px);
+    height: calc(var(--vh, 1vh) * 100 - 158px);
   }
   .legal-warning-container .legal-warning-bg .legal-warning-exit {
     font-size: 3.5em;

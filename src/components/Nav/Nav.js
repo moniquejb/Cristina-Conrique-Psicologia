@@ -31,6 +31,7 @@ const Nav = ({ navOrientation }) => {
     if (location.pathname === '/') {
       setSideNavOpen(false);
       setCompactNavOpen(false);
+      document.body.style.overflow = 'auto'
     }
   }
 
