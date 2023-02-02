@@ -18,7 +18,7 @@ const TherapyBenefits = lazy(() => import('../components/TherapyBenefits/Therapy
 const FAQs = lazy(() => import('../components/FAQs/FAQs.js'));
 const Resources = lazy(() => import('../components/Resources/Resources.js'));
 const LegalWarning = lazy(() => import('../components/LegalWarning/LegalWarning.js'));
-const renderLoader = () => <img height="30px" width="auto" src='images/loading-resource.svg'></img>;
+const renderLoader = () => <img height="30px" width="auto" src='images/loading-resource.svg' alt=''></img>;
 
 let width = document.documentElement.clientWidth;
 let height = document.documentElement.clientHeight;
@@ -38,22 +38,23 @@ function App() {
   const locUrl = 'https://get.geojs.io/v1/ip/country.json';
   const locationPrice = {
     prices: {
-      MX: 500, //Mexico
-      US: 35, //USA
-      CA: 35, //Canada
-      ZA: 500, //South Africa
-      ES: 35, //Spain
-      AR: 2500, //Argentina
+      MX: 550, //Mexico
+      US: 40, //USA
+      CA: 40, //Canada
+      ZA: 550, //South Africa
+      ES: 40, //Spain
+      AR: 4500, //Argentina
       PE: 100, //Peru
-      GB: 35, //Great Britain
+      GB: 40, //Great Britain
       AU: 55, //Australia
       NZ: 55, //New Zealand
-      VE: 10000, //Venezuela
+      VE: 30, //Venezuela - using USD
       UY: 1000, //Uruguay
-      GT: 200, //Guatemala
-      CL: 20000, //Chile
-      HN: 600, //Honduras
-      CO: 90000 //Colombia
+      GT: 220, //Guatemala
+      CL: 25000, //Chile
+      HN: 700, //Honduras
+      CO: 120000, //Colombia
+      BO: 195 //Bolivia
 
     },
     currency: {
@@ -67,12 +68,13 @@ function App() {
       GB: '£', //Great Britain
       AU: 'A$ ', //Australia
       NZ: 'NZ$ ', //New Zealand
-      VE: 'Bs.', //Venezuala
+      VE: 'US$ ', //Venezuala - using USD
       UY: '$U ', // Uruguay
       GT: 'Q', //Guatamala
       CL: 'CLP$ ', //Chile
       HL: 'L', //Honduras
-      CO: 'COL$ ' //Colombia
+      CO: 'COL$ ', //Colombia
+      BO: 'Bs.' //Bolivia
     }
   }
 
@@ -182,6 +184,7 @@ function App() {
               </Suspense>
               <About windowHeight={windowHeight} windowWidth={windowWidth} />
               <Prices price={price} currency={currency} country={country} />
+              <Reviews />
               <Contact handleToggleLegal={handleToggleLegal} windowHeight={windowHeight} windowWidth={windowWidth} originalCountry={originalCountry} />
           </Route>
         </Switch>
