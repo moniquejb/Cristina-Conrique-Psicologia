@@ -12,6 +12,7 @@ import About from '../components/About/About.js';
 import Contact from '../components/Contact/Contact.js';
 import Footer from '../components/Footer/Footer.js';
 import Prices from '../components/Prices/Prices.js';
+// import Reviews from '../components/Reviews/Reviews.js';
 
 const OnlineTherapy = lazy(() => import('../components/OnlineTherapy/OnlineTherapy.js'));
 const TherapyBenefits = lazy(() => import('../components/TherapyBenefits/TherapyBenefits.js'));
@@ -184,7 +185,7 @@ function App() {
               </Suspense>
               <About windowHeight={windowHeight} windowWidth={windowWidth} />
               <Prices price={price} currency={currency} country={country} />
-              <Reviews />
+              {/* <Reviews /> */}
               <Contact handleToggleLegal={handleToggleLegal} windowHeight={windowHeight} windowWidth={windowWidth} originalCountry={originalCountry} />
           </Route>
         </Switch>
