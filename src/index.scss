@@ -34,7 +34,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: $main-grey;
+  background-color: $main-grey !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;

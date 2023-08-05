@@ -225,7 +225,6 @@
     height: 18px;
     width: 18px;
   }
-
   .nav-droplet {
     position: fixed;
     top: 100px;
@@ -236,7 +235,6 @@
   .nav-compact-container ul {
     font-size: 1em;
   }
-
   .nav-droplet {
     left: 40%;
   }

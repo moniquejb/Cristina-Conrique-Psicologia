@@ -45,6 +45,7 @@ const NavSideBar = () => {
             <li><a onClick={handleNavLanding} href='/#terapia' className='li-text'>Terapia</a></li>
             <li><a onClick={handleNavLanding} href='/#sobre' className='li-text'>Sobre Mí</a></li>
             <li><a onClick={handleNavLanding} href='/#tarifas' className='li-text'>Tarifas</a></li>
+            <li><a onClick={handleNavLanding} href='/#resenas' className='li-text'>Reseñas</a></li>
             <li className='li-img'><a onClick={handleNavLanding} href='/#inicio'><img src='images/logo-small.png' alt='Psicóloga Cristina Conrique Logo'></img></a></li>
             <li><a href='/recursos' className='li-text'>Recursos</a></li>
             <li><a href='/faqs' className='li-text'>FAQs</a></li>

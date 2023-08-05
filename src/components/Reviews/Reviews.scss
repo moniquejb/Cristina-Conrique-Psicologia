@@ -1,0 +1,112 @@
+@import "../../utilities/variables.scss";
+
+.reviews-container {
+  height: auto;
+  // min-height: 800px;
+  width: 100%;
+  background-color: $main-blue-bg;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 30px 0 40px 0;
+  font-family: 'Montserrat', sans-serif;
+
+  h1 {
+    margin: 0 0 30px 0;
+    padding: 0;
+    @include main-heading($main-grey);
+  }
+
+  .carousel {
+    width: 90%;
+  }
+
+  .card {
+    border-radius: 10px;
+    border: none;
+    background-color: rgba($color: $dark-1-blue, $alpha: 0.2);
+    color: white;
+
+    .card-body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 260px;
+
+      @media only screen and (max-width: 1599.98px) { 
+        min-height: 280px;
+      }
+
+      @media only screen and (max-width: 1199.98px) { 
+        min-height: 300px;
+      }
+
+      @media only screen and (max-width: 991.98px) { 
+        min-height: 320px;
+      }
+
+      @media only screen and (max-width: 767.98px) { 
+        min-height: 400px;
+      }
+
+      @media only screen and (max-width: 575.98px) { 
+        min-height: 470px;
+      }
+
+      @media only screen and (max-width: 479.98px) { 
+        min-height: 520px;
+      }
+
+      @media only screen and (max-width: 359.98px) { 
+        min-height: 570px;
+      }
+
+      @media only screen and (max-width: 319.98px) { 
+        min-height: 620px;
+      }
+
+      p {
+        font-size: 1rem;
+
+        @media only screen and (max-width: 991.98px) { 
+          font-size: 0.9rem;
+        }
+
+        @media only screen and (max-width:419.98px) { 
+          font-size: 0.8rem;
+        }
+      }
+
+      blockquote {
+        @media only screen and (max-width: 991.98px) { 
+          font-size: 1rem;
+        }
+      }
+
+      footer {
+        color: $dark-2-blue;
+      }
+    }
+  }
+
+  .carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+  }
+
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba($color: $dark-1-blue, $alpha: 0.5);
+    border-radius: 100%;
+    background-size: 55% 55%;
+    background-position: 48%;
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    @media only screen and (max-width: 991.98px) { 
+      width: auto;
+    }
+  }
+}

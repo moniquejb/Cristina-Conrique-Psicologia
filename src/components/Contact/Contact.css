@@ -14,13 +14,13 @@
 }
 
 .form-fields-filled {
-  background-color: #FDEDDD;
+  background-color: #60858A;
   opacity: 1;
-  color: #c28412;
+  color: white;
 }
 
 .form-disabled {
-  background-color: #F8F8F8;
+  background-color: #9accbb;
   color: #4F6E72;
   opacity: 0.5;
 }
@@ -28,7 +28,7 @@
 .contact-container {
   height: auto;
   width: 100%;
-  background-color: #92C8B6;
+  background-color: #F8F8F8;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,7 +42,7 @@
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 2.8em;
-  color: #F8F8F8;
+  color: #4F6E72;
 }
 @media only screen and (max-width: 320px) {
   .contact-container h1 {
@@ -104,7 +104,7 @@
   min-width: 35px;
 }
 .contact-container .contact-details-form-container .contact-details-container .contact-details-box .contact-detail .contact-icon svg {
-  fill: #F8F8F8;
+  fill: #60858A;
 }
 .contact-container .contact-details-form-container .contact-details-container .contact-details-box .contact-detail .contact-info {
   padding: 0;
@@ -125,7 +125,7 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 4vw;
-  color: #F8F8F8;
+  color: #4F6E72;
   padding: 0;
   margin: 0;
 }
@@ -156,15 +156,15 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 5.5vw;
-  color: #F8F8F8;
+  color: #60858A;
 }
 .contact-container .contact-details-form-container .contact-form-container .contact-form-box .contact-form .contact-form-left .contact-form-element input {
   margin-top: 10px;
   width: 85vw;
   height: 40px;
   border-radius: 10px;
-  border: solid 1px #F8F8F8;
-  outline-color: #F8F8F8;
+  border: solid 1px #BCBCBC;
+  outline-color: #BCBCBC;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.2em;
@@ -185,7 +185,7 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 5.5vw;
-  color: #F8F8F8;
+  color: #60858A;
 }
 .contact-container .contact-details-form-container .contact-form-container .contact-form-box .contact-form-right .contact-form-textarea textarea {
   resize: none;
@@ -194,8 +194,8 @@
   height: auto;
   min-height: 100px;
   border-radius: 10px;
-  border: solid 1px #F8F8F8;
-  outline-color: #F8F8F8;
+  border: solid 1px #BCBCBC;
+  outline-color: #BCBCBC;
   padding: 10px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -216,7 +216,7 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1em;
-  color: #F8F8F8;
+  color: #60858A;
   padding-left: 10px;
 }
 .contact-container .contact-details-form-container .contact-form-container .contact-form-box .contact-form-right .contact-form-checkbox-container .contact-form-checkbox-label p {
@@ -497,7 +497,7 @@
     min-width: 45px;
   }
   .contact-container .contact-details-form-container .contact-details-container .contact-details-box .contact-detail .contact-info a h3 {
-    font-size: 1.7vw;
+    font-size: 1.8vw;
   }
   .contact-container .contact-details-form-container .contact-details-container .contact-details-box .contact-social-media {
     display: flex;
@@ -506,8 +506,8 @@
   .contact-container .contact-details-form-container .contact-details-container .contact-details-box .contact-social-media h3 {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
-    font-size: 2.3em;
-    color: #F8F8F8;
+    font-size: 2.5em;
+    color: #4F6E72;
     padding: 0;
     margin: 40px 0 30px 0;
   }
@@ -515,16 +515,16 @@
     margin: 0 30px 20px 0;
   }
   .contact-container .contact-details-form-container .contact-details-container .contact-details-box .contact-social-media .contact-social-icons a svg {
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
     min-height: 60px;
     min-width: 60px;
-    fill: #F8F8F8;
+    fill: #60858A;
     margin-bottom: -5px;
   }
   .contact-container .contact-details-form-container .contact-details-container .contact-details-box .contact-social-media .contact-social-icons a svg:hover {
     transform: scale(1.05);
-    fill: #E4F3F0;
+    fill: #4F6E72;
   }
   .contact-container .contact-details-form-container .contact-details-container .contact-details-box .contact-social-media .contact-social-icons a svg:active {
     transform: scale(1);
@@ -550,11 +550,11 @@
     width: 100%;
   }
   .contact-container .contact-details-form-container .contact-form-container .contact-form-box .contact-form .contact-form-left .contact-form-element label {
-    font-size: 1.4vw;
+    font-size: 1.7vw;
   }
   .contact-container .contact-details-form-container .contact-form-container .contact-form-box .contact-form .contact-form-left .contact-form-element input {
     width: 85%;
-    height: 45px;
+    height: 50px;
   }
   .contact-container .contact-details-form-container .contact-form-container .contact-form-box .contact-form-right {
     width: 60%;
@@ -566,7 +566,7 @@
     height: 100%;
   }
   .contact-container .contact-details-form-container .contact-form-container .contact-form-box .contact-form-right .contact-form-textarea label {
-    font-size: 1.4vw;
+    font-size: 1.7vw;
   }
   .contact-container .contact-details-form-container .contact-form-container .contact-form-box .contact-form-right .contact-form-textarea textarea {
     height: 85%;
@@ -595,6 +595,7 @@
     margin-left: 0;
   }
   .contact-container .contact-details-form-container .contact-form-container .contact-form-box .contact-form-right .form-fields-filled:hover {
+    background-color: #4F6E72;
     transform: scale(1.01);
   }
   .contact-container .contact-details-form-container .contact-form-container .contact-form-box .contact-form-right .form-fields-filled:active {
@@ -637,7 +638,7 @@
     font-size: 1.4vw;
   }
   .contact-container .contact-details-form-container .contact-form-container .contact-form-box .contact-form .contact-form-left .contact-form-element input {
-    height: 60px;
+    height: 80px;
     font-size: 2em;
     padding-left: 20px;
   }
@@ -694,7 +695,7 @@
     font-size: 1.2vw;
   }
   .contact-container .contact-details-form-container .contact-form-container .contact-form-box .contact-form .contact-form-left .contact-form-element input {
-    height: 80px;
+    height: 100px;
   }
   .contact-container .contact-details-form-container .contact-form-container .contact-form-box .contact-form-right .contact-form-textarea label {
     font-size: 1.2vw;

@@ -15,13 +15,13 @@
 }
 
 .form-fields-filled {
-  background-color: $light-yellow;
+  background-color: $dark-1-blue;
   opacity: 1;
-  color: #c28412;
+  color: white;
 }
 
 .form-disabled {
-  background-color: $main-grey;
+  background-color: $main-blue;
   color: $dark-2-blue;
   opacity: 0.5;
 }
@@ -29,7 +29,7 @@
 .contact-container {
   height: auto;
   width: 100%;
-  background-color: $main-blue-bg;
+  background-color: $main-grey;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,7 +40,7 @@
   h1 {
     margin: 0 0 7.5px 0;
     padding: 0;
-    @include main-heading($main-grey);
+    @include main-heading($dark-2-blue);
   }
 
   .contact-details-form-container {
@@ -78,7 +78,7 @@
             min-width: 35px;
 
             svg {
-              fill: $main-grey;
+              fill: $dark-1-blue;
             }
           }
 
@@ -98,7 +98,7 @@
               padding-left: 10px;
 
               h3 {
-                @include custom-Montserrat($main-grey, 4vw, 400);
+                @include custom-Montserrat($dark-2-blue, 4vw, 400);
                 padding: 0;
                 margin: 0;
               }
@@ -134,7 +134,7 @@
 
             .contact-form-element {
               label {
-                @include custom-Montserrat($main-grey, 5.5vw, 400);
+                @include custom-Montserrat($dark-1-blue, 5.5vw, 400);
               }
 
               input {
@@ -142,8 +142,8 @@
                 width: 85vw;
                 height: 40px;
                 border-radius: 10px;
-                border: solid 1px $main-grey;
-                outline-color: $main-grey;
+                border: solid 1px $dark-2-grey;
+                outline-color: $dark-2-grey;
                 @include custom-Montserrat(black, 1.2em, 400);
                 padding-left: 10px;
               }
@@ -162,7 +162,7 @@
             padding: 15px 0;
 
             label {
-              @include custom-Montserrat($main-grey, 5.5vw, 400);
+              @include custom-Montserrat($dark-1-blue, 5.5vw, 400);
             }
 
             textarea {
@@ -172,8 +172,8 @@
               height: auto;
               min-height: 100px;
               border-radius: 10px;
-              border: solid 1px $main-grey;
-              outline-color: $main-grey;
+              border: solid 1px $dark-2-grey;
+              outline-color: $dark-2-grey;
               padding: 10px;
               @include custom-Montserrat(black, 1.2em, 400);
             }
@@ -193,7 +193,7 @@
             }
 
             .contact-form-checkbox-label {
-              @include custom-Montserrat($main-grey, 1em, 400);
+              @include custom-Montserrat($dark-1-blue, 1em, 400);
               padding-left: 10px;
 
               p {
@@ -756,7 +756,7 @@
               .contact-info {
                 a {
                   h3 {
-                    font-size: 2vw;
+                    font-size: 1.8vw;
                   }
                 }
               }
@@ -767,7 +767,7 @@
               flex-direction: column;
 
               h3 {
-                @include custom-Roboto($main-grey, 2.5em, 500);
+                @include custom-Roboto($dark-2-blue, 2.5em, 500);
                 padding: 0;
                 margin: 40px 0 30px 0;
               }
@@ -781,12 +781,12 @@
                     width: 80px;
                     min-height: 60px;
                     min-width: 60px;
-                    fill: $main-grey;
+                    fill: $dark-1-blue;
                     margin-bottom: -5px;
 
                     &:hover {
                       transform: scale(1.05);
-                      fill: $light-blue;
+                      fill: $dark-2-blue;
                     }
 
                     &:active {
@@ -882,6 +882,7 @@
 
               .form-fields-filled {
                 &:hover {
+                  background-color: $dark-2-blue;
                   transform: scale(1.01);
                 }
 

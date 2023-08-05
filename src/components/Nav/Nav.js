@@ -57,10 +57,11 @@ const Nav = ({ navOrientation }) => {
     return (
       <nav className='nav-container no-select' id={`${shrinkNav}`}>
         <ul>
-          <li><a href='/#inicio' className='li-text'>Inicio</a></li>
+          {/* <li><a href='/#inicio' className='li-text'>Inicio</a></li> */}
           <li><a href='/#terapia' className='li-text'>Terapia</a></li>
           <li><a href='/#sobre' className='li-text'>Sobre Mí</a></li>
           <li><a href='/#tarifas' className='li-text'>Tarifas</a></li>
+          <li><a href='/#resenas' className='li-text'>Reseñas</a></li>
           <li className='li-img'><a href='/#inicio'><img src='images/logo.svg' alt='Psicóloga Cristina Conrique Logo'></img></a></li>
           <li><a href='/recursos' className='li-text'>Recursos</a></li>
           <li><a href='/faqs' className='li-text'>FAQs</a></li>
@@ -126,6 +127,7 @@ const Nav = ({ navOrientation }) => {
               <li><a onClick={handleNavLanding} href='/#terapia' className='li-text'>Terapia</a></li>
               <li><a onClick={handleNavLanding} href='/#sobre' className='li-text'>Sobre Mí</a></li>
               <li><a onClick={handleNavLanding} href='/#tarifas' className='li-text'>Tarifas</a></li>
+              <li><a onClick={handleNavLanding} href='/#resenas' className='li-text'>Reseñas</a></li>
               <li className='li-img'><a onClick={handleNavLanding} href='/#inicio'><img src='images/logo-small.png' alt='Psicóloga Cristina Conrique Logo'></img></a></li>
               <li><a href='/recursos' className='li-text'>Recursos</a></li>
               <li><a href='/faqs' className='li-text'>FAQs</a></li>

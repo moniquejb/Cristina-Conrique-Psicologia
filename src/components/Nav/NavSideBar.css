@@ -292,7 +292,6 @@
     width: 25px;
     height: 5px;
   }
-
   .nav-side-container {
     width: 160px;
     padding-top: 10px;
@@ -314,7 +313,7 @@
     padding-left: 40px;
   }
   .nav-side-container #nav-line-1,
-.nav-side-container #nav-line-2 {
+  .nav-side-container #nav-line-2 {
     height: 2px;
     width: 110px;
   }
