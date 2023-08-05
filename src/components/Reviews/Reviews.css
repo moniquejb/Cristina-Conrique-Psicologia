@@ -81,22 +81,27 @@
 }
 @media only screen and (max-width: 575.98px) {
   .reviews-container .card .card-body {
-    min-height: 470px;
+    min-height: 490px;
   }
 }
 @media only screen and (max-width: 479.98px) {
   .reviews-container .card .card-body {
-    min-height: 520px;
+    min-height: 560px;
   }
 }
 @media only screen and (max-width: 359.98px) {
   .reviews-container .card .card-body {
-    min-height: 570px;
+    min-height: 600px;
   }
 }
 @media only screen and (max-width: 319.98px) {
   .reviews-container .card .card-body {
-    min-height: 620px;
+    min-height: 640px;
+  }
+}
+@media only screen and (max-width: 299.98px) {
+  .reviews-container .card .card-body {
+    min-height: 700px;
   }
 }
 .reviews-container .card .card-body p {
