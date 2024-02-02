@@ -39,14 +39,14 @@ function App() {
   const locUrl = 'https://get.geojs.io/v1/ip/country.json';
   const locationPrice = {
     prices: {
-      MX: 550, //Mexico
-      US: 40, //USA
-      CA: 40, //Canada
-      ZA: 550, //South Africa
-      ES: 40, //Spain
+      MX: 600, //Mexico
+      US: 45, //USA
+      CA: 45, //Canada
+      ZA: 600, //South Africa
+      ES: 45, //Spain
       AR: 4500, //Argentina
-      PE: 100, //Peru
-      GB: 40, //Great Britain
+      PE: 130, //Peru
+      GB: 45, //Great Britain
       AU: 55, //Australia
       NZ: 55, //New Zealand
       VE: 30, //Venezuela - using USD
