@@ -18,10 +18,10 @@ const Prices = ({ price, currency, country }) => {
       setSmallerTextPrices('');
     }
     //Determine and round up monthly and weekly prices according to currency/price
-    setWeeklyTotal(Math.round(Math.round((price * 0.9)) * 4));
-    setMonthlyTotal(Math.round(Math.round((price * 0.85)) * 8));
-    setWeeklySession(Math.round(price * 0.9));
-    setMonthlySession(Math.round(price * 0.85));
+    setWeeklyTotal(Math.round(Math.round((price * 0.95)) * 4));
+    setMonthlyTotal(Math.round(Math.round((price * 0.9)) * 8));
+    setWeeklySession(Math.round(price * 0.95));
+    setMonthlySession(Math.round(price * 0.9));
   }, [price, country])
 
   return (
@@ -44,7 +44,7 @@ const Prices = ({ price, currency, country }) => {
           <div className='price-box'>
             <h3>Plan Mensual</h3>
             <div className={`price-box-discount ${smallerTextPrices}`}>
-              <h3>-10%</h3>
+              <h3>-5%</h3>
               <h2>{currency}{weeklySession}</h2>
               <h3>Total {currency}{weeklyTotal}</h3>
             </div>
@@ -53,7 +53,7 @@ const Prices = ({ price, currency, country }) => {
           <div className='price-box'>
             <h3>Plan Bimestral</h3>
             <div className={`price-box-discount ${smallerTextPrices}`}>
-              <h3>-15%</h3>
+              <h3>-10%</h3>
               <h2>{currency}{monthlySession}</h2>
               <h3>Total {currency}{monthlyTotal}</h3>
             </div>
