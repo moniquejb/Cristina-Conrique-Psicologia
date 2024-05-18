@@ -4,7 +4,7 @@
 
 https://psicologaconrique.com/
 
-This website was built to promote the online services of Mexican psychologist, Cristina Conrique. As she operates solely in Spanish, the website content was created in Spanish only (feel free to use that translator :wink:). The website is hosted on [Netlify](https://www.netlify.com/) but the custom domain and email are registered through [Hostinger](https://www.hostinger.com/).
+This website, built in 2021, was made to promote the online services of Mexican psychologist, Cristina Conrique. As she operates solely in Spanish, the website content was created in Spanish only (feel free to use that translator :wink:). The website is hosted on [Netlify](https://www.netlify.com/) but the custom domain and email are registered through [Hostinger](https://www.hostinger.com/).
 
 ## Technologies
 * JavaScript
