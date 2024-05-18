@@ -1,4 +1,4 @@
-[![Banner](https://i.postimg.cc/sDqbHTHY/Untitled-1-01.jpg)](https://postimg.cc/hf8Cf1Bv)
+![Banner](https://github.com/moniquejb/cristina-conrique-psychology/assets/54107967/5b0f75b1-c6d0-4337-87f0-fc4b800622af)
 
 # Cristina Conrique Psychology Website
 
