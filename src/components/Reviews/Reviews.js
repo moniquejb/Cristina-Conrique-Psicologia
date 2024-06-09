@@ -17,6 +17,7 @@ const Reviews = () => {
             <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
             <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
             <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+            <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="8" aria-label="Slide 0"></button>
           </div>
           <div className="carousel-inner">
             <div className="carousel-item active">
@@ -139,6 +140,20 @@ const Reviews = () => {
                         fácil avanzar, además, las sesiones están muy bien preparadas y personalizadas.
                       </p>
                       <footer class="blockquote-footer">Y.M.</footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="carousel-item">
+              <div className="col-12 d-flex justify-content-center">
+                <div class="card col-11 col-xl-10 col-xxl-9">
+                  <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                      <p>
+                        Cris me ha ayudado muchísimo en este proceso de terapia. Es comprensiva y súper empática, y hace que te sientas escuchado. Da muy buenos consejos y sus herramientas me han ayudado muchísimo en mi día a día. Le doy 5 estrellas muy merecidas. Si vuelvo a necesitar terapia, sin duda acudiré a ella.
+                      </p>
+                      <footer class="blockquote-footer">J.T.A</footer>
                     </blockquote>
                   </div>
                 </div>
