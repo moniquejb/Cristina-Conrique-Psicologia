@@ -177,14 +177,6 @@
     margin-top: -25px;
     visibility: hidden;
   }
-  #resenas::before {
-    content: "";
-    display: block;
-    height: 25px;
-    margin-top: -25px;
-    visibility: hidden;
-  }
-  
 }
 @media only screen and (max-width: 1025px) {
   .nav-container {
@@ -360,12 +352,4 @@
     margin-top: -150px;
     visibility: hidden;
   }
-  #resenas::before {
-    content: "";
-    display: block;
-    height: 150px;
-    margin-top: -150px;
-    visibility: hidden;
-  }
-  
 }/*# sourceMappingURL=Nav.css.map */

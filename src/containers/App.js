@@ -40,13 +40,13 @@ function App() {
   const locationPrice = {
     prices: {
       MX: 600, //Mexico
-      US: 45, //USA
-      CA: 45, //Canada
+      US: 48, //USA
+      CA: 48, //Canada
       ZA: 600, //South Africa
-      ES: 45, //Spain
+      ES: 48, //Spain
       AR: 4500, //Argentina
       PE: 130, //Peru
-      GB: 45, //Great Britain
+      GB: 48, //Great Britain
       AU: 55, //Australia
       NZ: 55, //New Zealand
       VE: 30, //Venezuela - using USD
